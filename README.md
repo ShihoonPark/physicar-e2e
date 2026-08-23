@@ -37,6 +37,23 @@ Unit tests require no simulator or ROS installation:
 python3 -m unittest discover -s tests -v
 ```
 
+## Dataset Extractor V1
+
+The offline extractor converts the three existing pilot MCAP bags into
+deterministic `200×66` RGB PNG camera samples with causal steering labels:
+
+```bash
+python3 scripts/run_dataset_extractor_v1.py \
+  --sim-root /path/to/physicar-ai-sim-docker
+```
+
+Raw bags remain canonical and read-only. Large images and manifests are written
+under simulator userdata, while compact validation metrics remain in `results/`.
+Synchronization uses causal zero-order hold on MCAP record timestamps; camera
+headers and `/clock` are diagnostics only. Future dataset splits must be made at
+whole-episode level, never randomly by frame. See
+`docs/dataset_extractor_v1.md` for the exact gates and preprocessing contract.
+
 ## Automated Rosbag Collector V1
 
 The collector records one external MCAP bag per canonical expert lap. It uses
