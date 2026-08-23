@@ -36,3 +36,10 @@ Unit tests require no simulator or ROS installation:
 ```bash
 python3 -m unittest discover -s tests -v
 ```
+
+## Lane-Follow Environment V1
+
+The cone-free, simulation-only baseline environment is reproducibly generated
+from its preserved canonical simulator world. See
+`docs/lane_follow_environment_v1.md` for generation and read-only verification
+commands; the generated simulator assets remain intentionally ignored there.
