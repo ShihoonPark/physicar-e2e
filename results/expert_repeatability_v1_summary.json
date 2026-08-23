@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "lap_time_max_s": 58.01142028599861,
+    "lap_time_mean_s": 57.98537129139986,
+    "lap_time_min_s": 57.94548029299949,
+    "lap_time_sample_standard_deviation_s": 0.035070490654059386,
+    "mean_of_run_mean_centerline_error_m": 0.018613204373149367,
+    "per_run_mean_centerline_error_m": [
+      0.018582570639208037,
+      0.01862498365431845,
+      0.018608590993583547,
+      0.018610179354291025,
+      0.01863969722434578
+    ],
+    "safe_stop_success_count": 5,
+    "steering_saturation_fraction_max": 0.10114942528735632,
+    "steering_saturation_fraction_mean": 0.10107974715283001,
+    "steering_saturation_fraction_min": 0.1010332950631458,
+    "success_count": 5,
+    "success_rate": 1.0,
+    "timing_slip_count_total": 0,
+    "total_api_or_control_failures": 0,
+    "total_clock_liveness_failures": 0,
+    "total_liveness_failures": 0,
+    "total_off_track_duration_s": 0.0,
+    "total_off_track_events": 0,
+    "total_pose_liveness_failures": 0,
+    "worst_max_centerline_error_m": 0.11836345336361985,
+    "worst_max_loop_period_s": 0.06942529200023273,
+    "worst_p95_loop_period_s": 0.06669726100153639
+  },
+  "baseline_comparison": {
+    "canonical_result_path": "results/expert_driver_v1_baseline.json",
+    "lap_time_mean_minus_baseline_s": -0.6253133246002136,
+    "mean_centerline_error_mean_minus_baseline_m": 0.000155211716304747,
+    "steering_saturation_fraction_mean_minus_baseline": 0.003352474425557278,
+    "worst_max_centerline_error_minus_baseline_m": 0.00411015049992676
+  },
+  "environment": {
+    "bounds_m": {
+      "height": 7.0,
+      "width": 12.0
+    },
+    "canonical_assets_valid": true,
+    "cone_count": 0,
+    "derived_assets_valid": true,
+    "derived_route_byte_identical": true,
+    "pose_valid": true,
+    "route_length_m": 30.50461070080936,
+    "route_points_api": 388,
+    "simulator_running": true,
+    "simulator_switching": false,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "failure_accounting_note": "The driver emits a single failure field rather than separate pose-liveness, clock-liveness, and API/control counters. All five runs recorded result PASS and failure null, so the observed failure totals are zero.",
+  "immutable_config": {
+    "path": "configs/expert_driver_v1.json",
+    "sha256": "63814d3a30f8753092cd33fc53d44414cfb343e39caf805e624dbaf33a4bd050",
+    "unchanged_from_canonical_baseline": true
+  },
+  "live_laps_attempted": 5,
+  "research_question": "Does the current canonical Automated Expert Driver V1 complete 5/5 independent laps under the same configuration?",
+  "result": "PASS",
+  "run_result_paths": [
+    "results/expert_repeatability_v1/run_01.json",
+    "results/expert_repeatability_v1/run_02.json",
+    "results/expert_repeatability_v1/run_03.json",
+    "results/expert_repeatability_v1/run_04.json",
+    "results/expert_repeatability_v1/run_05.json"
+  ],
+  "source": {
+    "branch": "test/expert-repeatability-v1",
+    "commit": "84009601d91af02609fd27201c6637da17bc95ca"
+  },
+  "standard_deviation_convention": "Sample standard deviation (n-1 denominator) over the five lap times.",
+  "static_gates": {
+    "canonical_config_matches_baseline": "PASS",
+    "git_diff_check": "PASS",
+    "json_validation": "PASS",
+    "python_compilation": "PASS",
+    "source_tree_clean_before_run": "PASS",
+    "unit_tests": "PASS (63 passed)"
+  }
+}
