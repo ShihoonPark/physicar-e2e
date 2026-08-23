@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Raw/generated research artifacts
+*.bag
+*.bag.active
+*.db3
+*.mcap
+rosbag2_*/
+datasets/raw/
+datasets/images/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+runs/
+tensorboard/
+logs/
+
+# Runtime scratch (compact curated results remain trackable)
+*.tmp
+*.pid
+results/runtime_*.json
