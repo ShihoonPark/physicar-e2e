@@ -11,6 +11,7 @@ dependencies = []
 
 [project.scripts]
 physicar-expert-v1 = "physicar_e2e.expert_driver:main"
+physicar-rosbag-collector-v1 = "physicar_e2e.rosbag_collector:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

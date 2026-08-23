@@ -1,0 +1,52 @@
+{
+  "bag_sizes_bytes": [
+    460695576,
+    460173366,
+    460692163
+  ],
+  "collector": "rosbag_collector_v1",
+  "completed_episode_count": 3,
+  "episode_results": [
+    {
+      "episode_id": "episode_001",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_002",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_003",
+      "result": "PASS"
+    }
+  ],
+  "failure_reason": null,
+  "generated_utc": "2026-08-23T16:34:17.510913+00:00",
+  "mean_bag_size_bytes": 460520368.3333333,
+  "mean_storage_rate_bytes_per_s": 7910334.313415528,
+  "passed_episode_count": 3,
+  "preflight": {
+    "cone_count": 0,
+    "container_userdata_root": "/opt/physicar/userdata",
+    "environment_verification": "PASS: canonical inputs valid (six expected cones present)\nPASS: derived world valid (world name correct; cone count 0)\nPASS: derived route byte-identical (SHA-256)\nPASS: derived model metadata matches canonical directory\nPASS: canonical asset integrity unchanged during verification",
+    "host_userdata_root": "/home/a/physicar-ai-sim-docker/userdata",
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "topic_types": {
+      "/camera/image_raw": "sensor_msgs/msg/Image",
+      "/clock": "rosgraph_msgs/msg/Clock",
+      "/cmd_vel": "geometry_msgs/msg/Twist",
+      "/odom": "nav_msgs/msg/Odometry",
+      "/speed": "std_msgs/msg/Float64",
+      "/steering": "std_msgs/msg/Float64",
+      "/tf": "tf2_msgs/msg/TFMessage",
+      "/tf_static": "tf2_msgs/msg/TFMessage"
+    },
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "projected_50_episode_storage_bytes": 23026018416.666664,
+  "requested_episode_count": 3,
+  "result": "PASS",
+  "total_bag_size_bytes": 1381561105
+}

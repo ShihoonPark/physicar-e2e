@@ -37,6 +37,31 @@ Unit tests require no simulator or ROS installation:
 python3 -m unittest discover -s tests -v
 ```
 
+## Automated Rosbag Collector V1
+
+The collector records one external MCAP bag per canonical expert lap. It uses
+the ROS 2 Jazzy installation inside the existing simulator container and
+discovers the userdata host bind mount before writing. Raw bags and recorder
+logs remain under simulator `userdata`, while compact JSON evidence is written
+under `results/rosbag_collector_v1_pilot/`.
+
+Run its read-only asset/runtime/topic preflight before collection:
+
+```bash
+python3 scripts/run_rosbag_collector_v1.py \
+  --sim-root ~/physicar-ai-sim-docker --preflight-only
+```
+
+The explicitly authorized V1 pilot command is:
+
+```bash
+python3 scripts/run_rosbag_collector_v1.py \
+  --sim-root ~/physicar-ai-sim-docker --episodes 3
+```
+
+See `docs/rosbag_collector_v1.md` for lifecycle, failure, storage, and metadata
+details. The collector performs no image preprocessing or synchronization.
+
 ## Lane-Follow Environment V1
 
 The cone-free, simulation-only baseline environment is reproducibly generated
