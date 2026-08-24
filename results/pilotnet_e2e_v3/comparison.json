@@ -1,0 +1,36 @@
+{
+  "version": "pilotnet_v1_v2_v3_comparison",
+  "data": {
+    "v1": "1754 nominal training samples",
+    "v2": "1754 nominal + 349 fixed-anchor recovery training samples",
+    "v3": "1754 nominal + 46 actual V1 on-policy DAgger training samples"
+  },
+  "nominal_episode_003": {
+    "v1": {"mae_rad": 0.004819397986644191, "rmse_rad": 0.0073321053560958084, "bias_rad": 0.0011234611336027709, "max_error_rad": 0.03434744477272034},
+    "v2": {"mae_rad": 0.004575813113397073, "rmse_rad": 0.006622101044273811, "bias_rad": -0.0008578863745513055, "max_error_rad": 0.032311081886291504},
+    "v3": {"mae_rad": 0.0044082728869422865, "rmse_rad": 0.006967083660582939, "bias_rad": -0.0018602231374657454, "max_error_rad": 0.034150898456573486},
+    "magnitude_bins_v1_vs_v3": {
+      "abs_lt_0.05": {"v1_mae_rad": 0.002679188961027454, "v3_mae_rad": 0.0020384392378673287, "v1_ratio": 1.1347315309329518, "v3_ratio": 1.047389818799531},
+      "abs_0.05_to_0.15": {"v1_mae_rad": 0.006135071762676897, "v3_mae_rad": 0.00616018931413519, "v1_ratio": 0.9810173242812367, "v3_ratio": 0.9944152027637629},
+      "abs_0.15_to_0.25": {"v1_mae_rad": 0.00703874767686312, "v3_mae_rad": 0.007937115258895434, "v1_ratio": 1.0015772408149606, "v3_ratio": 0.9981380760137258},
+      "abs_ge_0.25": {"v1_mae_rad": 0.008282864184090586, "v3_mae_rad": 0.007308729399334301, "v1_ratio": 1.0092024699911721, "v3_ratio": 0.9952974196885841}
+    }
+  },
+  "on_policy_holdout_B": {
+    "v1": {"mae_rad": 0.23206993699667774, "rmse_rad": 0.28988109201510287, "bias_rad": -0.23155470170505313, "max_error_rad": 0.5072844177484512, "corrective_magnitude_ratio": 0.3088819718885644},
+    "v2": {"mae_rad": 0.22783304162592025, "rmse_rad": 0.28221965812834, "bias_rad": -0.2275151143558932, "max_error_rad": 0.49451589584350586, "corrective_magnitude_ratio": 0.30501253083540364},
+    "v3": {"mae_rad": 0.027315376189852195, "rmse_rad": 0.03561139365787917, "bias_rad": -0.0007474137035553048, "max_error_rad": 0.12918933480978012, "corrective_magnitude_ratio": 0.9972709560418932},
+    "windows_v1_vs_v3": {
+      "pre_divergence": {"v1_mae_rad": 0.024858150685516497, "v3_mae_rad": 0.019599942462324785, "v1_ratio": 0.8043000138680757, "v3_ratio": 0.8433741291010688},
+      "divergence": {"v1_mae_rad": 0.2686570756447812, "v3_mae_rad": 0.026644996802012124, "v1_ratio": 0.24438452583337308, "v3_ratio": 0.9664819186608463},
+      "late_failure": {"v1_mae_rad": 0.4148820594928111, "v3_mae_rad": 0.036300175956317356, "v1_ratio": 0.19874884032155188, "v3_ratio": 1.0859376193948609}
+    }
+  },
+  "closed_loop_0.50_mps": {
+    "v1": {"result": "FAIL", "progress_m": 2.9529817702818324, "completion_fraction": 0.0968044404580283, "max_cte_m": 0.5772488592570291},
+    "v2": {"result": "FAIL", "progress_m": 2.590891723850847, "completion_fraction": 0.08493443005263805, "max_cte_m": 0.6085865558628248},
+    "v3": {"result": "FAIL", "run_count": 1, "elapsed_s": 40.758331607998116, "progress_m": 19.818846053812432, "completion_fraction": 0.6497000157843874, "mean_cte_m": 0.026194238454827275, "max_cte_m": 0.6032866032061377, "safe_stop_success": true},
+    "v3_runs_2_and_3": "NOT EXECUTED because run #1 failed"
+  },
+  "conclusion": "Actual visited-state labeling substantially outperformed fixed-anchor recovery on independent on-policy error and closed-loop progress, but one DAgger iteration was insufficient for lap completion."
+}

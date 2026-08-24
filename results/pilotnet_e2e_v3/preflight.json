@@ -1,0 +1,36 @@
+{
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-24T03:11:39.280841+00:00",
+  "preflight": {
+    "camera": {
+      "camera_acquisition_ms": 2.0752669988723937,
+      "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+      "model_input_shape": [
+        3,
+        66,
+        200
+      ],
+      "preprocessing_ms": 2.0245220002834685,
+      "result": "PASS",
+      "source_dimensions": [
+        480,
+        360
+      ],
+      "transport": "HTTP JPEG"
+    },
+    "cone_count": 0,
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "provenance": {
+    "config_sha256": "aa11b943dbc45d80a9ea101cb2f45e92501a40f32f4c3725a4939f4eed1a13f1",
+    "onnx_sha256": "a7ca714989d9c47df590df38a9d590650458bd402654ae69c2014739ba4cdccb",
+    "onnx_size_bytes": 1012518
+  },
+  "result": "PREFLIGHT_PASS",
+  "runs": [],
+  "version": "pilotnet_e2e_v3_dagger"
+}

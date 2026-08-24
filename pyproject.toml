@@ -32,6 +32,9 @@ physicar-recovery-data-v1 = "physicar_e2e.recovery_data:main"
 physicar-pilotnet-train-v2-recovery = "physicar_e2e.pilotnet_recovery_training:main"
 physicar-pilotnet-run-v2-recovery = "physicar_e2e.pilotnet_recovery_inference:main"
 physicar-pilotnet-failure-diagnosis-v1 = "physicar_e2e.pilotnet_failure_diagnosis:main"
+physicar-pilotnet-dagger-v1 = "physicar_e2e.pilotnet_dagger:main"
+physicar-pilotnet-train-v3-dagger = "physicar_e2e.pilotnet_dagger_training:main"
+physicar-pilotnet-run-v3-dagger = "physicar_e2e.pilotnet_dagger_inference:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

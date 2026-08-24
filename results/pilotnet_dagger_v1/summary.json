@@ -1,0 +1,62 @@
+{
+  "version": "pilotnet_dagger_v1",
+  "result": "PARTIAL_SUPPORT",
+  "research_question": "Does expert labeling of states actually visited by failing PilotNet V1 improve 0.50 m/s closed-loop robustness?",
+  "rollouts": {
+    "dagger_rollout_A": {
+      "source": "Failure Diagnosis V1 preserved rollout; no rerun",
+      "role": "training",
+      "raw_size_bytes": 49353870,
+      "source_mcap_sha256": "10fee63ddfcc104daedf2238fb23c3f74d71da0dd5848326e9107162fff6f405",
+      "samples": 46,
+      "window_counts": {"pre_divergence": 15, "divergence": 15, "late_failure": 16},
+      "label_age_ms": {"mean": 53.47826086956522, "median": 57.5, "p95": 100.0, "max": 100.0},
+      "future_label_violations": 0,
+      "full_rollout_fallback": false
+    },
+    "dagger_rollout_B": {
+      "source": "one new independent V1 0.50 m/s shadow rollout",
+      "role": "holdout only",
+      "collection_runs": 1,
+      "collection_result": "PASS",
+      "v1_live_result": "FAIL",
+      "v1_progress_m": 2.5579784123159843,
+      "v1_completion_fraction": 0.08385546819150573,
+      "raw_size_bytes": 47796358,
+      "source_mcap_sha256": "cf5190331867fad33e28ddfc3e7ac24498a114b174cfd77695a974c200e6bf40",
+      "samples": 44,
+      "window_counts": {"pre_divergence": 15, "divergence": 15, "late_failure": 14},
+      "label_age_ms": {"mean": 49.54545454545455, "median": 47.5, "p95": 94.25, "max": 100.0},
+      "future_label_violations": 0,
+      "full_rollout_fallback": false,
+      "api_failures": 0,
+      "liveness_failures": 0,
+      "safe_stop_success": true
+    }
+  },
+  "alignment": {
+    "common_clock": "raw camera header simulator time and shadow telemetry simulator clock",
+    "policy": "latest shadow-expert state at or before camera header time",
+    "causal": true,
+    "maximum_label_age_ms": 150,
+    "future_label_violations": 0
+  },
+  "window_rule": "continuous trajectory from 1.0 s before objective CTE divergence onset through final valid pre-safe-stop frame; full active fallback only below 20 frames",
+  "split": {"training": ["dagger_rollout_A"], "holdout": ["dagger_rollout_B"], "source_hash_overlap": false, "holdout_leakage": false},
+  "v3_dataset": {"nominal_training_samples": 1754, "dagger_training_samples": 46, "combined_training_samples": 1800, "nominal_validation_samples": 878, "on_policy_holdout_samples": 44, "recovery_v2_samples_included": 0},
+  "storage": {
+    "rollout_A_raw_reference_bytes": 49353870,
+    "rollout_B_raw_bytes": 47796358,
+    "extracted_dagger_bytes": 1834905,
+    "v3_artifacts_bytes": 2148082,
+    "new_external_root_bytes": 55920268,
+    "rollout_A_raw_was_not_duplicated": true
+  },
+  "decision": {
+    "classification": "PARTIAL SUPPORT",
+    "reason": "V3 reduced independent on-policy holdout error and progressed materially farther at 0.50 m/s, but did not complete a lap.",
+    "next_experiment": "A second bounded DAgger iteration using states actually visited near the new V3 failure around 19.82 m is justified later; it was not run here.",
+    "fifty_nominal_laps_justified": false
+  },
+  "tests": {"passed": 162, "failed": 0}
+}

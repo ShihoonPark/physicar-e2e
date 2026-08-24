@@ -1,0 +1,37 @@
+{
+  "accepted_samples": 44,
+  "expert_label_age_ms": {
+    "count": 44,
+    "max": 100.0,
+    "mean": 49.54545454545455,
+    "median": 47.5,
+    "p95": 94.25
+  },
+  "full_rollout_fallback": false,
+  "future_label_violations": 0,
+  "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_v1/extracted/manifests/dagger_rollout_B.csv",
+  "objective_window_raw_frames": 44,
+  "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_v1/extracted/previews/dagger_rollout_B.png",
+  "raw_camera_frames": 92,
+  "result": "PASS",
+  "role": "holdout",
+  "rollout_id": "dagger_rollout_B",
+  "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_v1/rollout_B/raw/dagger_rollout_B/bag",
+  "source_mcap_sha256": "cf5190331867fad33e28ddfc3e7ac24498a114b174cfd77695a974c200e6bf40",
+  "source_raw_size_bytes": 47796358,
+  "source_result": "results/pilotnet_dagger_v1/rollout_B_collection.json",
+  "source_result_sha256": "b2d8015a9741220657df8f672da4c19b297363708f1806920b93a23b8fb1b60a",
+  "stale_label_rejections": 0,
+  "telemetry_sha256": "27cf72830bd8538bdc9c025c5c5d3a90b3f5ad23814b8559fcfcda8ae380a38f",
+  "window": {
+    "divergence_sim_time_ns": 21223350000000,
+    "end_sim_time_ns": 21225265000000,
+    "rule": "continuous from 1.0 s before objective divergence onset through final valid pre-safe-stop telemetry",
+    "start_sim_time_ns": 21222350000000
+  },
+  "window_counts": {
+    "divergence": 15,
+    "late_failure": 14,
+    "pre_divergence": 15
+  }
+}
