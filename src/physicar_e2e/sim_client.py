@@ -40,6 +40,23 @@ class SimClient:
             raise SimClientError(f"{method} {path} returned non-object JSON")
         return payload
 
+    def camera_jpeg(self, path: str = "/camera") -> bytes:
+        """Fetch the live camera snapshot without decoding or exposing simulator state."""
+        request = Request(self.base_url + path, method="GET", headers={"Accept": "image/jpeg"})
+        started = time.monotonic()
+        try:
+            with urlopen(request, timeout=self.timeout_s) as response:
+                payload = response.read()
+                content_type = response.headers.get_content_type()
+        except (HTTPError, URLError, TimeoutError, OSError) as exc:
+            raise SimClientError(f"GET {path} failed: {exc}") from exc
+        elapsed = time.monotonic() - started
+        if elapsed > self.timeout_s:
+            raise SimClientError(f"GET {path} exceeded timeout ({elapsed:.3f}s)")
+        if content_type not in ("image/jpeg", "image/jpg") or not payload:
+            raise SimClientError(f"GET {path} returned {content_type!r}, expected non-empty JPEG")
+        return payload
+
     def openapi(self) -> dict[str, Any]:
         return self._request("/openapi.json")
 

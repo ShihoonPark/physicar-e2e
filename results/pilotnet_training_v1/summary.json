@@ -1,0 +1,142 @@
+{
+  "architecture": {
+    "feature_shape": [
+      64,
+      1,
+      18
+    ],
+    "input_shape": [
+      3,
+      66,
+      200
+    ],
+    "output": "steering_normalized",
+    "parameter_count": 252219
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_v1/checkpoints/pilotnet_v1_best.pt",
+      "sha256": "e6962b3bdb85a5c765c3e0988b1abe21e4b73c93a4390869259ed415dda3e3e2",
+      "size_bytes": 1016965
+    },
+    "onnx": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_v1/onnx/pilotnet_v1.onnx",
+      "sha256": "fef7c2caccb64624e2aeeeca5d0ef4504da789965c5d288d5c0cac1eb0de9b50",
+      "size_bytes": 1012518
+    }
+  },
+  "dataset_integrity": {
+    "dataset_metadata_sha256": "a94f44558c53075ec66c62809cde0cb6b6931d5ba7d6bda21996b97f43536609",
+    "episode_level_separation": true,
+    "missing_images": 0,
+    "non_finite_labels": 0,
+    "result": "PASS",
+    "train_episodes": [
+      "episode_001",
+      "episode_002"
+    ],
+    "training_samples": 1754,
+    "validation_episodes": [
+      "episode_003"
+    ],
+    "validation_samples": 878
+  },
+  "environment": {
+    "cuda_available": true,
+    "device": "cuda",
+    "numpy": "2.4.6",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130"
+  },
+  "gate_reached": "host_cpu_benchmark",
+  "generated_utc": "2026-08-24T01:13:48.783535+00:00",
+  "host_cpu_benchmark": {
+    "camera_period_ms": 66.0,
+    "label": "HOST CPU BENCHMARK \u2014 NOT Raspberry Pi 5 performance",
+    "onnx_inference": {
+      "iterations": 200,
+      "max_ms": 10.617135001666611,
+      "mean_ms": 0.6028054399757821,
+      "median_ms": 0.3162379998684628,
+      "p95_ms": 1.7019146982420343
+    },
+    "png_preprocessing": {
+      "iterations": 100,
+      "max_ms": 4.5541680010501295,
+      "mean_ms": 0.757568010048999,
+      "median_ms": 0.655834499411867,
+      "p95_ms": 1.3091853488731429
+    },
+    "provider": "CPUExecutionProvider",
+    "warmup_iterations": 20
+  },
+  "offline_validation": {
+    "groups": {
+      "near_zero": {
+        "bias_mean_signed_error_rad": -9.799215412495056e-06,
+        "mae_rad": 0.0022530288338603313,
+        "max_absolute_error_rad": 0.018678349093534052,
+        "rmse_rad": 0.003699994330668588,
+        "sample_count": 356
+      },
+      "negative": {
+        "bias_mean_signed_error_rad": 0.0022630009231992413,
+        "mae_rad": 0.005581374625781541,
+        "max_absolute_error_rad": 0.034004613757133484,
+        "rmse_rad": 0.008874087223455934,
+        "sample_count": 193
+      },
+      "positive": {
+        "bias_mean_signed_error_rad": 0.0016812407836250078,
+        "mae_rad": 0.007149385606819101,
+        "max_absolute_error_rad": 0.03434744477272034,
+        "rmse_rad": 0.009080660707714185,
+        "sample_count": 329
+      }
+    },
+    "overall": {
+      "bias_mean_signed_error_rad": 0.0011234611336027709,
+      "mae_rad": 0.004819397986644191,
+      "max_absolute_error_rad": 0.03434744477272034,
+      "normalized_mae": 0.013806552304275384,
+      "rmse_rad": 0.0073321053560958084,
+      "sample_count": 878
+    },
+    "result": "PASS"
+  },
+  "onnx_equivalence": {
+    "max_absolute_difference_normalized": 2.384185791015625e-07,
+    "max_absolute_difference_rad": 8.322381973266601e-08,
+    "mean_absolute_difference_normalized": 5.3682015277445316e-08,
+    "mean_absolute_difference_rad": 1.8738566344836725e-08,
+    "result": "PASS",
+    "samples": 128
+  },
+  "plots": [
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_v1/plots/loss_curve.png",
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_v1/plots/validation_trace.png",
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_v1/plots/validation_scatter.png"
+  ],
+  "result": "PASS",
+  "tiny_overfit": {
+    "epochs": 120,
+    "final_normalized_mse": 1.9513380494773358e-11,
+    "final_to_initial_ratio": 4.672114875486719e-08,
+    "initial_normalized_mse": 0.0004176562651991844,
+    "required_maximum_ratio": 0.2,
+    "result": "PASS",
+    "samples": 32
+  },
+  "training": {
+    "best_epoch": 15,
+    "early_stopped": true,
+    "epochs_completed": 22,
+    "result": "PASS",
+    "train_mse_rad2_at_best": 7.36439838016632e-05,
+    "train_normalized_mse_at_best": 0.0006043968261009828,
+    "validation_mse_rad2_at_best": 5.375977435997574e-05,
+    "validation_normalized_mse_at_best": 0.0004412069434291049
+  },
+  "training_config_sha256": "af96fab5118236917764fe8a964e00bc4724424ce41c48d53666006d2572b0c8",
+  "version": "pilotnet_training_v1"
+}

@@ -1,0 +1,38 @@
+{
+  "camera_only_model_observation": true,
+  "camera_preflight": {
+    "camera_acquisition_ms": 2.2208539994608145,
+    "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+    "model_input_shape": [
+      3,
+      66,
+      200
+    ],
+    "preprocessing_ms": 1.8426140013616532,
+    "result": "PASS",
+    "source_dimensions": [
+      480,
+      360
+    ],
+    "transport": "HTTP JPEG"
+  },
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-24T01:14:58.921550+00:00",
+  "provenance": {
+    "inference_config_sha256": "c04cc38aef8e452ea5ca0fe741173f6140b515ac488b718d6f58f130dd65014c",
+    "onnx_sha256": "fef7c2caccb64624e2aeeeca5d0ef4504da789965c5d288d5c0cac1eb0de9b50",
+    "onnx_size_bytes": 1012518
+  },
+  "result": "PREFLIGHT_PASS",
+  "simulator_preflight": {
+    "cone_count": 0,
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "smokes": [],
+  "transport_domain_limitation": "Training PNGs derive from raw ROS RGB; HTTP camera frames are JPEG.",
+  "version": "pilotnet_e2e_smoke_v1"
+}

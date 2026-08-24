@@ -37,6 +37,27 @@ Unit tests require no simulator or ROS installation:
 python3 -m unittest discover -s tests -v
 ```
 
+## PilotNet E2E Smoke V1
+
+PilotNet V1 trains only on existing extracted episodes 001–002 and validates on
+episode 003. Generated checkpoints, ONNX models, plots, and training logs belong
+under simulator userdata; only compact metrics and provenance belong in this
+repository. The live model boundary accepts the front camera tensor only. GT
+pose, route, boundaries, clock, and world status are privileged safety/metric
+inputs and never enter the neural model.
+
+```bash
+python3 scripts/train_pilotnet_v1.py \
+  --config configs/pilotnet_training_v1.json \
+  --dataset-root /path/to/dataset_extractor_v1_pilot \
+  --artifact-root /path/to/userdata/physicar_e2e/pilotnet_v1 \
+  --result results/pilotnet_training_v1/summary.json
+```
+
+After the offline gates pass, use `--preflight-only` before the explicitly
+authorized `--run-smokes` invocation. Smoke B at 0.50 m/s is automatically
+forbidden unless Smoke A at 0.30 m/s passes. See `docs/pilotnet_v1.md`.
+
 ## Dataset Extractor V1
 
 The offline extractor converts the three existing pilot MCAP bags into
