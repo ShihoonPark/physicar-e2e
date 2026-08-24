@@ -1,0 +1,17 @@
+{
+  "version": "pilotnet_pi5_deployment_v1",
+  "expected_onnx_sha256": "5dd2b88b50c43aed44361229dea34e8981cb0a34d05b01eef81a9ccdf63f396a",
+  "expected_onnx_size_bytes": 1012518,
+  "source_width": 480,
+  "source_height": 360,
+  "roi": {"x_start": 0, "x_end": 480, "y_start": 160, "y_end": 360},
+  "model_width": 200,
+  "model_height": 66,
+  "resize_interpolation": "Pillow bilinear",
+  "color_conversion": "direct full-range BT.601-style RGB-to-YUV matrix; U/V biased by 0.5; not JPEG YCbCr",
+  "normalization": "(YUV - 0.5) * 2.0",
+  "layout": "NCHW float32",
+  "max_steering_rad": 0.349066,
+  "host_benchmark": {"warmup_iterations": 20, "measured_iterations": 250},
+  "control_period_ms": 66.66666666666667
+}

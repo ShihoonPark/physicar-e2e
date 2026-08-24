@@ -1,0 +1,48 @@
+{
+  "version": "pilotnet_pi5_deployment_v1",
+  "result": "PASS",
+  "model": {
+    "sha256": "5dd2b88b50c43aed44361229dea34e8981cb0a34d05b01eef81a9ccdf63f396a",
+    "size_bytes": 1012518,
+    "identity_gate": "PASS",
+    "regenerated_or_modified": false
+  },
+  "deployment_contract": {
+    "input": "480x360 RGB",
+    "roi": [0, 160, 480, 360],
+    "resize": "200x66 Pillow bilinear",
+    "color": "direct full-range BT.601-style RGB-to-YUV matrix; U/V +0.5; not JPEG YCbCr",
+    "normalization": "(YUV - 0.5) * 2",
+    "tensor": "contiguous float32 1x3x66x200",
+    "output": "steering_rad, denormalized and clamped to +/-0.349066 exactly as live V4",
+    "runtime_dependencies": ["Python 3", "numpy==2.4.6", "Pillow==12.3.0", "onnxruntime==1.29.0"]
+  },
+  "parity": {
+    "result": "PASS",
+    "representative_existing_http_jpeg_frames": 12,
+    "all_tensors_exact_equal": true,
+    "tensor_mean_absolute_difference": 0.0,
+    "tensor_max_absolute_difference": 0.0,
+    "steering_difference_rad": {"mean": 0.0, "p95": 0.0, "max": 0.0}
+  },
+  "host_cpu_benchmark": {
+    "label": "HOST CPU BENCHMARK - NOT RASPBERRY PI 5",
+    "machine": "x86_64",
+    "warmup_iterations": 20,
+    "measured_iterations": 250,
+    "decode_ms": {"mean": 0.8075341520598158, "median": 0.6560889978572959, "p95": 1.2479220493332808, "max": 5.73307900049258},
+    "preprocessing_ms": {"mean": 0.8389291801431682, "median": 0.6711024998367066, "p95": 1.8540860006396531, "max": 4.073550000612158},
+    "onnx_inference_ms": {"mean": 0.6046659959829412, "median": 0.25769200146896765, "p95": 2.329635749265432, "max": 7.738806001725607},
+    "total_pipeline_ms": {"mean": 2.251737872007652, "median": 1.6563569988647941, "p95": 5.369440401773318, "max": 9.355805999803124},
+    "control_period_budget_ms": 66.66666666666667,
+    "total_p95_headroom_ms": 61.297226264893354,
+    "pi5_performance_claimed": false
+  },
+  "bundle": {
+    "path": "deploy/pi5",
+    "onnx_included_in_git": false,
+    "standalone_import_and_real_inference": "PASS",
+    "config_sha256": "c33e9912be7dec511458e5ed73a39cfb8f0f02e05f404a0a7b0e7e33e72eabf3"
+  },
+  "historical_context": "V4 previously achieved 3/3 valid same-map, same-spawn, 0.50 m/s simulator laps; historical evidence was not modified."
+}

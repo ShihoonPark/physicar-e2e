@@ -1,0 +1,53 @@
+{
+  "benchmark_label": "HOST CPU BENCHMARK \u2014 NOT RASPBERRY PI 5",
+  "control_period_budget_ms": 66.66666666666667,
+  "decode": {
+    "count": 250,
+    "max_ms": 5.73307900049258,
+    "mean_ms": 0.8075341520598158,
+    "median_ms": 0.6560889978572959,
+    "p95_ms": 1.2479220493332808
+  },
+  "deterministic_output_range_rad": [
+    0.34162193536758423,
+    0.34162193536758423
+  ],
+  "measured_iterations": 250,
+  "model_identity": {
+    "result": "PASS",
+    "sha256": "5dd2b88b50c43aed44361229dea34e8981cb0a34d05b01eef81a9ccdf63f396a",
+    "size_bytes": 1012518
+  },
+  "onnx_inference": {
+    "count": 250,
+    "max_ms": 7.738806001725607,
+    "mean_ms": 0.6046659959829412,
+    "median_ms": 0.25769200146896765,
+    "p95_ms": 2.329635749265432
+  },
+  "preprocessing": {
+    "count": 250,
+    "max_ms": 4.073550000612158,
+    "mean_ms": 0.8389291801431682,
+    "median_ms": 0.6711024998367066,
+    "p95_ms": 1.8540860006396531
+  },
+  "runtime_environment": {
+    "Pillow": "12.3.0",
+    "machine": "x86_64",
+    "numpy": "2.4.6",
+    "onnxruntime": "1.29.0",
+    "processor": "",
+    "python": "3.11.15",
+    "system": "Linux"
+  },
+  "total_p95_headroom_ms": 61.297226264893354,
+  "total_pipeline": {
+    "count": 250,
+    "max_ms": 9.355805999803124,
+    "mean_ms": 2.251737872007652,
+    "median_ms": 1.6563569988647941,
+    "p95_ms": 5.369440401773318
+  },
+  "warmup_iterations": 20
+}

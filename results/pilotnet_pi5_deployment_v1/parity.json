@@ -1,0 +1,135 @@
+{
+  "all_tensors_exact_equal": true,
+  "result": "PASS",
+  "sample_count": 12,
+  "samples": [
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": -0.003958392422646284,
+      "deployment_steering_rad": -0.003958392422646284,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0000.jpg",
+      "image_sha256": "9647a2fe64ec74aee05ea389c80c781217f9a8dbf8e85cbc0894ac1cf21e0d49",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": -0.0011418542126193643,
+      "deployment_steering_rad": -0.0011418542126193643,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0008.jpg",
+      "image_sha256": "98099c41dda4ad5b1d461c227abc98e7a92527874d1c4281541c968d8456e948",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 0.0003510848619043827,
+      "deployment_steering_rad": 0.0003510848619043827,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0016.jpg",
+      "image_sha256": "c00a081320889acef15c2132607ddc475d59e8b0031cc263b185fcc6cb51cf93",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 2.7513273380463943e-05,
+      "deployment_steering_rad": 2.7513273380463943e-05,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0024.jpg",
+      "image_sha256": "2b4a17dbf4e9a93543edb9a4256f378e33c64c5d85b83d7f1f657bbc457436ef",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": -0.0028668211307376623,
+      "deployment_steering_rad": -0.0028668211307376623,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0031.jpg",
+      "image_sha256": "6fd2079b4f3e4c9e82d248c3476410f84ae97b1545175f8b5b497608d64f265e",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": -0.005432846024632454,
+      "deployment_steering_rad": -0.005432846024632454,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0039.jpg",
+      "image_sha256": "4af5aa51a03980a59c39cea43f51b59fbfad6825b148643890dd31f698ba7cf0",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": -0.004117153584957123,
+      "deployment_steering_rad": -0.004117153584957123,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0044.jpg",
+      "image_sha256": "32c0ce5c882cb662ea782cf77049cb9370a2d89cfb562076faf255d2edfbb2f2",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 0.023749325424432755,
+      "deployment_steering_rad": 0.023749325424432755,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0053.jpg",
+      "image_sha256": "c94a9fda669bb3485145d8c24b10f57b49e33df25e2acf96b88d5a02786c2f99",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 0.34162193536758423,
+      "deployment_steering_rad": 0.34162193536758423,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0061.jpg",
+      "image_sha256": "cafd9926bbb1091511c56a17cd0353a7aa35ae2b2909bd016997aac306202fe6",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 0.349066,
+      "deployment_steering_rad": 0.349066,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0070.jpg",
+      "image_sha256": "82c7f21d8c103064d28bc4c843420768f564a5ca1ee0366eb2700e185c1a6ba2",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 0.349066,
+      "deployment_steering_rad": 0.349066,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0081.jpg",
+      "image_sha256": "f738a8faf71221e173dbd338a6f6608541ee4eff907ed32c5c36609bb384cce3",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    },
+    {
+      "absolute_steering_difference_rad": 0.0,
+      "canonical_steering_rad": 0.349066,
+      "deployment_steering_rad": 0.349066,
+      "image": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames/frame_0091.jpg",
+      "image_sha256": "c44528beb8ec767025244243d8ec39e7a5c731e9080ff1f7d045e7764f398b73",
+      "tensor_exact_equal": true,
+      "tensor_max_absolute_difference": 0.0,
+      "tensor_mean_absolute_difference": 0.0
+    }
+  ],
+  "steering_difference_rad": {
+    "max": 0.0,
+    "mean": 0.0,
+    "p95": 0.0
+  },
+  "steering_tolerance_rad": 1e-07,
+  "tensor_requirement": "exact equality",
+  "version": "pilotnet_pi5_deployment_v1_parity"
+}
