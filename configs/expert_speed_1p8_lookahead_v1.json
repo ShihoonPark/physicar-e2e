@@ -1,0 +1,10 @@
+{
+  "version": "expert_speed_1p8_lookahead_v1",
+  "canonical_config": "configs/expert_driver_v1.json",
+  "fixed_speed_mps": 1.8,
+  "lookahead_candidates_m": [0.6, 0.75, 0.9],
+  "maximum_live_runs": 3,
+  "stop_after_first_pass": true,
+  "infrastructure_retry": false,
+  "result_directory": "results/expert_speed_1p8_lookahead_v1"
+}

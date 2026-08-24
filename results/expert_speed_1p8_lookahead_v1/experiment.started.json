@@ -1,0 +1,10 @@
+{
+  "lookahead_candidates_m": [
+    0.6,
+    0.75,
+    0.9
+  ],
+  "maximum_live_runs": 3,
+  "started_utc": "2026-08-24T06:42:09.093421+00:00",
+  "status": "BOUNDED_SWEEP_STARTED_DO_NOT_REPEAT"
+}

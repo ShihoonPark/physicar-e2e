@@ -1,0 +1,106 @@
+{
+  "attempt_number": 3,
+  "classification": "EXPERT_PASS",
+  "lookahead_m": 0.9,
+  "metrics": {
+    "api_failures": 0,
+    "clock_liveness_failures": 0,
+    "cone_count": 0,
+    "control_iterations": 241,
+    "control_loop_frequency_hz": 15.000926706623641,
+    "cte_change_across_saturated_samples_m": -0.030053588512269497,
+    "cte_grew_while_saturated": false,
+    "dry_run": false,
+    "elapsed_s": 16.01881841100112,
+    "failure": null,
+    "final_distance_to_start_m": 0.21207241263304355,
+    "final_route_s_m": 30.296324773840443,
+    "max_abs_steering_route_s_m": 1.7694651184857275,
+    "max_absolute_steering_rad": 0.349066,
+    "max_centerline_error_m": 0.23236483370326205,
+    "max_cte_route_s_m": 28.999488806532245,
+    "max_loop_period_s": 0.06916542599356035,
+    "mean_absolute_command_delta_rad": 0.02509431355407935,
+    "mean_absolute_steering_rad": 0.11402414734517506,
+    "mean_centerline_error_m": 0.05561571310384006,
+    "mean_loop_period_s": 0.06666254822500074,
+    "off_track_event_count": 0,
+    "off_track_total_duration_s": 0.0,
+    "p95_loop_period_s": 0.06668850900314283,
+    "period_slip_count": 0,
+    "pose_liveness_failures": 0,
+    "rejected_progress_jumps": 0,
+    "result": "PASS",
+    "route_completion_fraction": 0.986734803614451,
+    "route_length_m": 30.50461070080936,
+    "route_points_api": 388,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "steering_saturation_fraction": 0.05394190871369295,
+    "terminal_steering_saturation_fraction": 0.0,
+    "terminal_window_samples": 15,
+    "timestamp_utc": "2026-08-24T06:43:05.123007+00:00",
+    "total_unwrapped_progress_m": 30.099961049198402,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "preflight": {
+    "clock_health": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.10612746600236278,
+      "observed_real_time_factor": 0.9561462261765864,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 40,
+      "sim_delta_s": {
+        "max": 0.10500000000320142,
+        "mean": 0.050128205128249906,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 1.9550000000017462,
+      "wall_elapsed_s": 2.0446663350012386,
+      "wall_interval_s": {
+        "max": 0.05376869800238637,
+        "mean": 0.05242734192310868,
+        "min": 0.050820778000343125
+      }
+    },
+    "control_api": "PASS",
+    "control_frequency_hz": 15.0,
+    "environment": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "bounds_height_m": 7.0,
+      "bounds_width_m": 12.0,
+      "cone_count": 0,
+      "pose": {
+        "q": [
+          0.004158,
+          0.00064,
+          -0.5912,
+          0.806514
+        ],
+        "x": 1.429593,
+        "y": 3.202643,
+        "yaw": -1.265087,
+        "z": -0.001147
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+    },
+    "lookahead_m": 0.9,
+    "max_steering_rad": 0.349066,
+    "result": "PASS",
+    "source_environment": "PASS: canonical inputs valid (six expected cones present)\nPASS: derived world valid (world name correct; cone count 0)\nPASS: derived route byte-identical (SHA-256)\nPASS: derived model metadata matches canonical directory\nPASS: canonical asset integrity unchanged during verification",
+    "speed_mps": 1.8,
+    "wheelbase_m": 0.18
+  }
+}
