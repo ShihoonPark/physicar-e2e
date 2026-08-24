@@ -1,0 +1,88 @@
+{
+  "attempts": [],
+  "camera": {
+    "camera_acquisition_ms": 4.266623000148684,
+    "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+    "model_input_shape": [
+      3,
+      66,
+      200
+    ],
+    "preprocessing_ms": 2.437336002913071,
+    "result": "PASS",
+    "source_dimensions": [
+      480,
+      360
+    ],
+    "transport": "HTTP JPEG"
+  },
+  "clock_health": {
+    "maximum_allowed_stall_s": 0.5,
+    "maximum_observed_clock_stall_s": 0.10536410300119314,
+    "observed_real_time_factor": 1.0100665413430372,
+    "paused_exposed": true,
+    "paused_observed": false,
+    "requested_duration_s": 2.0,
+    "result": "PASS",
+    "sample_count": 40,
+    "sim_delta_s": {
+      "max": 0.10500000000320142,
+      "mean": 0.05282051282045312,
+      "min": 0.0
+    },
+    "sim_elapsed_s": 2.0599999999976717,
+    "wall_elapsed_s": 2.0394695950017194,
+    "wall_interval_s": {
+      "max": 0.05328280700268806,
+      "mean": 0.052294092179531265,
+      "min": 0.051501469999493565
+    }
+  },
+  "environment": {
+    "bounds": {
+      "maxX": 12.0,
+      "maxY": 7.0,
+      "minX": 0.0,
+      "minY": 0.0
+    },
+    "bounds_height_m": 7.0,
+    "bounds_width_m": 12.0,
+    "cone_count": 0,
+    "pose": {
+      "q": [
+        -0.0,
+        -0.0,
+        -0.707065,
+        0.707148
+      ],
+      "x": 1.400001,
+      "y": 3.394477,
+      "yaw": -1.570679,
+      "z": -0.00117
+    },
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "switching": false,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "external_environment_verifier": "PASS: canonical inputs valid (six expected cones present)\nPASS: derived world valid (world name correct; cone count 0)\nPASS: derived route byte-identical (SHA-256)\nPASS: derived model metadata matches canonical directory\nPASS: canonical asset integrity unchanged during verification",
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-24T04:11:35.480977+00:00",
+  "identity": {
+    "checkpoint_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/v4/checkpoints/pilotnet_v4_dagger_best.pt",
+    "checkpoint_sha256": "a581c1a6cb13643a0af0ee2d568244291e1eb858516f685ef492a3016501d1d9",
+    "onnx_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/v4/onnx/pilotnet_v4_dagger.onnx",
+    "onnx_sha256": "5dd2b88b50c43aed44361229dea34e8981cb0a34d05b01eef81a9ccdf63f396a",
+    "onnx_size_bytes": 1012518,
+    "result": "PASS"
+  },
+  "immutable_config": {
+    "path": "configs/pilotnet_inference_v4_dagger.json",
+    "sha256": "5689447968dea75eed7771cd3751304da2df8aecb7269ded86e3f6ce422f0b45",
+    "speed_mps": 0.5
+  },
+  "result": "PREFLIGHT_PASS",
+  "version": "pilotnet_v4_repeatability_v1"
+}

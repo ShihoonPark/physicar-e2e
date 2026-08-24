@@ -38,6 +38,7 @@ physicar-pilotnet-run-v3-dagger = "physicar_e2e.pilotnet_dagger_inference:main"
 physicar-pilotnet-dagger-iteration2-v1 = "physicar_e2e.pilotnet_dagger_iteration2:main"
 physicar-pilotnet-train-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_training:main"
 physicar-pilotnet-run-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_inference:main"
+physicar-pilotnet-v4-repeatability-v1 = "physicar_e2e.pilotnet_v4_repeatability:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

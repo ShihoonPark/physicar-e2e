@@ -1,0 +1,15 @@
+{
+  "version": "pilotnet_v4_repeatability_v1",
+  "result": "FAIL",
+  "neural_policy_drove": false,
+  "classification": "ORCHESTRATION_PREFLIGHT_ORDER_ERROR",
+  "failure": {
+    "type": "RuntimeError",
+    "message": "vehicle is 5.649m from route spawn; limit is 0.500m"
+  },
+  "root_cause": "The validation preflight checked spawn before invoking the existing safe-stop/reset lifecycle.",
+  "corrective_change": "Use the existing wait_after_reset lifecycle before static environment and clock-health validation; no model, configuration, parameter, watchdog, or simulator change.",
+  "identity_gate_passed": true,
+  "external_environment_verifier_passed": true,
+  "safe_stop_success": true
+}

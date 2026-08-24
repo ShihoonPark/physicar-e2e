@@ -291,6 +291,7 @@ def run_smoke(
     final_distance = math.dist((final_pose["x"], final_pose["y"]), route.points[0])
     saturation_fraction = saturation_count / len(steerings) if steerings else 0.0
     deltas = [abs(steerings[i] - steerings[i - 1]) for i in range(1, len(steerings))]
+    target_period_s = 1.0 / safety.control_frequency_hz
     return {
         "result": result, "failure": failure,
         "failure_category": classify_failure(failure, steerings, saturation_fraction),
@@ -311,6 +312,7 @@ def run_smoke(
         "onnx_inference_latency": _summary_ms(inference_latencies),
         "control_loop_period": _summary_ms(periods),
         "control_loop_frequency_hz": 1.0 / statistics.fmean(periods) if periods else 0.0,
+        "timing_slips": sum(period > 1.5 * target_period_s for period in periods),
         "control_iterations": len(steerings), "api_failures": api_failures,
         "liveness_failures": liveness_failures, "safe_stop_success": not stop_errors,
         "safe_stop_errors": stop_errors, "neural_observation_fields": list(model.observation_fields),
