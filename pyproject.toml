@@ -35,6 +35,9 @@ physicar-pilotnet-failure-diagnosis-v1 = "physicar_e2e.pilotnet_failure_diagnosi
 physicar-pilotnet-dagger-v1 = "physicar_e2e.pilotnet_dagger:main"
 physicar-pilotnet-train-v3-dagger = "physicar_e2e.pilotnet_dagger_training:main"
 physicar-pilotnet-run-v3-dagger = "physicar_e2e.pilotnet_dagger_inference:main"
+physicar-pilotnet-dagger-iteration2-v1 = "physicar_e2e.pilotnet_dagger_iteration2:main"
+physicar-pilotnet-train-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_training:main"
+physicar-pilotnet-run-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_inference:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

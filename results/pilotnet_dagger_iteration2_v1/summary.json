@@ -1,0 +1,56 @@
+{
+  "version": "pilotnet_dagger_iteration2_v1",
+  "result": "PASS",
+  "assignment_frozen_before_v4_training": {
+    "dagger_iter2_rollout_A": "training",
+    "dagger_iter2_rollout_B": "holdout"
+  },
+  "rollouts": {
+    "A": {
+      "result": "FAIL_EXPECTED_OFFTRACK",
+      "progress_m": 19.81780505381872,
+      "completion_fraction": 0.6496658897958959,
+      "failure_time_s": 40.68879474499772,
+      "max_cte_m": 0.6251215790180337,
+      "safe_stop_success": true,
+      "raw_size_bytes": 319432257,
+      "raw_mcap_sha256": "9a7792a91ad12875fdce8f909c4be9753133bc6eb5eef7379cf7fdce63d5f77e",
+      "divergence_time_s": 39.40008542400028,
+      "selected_samples": 49,
+      "selected_progress_m": [18.83523744714981, 19.937856552068567],
+      "label_age_ms": {"mean": 48.265306122448976, "median": 50.0, "p95": 95.0, "max": 95.0},
+      "future_label_violations": 0
+    },
+    "B": {
+      "result": "FAIL_EXPECTED_OFFTRACK",
+      "progress_m": 19.817790053818808,
+      "completion_fraction": 0.649665398066955,
+      "failure_time_s": 40.69330860000264,
+      "max_cte_m": 0.6427718320220637,
+      "safe_stop_success": true,
+      "raw_size_bytes": 319951391,
+      "raw_mcap_sha256": "498b4ef7cbad59deb7174061ffe6745a5032d5380720d812210e490d63a00b5d",
+      "divergence_time_s": 39.40006595700106,
+      "selected_samples": 49,
+      "selected_progress_m": [18.83979962025014, 19.968321490142543],
+      "label_age_ms": {"mean": 49.38775510204081, "median": 50.0, "p95": 95.0, "max": 100.0},
+      "future_label_violations": 0
+    }
+  },
+  "quality_gates": {
+    "later_distribution_reproduced_by_A": true,
+    "minimum_progress_m": 10.0,
+    "minimum_samples": 20,
+    "a_b_source_hashes_distinct": true,
+    "holdout_leakage": false,
+    "contact_sheets": "PASS: later curved-route off-nominal states, intact ROI, no cones or reset/teleport frames"
+  },
+  "storage": {
+    "raw_total_bytes": 639383648,
+    "raw_mean_bytes": 319691824,
+    "extracted_total_bytes": 2143405,
+    "v4_artifacts_total_bytes": 2152107,
+    "estimated_50_nominal_bags_bytes_from_three_pilot_mean": 23026099417,
+    "iteration2_raw_fraction_of_estimated_50_nominal": 0.027767787
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "accepted_samples": 49,
+  "below_10m_rejections": 0,
+  "expert_label_age_ms": {
+    "count": 49,
+    "max": 95.0,
+    "mean": 48.265306122448976,
+    "median": 50.0,
+    "p95": 95.0
+  },
+  "future_label_violations": 0,
+  "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/extracted/manifests/dagger_iter2_rollout_A.csv",
+  "objective_window_raw_frames_before_progress_gate": 49,
+  "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/extracted/previews/dagger_iter2_rollout_A.png",
+  "raw_camera_frames": 615,
+  "result": "PASS",
+  "role": "training",
+  "rollout_id": "dagger_iter2_rollout_A",
+  "selected_progress_range_m": [
+    18.83523744714981,
+    19.937856552068567
+  ],
+  "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/dagger_iter2_rollout_A/raw/dagger_iter2_rollout_A/bag",
+  "source_mcap_sha256": "9a7792a91ad12875fdce8f909c4be9753133bc6eb5eef7379cf7fdce63d5f77e",
+  "source_raw_size_bytes": 319432257,
+  "source_result_sha256": "7f51cb3388ac3787fb72e5a30717ec57547021d2336d4bdb2304e9967d90d473",
+  "stale_label_rejections": 0,
+  "telemetry_sha256": "5edcdd8eefe6e9794b3e5a38c8fc46ca3025bda0193b463c379e5f671cbf4ef6",
+  "version": "pilotnet_dagger_iteration2_v1",
+  "window": {
+    "divergence_sim_time_ns": 22459585000000,
+    "end_sim_time_ns": 22460805000000,
+    "minimum_route_progress_m": 10.0,
+    "rule": "continuous from 2.0 s before objective V3 divergence through final valid pre-safe-stop frame, then require route progress >=10 m",
+    "start_sim_time_ns": 22457585000000
+  },
+  "window_counts": {
+    "divergence": 15,
+    "late_failure": 4,
+    "pre_divergence": 30
+  }
+}

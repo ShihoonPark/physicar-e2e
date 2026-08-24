@@ -1,0 +1,182 @@
+{
+  "bag": {
+    "duration_s": 40.958913429,
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/dagger_iter2_rollout_B/raw/dagger_iter2_rollout_B/bag",
+    "size_bytes": 319951391,
+    "topic_counts": {
+      "/camera/image_raw": 616,
+      "/clock": 8134
+    }
+  },
+  "collection_run_count": 1,
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "live": {
+    "api_failures": 0,
+    "camera_latency": {
+      "count": 611,
+      "max_ms": 6.304459999228129,
+      "mean_ms": 2.399649692240797,
+      "median_ms": 2.3213990025396924,
+      "p95_ms": 3.7538319993473124
+    },
+    "control_frequency_hz": 14.999995873895328,
+    "control_iterations": 611,
+    "control_period": {
+      "count": 610,
+      "max_ms": 69.69139300053939,
+      "mean_ms": 66.6666850049147,
+      "median_ms": 66.6667920013424,
+      "p95_ms": 66.68883199927222
+    },
+    "elapsed_s": 40.69330860000264,
+    "failure": "sustained off-track: boundary distance 0.293m",
+    "final_distance_to_start_m": 6.966107576417766,
+    "inference_latency": {
+      "count": 611,
+      "max_ms": 5.132545000378741,
+      "mean_ms": 1.400033767499594,
+      "median_ms": 0.6631619980907999,
+      "p95_ms": 4.108992501642206
+    },
+    "liveness_failures": 0,
+    "max_abs_steering_rad": 0.349066,
+    "max_cte_m": 0.6427718320220637,
+    "mean_abs_command_delta_rad": 0.007583989553851892,
+    "mean_abs_steering_rad": 0.07756663877109096,
+    "mean_cte_m": 0.0261896657836974,
+    "neural_observation_fields": [
+      "HTTP camera JPEG"
+    ],
+    "off_track_events": 1,
+    "off_track_total_duration_s": 0.5360142159988754,
+    "policy_controlling_vehicle": "PilotNet V3 only",
+    "preprocessing_latency": {
+      "count": 611,
+      "max_ms": 4.722407000372186,
+      "mean_ms": 1.716721078658691,
+      "median_ms": 1.7056949982361402,
+      "p95_ms": 2.2586659997614333
+    },
+    "privileged_fields_outside_model": [
+      "GT pose",
+      "route",
+      "CTE",
+      "sim clock",
+      "track boundaries"
+    ],
+    "result": "FAIL",
+    "route_completion_fraction": 0.649665398066955,
+    "route_length_m": 30.50461070080936,
+    "route_progress_m": 19.817790053818808,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "shadow_expert_control_authority": false,
+    "steering_saturation_fraction": 0.02127659574468085
+  },
+  "objective_divergence": {
+    "critical_pre_onset_indices": [
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590
+    ],
+    "divergence_index": 591,
+    "divergence_time_s": 39.40006595700106,
+    "final_excursion_indices": [
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610
+    ],
+    "initial_persistence_slope_m_per_s": 0.5045139708799878,
+    "method": "start of final continuous above-threshold CTE excursion that persists to failure and begins with positive slope",
+    "stable_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "threshold_crossing_reproduced": true,
+    "threshold_m": 0.03
+  },
+  "preflight": {
+    "cones": 0,
+    "result": "PASS",
+    "route_points": 388,
+    "topics": {
+      "/camera/image_raw": "sensor_msgs/msg/Image",
+      "/clock": "rosgraph_msgs/msg/Clock"
+    },
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "recorder_stop": {
+    "detail": null,
+    "graceful": true,
+    "orphaned": false
+  },
+  "reproduction_gate": {
+    "reason": "holdout progress is reported but does not define the training reproduction gate",
+    "result": "NOT_APPLICABLE"
+  },
+  "result": "PASS",
+  "role": "holdout",
+  "rollout_id": "dagger_iter2_rollout_B",
+  "telemetry": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/dagger_iter2_rollout_B/telemetry.json",
+  "v3_checkpoint_sha256": "ce83cb438aa1671e01ccd09e7200765fa46a73d50299d6a8449106eab0ef8ab2",
+  "v3_onnx_sha256": "a7ca714989d9c47df590df38a9d590650458bd402654ae69c2014739ba4cdccb",
+  "version": "pilotnet_dagger_iteration2_v1"
+}

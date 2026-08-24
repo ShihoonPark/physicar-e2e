@@ -1,0 +1,34 @@
+{
+  "version": "pilotnet_v1_v2_v3_v4_comparison",
+  "data": {
+    "v1": "1754 nominal training samples",
+    "v2": "1754 nominal + 349 fixed-anchor recovery samples",
+    "v3": "1754 nominal + 46 Iteration-1 on-policy samples",
+    "v4": "1754 nominal + 46 Iteration-1 + 49 Iteration-2 on-policy samples"
+  },
+  "nominal_episode_003": {
+    "v1": {"mae_rad": 0.004819397986644191, "rmse_rad": 0.0073321053560958084, "bias_rad": 0.0011234611336027709, "max_error_rad": 0.03434744477272034},
+    "v2": {"mae_rad": 0.004575813113397073, "rmse_rad": 0.006622101044273811, "bias_rad": -0.0008578863745513055, "max_error_rad": 0.032311081886291504},
+    "v3": {"mae_rad": 0.0044082728869422865, "rmse_rad": 0.006967083660582939, "bias_rad": -0.0018602231374657454, "max_error_rad": 0.034150898456573486},
+    "v4": {"mae_rad": 0.005698252768491757, "rmse_rad": 0.007619355453208634, "bias_rad": -0.000824856940521631, "max_error_rad": 0.038007969968020916}
+  },
+  "iteration2_on_policy_holdout_B": {
+    "v1": {"mae_rad": 0.16852513426434895, "rmse_rad": 0.23281925723777908, "bias_rad": 0.16542661896483896, "max_error_rad": 0.43296439945697784, "corrective_magnitude_ratio": 0.38061728108958387},
+    "v3": {"mae_rad": 0.27772728914432987, "rmse_rad": 0.38917770682216274, "bias_rad": 0.2729334783531269, "max_error_rad": 0.6332374513149261, "corrective_magnitude_ratio": 0.8260521805234851},
+    "v4": {"mae_rad": 0.02338843962785845, "rmse_rad": 0.03480036541986099, "bias_rad": 0.016978728651468242, "max_error_rad": 0.10636435449123383, "corrective_magnitude_ratio": 0.9203649870513607},
+    "v4_windows": {
+      "pre_divergence": {"mae_rad": 0.01419440289027989, "corrective_magnitude_ratio": 0.9666525759700956},
+      "divergence": {"mae_rad": 0.03816056549549103, "corrective_magnitude_ratio": 0.8871878006969246},
+      "late_failure": {"mae_rad": 0.03694824315607548, "corrective_magnitude_ratio": 0.7474042403681405}
+    }
+  },
+  "closed_loop_0_50_mps": {
+    "v1": {"result": "FAIL", "progress_m": 2.9529817702818324, "completion_fraction": 0.0968044404580283},
+    "v2": {"result": "FAIL", "progress_m": 2.590891723850847, "completion_fraction": 0.08493443005263805},
+    "v3": {"result": "FAIL", "progress_m": 19.818846053812432, "completion_fraction": 0.6497000157843874},
+    "v4_run_1": {"result": "PASS", "progress_m": 30.208005007117166, "completion_fraction": 0.9902766930349869, "elapsed_s": 59.038423037996836, "mean_cte_m": 0.018889885436530588, "max_cte_m": 0.10985799999999912},
+    "v4_run_2": {"result": "FAIL_LIVENESS", "progress_m": 21.328036504514742, "completion_fraction": 0.6991741908690826, "elapsed_s": 43.01822318199993, "mean_cte_m": 0.016073004567506086, "max_cte_m": 0.10802099999999903, "off_track_events": 0, "liveness_failures": 1},
+    "v4_run_3": "NOT_EXECUTED_AFTER_RUN_2_FAILURE"
+  },
+  "conclusion": "DAgger Iteration 2 viability passed with one full 0.50 m/s lap. Three-lap repeatability is not established because conditional run 2 hit simulator-clock liveness failure; this is not evidence of a V4 off-track policy failure."
+}

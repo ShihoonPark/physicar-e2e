@@ -434,7 +434,9 @@ def _latency(values: Sequence[float]) -> dict[str, Any]:
             "p95_ms": float(np.percentile(scaled, 95)), "max_ms": float(np.max(scaled))}
 
 
-def run_live_loop(client, model, config: dict[str, Any], initial, frame_root: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+def run_live_loop(
+    client, model, config: dict[str, Any], initial, frame_root: Path, *, policy_name: str = "PilotNet V1",
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     route = initial.route
     safety = _driver_config(config)
     tracker = ProgressTracker(route.length, safety.maximum_progress_jump_m)
@@ -547,7 +549,7 @@ def run_live_loop(client, model, config: dict[str, Any], initial, frame_root: Pa
         "control_frequency_hz": 1.0 / statistics.fmean(periods) if periods else 0.0,
         "control_iterations": len(telemetry), "api_failures": api_failures, "liveness_failures": liveness_failures,
         "safe_stop_success": not stop_errors, "safe_stop_errors": stop_errors,
-        "policy_controlling_vehicle": "PilotNet V1 only", "shadow_expert_control_authority": False,
+        "policy_controlling_vehicle": f"{policy_name} only", "shadow_expert_control_authority": False,
         "neural_observation_fields": ["HTTP camera JPEG"],
         "privileged_fields_outside_model": ["GT pose", "route", "CTE", "sim clock", "track boundaries"],
     }, telemetry
