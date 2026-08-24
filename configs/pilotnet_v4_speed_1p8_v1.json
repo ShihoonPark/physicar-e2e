@@ -1,0 +1,10 @@
+{
+  "version": "pilotnet_v4_speed_1p8_v1",
+  "canonical_config": "configs/pilotnet_inference_v4_dagger.json",
+  "fixed_speed_mps": 1.8,
+  "target_valid_policy_runs": 3,
+  "maximum_live_attempts": 5,
+  "initial_infrastructure_retry_limit": 1,
+  "automatic_policy_retry": false,
+  "result_directory": "results/pilotnet_v4_speed_1p8_v1"
+}

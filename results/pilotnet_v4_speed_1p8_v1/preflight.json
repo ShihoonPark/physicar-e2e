@@ -1,0 +1,103 @@
+{
+  "attempts": [],
+  "canonical_config": {
+    "path": "/home/a/physicar-e2e/configs/pilotnet_inference_v4_dagger.json",
+    "sha256": "5689447968dea75eed7771cd3751304da2df8aecb7269ded86e3f6ce422f0b45",
+    "unchanged": true
+  },
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-24T06:21:43.901964+00:00",
+  "model_identity": {
+    "parameter_count": 252219,
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_dagger_iteration2_v1/v4/onnx/pilotnet_v4_dagger.onnx",
+    "result": "PASS",
+    "sha256": "5dd2b88b50c43aed44361229dea34e8981cb0a34d05b01eef81a9ccdf63f396a",
+    "size_bytes": 1012518
+  },
+  "preflight": {
+    "camera": {
+      "camera_acquisition_ms": 3.191710995452013,
+      "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+      "model_input_shape": [
+        3,
+        66,
+        200
+      ],
+      "preprocessing_ms": 2.2452569974120706,
+      "result": "PASS",
+      "source_dimensions": [
+        480,
+        360
+      ],
+      "transport": "HTTP JPEG"
+    },
+    "clock_health": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.10579869299544953,
+      "observed_real_time_factor": 0.9642204708043942,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 40,
+      "sim_delta_s": {
+        "max": 0.10500000000320142,
+        "mean": 0.050512820512850366,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 1.9700000000011642,
+      "wall_elapsed_s": 2.0431011990003753,
+      "wall_interval_s": {
+        "max": 0.053209712998068426,
+        "mean": 0.05238721023077886,
+        "min": 0.051356980999116786
+      }
+    },
+    "control_api": "PASS",
+    "control_frequency_hz": 15.0,
+    "environment": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "bounds_height_m": 7.0,
+      "bounds_width_m": 12.0,
+      "cone_count": 0,
+      "pose": {
+        "q": [
+          -0.0,
+          -0.0,
+          -0.707065,
+          0.707148
+        ],
+        "x": 1.400001,
+        "y": 3.394457,
+        "yaw": -1.570679,
+        "z": -0.00115
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+    },
+    "max_steering_rad": 0.349066,
+    "result": "PASS",
+    "speed_mps": 1.8
+  },
+  "protocol": {
+    "automatic_policy_retry": false,
+    "baseline_interval_distance_ratio": 3.6,
+    "control_frequency_hz": 15.0,
+    "distance_per_control_interval_m": 0.12000000000000001,
+    "maximum_live_attempts": 5,
+    "speed_mps": 1.8,
+    "target_valid_runs": 3
+  },
+  "result": "PREFLIGHT_PASS",
+  "source_environment": "PASS: canonical inputs valid (six expected cones present)\nPASS: derived world valid (world name correct; cone count 0)\nPASS: derived route byte-identical (SHA-256)\nPASS: derived model metadata matches canonical directory\nPASS: canonical asset integrity unchanged during verification",
+  "version": "pilotnet_v4_speed_1p8_v1"
+}
