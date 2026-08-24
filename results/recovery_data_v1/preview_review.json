@@ -1,0 +1,12 @@
+{
+  "version": "recovery_data_v1_preview_review",
+  "result": "PASS",
+  "contact_sheets_reviewed": 12,
+  "off_center_observations_present": true,
+  "corrective_transitions_visible": true,
+  "road_and_lane_geometry_intact": true,
+  "roi_corruption_observed": false,
+  "cones_observed": false,
+  "reset_or_teleport_frames_observed": false,
+  "notes": "All 12 generated contact sheets were inspected. Curvature-far sequences visibly begin with substantial road-edge/grass displacement and converge toward the lane; no ROI or scene corruption was observed."
+}

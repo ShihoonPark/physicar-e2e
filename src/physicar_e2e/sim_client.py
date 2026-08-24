@@ -88,6 +88,19 @@ class SimClient:
     def reset(self) -> dict[str, Any]:
         return self._request("/sim/api/reset", method="POST")
 
+    def set_pose(self, x: float, y: float, yaw: float) -> dict[str, Any]:
+        """Teleport to an exact world pose through the simulator's confirmed pose API."""
+        values = (float(x), float(y), float(yaw))
+        if not all(math.isfinite(value) for value in values):
+            raise SimClientError("refusing non-finite pose command")
+        response = self._request(
+            "/sim/api/pose", method="POST",
+            body={"x": values[0], "y": values[1], "yaw": values[2]},
+        )
+        if response.get("ok") is not True or response.get("applied") is not True:
+            raise SimClientError(f"pose command was not confirmed: {response}")
+        return response
+
     def command_steering(self, value: float) -> dict[str, Any]:
         return self._control("/steering", value)
 

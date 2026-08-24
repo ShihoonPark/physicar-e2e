@@ -1,0 +1,27 @@
+{
+  "version": "pilotnet_recovery_v1_v2_comparison",
+  "result": "HYPOTHESIS_NOT_SUPPORTED",
+  "data": {
+    "v1_nominal_total_samples": 2632,
+    "v2_nominal_training_samples": 1754,
+    "v2_recovery_training_samples": 349,
+    "v2_combined_training_samples": 2103,
+    "recovery_holdout_samples": 222,
+    "recovery_total_samples": 571
+  },
+  "offline_nominal": {
+    "v1": {"mae_rad": 0.004819397986644191, "rmse_rad": 0.0073321053560958084, "bias_rad": 0.0011234611336027709},
+    "v2": {"mae_rad": 0.004575813113397073, "rmse_rad": 0.006622101044273811, "bias_rad": -0.0008578863745513055}
+  },
+  "offline_recovery_holdout": {
+    "v1": {"mae_rad": 0.10068331074823315, "rmse_rad": 0.18644152205059542, "bias_rad": 0.09183938176998331},
+    "v2": {"mae_rad": 0.11306459071416972, "rmse_rad": 0.20280107089155266, "bias_rad": 0.10393978734475798}
+  },
+  "closed_loop_0_50_mps": {
+    "v1": {"result": "FAIL", "progress_m": 2.9529817702818324, "route_completion_fraction": 0.0968044404580283, "max_cte_m": 0.5772488592570291},
+    "v2": {"result": "FAIL", "progress_m": 2.590891723850847, "route_completion_fraction": 0.08493443005263805, "max_cte_m": 0.6085865558628248},
+    "v2_lap_2": "NOT_EXECUTED_AFTER_LAP_1_FAILURE",
+    "v2_lap_3": "NOT_EXECUTED_AFTER_LAP_1_FAILURE"
+  },
+  "interpretation": "The fixed 12-episode recovery intervention did not improve held-out recovery imitation or the same-map 0.50 m/s closed-loop failure. V2 failed slightly earlier in the same initial route region."
+}

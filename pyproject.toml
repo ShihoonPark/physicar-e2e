@@ -28,6 +28,9 @@ physicar-rosbag-collector-v1 = "physicar_e2e.rosbag_collector:main"
 physicar-dataset-extractor-v1 = "physicar_e2e.dataset_extractor:main"
 physicar-pilotnet-train-v1 = "physicar_e2e.pilotnet_training:main"
 physicar-pilotnet-inference-v1 = "physicar_e2e.pilotnet_inference:main"
+physicar-recovery-data-v1 = "physicar_e2e.recovery_data:main"
+physicar-pilotnet-train-v2-recovery = "physicar_e2e.pilotnet_recovery_training:main"
+physicar-pilotnet-run-v2-recovery = "physicar_e2e.pilotnet_recovery_inference:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

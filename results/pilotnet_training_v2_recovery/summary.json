@@ -1,0 +1,241 @@
+{
+  "architecture": {
+    "identical_to_v1": true,
+    "parameter_count": 252219
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_recovery_v1/v2/checkpoints/pilotnet_v2_recovery_best.pt",
+      "sha256": "758195fee2d9967db0423ec2a9fa42a9c09f487ea90f137ba2faca1f378eab0d",
+      "size_bytes": 1017373
+    },
+    "onnx": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_recovery_v1/v2/onnx/pilotnet_v2_recovery.onnx",
+      "sha256": "f3e3261235ffd46be4f02d75c854533e4a2170966536b23113d3e951fa532980",
+      "size_bytes": 1012518
+    },
+    "v1_checkpoint_sha256": "e6962b3bdb85a5c765c3e0988b1abe21e4b73c93a4390869259ed415dda3e3e2"
+  },
+  "dataset": {
+    "anchor_leakage": false,
+    "combined_training_samples": 2103,
+    "nominal": {
+      "dataset_metadata_sha256": "a94f44558c53075ec66c62809cde0cb6b6931d5ba7d6bda21996b97f43536609",
+      "episode_level_separation": true,
+      "missing_images": 0,
+      "non_finite_labels": 0,
+      "result": "PASS",
+      "train_episodes": [
+        "episode_001",
+        "episode_002"
+      ],
+      "training_samples": 1754,
+      "validation_episodes": [
+        "episode_003"
+      ],
+      "validation_samples": 878
+    },
+    "nominal_training_samples": 1754,
+    "nominal_validation_samples": 878,
+    "recovery_holdout_episodes": [
+      "recovery_curvature_far_lat_m10",
+      "recovery_curvature_far_lat_p10",
+      "recovery_curvature_far_yaw_m06",
+      "recovery_curvature_far_yaw_p06"
+    ],
+    "recovery_holdout_samples": 222,
+    "recovery_metadata_sha256": "e0c2a3db9605050e0cbf9cd78b1458a90ecc1688001fd1e2b1e530050a033ca7",
+    "recovery_training_episodes": [
+      "recovery_curvature_near_lat_m10",
+      "recovery_curvature_near_lat_p10",
+      "recovery_curvature_near_yaw_m06",
+      "recovery_curvature_near_yaw_p06",
+      "recovery_failure_lat_m10",
+      "recovery_failure_lat_p10",
+      "recovery_failure_yaw_m06",
+      "recovery_failure_yaw_p06"
+    ],
+    "recovery_training_samples": 349
+  },
+  "environment": {
+    "cuda_available": true,
+    "device": "cuda",
+    "torch": "2.13.0+cu130"
+  },
+  "gate_reached": "onnx_equivalence",
+  "generated_utc": "2026-08-24T02:13:42.754545+00:00",
+  "onnx_equivalence": {
+    "max_absolute_difference_normalized": 2.5331974029541016e-07,
+    "max_absolute_difference_rad": 8.842530846595763e-08,
+    "mean_absolute_difference_normalized": 6.5410858951509e-08,
+    "mean_absolute_difference_rad": 2.2832706890767438e-08,
+    "result": "PASS",
+    "samples": 128
+  },
+  "plots": [
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_recovery_v1/v2/plots/loss_curve.png",
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_recovery_v1/v2/plots/validation_trace.png",
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_recovery_v1/v2/plots/validation_scatter.png"
+  ],
+  "result": "PASS",
+  "training": {
+    "best_epoch": 19,
+    "early_stopped": true,
+    "epochs_completed": 26,
+    "initialized_from_scratch": true,
+    "result": "PASS",
+    "train_normalized_mse_at_best": 0.0006149455823475443,
+    "v1_checkpoint_loaded_for_training": false,
+    "validation_normalized_mse_at_best": 0.0003598955680856456
+  },
+  "training_config_sha256": "2fa47380a0d658e6e25d148df8362d8a644ac8dcb2ecbb8dc94b65929e44de18",
+  "validation": {
+    "nominal_v1": {
+      "groups": {
+        "near_zero": {
+          "bias_mean_signed_error_rad": -9.799215412495056e-06,
+          "mae_rad": 0.0022530288338603313,
+          "max_absolute_error_rad": 0.018678349093534052,
+          "rmse_rad": 0.003699994330668588,
+          "sample_count": 356
+        },
+        "negative": {
+          "bias_mean_signed_error_rad": 0.0022630009231992413,
+          "mae_rad": 0.005581374625781541,
+          "max_absolute_error_rad": 0.034004613757133484,
+          "rmse_rad": 0.008874087223455934,
+          "sample_count": 193
+        },
+        "positive": {
+          "bias_mean_signed_error_rad": 0.0016812407836250078,
+          "mae_rad": 0.007149385606819101,
+          "max_absolute_error_rad": 0.03434744477272034,
+          "rmse_rad": 0.009080660707714185,
+          "sample_count": 329
+        }
+      },
+      "overall": {
+        "bias_mean_signed_error_rad": 0.0011234611336027709,
+        "mae_rad": 0.004819397986644191,
+        "max_absolute_error_rad": 0.03434744477272034,
+        "normalized_mae": 0.013806552304275384,
+        "rmse_rad": 0.0073321053560958084,
+        "sample_count": 878
+      },
+      "result": "PASS"
+    },
+    "nominal_v2": {
+      "groups": {
+        "near_zero": {
+          "bias_mean_signed_error_rad": -0.0014127842358941857,
+          "mae_rad": 0.002781488269717434,
+          "max_absolute_error_rad": 0.01972974743694067,
+          "rmse_rad": 0.0036409395610433105,
+          "sample_count": 356
+        },
+        "negative": {
+          "bias_mean_signed_error_rad": -0.0010487299528301071,
+          "mae_rad": 0.005356165315048682,
+          "max_absolute_error_rad": 0.030070602893829346,
+          "rmse_rad": 0.007658769954947798,
+          "sample_count": 193
+        },
+        "positive": {
+          "bias_mean_signed_error_rad": -0.00014549595131156654,
+          "mae_rad": 0.0060596175797532755,
+          "max_absolute_error_rad": 0.032311081886291504,
+          "rmse_rad": 0.008262818912153252,
+          "sample_count": 329
+        }
+      },
+      "overall": {
+        "bias_mean_signed_error_rad": -0.0008578863745513055,
+        "mae_rad": 0.004575813113397073,
+        "max_absolute_error_rad": 0.032311081886291504,
+        "normalized_mae": 0.01310873334382917,
+        "rmse_rad": 0.006622101044273811,
+        "sample_count": 878
+      },
+      "result": "PASS"
+    },
+    "recovery_holdout_v1": {
+      "by_perturbation_type": {
+        "heading_negative": {
+          "bias_mean_signed_error_rad": 0.0710242351663604,
+          "mae_rad": 0.0733158071575574,
+          "max_absolute_error_rad": 0.431267149746418,
+          "rmse_rad": 0.1565052599952536,
+          "sample_count": 58
+        },
+        "heading_positive": {
+          "bias_mean_signed_error_rad": 0.11591416540366756,
+          "mae_rad": 0.13010380739666838,
+          "max_absolute_error_rad": 0.41348491609096527,
+          "rmse_rad": 0.21283090086001794,
+          "sample_count": 53
+        },
+        "lateral_negative": {
+          "bias_mean_signed_error_rad": 0.08696168989095335,
+          "mae_rad": 0.09670319879436508,
+          "max_absolute_error_rad": 0.43437596410512924,
+          "rmse_rad": 0.18370285835082156,
+          "sample_count": 52
+        },
+        "lateral_positive": {
+          "bias_mean_signed_error_rad": 0.09497421139938031,
+          "mae_rad": 0.10466627189218682,
+          "max_absolute_error_rad": 0.41862503439188004,
+          "rmse_rad": 0.19047669276688886,
+          "sample_count": 59
+        }
+      },
+      "overall": {
+        "bias_mean_signed_error_rad": 0.09183938176998331,
+        "mae_rad": 0.10068331074823315,
+        "max_absolute_error_rad": 0.43437596410512924,
+        "rmse_rad": 0.18644152205059542,
+        "sample_count": 222
+      }
+    },
+    "recovery_holdout_v2": {
+      "by_perturbation_type": {
+        "heading_negative": {
+          "bias_mean_signed_error_rad": 0.08092113207736663,
+          "mae_rad": 0.08547929612566428,
+          "max_absolute_error_rad": 0.4573327824473381,
+          "rmse_rad": 0.17428718756105824,
+          "sample_count": 58
+        },
+        "heading_positive": {
+          "bias_mean_signed_error_rad": 0.1297092969078496,
+          "mae_rad": 0.14299624679881404,
+          "max_absolute_error_rad": 0.4501725360751152,
+          "rmse_rad": 0.22825130989658107,
+          "sample_count": 53
+        },
+        "lateral_negative": {
+          "bias_mean_signed_error_rad": 0.1000793773055193,
+          "mae_rad": 0.1090670058021295,
+          "max_absolute_error_rad": 0.4642472192645073,
+          "rmse_rad": 0.1999636939025765,
+          "sample_count": 52
+        },
+        "lateral_positive": {
+          "bias_mean_signed_error_rad": 0.10682180972959278,
+          "mae_rad": 0.11681787425778427,
+          "max_absolute_error_rad": 0.4580553099513054,
+          "rmse_rad": 0.20700420133195946,
+          "sample_count": 59
+        }
+      },
+      "overall": {
+        "bias_mean_signed_error_rad": 0.10393978734475798,
+        "mae_rad": 0.11306459071416972,
+        "max_absolute_error_rad": 0.4642472192645073,
+        "rmse_rad": 0.20280107089155266,
+        "sample_count": 222
+      }
+    }
+  },
+  "version": "pilotnet_training_v2_recovery"
+}

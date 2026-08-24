@@ -1,0 +1,110 @@
+{
+  "all_bags_finalized": true,
+  "all_safe_stops": true,
+  "completed_episode_count": 12,
+  "episodes": [
+    {
+      "bag_size_bytes": 23052718,
+      "episode_id": "recovery_failure_lat_p10",
+      "recovery_progress_m": 1.3100936407517008,
+      "recovery_time_s": 2.677696579001349,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 23050217,
+      "episode_id": "recovery_failure_lat_m10",
+      "recovery_progress_m": 1.3026580882586174,
+      "recovery_time_s": 2.6784300430008443,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 18343021,
+      "episode_id": "recovery_failure_yaw_p06",
+      "recovery_progress_m": 1.0080411698941365,
+      "recovery_time_s": 2.077687536999292,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 18342903,
+      "episode_id": "recovery_failure_yaw_m06",
+      "recovery_progress_m": 1.0055956019410512,
+      "recovery_time_s": 2.0760106640009326,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 29328551,
+      "episode_id": "recovery_curvature_near_lat_p10",
+      "recovery_progress_m": 1.86444771545343,
+      "recovery_time_s": 3.4820277389990224,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 28277492,
+      "episode_id": "recovery_curvature_near_lat_m10",
+      "recovery_progress_m": 1.573074381639202,
+      "recovery_time_s": 3.280565619999834,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 29326514,
+      "episode_id": "recovery_curvature_near_yaw_p06",
+      "recovery_progress_m": 1.7132049765711876,
+      "recovery_time_s": 3.480837467999663,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 28803614,
+      "episode_id": "recovery_curvature_near_yaw_m06",
+      "recovery_progress_m": 1.6460110974320337,
+      "recovery_time_s": 3.3488827030014363,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 32987576,
+      "episode_id": "recovery_curvature_far_lat_p10",
+      "recovery_progress_m": 1.678662378745571,
+      "recovery_time_s": 3.9497207579988753,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 28803955,
+      "episode_id": "recovery_curvature_far_lat_m10",
+      "recovery_progress_m": 1.4988559135605293,
+      "recovery_time_s": 3.4141195730007894,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 29849813,
+      "episode_id": "recovery_curvature_far_yaw_p06",
+      "recovery_progress_m": 1.5248689217963367,
+      "recovery_time_s": 3.5471765640031663,
+      "result": "PASS"
+    },
+    {
+      "bag_size_bytes": 32462311,
+      "episode_id": "recovery_curvature_far_yaw_m06",
+      "recovery_progress_m": 1.7886341511313937,
+      "recovery_time_s": 3.812055111000518,
+      "result": "PASS"
+    }
+  ],
+  "failure_reason": null,
+  "final_safe_stop_errors": [],
+  "generated_utc": "2026-08-24T02:11:52.174568+00:00",
+  "mean_raw_bag_size_bytes": 26885723.75,
+  "passed_episode_count": 12,
+  "requested_episode_count": 12,
+  "result": "PASS",
+  "topic_types": {
+    "/camera/image_raw": "sensor_msgs/msg/Image",
+    "/clock": "rosgraph_msgs/msg/Clock",
+    "/cmd_vel": "geometry_msgs/msg/Twist",
+    "/odom": "nav_msgs/msg/Odometry",
+    "/speed": "std_msgs/msg/Float64",
+    "/steering": "std_msgs/msg/Float64",
+    "/tf": "tf2_msgs/msg/TFMessage",
+    "/tf_static": "tf2_msgs/msg/TFMessage"
+  },
+  "total_raw_bag_size_bytes": 322628685,
+  "version": "recovery_data_v1"
+}

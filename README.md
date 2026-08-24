@@ -58,6 +58,16 @@ After the offline gates pass, use `--preflight-only` before the explicitly
 authorized `--run-smokes` invocation. Smoke B at 0.50 m/s is automatically
 forbidden unless Smoke A at 0.30 m/s passes. See `docs/pilotnet_v1.md`.
 
+## PilotNet Recovery Data V1 / V2
+
+The recovery experiment preserves PilotNet V1 and tests a fixed set of twelve
+short, expert-driven perturbation recoveries at three route anchors. V2 keeps
+the V1 architecture and preprocessing unchanged and trains from scratch on the
+two nominal training episodes plus eight recovery episodes. Four episodes from
+the far curvature anchor remain held out. Raw bags, extracted images, and V2
+models stay in simulator userdata. See `docs/recovery_data_v1.md` for the exact
+gates and the recorded negative experimental outcome.
+
 ## Dataset Extractor V1
 
 The offline extractor converts the three existing pilot MCAP bags into

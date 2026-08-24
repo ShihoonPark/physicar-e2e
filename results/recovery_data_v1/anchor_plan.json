@@ -1,0 +1,186 @@
+{
+  "anchors": [
+    {
+      "curvature_per_m": 0.0,
+      "role": "failure",
+      "s_m": 2.95,
+      "x": 2.215738336587228,
+      "y": 1.247159145632203,
+      "yaw_rad": -0.00439402928251603
+    },
+    {
+      "curvature_per_m": 5.250634520258059,
+      "role": "curvature_near",
+      "s_m": 11.65,
+      "x": 10.894600146748505,
+      "y": 1.2384799427997435,
+      "yaw_rad": 1.158065353895602
+    },
+    {
+      "curvature_per_m": -5.324878292548791,
+      "role": "curvature_far",
+      "s_m": 19.75,
+      "x": 8.380102349773223,
+      "y": 3.821019028130669,
+      "yaw_rad": -1.8743855505733868
+    }
+  ],
+  "episodes": [
+    {
+      "anchor_role": "failure",
+      "anchor_s_m": 2.95,
+      "boundary_clearance_m": 0.2500017464981813,
+      "episode_id": "recovery_failure_lat_p10",
+      "heading_offset_deg": 0.0,
+      "lateral_offset_m": 0.1,
+      "perturbation_type": "lateral_positive",
+      "x": 2.2161777381015195,
+      "y": 1.3471581802590895,
+      "yaw_rad": -0.004394029282515977
+    },
+    {
+      "anchor_role": "failure",
+      "anchor_s_m": 2.95,
+      "boundary_clearance_m": 0.25000562610771787,
+      "episode_id": "recovery_failure_lat_m10",
+      "heading_offset_deg": 0.0,
+      "lateral_offset_m": -0.1,
+      "perturbation_type": "lateral_negative",
+      "x": 2.215298935072936,
+      "y": 1.1471601110053167,
+      "yaw_rad": -0.004394029282515977
+    },
+    {
+      "anchor_role": "failure",
+      "anchor_s_m": 2.95,
+      "boundary_clearance_m": 0.3500017464981745,
+      "episode_id": "recovery_failure_yaw_p06",
+      "heading_offset_deg": 6.0,
+      "lateral_offset_m": 0.0,
+      "perturbation_type": "heading_positive",
+      "x": 2.215738336587228,
+      "y": 1.247159145632203,
+      "yaw_rad": 0.10032572583714394
+    },
+    {
+      "anchor_role": "failure",
+      "anchor_s_m": 2.95,
+      "boundary_clearance_m": 0.3500017464981745,
+      "episode_id": "recovery_failure_yaw_m06",
+      "heading_offset_deg": -6.0,
+      "lateral_offset_m": 0.0,
+      "perturbation_type": "heading_negative",
+      "x": 2.215738336587228,
+      "y": 1.247159145632203,
+      "yaw_rad": -0.1091137844021759
+    },
+    {
+      "anchor_role": "curvature_near",
+      "anchor_s_m": 11.65,
+      "boundary_clearance_m": 0.40894135457007874,
+      "episode_id": "recovery_curvature_near_lat_p10",
+      "heading_offset_deg": 0.0,
+      "lateral_offset_m": 0.1,
+      "perturbation_type": "lateral_positive",
+      "x": 10.80299726546265,
+      "y": 1.2785911898525295,
+      "yaw_rad": 1.1580653538956023
+    },
+    {
+      "anchor_role": "curvature_near",
+      "anchor_s_m": 11.65,
+      "boundary_clearance_m": 0.2589839049337181,
+      "episode_id": "recovery_curvature_near_lat_m10",
+      "heading_offset_deg": 0.0,
+      "lateral_offset_m": -0.1,
+      "perturbation_type": "lateral_negative",
+      "x": 10.98620302803436,
+      "y": 1.1983686957469575,
+      "yaw_rad": 1.1580653538956023
+    },
+    {
+      "anchor_role": "curvature_near",
+      "anchor_s_m": 11.65,
+      "boundary_clearance_m": 0.3542386321107659,
+      "episode_id": "recovery_curvature_near_yaw_p06",
+      "heading_offset_deg": 6.0,
+      "lateral_offset_m": 0.0,
+      "perturbation_type": "heading_positive",
+      "x": 10.894600146748505,
+      "y": 1.2384799427997435,
+      "yaw_rad": 1.2627851090152618
+    },
+    {
+      "anchor_role": "curvature_near",
+      "anchor_s_m": 11.65,
+      "boundary_clearance_m": 0.3542386321107659,
+      "episode_id": "recovery_curvature_near_yaw_m06",
+      "heading_offset_deg": -6.0,
+      "lateral_offset_m": 0.0,
+      "perturbation_type": "heading_negative",
+      "x": 10.894600146748505,
+      "y": 1.2384799427997435,
+      "yaw_rad": 1.0533455987759428
+    },
+    {
+      "anchor_role": "curvature_far",
+      "anchor_s_m": 19.75,
+      "boundary_clearance_m": 0.2540414482366757,
+      "episode_id": "recovery_curvature_far_lat_p10",
+      "heading_offset_deg": 0.0,
+      "lateral_offset_m": 0.1,
+      "perturbation_type": "lateral_positive",
+      "x": 8.475529314741484,
+      "y": 3.791124306908583,
+      "yaw_rad": -1.8743855505733868
+    },
+    {
+      "anchor_role": "curvature_far",
+      "anchor_s_m": 19.75,
+      "boundary_clearance_m": 0.3919591186714818,
+      "episode_id": "recovery_curvature_far_lat_m10",
+      "heading_offset_deg": 0.0,
+      "lateral_offset_m": -0.1,
+      "perturbation_type": "lateral_negative",
+      "x": 8.284675384804961,
+      "y": 3.850913749352755,
+      "yaw_rad": -1.8743855505733868
+    },
+    {
+      "anchor_role": "curvature_far",
+      "anchor_s_m": 19.75,
+      "boundary_clearance_m": 0.3490488772000497,
+      "episode_id": "recovery_curvature_far_yaw_p06",
+      "heading_offset_deg": 6.0,
+      "lateral_offset_m": 0.0,
+      "perturbation_type": "heading_positive",
+      "x": 8.380102349773223,
+      "y": 3.821019028130669,
+      "yaw_rad": -1.7696657954537272
+    },
+    {
+      "anchor_role": "curvature_far",
+      "anchor_s_m": 19.75,
+      "boundary_clearance_m": 0.3490488772000497,
+      "episode_id": "recovery_curvature_far_yaw_m06",
+      "heading_offset_deg": -6.0,
+      "lateral_offset_m": 0.0,
+      "perturbation_type": "heading_negative",
+      "x": 8.380102349773223,
+      "y": 3.821019028130669,
+      "yaw_rad": -1.9791053056930465
+    }
+  ],
+  "generated_utc": "2026-08-24T02:08:52.264680+00:00",
+  "holdout_policy_frozen_before_training": "curvature_far; the additional anchor with greatest circular arc distance from failure",
+  "result": "PASS",
+  "route_length_m": 30.50461103699958,
+  "route_point_count": 388,
+  "route_source": "/home/a/physicar-ai-sim-docker/src/physicar-sim/share/routes/custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1.npy",
+  "sign_convention": {
+    "heading": "yaw_perturbed = route_yaw + delta_yaw; positive is counter-clockwise",
+    "lateral": "p_perturbed = p_route + d * left_normal; positive d is left",
+    "left_normal": "[-sin(route_yaw), cos(route_yaw)]"
+  },
+  "version": "recovery_data_v1_plan"
+}
