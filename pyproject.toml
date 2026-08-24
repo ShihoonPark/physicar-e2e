@@ -31,6 +31,7 @@ physicar-pilotnet-inference-v1 = "physicar_e2e.pilotnet_inference:main"
 physicar-recovery-data-v1 = "physicar_e2e.recovery_data:main"
 physicar-pilotnet-train-v2-recovery = "physicar_e2e.pilotnet_recovery_training:main"
 physicar-pilotnet-run-v2-recovery = "physicar_e2e.pilotnet_recovery_inference:main"
+physicar-pilotnet-failure-diagnosis-v1 = "physicar_e2e.pilotnet_failure_diagnosis:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

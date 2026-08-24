@@ -1,0 +1,516 @@
+{
+  "analysis": {
+    "divergence_detection": {
+      "critical_pre_onset_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "divergence_index": 60,
+      "divergence_time_s": 4.000068157998612,
+      "late_indices": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "method": "first persistent above-baseline CTE window with positive linear slope",
+      "stable_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "threshold_m": 0.03
+    },
+    "feature_distance": {
+      "correlation_with_abs_network_expert_error": 0.9265563170594958,
+      "correlation_with_cte": 0.7418442707145935,
+      "correlation_with_progress": 0.7964215503775407,
+      "metric": "cosine_distance_after_L2_normalization",
+      "no_pass_threshold_defined": true,
+      "windows": {
+        "divergence_onset": {
+          "count": 30,
+          "max": 0.008505582809448242,
+          "mean": 0.00055693785349528,
+          "median": 6.899237632751465e-05,
+          "p95": 0.0030626028776168717
+        },
+        "late_failure": {
+          "count": 16,
+          "max": 0.20887064933776855,
+          "mean": 0.18420958518981934,
+          "median": 0.1967652440071106,
+          "p95": 0.2079721987247467
+        },
+        "stable_initial": {
+          "count": 16,
+          "max": 3.826618194580078e-05,
+          "mean": 1.718848943710327e-05,
+          "median": 1.5109777450561523e-05,
+          "p95": 3.719329833984375e-05
+        }
+      }
+    },
+    "network_shadow_expert_temporal_shift": {
+      "alignment": "linear interpolation on actual camera record timestamps; diagnostic only",
+      "best_shift": {
+        "correlation": 0.3876961415511463,
+        "count": 89,
+        "mae_rad": 0.11329463118081294,
+        "max_abs_error_rad": 0.5442168671045303,
+        "rmse_rad": 0.19413797196008886,
+        "shift_ms": 150.0,
+        "signed_bias_rad": -0.11280005742500612
+      },
+      "mae_improvement_fraction": 0.0398727278318714,
+      "shifts": [
+        {
+          "correlation": 0.1387665599434822,
+          "count": 88,
+          "mae_rad": 0.12668947594965527,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.21510169146911198,
+          "shift_ms": -200.0,
+          "signed_bias_rad": -0.11112371270369809
+        },
+        {
+          "correlation": 0.18082153425304232,
+          "count": 89,
+          "mae_rad": 0.12279275962347423,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.21247603932929285,
+          "shift_ms": -150.0,
+          "signed_bias_rad": -0.11281981366601142
+        },
+        {
+          "correlation": 0.21591724647396437,
+          "count": 90,
+          "mae_rad": 0.11877229052481843,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.2104711000611647,
+          "shift_ms": -100.0,
+          "signed_bias_rad": -0.11447970115172638
+        },
+        {
+          "correlation": 0.24380909076358356,
+          "count": 91,
+          "mae_rad": 0.1164139415731623,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.20914850408657193,
+          "shift_ms": -50.0,
+          "signed_bias_rad": -0.1161235844697399
+        },
+        {
+          "correlation": 0.26369903894898855,
+          "count": 92,
+          "mae_rad": 0.11799959699610932,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.20855319804457262,
+          "shift_ms": 0.0,
+          "signed_bias_rad": -0.11772227101202955
+        },
+        {
+          "correlation": 0.2997083764328228,
+          "count": 91,
+          "mae_rad": 0.1169181399517651,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.2046070359189942,
+          "shift_ms": 50.0,
+          "signed_bias_rad": -0.11656143258020471
+        },
+        {
+          "correlation": 0.3417928937012521,
+          "count": 90,
+          "mae_rad": 0.11525541052085594,
+          "max_abs_error_rad": 0.5561359036121368,
+          "rmse_rad": 0.19961985510041164,
+          "shift_ms": 100.0,
+          "signed_bias_rad": -0.11482186831450344
+        },
+        {
+          "correlation": 0.3876961415511463,
+          "count": 89,
+          "mae_rad": 0.11329463118081294,
+          "max_abs_error_rad": 0.5442168671045303,
+          "rmse_rad": 0.19413797196008886,
+          "shift_ms": 150.0,
+          "signed_bias_rad": -0.11280005742500612
+        },
+        {
+          "correlation": 0.3831038056798561,
+          "count": 89,
+          "mae_rad": 0.11625572413796474,
+          "max_abs_error_rad": 0.5442168671045303,
+          "rmse_rad": 0.1966843754349088,
+          "shift_ms": 200.0,
+          "signed_bias_rad": -0.11573630249175194
+        }
+      ],
+      "sign_convention": "positive shift compares prediction at t with expert label at t+shift",
+      "zero_shift": {
+        "correlation": 0.26369903894898855,
+        "count": 92,
+        "mae_rad": 0.11799959699610932,
+        "max_abs_error_rad": 0.5561359036121368,
+        "rmse_rad": 0.20855319804457262,
+        "shift_ms": 0.0,
+        "signed_bias_rad": -0.11772227101202955
+      }
+    },
+    "raw_rgb_vs_http_jpeg": {
+      "absolute_prediction_difference_rad": {
+        "count": 92,
+        "max": 0.08609988540410995,
+        "mean": 0.012923225372916299,
+        "median": 0.0028212658944539726,
+        "p95": 0.0503535557538271
+      },
+      "association_absolute_error_ms": {
+        "count": 92,
+        "max": 46.395933,
+        "mean": 36.54236930434782,
+        "median": 37.575205,
+        "p95": 43.7173521
+      },
+      "association_method": "one-to-one nearest MCAP record timestamp to HTTP receive wall time",
+      "exact_frame_identity_claimed": false,
+      "http_frames": 92,
+      "matched_pairs": 92,
+      "mean_absolute_pixel_difference_0_255": {
+        "count": 92,
+        "max": 19.27919191919192,
+        "mean": 8.024968434343434,
+        "median": 6.488156565656565,
+        "p95": 16.71243813131313
+      },
+      "raw_frames": 95,
+      "signed_prediction_difference_rad": {
+        "count": 92,
+        "max": 0.05152546241879463,
+        "mean": 0.0005208785149119175,
+        "median": 5.084976146463305e-05,
+        "p95": 0.036653955187648544
+      },
+      "tolerance_ms": 100.0,
+      "windows": {
+        "critical_pre_onset": {
+          "absolute_prediction_difference_rad": {
+            "count": 30,
+            "max": 0.08609988540410995,
+            "mean": 0.013447372274337491,
+            "median": 0.003038426337298006,
+            "p95": 0.07777898311614988
+          },
+          "association_absolute_error_ms": {
+            "count": 30,
+            "max": 45.081309,
+            "mean": 36.8603797,
+            "median": 38.0506405,
+            "p95": 43.6931885
+          },
+          "mean_absolute_pixel_difference_0_255": {
+            "count": 30,
+            "max": 12.192373737373737,
+            "mean": 6.878479797979797,
+            "median": 6.156729797979798,
+            "p95": 11.25389141414141
+          },
+          "signed_prediction_difference_rad": {
+            "count": 30,
+            "max": 0.02389127016067505,
+            "mean": -0.010291794536654682,
+            "median": -0.0008274372667074203,
+            "p95": 0.004731423253542743
+          }
+        },
+        "late_failure": {
+          "absolute_prediction_difference_rad": {
+            "count": 16,
+            "max": 0.08562080189585686,
+            "mean": 0.024515094453818165,
+            "median": 0.01987498253583908,
+            "p95": 0.05832669045776129
+          },
+          "association_absolute_error_ms": {
+            "count": 16,
+            "max": 46.395933,
+            "mean": 38.314230125,
+            "median": 38.9564335,
+            "p95": 46.07288025
+          },
+          "mean_absolute_pixel_difference_0_255": {
+            "count": 16,
+            "max": 19.27919191919192,
+            "mean": 11.371737689393939,
+            "median": 10.153825757575756,
+            "p95": 18.5242297979798
+          },
+          "signed_prediction_difference_rad": {
+            "count": 16,
+            "max": 0.03918580710887909,
+            "mean": 0.004932057796395384,
+            "median": 0.010935905331280082,
+            "p95": 0.035886840894818306
+          }
+        },
+        "stable_initial": {
+          "absolute_prediction_difference_rad": {
+            "count": 16,
+            "max": 0.0008025532588362694,
+            "mean": 0.00031989642320695566,
+            "median": 0.00025936702331819106,
+            "p95": 0.0007366322097368538
+          },
+          "association_absolute_error_ms": {
+            "count": 16,
+            "max": 44.189499,
+            "mean": 37.3820691875,
+            "median": 37.5496525,
+            "p95": 43.81765725
+          },
+          "mean_absolute_pixel_difference_0_255": {
+            "count": 16,
+            "max": 7.690479797979798,
+            "mean": 4.835145202020202,
+            "median": 4.440631313131313,
+            "p95": 6.945498737373738
+          },
+          "signed_prediction_difference_rad": {
+            "count": 16,
+            "max": 0.0004941154220432509,
+            "mean": -0.00014499636927212123,
+            "median": -0.00017655672127148136,
+            "p95": 0.0003535620899128844
+          }
+        }
+      }
+    },
+    "steering_windows": {
+      "critical_pre_onset": {
+        "corrective_magnitude_ratio": 0.8090714992998326,
+        "correlation": 0.9868641563965312,
+        "count": 30,
+        "mean_absolute_difference_rad": 0.015012538448000375,
+        "mean_network_rad": 0.04823519000880575,
+        "mean_shadow_expert_rad": 0.062397262105628154,
+        "mean_signed_difference_rad": -0.014162072096822399,
+        "same_sign_fraction": 0.7333333333333333
+      },
+      "late_pre_offtrack": {
+        "corrective_magnitude_ratio": 0.23252303817686745,
+        "correlation": null,
+        "count": 16,
+        "mean_absolute_difference_rad": 0.42076959393421676,
+        "mean_network_rad": -0.07170359393421677,
+        "mean_shadow_expert_rad": 0.349066,
+        "mean_signed_difference_rad": -0.42076959393421676,
+        "same_sign_fraction": 0.3125
+      },
+      "stable_initial": {
+        "corrective_magnitude_ratio": 0.4609959554503474,
+        "correlation": 0.8402597632337104,
+        "count": 16,
+        "mean_absolute_difference_rad": 0.001652345462098728,
+        "mean_network_rad": -0.00045455256577042746,
+        "mean_shadow_expert_rad": 0.0011977928963283005,
+        "mean_signed_difference_rad": -0.001652345462098728,
+        "same_sign_fraction": 0.1875
+      }
+    }
+  },
+  "diagnostic_bag": {
+    "duration_s": 6.302265742,
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/raw/diagnostic_run_001/bag",
+    "size_bytes": 49353870,
+    "topic_counts": {
+      "/camera/image_raw": 95,
+      "/clock": 1247
+    }
+  },
+  "external_artifacts": {
+    "diagnostic_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/raw/diagnostic_run_001/bag",
+    "http_frames": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/http_frames",
+    "root": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1",
+    "telemetry": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/telemetry.json"
+  },
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-24T02:43:53.307968+00:00",
+  "interpretation": {
+    "exact_next_intervention": "Collect a tightly scoped on-policy expert-labeling/DAgger dataset from actual V1 deviation states; do not collect blind nominal or arbitrary-anchor recovery laps.",
+    "hypotheses": {
+      "H1_temporal_phase_mismatch": {
+        "best_lag_ms": 150.0,
+        "classification": "NOT SUPPORTED",
+        "mae_improvement_fraction": 0.0398727278318714
+      },
+      "H2_regression_to_mean_under_correction": {
+        "classification": "WEAKLY SUPPORTED",
+        "critical_live_ratio": 0.8090714992998326,
+        "offline_high_steering_ratio": 1.009202437161105,
+        "offline_slope": 1.0045794845637317
+      },
+      "H3_http_jpeg_vs_raw_rgb": {
+        "classification": "INCONCLUSIVE",
+        "confound": "Near-matched transport frames are not proven identical; temporal scene change can inflate the difference.",
+        "late_median_abs_prediction_difference_rad": 0.01987498253583908,
+        "matched_pairs": 92,
+        "mean_abs_prediction_difference_rad": 0.012923225372916299,
+        "median_association_error_ms": 37.575205,
+        "nominal_validation_mae_rad_for_context": 0.0048193971887892486
+      },
+      "H4_on_policy_distribution_shift": {
+        "classification": "SUPPORTED",
+        "distance_cte_correlation": 0.7418442707145935,
+        "late_median_distance": 0.1967652440071106,
+        "stable_median_distance": 1.5109777450561523e-05,
+        "threshold_note": "No feature-distance PASS threshold was defined; classification uses relative evolution and correlation."
+      },
+      "H5_preprocessing_runtime_mismatch": {
+        "audit_result": "PASS",
+        "classification": "NOT SUPPORTED"
+      }
+    }
+  },
+  "live_run": {
+    "api_failures": 0,
+    "camera_latency": {
+      "count": 92,
+      "max_ms": 4.629664999811212,
+      "mean_ms": 2.2744264458552883,
+      "median_ms": 2.1876289993087994,
+      "p95_ms": 3.325814550044015
+    },
+    "control_frequency_hz": 15.000070728625587,
+    "control_iterations": 92,
+    "control_period": {
+      "count": 91,
+      "max_ms": 73.10541900005774,
+      "mean_ms": 66.66635231870184,
+      "median_ms": 66.66604299971368,
+      "p95_ms": 66.68494900077349
+    },
+    "elapsed_s": 6.081689523998648,
+    "failure": "sustained off-track: boundary distance 0.290m",
+    "final_distance_to_start_m": 2.8503601536256786,
+    "inference_latency": {
+      "count": 92,
+      "max_ms": 6.10173300083261,
+      "mean_ms": 1.5505032611342713,
+      "median_ms": 0.7151399986469187,
+      "p95_ms": 4.000392702073441
+    },
+    "liveness_failures": 0,
+    "max_abs_steering_rad": 0.3345036208629608,
+    "max_cte_m": 0.6399231757074909,
+    "mean_abs_command_delta_rad": 0.012119713991114122,
+    "mean_abs_steering_rad": 0.05319255622065532,
+    "mean_cte_m": 0.09012971507979185,
+    "neural_observation_fields": [
+      "HTTP camera JPEG"
+    ],
+    "off_track_events": 1,
+    "off_track_total_duration_s": 0.534690149997914,
+    "policy_controlling_vehicle": "PilotNet V1 only",
+    "preprocessing_latency": {
+      "count": 92,
+      "max_ms": 2.9453290007950272,
+      "mean_ms": 1.7570136196018606,
+      "median_ms": 1.720974498311989,
+      "p95_ms": 2.224761899924488
+    },
+    "privileged_fields_outside_model": [
+      "GT pose",
+      "route",
+      "CTE",
+      "sim clock",
+      "track boundaries"
+    ],
+    "result": "FAIL",
+    "route_completion_fraction": 0.08969444272475763,
+    "route_length_m": 30.50461070080936,
+    "route_progress_m": 2.736094057344774,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "shadow_expert_control_authority": false,
+    "steering_saturation_fraction": 0.0
+  },
+  "live_run_count": 1,
+  "preflight": {
+    "camera_dimensions": [
+      480,
+      360
+    ],
+    "cones": 0,
+    "diagnostic_topics": {
+      "/camera/image_raw": "sensor_msgs/msg/Image",
+      "/clock": "rosgraph_msgs/msg/Clock"
+    },
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "v1_checkpoint_sha256": "e6962b3bdb85a5c765c3e0988b1abe21e4b73c93a4390869259ed415dda3e3e2",
+    "v1_onnx_sha256": "fef7c2caccb64624e2aeeeca5d0ef4504da789965c5d288d5c0cac1eb0de9b50",
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "recorder_stop": {
+    "detail": null,
+    "graceful": true,
+    "orphaned": false
+  },
+  "result": "DIAGNOSIS_COMPLETE",
+  "version": "pilotnet_failure_diagnosis_v1"
+}

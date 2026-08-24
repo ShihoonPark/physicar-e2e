@@ -1,0 +1,95 @@
+{
+  "version": "pilotnet_failure_diagnosis_v1",
+  "result": "DIAGNOSIS_COMPLETE",
+  "models_retrained": 0,
+  "live_neural_runs": 1,
+  "preprocessing_audit": "PASS",
+  "offline": {
+    "validation_episode": "episode_003",
+    "samples": 878,
+    "route_0_to_5m_analysis": "UNAVAILABLE: nominal manifests contain no pose/route association",
+    "v1": {
+      "slope": 1.0045794845637317,
+      "intercept_rad": 0.0009475197767697617,
+      "correlation": 0.9989641003604215,
+      "bias_rad": 0.0011234599260028144,
+      "magnitude_bins": {
+        "abs_lt_0.05": {"count": 464, "magnitude_ratio": 1.1347315015651256, "mae_rad": 0.002679188953622322},
+        "abs_0.05_to_0.15": {"count": 145, "magnitude_ratio": 0.9810172931146405, "mae_rad": 0.006135071669861374},
+        "abs_0.15_to_0.25": {"count": 104, "magnitude_ratio": 1.0015772111940462, "mae_rad": 0.007038746735638503},
+        "abs_ge_0.25": {"count": 165, "magnitude_ratio": 1.009202437161105, "mae_rad": 0.008282860634181204}
+      }
+    },
+    "v2": {
+      "slope": 1.0049578481455046,
+      "intercept_rad": -0.0010483641588173906,
+      "correlation": 0.9991532525793785,
+      "bias_rad": -0.000857887582151262,
+      "high_steering_magnitude_ratio": 1.0046692358440106
+    },
+    "v1_temporal_shift": {"zero_shift_mae_rad": 0.0048193971887892486, "best_shift_ms": 0.0, "best_mae_rad": 0.0048193971887892486, "improvement_fraction": 0.0}
+  },
+  "live": {
+    "policy": "PilotNet V1 camera-only; Pure Pursuit shadow had no control authority",
+    "speed_mps": 0.5,
+    "result": "FAIL",
+    "failure": "sustained off-track",
+    "elapsed_s": 6.081689523998648,
+    "progress_m": 2.736094057344774,
+    "route_completion_fraction": 0.08969444272475763,
+    "mean_cte_m": 0.09012971507979185,
+    "max_cte_m": 0.6399231757074909,
+    "off_track_events": 1,
+    "off_track_duration_s": 0.534690149997914,
+    "api_failures": 0,
+    "liveness_failures": 0,
+    "safe_stop_success": true,
+    "control_frequency_hz": 15.000070728625587,
+    "mean_inference_ms": 1.5505032611342713,
+    "divergence_onset_s": 4.000068157998612,
+    "critical_pre_onset": {
+      "network_mean_rad": 0.04823519000880575,
+      "shadow_expert_mean_rad": 0.062397262105628154,
+      "signed_difference_rad": -0.014162072096822399,
+      "mean_abs_difference_rad": 0.015012538448000375,
+      "corrective_magnitude_ratio": 0.8090714992998326,
+      "correlation": 0.9868641563965312,
+      "same_sign_fraction": 0.7333333333333333
+    },
+    "network_expert_temporal_shift": {"best_lag_ms": 150.0, "zero_mae_rad": 0.11799959699610932, "best_mae_rad": 0.11329463118081294, "improvement_fraction": 0.0398727278318714},
+    "feature_distance": {"stable_median": 0.000015109777450561523, "critical_median": 0.00006899237632751465, "late_median": 0.1967652440071106, "correlation_with_cte": 0.7418442707145935, "correlation_with_abs_steering_error": 0.9265563170594958},
+    "raw_jpeg": {
+      "matched_pairs": 92,
+      "association_abs_error_ms": {"mean": 36.54236930434782, "median": 37.575205, "p95": 43.7173521},
+      "prediction_abs_difference_rad": {"mean": 0.012923225372916299, "median": 0.0028212658944539726, "p95": 0.0503535557538271, "max": 0.08609988540410995},
+      "stable_median_abs_difference_rad": 0.00025936702331819106,
+      "critical_median_abs_difference_rad": 0.003038426337298006,
+      "late_median_abs_difference_rad": 0.01987498253583908,
+      "exact_frame_identity_claimed": false
+    }
+  },
+  "hypotheses": {
+    "H1_temporal_phase_mismatch": "NOT SUPPORTED",
+    "H2_regression_to_mean_under_correction": "WEAKLY SUPPORTED",
+    "H3_http_jpeg_vs_raw_rgb": "INCONCLUSIVE",
+    "H4_on_policy_distribution_shift": "SUPPORTED",
+    "H5_preprocessing_runtime_mismatch": "NOT SUPPORTED"
+  },
+  "ranked_causes": [
+    "H4 on-policy distribution shift",
+    "H2 live under-correction as an interacting symptom",
+    "H3 transport difference remains confounded by non-identical frame timing",
+    "H1 and H5 are not supported"
+  ],
+  "next_intervention": "One controlled on-policy expert-labeling/DAgger experiment using actual V1 deviation states near divergence; no blind nominal laps or arbitrary recovery anchors.",
+  "external_storage": {
+    "root_bytes": 57351065,
+    "diagnostic_raw_directory_bytes": 49355026,
+    "diagnostic_bag_payload_bytes": 49353870,
+    "http_frames": 92,
+    "http_frames_directory_bytes": 4169357,
+    "telemetry_bytes": 96964,
+    "nominal_feature_reference_bytes": 3729718
+  },
+  "tests": {"passed": 150, "failed": 0}
+}

@@ -1,0 +1,283 @@
+{
+  "environment": {
+    "device": "cuda",
+    "parameter_count": 252219,
+    "torch": "2.13.0+cu130"
+  },
+  "feature_reference": {
+    "distance": "cosine_distance_after_L2_normalization",
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/pilotnet_failure_diagnosis_v1/v1_nominal_train_features.npz",
+    "representation": "final_convolution_flattened",
+    "sha256": "0d61cce050e76d67013f05b24a7945bee6aba03602b13cc51c08985d113f7ea5",
+    "training_samples": 1754
+  },
+  "gate_reached": "offline_diagnostics",
+  "generated_utc": "2026-08-24T02:42:57.968328+00:00",
+  "offline": {
+    "route_section_0_to_5m": {
+      "reason": "nominal manifest has no pose or route-progress association; geometry was not manufactured",
+      "result": "UNAVAILABLE"
+    },
+    "sample_count": 878,
+    "temporal_shift_v1": {
+      "alignment": "linear interpolation on actual camera record timestamps; diagnostic only",
+      "best_shift": {
+        "correlation": 0.9989641003604215,
+        "count": 878,
+        "mae_rad": 0.0048193971887892486,
+        "max_abs_error_rad": 0.03434745414543511,
+        "rmse_rad": 0.007332104601271014,
+        "shift_ms": 0.0,
+        "signed_bias_rad": 0.0011234599260028144
+      },
+      "mae_improvement_fraction": 0.0,
+      "shifts": [
+        {
+          "correlation": 0.9501528684832186,
+          "count": 875,
+          "mae_rad": 0.026916673184747875,
+          "max_abs_error_rad": 0.2371119491232443,
+          "rmse_rad": 0.04998474430998308,
+          "shift_ms": -200.0,
+          "signed_bias_rad": 0.0009900135195307245
+        },
+        {
+          "correlation": 0.9712248206905807,
+          "count": 875,
+          "mae_rad": 0.02059902558691904,
+          "max_abs_error_rad": 0.1855065891299583,
+          "rmse_rad": 0.03797336344012554,
+          "shift_ms": -150.0,
+          "signed_bias_rad": 0.0010212999488699052
+        },
+        {
+          "correlation": 0.986780531046688,
+          "count": 876,
+          "mae_rad": 0.014277026456280014,
+          "max_abs_error_rad": 0.13393904570562554,
+          "rmse_rad": 0.025743271123812052,
+          "shift_ms": -100.0,
+          "signed_bias_rad": 0.001059107447235231
+        },
+        {
+          "correlation": 0.9961873028324866,
+          "count": 877,
+          "mae_rad": 0.00806901784480491,
+          "max_abs_error_rad": 0.07741409959182116,
+          "rmse_rad": 0.013880740361143003,
+          "shift_ms": -50.0,
+          "signed_bias_rad": 0.0010983456294682494
+        },
+        {
+          "correlation": 0.9989641003604215,
+          "count": 878,
+          "mae_rad": 0.0048193971887892486,
+          "max_abs_error_rad": 0.03434745414543511,
+          "rmse_rad": 0.007332104601271014,
+          "shift_ms": 0.0,
+          "signed_bias_rad": 0.0011234599260028144
+        },
+        {
+          "correlation": 0.9950109101072819,
+          "count": 877,
+          "mae_rad": 0.008549521548117797,
+          "max_abs_error_rad": 0.08877060295815181,
+          "rmse_rad": 0.015858747769443765,
+          "shift_ms": 50.0,
+          "signed_bias_rad": 0.0011538591401719627
+        },
+        {
+          "correlation": 0.9847654719718161,
+          "count": 876,
+          "mae_rad": 0.014501874739356723,
+          "max_abs_error_rad": 0.14501564648482762,
+          "rmse_rad": 0.02763420631671607,
+          "shift_ms": 100.0,
+          "signed_bias_rad": 0.001171019113890058
+        },
+        {
+          "correlation": 0.9687315699532945,
+          "count": 875,
+          "mae_rad": 0.020803792292664443,
+          "max_abs_error_rad": 0.21379502074475554,
+          "rmse_rad": 0.0395885367664599,
+          "shift_ms": 150.0,
+          "signed_bias_rad": 0.0012002907813249836
+        },
+        {
+          "correlation": 0.9477624643761657,
+          "count": 874,
+          "mae_rad": 0.027148178648915982,
+          "max_abs_error_rad": 0.26935276017779913,
+          "rmse_rad": 0.05119738921492588,
+          "shift_ms": 200.0,
+          "signed_bias_rad": 0.0011962058369722175
+        }
+      ],
+      "sign_convention": "positive shift compares prediction at t with expert label at t+shift",
+      "zero_shift": {
+        "correlation": 0.9989641003604215,
+        "count": 878,
+        "mae_rad": 0.0048193971887892486,
+        "max_abs_error_rad": 0.03434745414543511,
+        "rmse_rad": 0.007332104601271014,
+        "shift_ms": 0.0,
+        "signed_bias_rad": 0.0011234599260028144
+      }
+    },
+    "v1_calibration": {
+      "correlation": 0.9989641003604215,
+      "count": 878,
+      "mae_rad": 0.0048193971887892486,
+      "magnitude_bins": {
+        "abs_0.05_to_0.15": {
+          "absolute_magnitude_ratio": 0.9810172931146405,
+          "correlation": 0.9954847975404553,
+          "count": 145,
+          "gt_mean_abs_rad": 0.09580563323433242,
+          "mae_rad": 0.006135071669861374,
+          "max_abs_error_rad": 0.03400462732578141,
+          "prediction_mean_abs_rad": 0.09398698298067883,
+          "rmse_rad": 0.008897921780140134,
+          "signed_bias_rad": 0.0012261054176940683
+        },
+        "abs_0.15_to_0.25": {
+          "absolute_magnitude_ratio": 1.0015772111940462,
+          "correlation": 0.9986299137318678,
+          "count": 104,
+          "gt_mean_abs_rad": 0.1957080860544542,
+          "mae_rad": 0.007038746735638503,
+          "max_abs_error_rad": 0.02950314179361807,
+          "prediction_mean_abs_rad": 0.19601675903854462,
+          "rmse_rad": 0.009021266455677851,
+          "signed_bias_rad": 0.001800178256484902
+        },
+        "abs_ge_0.25": {
+          "absolute_magnitude_ratio": 1.009202437161105,
+          "correlation": 0.9995238146096637,
+          "count": 165,
+          "gt_mean_abs_rad": 0.32387614978658785,
+          "mae_rad": 0.008282860634181204,
+          "max_abs_error_rad": 0.03434745414543511,
+          "prediction_mean_abs_rad": 0.3268565997029796,
+          "rmse_rad": 0.010583488669251625,
+          "signed_bias_rad": 0.00422498946216661
+        },
+        "abs_lt_0.05": {
+          "absolute_magnitude_ratio": 1.1347315015651256,
+          "correlation": 0.947184165255299,
+          "count": 464,
+          "gt_mean_abs_rad": 0.00681536062153979,
+          "mae_rad": 0.002679188953622322,
+          "max_abs_error_rad": 0.02166769556906885,
+          "prediction_mean_abs_rad": 0.0077336043917876724,
+          "rmse_rad": 0.00434885896971174,
+          "signed_bias_rad": -0.00016320963462734762
+        }
+      },
+      "max_abs_error_rad": 0.03434745414543511,
+      "regression_intercept_rad": 0.0009475197767697617,
+      "regression_slope": 1.0045794845637317,
+      "rmse_rad": 0.007332104601271014,
+      "signed_bias_rad": 0.0011234599260028144
+    },
+    "v2_calibration": {
+      "correlation": 0.9991532525793785,
+      "count": 878,
+      "mae_rad": 0.004575812313678863,
+      "magnitude_bins": {
+        "abs_0.05_to_0.15": {
+          "absolute_magnitude_ratio": 0.9860327871390847,
+          "correlation": 0.9964052971505741,
+          "count": 145,
+          "gt_mean_abs_rad": 0.09580563323433242,
+          "mae_rad": 0.005669498072764772,
+          "max_abs_error_rad": 0.030070612169742855,
+          "prediction_mean_abs_rad": 0.09446749556167372,
+          "rmse_rad": 0.007741642014079783,
+          "signed_bias_rad": -0.00089517345713894
+        },
+        "abs_0.15_to_0.25": {
+          "absolute_magnitude_ratio": 1.0059818093906587,
+          "correlation": 0.9986711509615467,
+          "count": 104,
+          "gt_mean_abs_rad": 0.1957080860544542,
+          "mae_rad": 0.007033049018749371,
+          "max_abs_error_rad": 0.022233314991050745,
+          "prediction_mean_abs_rad": 0.19687877452144256,
+          "rmse_rad": 0.008970843435363621,
+          "signed_bias_rad": -6.844161362300552e-05
+        },
+        "abs_ge_0.25": {
+          "absolute_magnitude_ratio": 1.0046692358440106,
+          "correlation": 0.9996365722659505,
+          "count": 165,
+          "gt_mean_abs_rad": 0.32387614978658785,
+          "mae_rad": 0.005979603668622916,
+          "max_abs_error_rad": 0.032311091259006275,
+          "prediction_mean_abs_rad": 0.3253884039141915,
+          "rmse_rad": 0.00845077230973211,
+          "signed_bias_rad": 0.0009800203940150778
+        },
+        "abs_lt_0.05": {
+          "absolute_magnitude_ratio": 1.2174839177609122,
+          "correlation": 0.9504759966726644,
+          "count": 464,
+          "gt_mean_abs_rad": 0.00681536062153979,
+          "mae_rad": 0.0031840825163500733,
+          "max_abs_error_rad": 0.028630792128116547,
+          "prediction_mean_abs_rad": 0.00829759195046571,
+          "rmse_rad": 0.004562516293573696,
+          "signed_bias_rad": -0.0016767469462055109
+        }
+      },
+      "max_abs_error_rad": 0.032311091259006275,
+      "regression_intercept_rad": -0.0010483641588173906,
+      "regression_slope": 1.0049578481455046,
+      "rmse_rad": 0.006622100349569809,
+      "signed_bias_rad": -0.000857887582151262
+    }
+  },
+  "preprocessing_audit": {
+    "checks": {
+      "chw_shape": true,
+      "normalization": true,
+      "resize_dimensions": true,
+      "resize_interpolation": true,
+      "rgb_channel_interpretation": true,
+      "roi": true,
+      "shared_preprocess_is_deterministic": true,
+      "steering_denormalization": true,
+      "yuv_convention": true
+    },
+    "pipeline": {
+      "live": "HTTP JPEG 480x360 -> RGB -> ROI -> bilinear 200x66 -> same preprocess_rgb",
+      "training_offline": "RGB PNG 200x66 -> preprocess_rgb -> BT.601-style YUV -> normalization -> CHW"
+    },
+    "result": "PASS",
+    "rgb_to_yuv_matrix": [
+      [
+        0.29899999499320984,
+        0.5870000123977661,
+        0.11400000005960464
+      ],
+      [
+        -0.14712999761104584,
+        -0.2888599932193756,
+        0.4359999895095825
+      ],
+      [
+        0.6150000095367432,
+        -0.514989972114563,
+        -0.10001000016927719
+      ]
+    ]
+  },
+  "provenance": {
+    "diagnostic_config_sha256": "f9bad73e586478eaeedad4cf520c9f22b7dd98618024db4d4178dce1fb6ad80a",
+    "v1_checkpoint_sha256": "e6962b3bdb85a5c765c3e0988b1abe21e4b73c93a4390869259ed415dda3e3e2",
+    "v2_checkpoint_sha256": "758195fee2d9967db0423ec2a9fa42a9c09f487ea90f137ba2faca1f378eab0d"
+  },
+  "result": "OFFLINE_PASS",
+  "version": "pilotnet_failure_diagnosis_v1"
+}
