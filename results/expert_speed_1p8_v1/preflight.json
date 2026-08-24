@@ -1,0 +1,84 @@
+{
+  "automatic_retry": false,
+  "canonical_config": {
+    "path": "/home/a/physicar-e2e/configs/expert_driver_v1.json",
+    "sha256": "63814d3a30f8753092cd33fc53d44414cfb343e39caf805e624dbaf33a4bd050",
+    "unchanged": true
+  },
+  "experimental_contract": {
+    "control_frequency_hz": 15.0,
+    "lookahead_m": 0.45,
+    "max_steering_rad": 0.349066,
+    "runtime_difference_from_canonical": [
+      "fixed_speed_mps"
+    ],
+    "speed_mps": 1.8,
+    "wheelbase_m": 0.18
+  },
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-24T06:34:14.854263+00:00",
+  "maximum_live_runs": 1,
+  "preflight": {
+    "clock_health": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.10641545899852645,
+      "observed_real_time_factor": 0.9993154557520343,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 40,
+      "sim_delta_s": {
+        "max": 0.10500000000320142,
+        "mean": 0.05256410256417719,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 2.0500000000029104,
+      "wall_elapsed_s": 2.0514042770009837,
+      "wall_interval_s": {
+        "max": 0.054282312994473614,
+        "mean": 0.05260010966669189,
+        "min": 0.05099230800260557
+      }
+    },
+    "control_api": "PASS",
+    "control_frequency_hz": 15.0,
+    "environment": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "bounds_height_m": 7.0,
+      "bounds_width_m": 12.0,
+      "cone_count": 0,
+      "pose": {
+        "q": [
+          0.0,
+          0.0,
+          -0.707065,
+          0.707148
+        ],
+        "x": 1.400001,
+        "y": 3.394467,
+        "yaw": -1.570679,
+        "z": -0.00116
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+    },
+    "lookahead_m": 0.45,
+    "max_steering_rad": 0.349066,
+    "result": "PASS",
+    "source_environment": "PASS: canonical inputs valid (six expected cones present)\nPASS: derived world valid (world name correct; cone count 0)\nPASS: derived route byte-identical (SHA-256)\nPASS: derived model metadata matches canonical directory\nPASS: canonical asset integrity unchanged during verification",
+    "speed_mps": 1.8,
+    "wheelbase_m": 0.18
+  },
+  "result": "PREFLIGHT_PASS",
+  "version": "expert_driver_speed_1p8_v1"
+}

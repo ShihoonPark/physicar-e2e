@@ -1,0 +1,8 @@
+{
+  "version": "expert_driver_speed_1p8_v1",
+  "canonical_config": "configs/expert_driver_v1.json",
+  "fixed_speed_mps": 1.8,
+  "maximum_live_runs": 1,
+  "automatic_retry": false,
+  "result_directory": "results/expert_speed_1p8_v1"
+}
