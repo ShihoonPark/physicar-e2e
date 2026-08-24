@@ -1,0 +1,11 @@
+{
+  "version": "expert_speed_1p8_repeatability_v1",
+  "canonical_config": "configs/expert_driver_v1.json",
+  "historical_pass": "results/expert_speed_1p8_lookahead_v1/attempt_03.json",
+  "fixed_speed_mps": 1.8,
+  "fixed_lookahead_m": 0.9,
+  "target_new_valid_runs": 2,
+  "maximum_new_live_attempts": 4,
+  "retry_expert_failure": false,
+  "result_directory": "results/expert_speed_1p8_repeatability_v1"
+}
