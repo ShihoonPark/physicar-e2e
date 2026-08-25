@@ -1,0 +1,108 @@
+{
+  "camera": {
+    "camera_acquisition_ms": 2.1349329999793554,
+    "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+    "model_input_shape": [
+      3,
+      66,
+      200
+    ],
+    "preprocessing_ms": 2.2851040012028534,
+    "result": "PASS",
+    "source_dimensions": [
+      480,
+      360
+    ],
+    "transport": "HTTP JPEG"
+  },
+  "clock_health": {
+    "maximum_allowed_stall_s": 0.5,
+    "maximum_observed_clock_stall_s": 0.10498756500055606,
+    "observed_real_time_factor": 1.0120401468093758,
+    "paused_exposed": true,
+    "paused_observed": false,
+    "requested_duration_s": 2.0,
+    "result": "PASS",
+    "sample_count": 40,
+    "sim_delta_s": {
+      "max": 0.10500000000138243,
+      "mean": 0.05282051282049976,
+      "min": 0.0
+    },
+    "sim_elapsed_s": 2.0599999999994907,
+    "wall_elapsed_s": 2.035492372999215,
+    "wall_interval_s": {
+      "max": 0.05459139999948093,
+      "mean": 0.052192112128185,
+      "min": 0.05133534499873349
+    }
+  },
+  "environment": {
+    "bounds": {
+      "maxX": 12.0,
+      "maxY": 7.0,
+      "minX": 0.0,
+      "minY": 0.0
+    },
+    "bounds_height_m": 7.0,
+    "bounds_width_m": 12.0,
+    "cone_count": 0,
+    "pose": {
+      "q": [
+        -0.0,
+        -0.0,
+        -0.707065,
+        0.707148
+      ],
+      "x": 1.400001,
+      "y": 3.394472,
+      "yaw": -1.570679,
+      "z": -0.001165
+    },
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "switching": false,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "generated_utc": "2026-08-25T05:09:23.495949+00:00",
+  "model_input_shape": [
+    9,
+    66,
+    200
+  ],
+  "onnx": {
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/onnx/pilotnet_v9_high_speed_temporal.onnx",
+    "sha256": "7f6aa4c2d8c9b3615c580f065660c674efff94ff4cd0b9bdc9357df904000888",
+    "size_bytes": 1026938
+  },
+  "result": "PASS",
+  "safe_stop_errors": [],
+  "safe_stop_success": true,
+  "temporal_buffer_warmup": {
+    "adjacent_gaps_s": [
+      0.07168590000037511,
+      0.07357578200026182
+    ],
+    "camera_acquisition_latency": {
+      "count": 3,
+      "max_ms": 3.818107999904896,
+      "mean_ms": 3.2215833331671697,
+      "median_ms": 3.540378000252531,
+      "p95_ms": 3.7903349999396596
+    },
+    "duplicate_padding_frames": 0,
+    "oldest_to_current_span_s": 0.14526168200063694,
+    "preprocessing_latency": {
+      "count": 3,
+      "max_ms": 3.0106249996606493,
+      "mean_ms": 2.834280666623575,
+      "median_ms": 2.8870120004285127,
+      "p95_ms": 2.9982636997374357
+    },
+    "real_frame_acquisitions": 3,
+    "result": "PASS",
+    "vehicle_motion_during_warmup": false
+  },
+  "version": "pilotnet_e2e_v9_high_speed_temporal_preflight"
+}

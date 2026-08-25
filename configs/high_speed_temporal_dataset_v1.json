@@ -1,0 +1,34 @@
+{
+  "version": "high_speed_temporal_dataset_v1",
+  "history_frames": 3,
+  "frame_order": ["t_minus_2", "t_minus_1", "t"],
+  "target_time": "t",
+  "maximum_adjacent_gap_s": 0.120,
+  "causal_only": true,
+  "allow_boundary_crossing": false,
+  "allow_duplicate_padding": false,
+  "source_width": 480,
+  "source_height": 360,
+  "roi": {"x_start": 0, "x_end": 480, "y_start": 160, "y_end": 360},
+  "output_width": 200,
+  "output_height": 66,
+  "resize_interpolation": "bilinear",
+  "stored_color_space": "RGB",
+  "model_color_space": "YUV_BT601_full_range",
+  "channel_order": "oldest_to_current",
+  "train_sources": [
+    "nominal_episode_001_008",
+    "high_speed_dagger_rollout_A",
+    "high_speed_dagger_iter2_rollout_A",
+    "high_speed_dagger_iter3_rollout_A"
+  ],
+  "evaluation_sources": [
+    "nominal_episode_009_010",
+    "nominal_episode_011_012",
+    "high_speed_dagger_rollout_B",
+    "high_speed_dagger_iter2_rollout_B",
+    "high_speed_dagger_iter3_rollout_B"
+  ],
+  "new_training_data_collection_permitted": false,
+  "dagger_iteration4_permitted": false
+}

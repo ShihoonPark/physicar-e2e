@@ -1,0 +1,605 @@
+{
+  "dagger_iteration4_executed": false,
+  "external_root": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1",
+  "generated_utc": "2026-08-25T05:05:47.753794+00:00",
+  "leakage": {
+    "all_B_holdouts_excluded": true,
+    "low_speed_data_included": false,
+    "source_hash_overlap": false,
+    "source_id_overlap": false
+  },
+  "maximum_adjacent_gap_s": 0.12,
+  "new_training_data_collected": false,
+  "parameter_precheck": {
+    "actual": 255819,
+    "expected": 255819,
+    "result": "PASS"
+  },
+  "raw_bags_created": 0,
+  "result": "PASS",
+  "strata": {
+    "dagger1_B": {
+      "adjacent_gap_s": {
+        "count": 82,
+        "max": 0.07,
+        "mean": 0.06597560975609758,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/dagger1_B.csv",
+      "manifest_sha256": "657084a519bae44fb750fb1dd69dd0a41089427645bd09cadea5114ec65f5455",
+      "oldest_to_current_span_s": {
+        "count": 41,
+        "max": 0.135,
+        "mean": 0.13195121951219513,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "rejected_boundary_count": 2,
+      "rejected_gap_count": 0,
+      "sequence_count": 41,
+      "source_count": 1,
+      "sources": [
+        {
+          "accepted": 41,
+          "adjacent_gap_s": {
+            "count": 82,
+            "max": 0.07,
+            "mean": 0.06597560975609758,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 41,
+            "max": 0.135,
+            "mean": 0.13195121951219513,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 43,
+          "source_id": "high_speed_dagger_rollout_B",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/manifests/high_speed_dagger_rollout_B.csv",
+          "source_manifest_sha256": "83e25a7d006b227587012282f2870a5006ed8ee4c17f640af686c8ca4460070e",
+          "temporal_candidates": 41
+        }
+      ],
+      "temporal_candidate_count": 41
+    },
+    "dagger2_B": {
+      "adjacent_gap_s": {
+        "count": 88,
+        "max": 0.07,
+        "mean": 0.06596590909090909,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/dagger2_B.csv",
+      "manifest_sha256": "2ec4d729d5654295fcadf13db2da6228c64b4ad87d66334d783e1f8fe5c15d23",
+      "oldest_to_current_span_s": {
+        "count": 44,
+        "max": 0.135,
+        "mean": 0.13193181818181818,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "rejected_boundary_count": 2,
+      "rejected_gap_count": 0,
+      "sequence_count": 44,
+      "source_count": 1,
+      "sources": [
+        {
+          "accepted": 44,
+          "adjacent_gap_s": {
+            "count": 88,
+            "max": 0.07,
+            "mean": 0.06596590909090909,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 44,
+            "max": 0.135,
+            "mean": 0.13193181818181818,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 46,
+          "source_id": "high_speed_dagger_iter2_rollout_B",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration2_v1/extracted/manifests/high_speed_dagger_iter2_rollout_B.csv",
+          "source_manifest_sha256": "0dc99d8be4a2e9cf65d4fed997aaba4431a3f7e002e49aef59dae4e0beb6eb78",
+          "temporal_candidates": 44
+        }
+      ],
+      "temporal_candidate_count": 44
+    },
+    "dagger3_B": {
+      "adjacent_gap_s": {
+        "count": 2022,
+        "max": 0.07,
+        "mean": 0.06600148367952521,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/dagger3_B.csv",
+      "manifest_sha256": "8872571653a5e3d340ad535c38ba9ca332d9c3efef5268c8544394ed1195d954",
+      "oldest_to_current_span_s": {
+        "count": 1011,
+        "max": 0.135,
+        "mean": 0.13200296735905045,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "rejected_boundary_count": 2,
+      "rejected_gap_count": 2,
+      "sequence_count": 1011,
+      "source_count": 1,
+      "sources": [
+        {
+          "accepted": 1011,
+          "adjacent_gap_s": {
+            "count": 2022,
+            "max": 0.07,
+            "mean": 0.06600148367952521,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 1011,
+            "max": 0.135,
+            "mean": 0.13200296735905045,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 2,
+          "source_frames": 1015,
+          "source_id": "high_speed_dagger_iter3_rollout_B",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/extracted/manifests/high_speed_dagger_iter3_rollout_B.csv",
+          "source_manifest_sha256": "5bf2401270ca7f2a76a4acaa3e8472b72d022fd2dcc804841e9675388367a107",
+          "temporal_candidates": 1013
+        }
+      ],
+      "temporal_candidate_count": 1013
+    },
+    "nominal_holdout": {
+      "adjacent_gap_s": {
+        "count": 962,
+        "max": 0.07,
+        "mean": 0.06599792099792098,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/nominal_holdout.csv",
+      "manifest_sha256": "50f834a5c8bce45b251d84968028d88c87ba6290a0bc3682ea76159fd29d3799",
+      "oldest_to_current_span_s": {
+        "count": 481,
+        "max": 0.135,
+        "mean": 0.131995841995842,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "rejected_boundary_count": 4,
+      "rejected_gap_count": 0,
+      "sequence_count": 481,
+      "source_count": 2,
+      "sources": [
+        {
+          "accepted": 241,
+          "adjacent_gap_s": {
+            "count": 482,
+            "max": 0.07,
+            "mean": 0.06599585062240663,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 241,
+            "max": 0.135,
+            "mean": 0.1319917012448133,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 243,
+          "source_id": "episode_011",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_011.csv",
+          "source_manifest_sha256": "bdad72730ffed3f04deaf8d5d03b872fa199c340ffd6844d21a65633c52e2ec6",
+          "temporal_candidates": 241
+        },
+        {
+          "accepted": 240,
+          "adjacent_gap_s": {
+            "count": 480,
+            "max": 0.07,
+            "mean": 0.06599999999999999,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 240,
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 242,
+          "source_id": "episode_012",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_012.csv",
+          "source_manifest_sha256": "47000d842b8aaba31ae3263821e8ea37326cac8bd500c4a2593e42668ff54b88",
+          "temporal_candidates": 240
+        }
+      ],
+      "temporal_candidate_count": 481
+    },
+    "nominal_validation": {
+      "adjacent_gap_s": {
+        "count": 964,
+        "max": 0.07,
+        "mean": 0.06601141078838173,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/nominal_validation.csv",
+      "manifest_sha256": "13210fe81a8451fd3cc80a5c87432bf3f5ec7dd37554b5c854673a976682317f",
+      "oldest_to_current_span_s": {
+        "count": 482,
+        "max": 0.135,
+        "mean": 0.13202282157676348,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "rejected_boundary_count": 4,
+      "rejected_gap_count": 0,
+      "sequence_count": 482,
+      "source_count": 2,
+      "sources": [
+        {
+          "accepted": 241,
+          "adjacent_gap_s": {
+            "count": 482,
+            "max": 0.07,
+            "mean": 0.06600622406639003,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 241,
+            "max": 0.135,
+            "mean": 0.1320124481327801,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 243,
+          "source_id": "episode_009",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_009.csv",
+          "source_manifest_sha256": "357a7f673cee7d2ea97453a14a1fb05dfddd3dccb195b5a6642a60de88d1882a",
+          "temporal_candidates": 241
+        },
+        {
+          "accepted": 241,
+          "adjacent_gap_s": {
+            "count": 482,
+            "max": 0.07,
+            "mean": 0.06601659751037343,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 241,
+            "max": 0.135,
+            "mean": 0.1320331950207469,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 243,
+          "source_id": "episode_010",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_010.csv",
+          "source_manifest_sha256": "f946de0ba744d66d09c2c2b3a277cc685251b9c42683897453a36c24e6aa2da5",
+          "temporal_candidates": 241
+        }
+      ],
+      "temporal_candidate_count": 482
+    },
+    "train": {
+      "adjacent_gap_s": {
+        "count": 7020,
+        "max": 0.07,
+        "mean": 0.06599999999999999,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/train.csv",
+      "manifest_sha256": "07d2f6cb6dd668352ae988dcfb771fa42739faed745681c0ed9b682b669834b4",
+      "oldest_to_current_span_s": {
+        "count": 3510,
+        "max": 0.135,
+        "mean": 0.132,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "rejected_boundary_count": 22,
+      "rejected_gap_count": 2,
+      "sequence_count": 3510,
+      "source_count": 11,
+      "sources": [
+        {
+          "accepted": 240,
+          "adjacent_gap_s": {
+            "count": 480,
+            "max": 0.07,
+            "mean": 0.06599999999999999,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 240,
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 242,
+          "source_id": "episode_001",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_001.csv",
+          "source_manifest_sha256": "3a68872904f454ee1c498c5d7e3f5a1139812cd66e166b3b3d67d0932312cc1c",
+          "temporal_candidates": 240
+        },
+        {
+          "accepted": 240,
+          "adjacent_gap_s": {
+            "count": 480,
+            "max": 0.07,
+            "mean": 0.06599999999999999,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 240,
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 242,
+          "source_id": "episode_002",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_002.csv",
+          "source_manifest_sha256": "8962e33ffcbd8217794989892d5480f4c18dd23dd66148d4216c3e19221cb7e3",
+          "temporal_candidates": 240
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06599173553719007,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13198347107438016,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "episode_003",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_003.csv",
+          "source_manifest_sha256": "b4518624b51da7eb10438552d6aa9a38a9f09349c4724b7d21c659e59f9df30b",
+          "temporal_candidates": 242
+        },
+        {
+          "accepted": 241,
+          "adjacent_gap_s": {
+            "count": 482,
+            "max": 0.07,
+            "mean": 0.06599585062240663,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 241,
+            "max": 0.135,
+            "mean": 0.1319917012448133,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 243,
+          "source_id": "episode_004",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_004.csv",
+          "source_manifest_sha256": "83566391d44542bec4d83835b81306113b25e3168d6b56e9ab81bc30de88bc58",
+          "temporal_candidates": 241
+        },
+        {
+          "accepted": 240,
+          "adjacent_gap_s": {
+            "count": 480,
+            "max": 0.07,
+            "mean": 0.06599999999999999,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 240,
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 242,
+          "source_id": "episode_005",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_005.csv",
+          "source_manifest_sha256": "35c22ca89b7c4cf56173350e9f1de53ebedae1795fd9aceba44d104c65fd27dd",
+          "temporal_candidates": 240
+        },
+        {
+          "accepted": 240,
+          "adjacent_gap_s": {
+            "count": 480,
+            "max": 0.07,
+            "mean": 0.06599999999999999,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 240,
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 242,
+          "source_id": "episode_006",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_006.csv",
+          "source_manifest_sha256": "75bc99ace1168b7bc5a613918973f525aa7cdf67386a388d8396d81d95919c79",
+          "temporal_candidates": 240
+        },
+        {
+          "accepted": 240,
+          "adjacent_gap_s": {
+            "count": 480,
+            "max": 0.07,
+            "mean": 0.06599999999999999,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 240,
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 242,
+          "source_id": "episode_007",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_007.csv",
+          "source_manifest_sha256": "9789b111172e0bfdafbfb7dddf009a1f2343015717f9afec07191625d5381bdc",
+          "temporal_candidates": 240
+        },
+        {
+          "accepted": 241,
+          "adjacent_gap_s": {
+            "count": 482,
+            "max": 0.07,
+            "mean": 0.06599585062240663,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 241,
+            "max": 0.135,
+            "mean": 0.1319917012448133,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 243,
+          "source_id": "episode_008",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/dataset/manifests/episode_008.csv",
+          "source_manifest_sha256": "0abdf4f4db25cb6b272e2adb939e2b3539e3eb794fed30eef1b992c697a9c649",
+          "temporal_candidates": 241
+        },
+        {
+          "accepted": 48,
+          "adjacent_gap_s": {
+            "count": 96,
+            "max": 0.07,
+            "mean": 0.06604166666666667,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 48,
+            "max": 0.135,
+            "mean": 0.13208333333333333,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 50,
+          "source_id": "high_speed_dagger_rollout_A",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/manifests/high_speed_dagger_rollout_A.csv",
+          "source_manifest_sha256": "dc4132146baf679f8370f685f2e0251c715b71d74b1086e45e8ea4f34ba91b22",
+          "temporal_candidates": 48
+        },
+        {
+          "accepted": 43,
+          "adjacent_gap_s": {
+            "count": 86,
+            "max": 0.07,
+            "mean": 0.06598837209302329,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 43,
+            "max": 0.135,
+            "mean": 0.13197674418604652,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 45,
+          "source_id": "high_speed_dagger_iter2_rollout_A",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration2_v1/extracted/manifests/high_speed_dagger_iter2_rollout_A.csv",
+          "source_manifest_sha256": "a6c7b0b33b53040f0ba039d921519f65068cbb737d712c66cb6efd681eb6a70d",
+          "temporal_candidates": 43
+        },
+        {
+          "accepted": 1495,
+          "adjacent_gap_s": {
+            "count": 2990,
+            "max": 0.07,
+            "mean": 0.06600167224080267,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 1495,
+            "max": 0.135,
+            "mean": 0.13200334448160536,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 2,
+          "source_frames": 1499,
+          "source_id": "high_speed_dagger_iter3_rollout_A",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/extracted/manifests/high_speed_dagger_iter3_rollout_A.csv",
+          "source_manifest_sha256": "a39e32afc78da81783e7a91fd14ea0ad3a94e47f1e7ebe48abc7cf8ab9d66670",
+          "temporal_candidates": 1497
+        }
+      ],
+      "temporal_candidate_count": 3512
+    }
+  },
+  "version": "high_speed_temporal_dataset_v1"
+}

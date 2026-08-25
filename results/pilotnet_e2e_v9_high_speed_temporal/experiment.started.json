@@ -1,0 +1,6 @@
+{
+  "additional_dagger": false,
+  "maximum_total_attempts": 5,
+  "maximum_valid_policy_runs": 3,
+  "status": "V9_TEMPORAL_LIVE_STARTED"
+}
