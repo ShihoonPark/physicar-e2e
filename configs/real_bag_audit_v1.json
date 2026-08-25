@@ -1,0 +1,109 @@
+{
+  "version": "real_bag_audit_v1",
+  "bags": [
+    {
+      "id": "bag_01",
+      "path": "/home/a/bag_01"
+    },
+    {
+      "id": "bag_02",
+      "path": "/home/a/bag_02"
+    },
+    {
+      "id": "bag_03",
+      "path": "/home/a/bag_03"
+    }
+  ],
+  "required_topics": {
+    "camera": {
+      "name": "/camera/image_raw",
+      "type": "sensor_msgs/msg/Image"
+    },
+    "steering": {
+      "name": "/steering",
+      "type": "std_msgs/msg/Float64"
+    },
+    "speed": {
+      "name": "/speed",
+      "type": "std_msgs/msg/Float64"
+    }
+  },
+  "timestamp_domain": {
+    "selected": "mcap_log_time",
+    "camera_header_use": "diagnostic_only",
+    "reason": "Float64 has no header; use one causal MCAP bag-record timestamp domain for camera, steering, and speed."
+  },
+  "steering_contract": {
+    "unit": "radians",
+    "confirmed_numeric_range_rad": [-0.35, 0.35],
+    "near_zero_abs_rad": 0.01,
+    "range_and_unit_evidence": "Confirmed real-vehicle fact supplied by the user on 2026-08-26.",
+    "left_right_sign_convention": "unresolved",
+    "command_or_feedback": "unresolved"
+  },
+  "speed_contract": {
+    "unit": "unresolved",
+    "meaning": "unresolved",
+    "stationary_diagnostic": "exact_zero_only",
+    "active_window_diagnostic": "longest_contiguous_nonzero_run"
+  },
+  "simulator_camera_reference": {
+    "width": 480,
+    "height": 360,
+    "encoding": "rgb8",
+    "aspect_ratio": "4:3",
+    "roi": {
+      "x_start": 0,
+      "x_end": 480,
+      "y_start": 160,
+      "y_end": 360
+    },
+    "output_width": 200,
+    "output_height": 66,
+    "source": "configs/dataset_extractor_v1.json"
+  },
+  "real_camera_roi": {
+    "status": "unresolved_requires_human_approval_after_complete_bag_previews",
+    "auto_apply_simulator_roi": false
+  },
+  "simulator_temporal_reference": {
+    "frame_order": ["t_minus_2", "t_minus_1", "t"],
+    "maximum_adjacent_gap_s": 0.12,
+    "representative_train_adjacent_gap_s": {
+      "mean": 0.066,
+      "median": 0.065,
+      "p95": 0.07,
+      "max": 0.07
+    },
+    "representative_train_oldest_to_current_span_s": {
+      "mean": 0.132,
+      "median": 0.13,
+      "p95": 0.135,
+      "max": 0.135
+    },
+    "source": "results/high_speed_temporal_dataset_v1/summary.json"
+  },
+  "preview": {
+    "root": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews",
+    "thumbnail_width": 320,
+    "thumbnail_height": 240,
+    "save_selected_full_frames": true
+  },
+  "manual_visual_review": {
+    "status": "completed_on_readable_prefix_previews",
+    "field_of_view_and_content": "The real camera is mounted very low and shows a wider, visibly barrel-distorted indoor track view with close barriers, spectators, cones, ceiling lights, motion blur, and curved lane geometry. The simulator reference is a clean rectilinear outdoor view with a distant horizon and substantial sky. Although dimensions and rgb8 encoding match, image content and projection do not.",
+    "roi_implication": "Simulator y=160:360 would remove much of the real far-track and turn context visible above row 160. It is not approved for real data; retain uncropped previews until a complete-bag human ROI decision.",
+    "simulator_full_frame_reviewed": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/simulator_reference_full_frame.png"
+  },
+  "output_root": "results/real_bag_audit_v1",
+  "scope_guards": {
+    "real_data_audit_only": true,
+    "require_odometry": false,
+    "generate_training_dataset": false,
+    "invoke_training": false,
+    "drive_simulator": false,
+    "modify_docker": false,
+    "modify_bags": false,
+    "auto_apply_simulator_roi": false
+  }
+}

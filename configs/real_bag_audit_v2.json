@@ -1,0 +1,159 @@
+{
+  "version": "real_bag_audit_v2",
+  "bags": [
+    {
+      "id": "bag_01",
+      "path": "/home/a/output_bag/bag_01"
+    },
+    {
+      "id": "bag_02",
+      "path": "/home/a/output_bag/bag_02"
+    },
+    {
+      "id": "bag_03",
+      "path": "/home/a/output_bag/bag_03"
+    }
+  ],
+  "historical_v1": {
+    "result": "FAIL_INCOMPLETE_INPUTS",
+    "preserve_unchanged": true,
+    "result_root": "results/real_bag_audit_v1",
+    "reason": "Historical evidence from the earlier truncated local transfers."
+  },
+  "required_topics": {
+    "camera": {
+      "name": "/camera/image_raw",
+      "type": "sensor_msgs/msg/Image"
+    },
+    "steering": {
+      "name": "/steering",
+      "type": "std_msgs/msg/Float64"
+    },
+    "speed": {
+      "name": "/speed",
+      "type": "std_msgs/msg/Float64"
+    }
+  },
+  "timestamp_domain": {
+    "selected": "mcap_log_time",
+    "camera_header_use": "diagnostic_only",
+    "reason": "Float64 has no header; use one causal MCAP bag-record timestamp domain for camera, steering, and speed."
+  },
+  "steering_contract": {
+    "recorded_representation": "normalized_raw",
+    "recorded_numeric_range": [-1.0, 1.0],
+    "recorded_to_radians_scale": 0.35,
+    "recorded_scale_evidence": "User-confirmed on 2026-08-26: these bags mistakenly stored steering on a -1 to +1 scale and the entire stream must be rescaled to the physical +/-0.35 rad range.",
+    "physical_unit": "radians",
+    "confirmed_numeric_range_rad": [-0.35, 0.35],
+    "near_zero_abs_rad": 0.01,
+    "range_and_unit_evidence": "Physical steering range and normalized-recording correction supplied by the user on 2026-08-26.",
+    "left_right_sign_convention": "positive_left_negative_right",
+    "command_or_feedback": "command",
+    "control_semantics_evidence": "User-confirmed real-vehicle control semantics supplied on 2026-08-26: normalized steering command, positive is LEFT, negative is RIGHT.",
+    "clip_out_of_range": false
+  },
+  "speed_contract": {
+    "unit": "meters_per_second",
+    "unit_symbol": "m/s",
+    "meaning": "unresolved_command_or_actual_feedback_measurement",
+    "unit_evidence": "User-confirmed real-vehicle /speed unit supplied on 2026-08-26.",
+    "stationary_diagnostic": "exact_zero_only",
+    "active_window_diagnostic": "all_contiguous_nonzero_runs_plus_longest"
+  },
+  "simulator_camera_reference": {
+    "width": 480,
+    "height": 360,
+    "encoding": "rgb8",
+    "aspect_ratio": "4:3",
+    "roi": {
+      "x_start": 0,
+      "x_end": 480,
+      "y_start": 160,
+      "y_end": 360
+    },
+    "output_width": 200,
+    "output_height": 66,
+    "source": "configs/dataset_extractor_v1.json"
+  },
+  "real_camera_roi": {
+    "version": "real_camera_roi_v1",
+    "status": "approved",
+    "approval_evidence": "Human review completed and contract supplied by the user on 2026-08-26 after reviewing the complete-bag V2 contact sheets.",
+    "source": {
+      "width": 480,
+      "height": 360,
+      "color_space": "RGB",
+      "ros_encoding": "rgb8"
+    },
+    "crop": {
+      "x_start": 0,
+      "x_end": 480,
+      "y_start": 80,
+      "y_end": 360,
+      "end_coordinates_exclusive": true
+    },
+    "cropped_width": 480,
+    "cropped_height": 280,
+    "resize": {
+      "output_width": 200,
+      "output_height": 66,
+      "interpolation": "bilinear",
+      "implementation": "canonical Pillow Image.Resampling.BILINEAR"
+    },
+    "post_resize_color_conversion": "existing RGB_to_YUV preprocessing",
+    "temporal_input": {
+      "frame_order": ["t_minus_2", "t_minus_1", "t"],
+      "frame_count": 3,
+      "causal": true
+    },
+    "horizontal_crop_applied": false,
+    "camera_undistortion_applied": false,
+    "auto_apply_simulator_roi": false,
+    "simulator_y_160_360_crop_used": false,
+    "apply_to_audit_previews": false,
+    "reason": "The y=80:160 band retains useful far-track curvature, orange center-line vanishing-point information, and early cone visibility that simulator y=160:360 would discard."
+  },
+  "simulator_temporal_reference": {
+    "frame_order": ["t_minus_2", "t_minus_1", "t"],
+    "maximum_adjacent_gap_s": 0.12,
+    "representative_train_adjacent_gap_s": {
+      "mean": 0.066,
+      "median": 0.065,
+      "p95": 0.07,
+      "max": 0.07
+    },
+    "representative_train_oldest_to_current_span_s": {
+      "mean": 0.132,
+      "median": 0.13,
+      "p95": 0.135,
+      "max": 0.135
+    },
+    "source": "results/high_speed_temporal_dataset_v1/summary.json"
+  },
+  "preview": {
+    "root": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews",
+    "thumbnail_width": 320,
+    "thumbnail_height": 240,
+    "save_selected_full_frames": true,
+    "major_steering_frames_per_sign": 3,
+    "major_steering_minimum_separation_s": 3.0
+  },
+  "manual_visual_review": {
+    "status": "completed_real_camera_roi_v1_approved",
+    "field_of_view_and_content": "The complete-bag contact sheets show a low-mounted, wide, visibly barrel-distorted indoor track view with close barriers, spectators, cones, ceiling lights, motion blur, curved lane geometry, far-track curvature, and orange center-line vanishing-point information.",
+    "roi_implication": "Real Camera ROI V1 is approved at x=0:480, y=80:360. Simulator y=160:360 is forbidden for real data because it discards useful far-track and early-cone information. No horizontal crop or camera undistortion is approved for V1.",
+    "simulator_full_frame_reviewed": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/simulator_reference_full_frame.png"
+  },
+  "output_root": "results/real_bag_audit_v2",
+  "scope_guards": {
+    "real_data_audit_only": true,
+    "require_odometry": false,
+    "generate_training_dataset": false,
+    "invoke_training": false,
+    "drive_simulator": false,
+    "modify_docker": false,
+    "modify_bags": false,
+    "auto_apply_simulator_roi": false
+  }
+}

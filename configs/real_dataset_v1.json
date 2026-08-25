@@ -1,0 +1,116 @@
+{
+  "version": "real_dataset_v1",
+  "source_bags": [
+    {
+      "bag_id": "bag_01",
+      "bag_root": "/home/a/output_bag/bag_01",
+      "mcap_filename": "bag_01_0.mcap",
+      "expected_mcap_size_bytes": 678405210,
+      "expected_mcap_sha256": "c98fd035af40fb5e698e94f0a87fe3f8c979f4b473c16807621c70aa0b038f04"
+    },
+    {
+      "bag_id": "bag_02",
+      "bag_root": "/home/a/output_bag/bag_02",
+      "mcap_filename": "bag_02_0.mcap",
+      "expected_mcap_size_bytes": 1112101420,
+      "expected_mcap_sha256": "856bcdebb65db968a549625abb528a80ee863e03540fa458b43c711333826636"
+    },
+    {
+      "bag_id": "bag_03",
+      "bag_root": "/home/a/output_bag/bag_03",
+      "mcap_filename": "bag_03_0.mcap",
+      "expected_mcap_size_bytes": 472764359,
+      "expected_mcap_sha256": "f7b3622c0d35e04fcc31e01aa6041bc5ae46c1ed6fdcb700c30900aa7e34438f"
+    }
+  ],
+  "topics": {
+    "camera": {
+      "name": "/camera/image_raw",
+      "type": "sensor_msgs/msg/Image"
+    },
+    "steering": {
+      "name": "/steering",
+      "type": "std_msgs/msg/Float64"
+    },
+    "speed": {
+      "name": "/speed",
+      "type": "std_msgs/msg/Float64"
+    }
+  },
+  "timestamp_contract": {
+    "domain": "MCAP_log_time",
+    "causal_rule": "latest_scalar_with_log_time_lte_camera_log_time",
+    "future_steering_labels_permitted": false,
+    "maximum_steering_age_s": 0.12,
+    "reject_steering_age_strictly_greater_than_s": 0.12
+  },
+  "steering_contract": {
+    "recorded_representation": "normalized_steering_command",
+    "recorded_to_radians_scale": 0.35,
+    "physical_target_unit": "radians",
+    "positive_direction": "LEFT",
+    "negative_direction": "RIGHT",
+    "selective_clipping": false,
+    "expected_physical_range_rad": [-0.35, 0.35]
+  },
+  "speed_contract": {
+    "unit": "m/s",
+    "semantics": "UNKNOWN_COMMAND_OR_FEEDBACK",
+    "maximum_age_s": 0.12,
+    "stale_if_strictly_greater_than_s": 0.12,
+    "reject_sequence_if_missing_or_stale": false,
+    "active_driving_filter": false,
+    "neural_input": false,
+    "steering_target": false
+  },
+  "camera_contract": {
+    "source_width": 480,
+    "source_height": 360,
+    "source_encoding": "rgb8",
+    "roi": {
+      "x_start": 0,
+      "x_end": 480,
+      "y_start": 80,
+      "y_end": 360,
+      "end_coordinates_exclusive": true
+    },
+    "cropped_width": 480,
+    "cropped_height": 280,
+    "output_width": 200,
+    "output_height": 66,
+    "resize": "Pillow_Image.Resampling.BILINEAR",
+    "stored_color_space": "RGB",
+    "model_preprocessing_later": "RGB_to_YUV",
+    "horizontal_crop": false,
+    "undistortion": false,
+    "simulator_y_160_360_crop": false
+  },
+  "temporal_contract": {
+    "history_frames": 3,
+    "frame_order": ["t_minus_2", "t_minus_1", "t"],
+    "target_frame": "t",
+    "maximum_adjacent_gap_s": 0.12,
+    "reject_gap_strictly_greater_than_s": 0.12,
+    "allow_episode_crossing": false,
+    "allow_duplicate_frame_padding": false
+  },
+  "storage": {
+    "external_dataset_root": "/home/a/physicar-e2e-artifacts/real_dataset_v1",
+    "compact_result_root": "results/real_dataset_v1",
+    "image_format": "PNG",
+    "manifest_format": "CSV"
+  },
+  "qc": {
+    "preview_sequences_per_bag": 12,
+    "verify_every_stored_image": true,
+    "require_every_image_referenced": true,
+    "require_zero_future_steering_labels": true
+  },
+  "scope_guards": {
+    "training_permitted": false,
+    "raw_bag_copy_permitted": false,
+    "raw_bag_modification_permitted": false,
+    "simulator_permitted": false,
+    "docker_permitted": false
+  }
+}

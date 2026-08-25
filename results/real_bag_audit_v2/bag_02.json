@@ -1,0 +1,5190 @@
+{
+  "actual_readable_messages": {
+    "end_time_ns": 1787685086379324121,
+    "end_time_utc": "2026-08-25T19:11:26.379324121Z",
+    "span_s": 72.767350237,
+    "start_time_ns": 1787685013611973884,
+    "start_time_utc": "2026-08-25T19:10:13.611973884Z",
+    "topic_counts_and_rates": [
+      {
+        "count_matches_metadata": true,
+        "measured_rate_hz": 14.952511788028234,
+        "metadata_message_count": 1068,
+        "metadata_type": "sensor_msgs/msg/Image",
+        "readable_fraction": 1.0,
+        "readable_message_count": 1068,
+        "readable_schema_types": [
+          "sensor_msgs/msg/Image"
+        ],
+        "readable_span_s": 71.359248207,
+        "topic": "/camera/image_raw"
+      },
+      {
+        "count_matches_metadata": true,
+        "measured_rate_hz": 14.953795402784028,
+        "metadata_message_count": 1068,
+        "metadata_type": "sensor_msgs/msg/Image",
+        "readable_fraction": 1.0,
+        "readable_message_count": 1068,
+        "readable_schema_types": [
+          "sensor_msgs/msg/Image"
+        ],
+        "readable_span_s": 71.35312282,
+        "topic": "/lane/debug/path"
+      },
+      {
+        "count_matches_metadata": true,
+        "measured_rate_hz": 9.977896341107352,
+        "metadata_message_count": 713,
+        "metadata_type": "sensor_msgs/msg/LaserScan",
+        "readable_fraction": 1.0,
+        "readable_message_count": 713,
+        "readable_schema_types": [
+          "sensor_msgs/msg/LaserScan"
+        ],
+        "readable_span_s": 71.357726685,
+        "topic": "/scan"
+      },
+      {
+        "count_matches_metadata": true,
+        "measured_rate_hz": 14.697145249868115,
+        "metadata_message_count": 1070,
+        "metadata_type": "std_msgs/msg/Float64",
+        "readable_fraction": 1.0,
+        "readable_message_count": 1070,
+        "readable_schema_types": [
+          "std_msgs/msg/Float64"
+        ],
+        "readable_span_s": 72.735213664,
+        "topic": "/speed"
+      },
+      {
+        "count_matches_metadata": true,
+        "measured_rate_hz": 14.697155071988309,
+        "metadata_message_count": 1070,
+        "metadata_type": "std_msgs/msg/Float64",
+        "readable_fraction": 1.0,
+        "readable_message_count": 1070,
+        "readable_schema_types": [
+          "std_msgs/msg/Float64"
+        ],
+        "readable_span_s": 72.735165055,
+        "topic": "/steering"
+      }
+    ]
+  },
+  "audit_scope": "complete_bag",
+  "bag_id": "bag_02",
+  "camera": {
+    "all_readable_messages_share_contract": true,
+    "bag_publish_timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 1068,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013636278158,
+      "first_time_utc": "2026-08-25T19:10:13.636278158Z",
+      "gap_s": {
+        "count": 1067,
+        "finite_count": 1067,
+        "max": 0.357086038,
+        "mean": 0.06687989624835988,
+        "median": 0.066675105,
+        "min": 0.040511711,
+        "nonfinite_count": 0,
+        "p01": 0.06028769884,
+        "p05": 0.0638369501,
+        "p25": 0.0656420835,
+        "p75": 0.0676753115,
+        "p95": 0.06938161620000001,
+        "p99": 0.07235550944,
+        "std": 0.009129213815448699
+      },
+      "last_time_ns": 1787685084997127455,
+      "last_time_utc": "2026-08-25T19:11:24.997127455Z",
+      "maximum_time_ns": 1787685084997127455,
+      "measured_rate_hz": 14.952176305514577,
+      "minimum_time_ns": 1787685013636278158,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 71.360849297,
+      "strictly_increasing": true
+    },
+    "bag_record_timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 1068,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013638317409,
+      "first_time_utc": "2026-08-25T19:10:13.638317409Z",
+      "gap_s": {
+        "count": 1067,
+        "finite_count": 1067,
+        "max": 0.357921377,
+        "mean": 0.06687839569540768,
+        "median": 0.066674831,
+        "min": 0.039547205,
+        "nonfinite_count": 0,
+        "p01": 0.060420888660000005,
+        "p05": 0.06359187969999999,
+        "p25": 0.065487615,
+        "p75": 0.067798742,
+        "p95": 0.06960835679999999,
+        "p99": 0.072285292,
+        "std": 0.00918327326348453
+      },
+      "last_time_ns": 1787685084997565616,
+      "last_time_utc": "2026-08-25T19:11:24.997565616Z",
+      "maximum_time_ns": 1787685084997565616,
+      "measured_rate_hz": 14.952511788028234,
+      "minimum_time_ns": 1787685013638317409,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 71.359248207,
+      "strictly_increasing": true
+    },
+    "bounded_preview_decode": {
+      "attempted_count": 11,
+      "failure_count": 0
+    },
+    "contracts": [
+      {
+        "count": 1068,
+        "encoding": "rgb8",
+        "frame_id": "camera",
+        "height": 360,
+        "is_bigendian": 0,
+        "step": 1440,
+        "width": 480
+      }
+    ],
+    "decode": {
+      "all_readable_payload_layouts_valid": true,
+      "failure_count": 0,
+      "payload_validation_attempted_count": 1068,
+      "payload_validation_failure_count": 0
+    },
+    "duplicate_timestamps": {
+      "bag_record": 0,
+      "camera_header": 145
+    },
+    "fps": 14.952511788028234,
+    "frame_ids": {
+      "camera": 1068
+    },
+    "header_timestamp": {
+      "available_count": 1068,
+      "backward_timestamp_count": 1,
+      "count": 1068,
+      "duplicate_timestamp_count": 145,
+      "first_time_ns": 1787626035549140538,
+      "first_time_utc": "2026-08-25T02:47:15.549140538Z",
+      "gap_s": {
+        "count": 1067,
+        "finite_count": 1067,
+        "max": 0.066682614,
+        "mean": 0.008993850897844421,
+        "median": 0.066645907,
+        "min": -61.447966112,
+        "nonfinite_count": 0,
+        "p01": 0.06663573006,
+        "p05": 0.066639425,
+        "p25": 0.066642649,
+        "p75": 0.066648824,
+        "p95": 0.0666518273,
+        "p99": 0.06665554966000001,
+        "std": 1.8823157287562966
+      },
+      "last_time_ns": 1787626045145579446,
+      "last_time_utc": "2026-08-25T02:47:25.145579446Z",
+      "maximum_time_ns": 1787626095464377187,
+      "measured_rate_hz": 17.364285061204466,
+      "minimum_time_ns": 1787626034016411075,
+      "missing_count": 0,
+      "monotonic_non_decreasing": false,
+      "non_increasing_timestamp_count": 1,
+      "nonzero_count": 1068,
+      "span_s": 61.447966112,
+      "strictly_increasing": false
+    },
+    "header_vs_bag_record": {
+      "first_record_minus_header_s": 58978.089176871,
+      "inter_frame_increment_difference_ms": {
+        "count": 1067,
+        "finite_count": 1067,
+        "max": 61805.887489,
+        "mean": 57.884544797563265,
+        "median": 0.032257,
+        "min": -27.091017,
+        "nonfinite_count": 0,
+        "p01": -6.22817194,
+        "p05": -3.0503458,
+        "p25": -1.154808,
+        "p75": 1.1503255000000001,
+        "p95": 2.959896899999999,
+        "p99": 5.640126519999997,
+        "std": 1891.2311366980707
+      },
+      "last_record_minus_header_s": 59039.85198617,
+      "mixed_domain_use_safe_without_proven_transform": false,
+      "offset_change_s": 61.762809298998036,
+      "pair_count": 1068,
+      "record_minus_header_s": {
+        "count": 1068,
+        "finite_count": 1068,
+        "max": 59039.894691333,
+        "mean": 58987.80477999826,
+        "median": 58978.088773767,
+        "min": 58978.086583354,
+        "nonfinite_count": 0,
+        "p01": 58978.08675919687,
+        "p05": 58978.0870117262,
+        "p25": 58978.0879024045,
+        "p75": 58978.09049494975,
+        "p95": 59039.85436147875,
+        "p99": 59039.8569250242,
+        "std": 22.48800695042309
+      },
+      "timestamps_numerically_identical": false
+    },
+    "inter_frame_gap_s": {
+      "count": 1067,
+      "finite_count": 1067,
+      "max": 0.357921377,
+      "mean": 0.06687839569540768,
+      "median": 0.066674831,
+      "min": 0.039547205,
+      "nonfinite_count": 0,
+      "p01": 0.060420888660000005,
+      "p05": 0.06359187969999999,
+      "p25": 0.065487615,
+      "p75": 0.067798742,
+      "p95": 0.06960835679999999,
+      "p99": 0.072285292,
+      "std": 0.00918327326348453
+    },
+    "message_count": 1068,
+    "roi_applied": false,
+    "timestamp_monotonicity": {
+      "bag_record": true,
+      "camera_header": false
+    },
+    "uniform_contract": {
+      "count": 1068,
+      "encoding": "rgb8",
+      "frame_id": "camera",
+      "height": 360,
+      "is_bigendian": 0,
+      "step": 1440,
+      "width": 480
+    }
+  },
+  "causal_synchronization": {
+    "camera_count": 1068,
+    "complete_causal_pair_count": 1067,
+    "future_label_violations": 0,
+    "missing_both_count": 1,
+    "missing_causal_speed_count": 1,
+    "missing_causal_steering_count": 1,
+    "rule": "latest scalar record satisfying t_scalar <= t_camera",
+    "speed_age_ms": {
+      "count": 1067,
+      "finite_count": 1067,
+      "max": 356.690094,
+      "mean": 62.19089571602625,
+      "median": 61.233712,
+      "min": 31.698587,
+      "nonfinite_count": 0,
+      "p01": 53.44925036,
+      "p05": 56.742238,
+      "p25": 59.168566,
+      "p75": 65.2199885,
+      "p95": 67.736592,
+      "p99": 70.41070744,
+      "std": 9.838936793197899
+    },
+    "stale_age_threshold_applied": false,
+    "steering_age_ms": {
+      "count": 1067,
+      "finite_count": 1067,
+      "max": 356.70113,
+      "mean": 62.236774149953135,
+      "median": 61.283348,
+      "min": 31.776791,
+      "nonfinite_count": 0,
+      "p01": 53.56385522,
+      "p05": 56.8127513,
+      "p25": 59.2237565,
+      "p75": 65.229883,
+      "p95": 67.7448004,
+      "p99": 70.42038044,
+      "std": 9.830048348760107
+    },
+    "timestamp_domain": "MCAP log_time (bag-record time) for all three streams"
+  },
+  "decode_failure_examples": [],
+  "integrity": {
+    "classification": "complete, footer-valid MCAP with matching metadata and readable required streams",
+    "closing_magic_valid": true,
+    "completed_records_crc_checked": true,
+    "footer_record_valid": true,
+    "full_required_stream_readability_pass": true,
+    "metadata_counts_match_readable_messages": true,
+    "metadata_total_message_count": 4989,
+    "opening_magic_valid": true,
+    "readable_total_fraction": 1.0,
+    "readable_total_message_count": 4989,
+    "required_topic_decode_pass": true,
+    "result": "PASS",
+    "scan_error_message": null,
+    "scan_error_type": null,
+    "strict_crc_and_footer_scan_completed": true,
+    "strict_crc_stream_scan_completed": true
+  },
+  "mcap_path": "/home/a/output_bag/bag_02/bag_02_0.mcap",
+  "mcap_sha256": "856bcdebb65db968a549625abb528a80ee863e03540fa458b43c711333826636",
+  "mcap_size_bytes": 1112101420,
+  "metadata": {
+    "duration_ns": 72767350237,
+    "duration_s": 72.767350237,
+    "end_time_ns": 1787685086379324121,
+    "end_time_utc": "2026-08-25T19:11:26.379324121Z",
+    "message_count": 4989,
+    "relative_file_paths": [
+      "bag_02_0.mcap"
+    ],
+    "ros_distro": "jazzy",
+    "start_time_ns": 1787685013611973884,
+    "start_time_utc": "2026-08-25T19:10:13.611973884Z",
+    "storage_identifier": "mcap",
+    "topics": {
+      "/camera/image_raw": {
+        "message_count": 1068,
+        "name": "/camera/image_raw",
+        "type": "sensor_msgs/msg/Image"
+      },
+      "/lane/debug/path": {
+        "message_count": 1068,
+        "name": "/lane/debug/path",
+        "type": "sensor_msgs/msg/Image"
+      },
+      "/scan": {
+        "message_count": 713,
+        "name": "/scan",
+        "type": "sensor_msgs/msg/LaserScan"
+      },
+      "/speed": {
+        "message_count": 1070,
+        "name": "/speed",
+        "type": "std_msgs/msg/Float64"
+      },
+      "/steering": {
+        "message_count": 1070,
+        "name": "/steering",
+        "type": "std_msgs/msg/Float64"
+      }
+    },
+    "version": 9
+  },
+  "metadata_path": "/home/a/output_bag/bag_02/metadata.yaml",
+  "path": "/home/a/output_bag/bag_02",
+  "previews": {
+    "contact_sheet": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/bag_02_contact_sheet.png",
+    "decode_failure_count": 0,
+    "decode_failures": [],
+    "roi_applied": false,
+    "scope": "complete_bag",
+    "selected_frame_count": 11,
+    "selected_frames": [
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000000__first.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000107__early.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000338__maximum_steering_recorded__major_positive_steering_01.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000473__major_positive_steering_02.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000534__middle.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000582__minimum_steering_recorded__major_negative_steering_01.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000657__major_positive_steering_03.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000685__major_negative_steering_03.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000779__major_negative_steering_02.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000960__late.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_001067__last.png"
+    ],
+    "selection": [
+      {
+        "camera_index": 0,
+        "labels": [
+          "first"
+        ],
+        "offset_from_first_camera_s": 0.0,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000000__first.png",
+        "record_time_ns": 1787685013638317409,
+        "speed_mps": null,
+        "speed_raw": null,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": null,
+        "steering_recorded_raw": null
+      },
+      {
+        "camera_index": 107,
+        "labels": [
+          "early"
+        ],
+        "offset_from_first_camera_s": 7.130728684,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000107__early.png",
+        "record_time_ns": 1787685020769046093,
+        "speed_mps": 0.8980377445243344,
+        "speed_raw": 0.8980377445243344,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.03531589425177166,
+        "steering_recorded_raw": 0.10090255500506189
+      },
+      {
+        "camera_index": 338,
+        "labels": [
+          "maximum_steering_recorded",
+          "major_positive_steering_01"
+        ],
+        "offset_from_first_camera_s": 22.524952132,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000338__maximum_steering_recorded__major_positive_steering_01.png",
+        "record_time_ns": 1787685036163269541,
+        "speed_mps": 0.5,
+        "speed_raw": 0.5,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.3153779657400577,
+        "steering_recorded_raw": 0.9010799021144507
+      },
+      {
+        "camera_index": 473,
+        "labels": [
+          "major_positive_steering_02"
+        ],
+        "offset_from_first_camera_s": 31.522367057,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000473__major_positive_steering_02.png",
+        "record_time_ns": 1787685045160684466,
+        "speed_mps": 0.2,
+        "speed_raw": 0.2,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.31182326347694633,
+        "steering_recorded_raw": 0.8909236099341324
+      },
+      {
+        "camera_index": 534,
+        "labels": [
+          "middle"
+        ],
+        "offset_from_first_camera_s": 35.586800238,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000534__middle.png",
+        "record_time_ns": 1787685049225117647,
+        "speed_mps": 0.82303298741865,
+        "speed_raw": 0.82303298741865,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.06680926694714787,
+        "steering_recorded_raw": 0.19088361984899394
+      },
+      {
+        "camera_index": 582,
+        "labels": [
+          "minimum_steering_recorded",
+          "major_negative_steering_01"
+        ],
+        "offset_from_first_camera_s": 38.787242105,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000582__minimum_steering_recorded__major_negative_steering_01.png",
+        "record_time_ns": 1787685052425559514,
+        "speed_mps": 0.5,
+        "speed_raw": 0.5,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": -0.327208485671835,
+        "steering_recorded_raw": -0.9348813876338145
+      },
+      {
+        "camera_index": 657,
+        "labels": [
+          "major_positive_steering_03"
+        ],
+        "offset_from_first_camera_s": 43.785414215,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000657__major_positive_steering_03.png",
+        "record_time_ns": 1787685057423731624,
+        "speed_mps": 0.5,
+        "speed_raw": 0.5,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.30914924729811755,
+        "steering_recorded_raw": 0.8832835637089073
+      },
+      {
+        "camera_index": 685,
+        "labels": [
+          "major_negative_steering_03"
+        ],
+        "offset_from_first_camera_s": 45.653431197,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000685__major_negative_steering_03.png",
+        "record_time_ns": 1787685059291748606,
+        "speed_mps": 0.5591998362886255,
+        "speed_raw": 0.5591998362886255,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": -0.24056521322582675,
+        "steering_recorded_raw": -0.6873291806452193
+      },
+      {
+        "camera_index": 779,
+        "labels": [
+          "major_negative_steering_02"
+        ],
+        "offset_from_first_camera_s": 51.917089481,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000779__major_negative_steering_02.png",
+        "record_time_ns": 1787685065555406890,
+        "speed_mps": 0.5148217834724909,
+        "speed_raw": 0.5148217834724909,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": -0.2853003389583823,
+        "steering_recorded_raw": -0.8151438255953781
+      },
+      {
+        "camera_index": 960,
+        "labels": [
+          "late"
+        ],
+        "offset_from_first_camera_s": 64.230235124,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_000960__late.png",
+        "record_time_ns": 1787685077868552533,
+        "speed_mps": 0.967597356307469,
+        "speed_raw": 0.967597356307469,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.010420178136162283,
+        "steering_recorded_raw": 0.02977193753189224
+      },
+      {
+        "camera_index": 1067,
+        "labels": [
+          "last"
+        ],
+        "offset_from_first_camera_s": 71.359248207,
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews/bag_02/frame_001067__last.png",
+        "record_time_ns": 1787685084997565616,
+        "speed_mps": 0.9723054474034518,
+        "speed_raw": 0.9723054474034518,
+        "speed_unit_symbol": "m/s",
+        "steering_rad": 0.008863093474693306,
+        "steering_recorded_raw": 0.02532312421340945
+      }
+    ]
+  },
+  "result": "PASS",
+  "speed": {
+    "active_driving_candidate_window": {
+      "diagnostic_only": true,
+      "duration_s": 61.632012354,
+      "end_offset_from_metadata_s": 67.528992977,
+      "end_record_time_ns": 1787685081140966861,
+      "end_time_utc": "2026-08-25T19:11:21.140966861Z",
+      "full_bag_inference_permitted": true,
+      "left_censored_by_readable_prefix": false,
+      "method": "longest contiguous run of finite, exactly nonzero raw speed values",
+      "record_count": 922,
+      "right_censored_by_readable_prefix": false,
+      "speed_unit": "meters_per_second",
+      "speed_unit_symbol": "m/s",
+      "start_offset_from_metadata_s": 5.896980623,
+      "start_record_time_ns": 1787685019508954507,
+      "start_time_utc": "2026-08-25T19:10:19.508954507Z",
+      "supporting_raw_speed_distribution": {
+        "count": 922,
+        "finite_count": 922,
+        "max": 1.1,
+        "mean": 0.8078311735297241,
+        "median": 0.8783918248972122,
+        "min": 0.2,
+        "nonfinite_count": 0,
+        "p01": 0.2,
+        "p05": 0.5157197091971552,
+        "p25": 0.6949039069636223,
+        "p75": 0.944531798764598,
+        "p95": 0.9902961520631998,
+        "p99": 0.9984995648354781,
+        "std": 0.18358096448594752
+      },
+      "window_index": 1
+    },
+    "active_driving_candidate_windows": [
+      {
+        "diagnostic_only": true,
+        "duration_s": 5.731353179,
+        "end_offset_from_metadata_s": 5.763489752,
+        "end_record_time_ns": 1787685019375463636,
+        "end_time_utc": "2026-08-25T19:10:19.375463636Z",
+        "full_bag_inference_permitted": true,
+        "left_censored_by_readable_prefix": true,
+        "method": "contiguous run of finite, exactly nonzero raw speed values",
+        "record_count": 87,
+        "right_censored_by_readable_prefix": false,
+        "speed_unit": "meters_per_second",
+        "speed_unit_symbol": "m/s",
+        "start_offset_from_metadata_s": 0.032136573,
+        "start_record_time_ns": 1787685013644110457,
+        "start_time_utc": "2026-08-25T19:10:13.644110457Z",
+        "supporting_raw_speed_distribution": {
+          "count": 87,
+          "finite_count": 87,
+          "max": 0.9723054474034518,
+          "mean": 0.8373188676314952,
+          "median": 0.9314945301218822,
+          "min": 0.2,
+          "nonfinite_count": 0,
+          "p01": 0.2,
+          "p05": 0.2,
+          "p25": 0.9271714001289594,
+          "p75": 0.944713120851566,
+          "p95": 0.9629334737816232,
+          "p99": 0.9682564890609066,
+          "std": 0.24279863895985554
+        },
+        "window_index": 0
+      },
+      {
+        "diagnostic_only": true,
+        "duration_s": 61.632012354,
+        "end_offset_from_metadata_s": 67.528992977,
+        "end_record_time_ns": 1787685081140966861,
+        "end_time_utc": "2026-08-25T19:11:21.140966861Z",
+        "full_bag_inference_permitted": true,
+        "left_censored_by_readable_prefix": false,
+        "method": "contiguous run of finite, exactly nonzero raw speed values",
+        "record_count": 922,
+        "right_censored_by_readable_prefix": false,
+        "speed_unit": "meters_per_second",
+        "speed_unit_symbol": "m/s",
+        "start_offset_from_metadata_s": 5.896980623,
+        "start_record_time_ns": 1787685019508954507,
+        "start_time_utc": "2026-08-25T19:10:19.508954507Z",
+        "supporting_raw_speed_distribution": {
+          "count": 922,
+          "finite_count": 922,
+          "max": 1.1,
+          "mean": 0.8078311735297241,
+          "median": 0.8783918248972122,
+          "min": 0.2,
+          "nonfinite_count": 0,
+          "p01": 0.2,
+          "p05": 0.5157197091971552,
+          "p25": 0.6949039069636223,
+          "p75": 0.944531798764598,
+          "p95": 0.9902961520631998,
+          "p99": 0.9984995648354781,
+          "std": 0.18358096448594752
+        },
+        "window_index": 1
+      },
+      {
+        "diagnostic_only": true,
+        "duration_s": 5.106411935,
+        "end_offset_from_metadata_s": 72.767350237,
+        "end_record_time_ns": 1787685086379324121,
+        "end_time_utc": "2026-08-25T19:11:26.379324121Z",
+        "full_bag_inference_permitted": true,
+        "left_censored_by_readable_prefix": false,
+        "method": "contiguous run of finite, exactly nonzero raw speed values",
+        "record_count": 59,
+        "right_censored_by_readable_prefix": true,
+        "speed_unit": "meters_per_second",
+        "speed_unit_symbol": "m/s",
+        "start_offset_from_metadata_s": 67.660938302,
+        "start_record_time_ns": 1787685081272912186,
+        "start_time_utc": "2026-08-25T19:11:21.272912186Z",
+        "supporting_raw_speed_distribution": {
+          "count": 59,
+          "finite_count": 59,
+          "max": 1.1,
+          "mean": 0.9080510733169102,
+          "median": 0.967597356307469,
+          "min": 0.5496621533611644,
+          "nonfinite_count": 0,
+          "p01": 0.5519797357864005,
+          "p05": 0.6089576651008858,
+          "p25": 0.8726844271220083,
+          "p75": 0.9852538736644547,
+          "p95": 0.9984995648354781,
+          "p99": 1.1,
+          "std": 0.12665697508578425
+        },
+        "window_index": 2
+      }
+    ],
+    "count_and_rate": {
+      "backward_timestamp_count": 0,
+      "count": 1070,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644110457,
+      "first_time_utc": "2026-08-25T19:10:13.644110457Z",
+      "gap_s": {
+        "count": 1069,
+        "finite_count": 1069,
+        "max": 1.129809438,
+        "mean": 0.0680404243816651,
+        "median": 0.066659468,
+        "min": 0.032878002,
+        "nonfinite_count": 0,
+        "p01": 0.05689450696,
+        "p05": 0.0590057208,
+        "p25": 0.063638796,
+        "p75": 0.069621871,
+        "p95": 0.07400772439999999,
+        "p99": 0.07881149195999998,
+        "std": 0.03453818406210457
+      },
+      "last_time_ns": 1787685086379324121,
+      "last_time_utc": "2026-08-25T19:11:26.379324121Z",
+      "maximum_time_ns": 1787685086379324121,
+      "measured_rate_hz": 14.697145249868115,
+      "minimum_time_ns": 1787685013644110457,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 72.735213664,
+      "strictly_increasing": true
+    },
+    "distribution_mps": {
+      "count": 1070,
+      "finite_count": 1070,
+      "max": 1.1,
+      "mean": 0.8142449502841528,
+      "median": 0.8900660245861577,
+      "min": 0.0,
+      "nonfinite_count": 0,
+      "p01": 0.2,
+      "p05": 0.5126825890648944,
+      "p25": 0.705114850376181,
+      "p75": 0.9492036991058652,
+      "p95": 0.9906860124623545,
+      "p99": 0.9984995648354781,
+      "std": 0.19110563541550643
+    },
+    "distribution_raw": {
+      "count": 1070,
+      "finite_count": 1070,
+      "max": 1.1,
+      "mean": 0.8142449502841528,
+      "median": 0.8900660245861577,
+      "min": 0.0,
+      "nonfinite_count": 0,
+      "p01": 0.2,
+      "p05": 0.5126825890648944,
+      "p25": 0.705114850376181,
+      "p75": 0.9492036991058652,
+      "p95": 0.9906860124623545,
+      "p99": 0.9984995648354781,
+      "std": 0.19110563541550643
+    },
+    "float64_decode_validation": {
+      "attempted_count": 1070,
+      "method": "mcap_ros2 decode independently compared with direct CDR Float64 unpack",
+      "mismatch_count": 0
+    },
+    "meaning": "unresolved_command_or_actual_feedback_measurement",
+    "sign_and_stationary_counts": {
+      "exact_zero": 2,
+      "exact_zero_fraction": 0.001869158878504673,
+      "negative": 0,
+      "positive": 1068,
+      "stationary_definition": "exact zero only; diagnostic, not a permanent filter"
+    },
+    "stationary_prefix_candidate": {
+      "observed": false,
+      "record_count": 0
+    },
+    "stationary_suffix_candidate": {
+      "full_bag_suffix_observable": true,
+      "observed": false,
+      "record_count": 0
+    },
+    "timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 1070,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644110457,
+      "first_time_utc": "2026-08-25T19:10:13.644110457Z",
+      "gap_s": {
+        "count": 1069,
+        "finite_count": 1069,
+        "max": 1.129809438,
+        "mean": 0.0680404243816651,
+        "median": 0.066659468,
+        "min": 0.032878002,
+        "nonfinite_count": 0,
+        "p01": 0.05689450696,
+        "p05": 0.0590057208,
+        "p25": 0.063638796,
+        "p75": 0.069621871,
+        "p95": 0.07400772439999999,
+        "p99": 0.07881149195999998,
+        "std": 0.03453818406210457
+      },
+      "last_time_ns": 1787685086379324121,
+      "last_time_utc": "2026-08-25T19:11:26.379324121Z",
+      "maximum_time_ns": 1787685086379324121,
+      "measured_rate_hz": 14.697145249868115,
+      "minimum_time_ns": 1787685013644110457,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 72.735213664,
+      "strictly_increasing": true
+    },
+    "unit": "meters_per_second",
+    "unit_symbol": "m/s"
+  },
+  "steering": {
+    "confirmed_numeric_range_rad": [
+      -0.35,
+      0.35
+    ],
+    "count_and_rate": {
+      "backward_timestamp_count": 0,
+      "count": 1070,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644054462,
+      "first_time_utc": "2026-08-25T19:10:13.644054462Z",
+      "gap_s": {
+        "count": 1069,
+        "finite_count": 1069,
+        "max": 1.129736934,
+        "mean": 0.06804037891019644,
+        "median": 0.066648905,
+        "min": 0.032943972,
+        "nonfinite_count": 0,
+        "p01": 0.05694932244,
+        "p05": 0.0590775012,
+        "p25": 0.063634658,
+        "p75": 0.069599781,
+        "p95": 0.0739860996,
+        "p99": 0.07877284091999998,
+        "std": 0.03453137313976916
+      },
+      "last_time_ns": 1787685086379219517,
+      "last_time_utc": "2026-08-25T19:11:26.379219517Z",
+      "maximum_time_ns": 1787685086379219517,
+      "measured_rate_hz": 14.697155071988309,
+      "minimum_time_ns": 1787685013644054462,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 72.735165055,
+      "strictly_increasing": true
+    },
+    "distribution_rad": {
+      "count": 1070,
+      "finite_count": 1070,
+      "max": 0.3153779657400577,
+      "mean": 0.024384792770760506,
+      "median": 0.019766394046665102,
+      "min": -0.327208485671835,
+      "nonfinite_count": 0,
+      "p01": -0.273260481713723,
+      "p05": -0.1652945185143432,
+      "p25": -0.00512125866732993,
+      "p75": 0.04613866299032213,
+      "p95": 0.2575647227878294,
+      "p99": 0.29935844117357224,
+      "std": 0.11290944189647593
+    },
+    "distribution_recorded_raw": {
+      "count": 1070,
+      "finite_count": 1070,
+      "max": 0.9010799021144507,
+      "mean": 0.06967083648788716,
+      "median": 0.05647541156190029,
+      "min": -0.9348813876338145,
+      "nonfinite_count": 0,
+      "p01": -0.7807442334677802,
+      "p05": -0.4722700528981235,
+      "p25": -0.014632167620942658,
+      "p75": 0.13182475140092037,
+      "p95": 0.7358992079652269,
+      "p99": 0.8553098319244922,
+      "std": 0.3225984054185027
+    },
+    "float64_decode_validation": {
+      "attempted_count": 1070,
+      "method": "mcap_ros2 decode independently compared with direct CDR Float64 unpack",
+      "mismatch_count": 0
+    },
+    "out_of_range_reconciliation": {
+      "above_count": 158,
+      "below_count": 116,
+      "causal_speed_relation": {
+        "available_count": 274,
+        "exact_zero_count": 1,
+        "missing_count": 0,
+        "negative_count": 0,
+        "nonzero_count": 273,
+        "nonzero_fraction": 0.9963503649635036,
+        "raw_speed_distribution_at_all_steering": {
+          "count": 1069,
+          "finite_count": 1069,
+          "max": 1.1,
+          "mean": 0.8136034581890024,
+          "median": 0.8900660245861577,
+          "min": 0.0,
+          "nonfinite_count": 0,
+          "p01": 0.2,
+          "p05": 0.5125593759369239,
+          "p25": 0.7043415741655686,
+          "p75": 0.9492036991058652,
+          "p95": 0.9905190779633393,
+          "p99": 0.9984995648354781,
+          "std": 0.19238826763576597
+        },
+        "raw_speed_distribution_at_out_of_range_steering": {
+          "count": 274,
+          "finite_count": 274,
+          "max": 1.1,
+          "mean": 0.5726809614468363,
+          "median": 0.6123225146851343,
+          "min": 0.0,
+          "nonfinite_count": 0,
+          "p01": 0.2,
+          "p05": 0.2,
+          "p25": 0.5315234178530662,
+          "p75": 0.6659860650986964,
+          "p95": 0.722264613959684,
+          "p99": 0.902081291531267,
+          "std": 0.16380922118790994
+        },
+        "rule": "latest speed MCAP log_time satisfying t_speed <= t_steering",
+        "speed_age_ms_at_out_of_range_steering": {
+          "count": 274,
+          "finite_count": 274,
+          "max": 82.315026,
+          "mean": 66.67808348540146,
+          "median": 66.587332,
+          "min": 49.927194,
+          "nonfinite_count": 0,
+          "p01": 56.441044850000004,
+          "p05": 58.86076785,
+          "p25": 63.092799,
+          "p75": 70.33371224999999,
+          "p95": 74.4276594,
+          "p99": 79.02962102,
+          "std": 5.114057912239907
+        },
+        "unit": "meters_per_second",
+        "unit_symbol": "m/s"
+      },
+      "clipping_applied": false,
+      "driving_phase_counts": {
+        "active_nonzero_speed": 273,
+        "zero_speed_inside_active_envelope": 1
+      },
+      "driving_phase_definition": {
+        "active_nonzero_speed": "within the first-to-last nonzero envelope with causal speed nonzero",
+        "stationary_prefix": "before the first finite, exactly nonzero speed record",
+        "stationary_suffix": "after the last finite, exactly nonzero speed record",
+        "zero_speed_inside_active_envelope": "within that envelope with causal speed exactly zero"
+      },
+      "finite_steering_count": 1070,
+      "interpretation": "These are recorded normalized values whose raw magnitudes exceed the physical radian numeric limit before the required whole-stream rescaling; they are not physical-radian range violations.",
+      "outside_count": 274,
+      "outside_fraction": 0.2560747663551402,
+      "physical_outside_count_after_rescaling": 0,
+      "physical_outside_fraction_after_rescaling": 0.0,
+      "recorded_representation": "normalized_raw",
+      "recorded_to_radians_formula": "steering_rad = steering_recorded * 0.35",
+      "recorded_to_radians_scale": 0.35,
+      "repeated_consecutive_plateau_count": 22,
+      "repeated_consecutive_plateau_definition": "at least two consecutive recorded values outside the unscaled physical numeric range, equal after rounding to 6 decimals",
+      "repeated_consecutive_plateaus": [
+        {
+          "causal_speed_age_ms": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 73.592879,
+            "mean": 66.54959533333333,
+            "median": 66.291543,
+            "min": 59.764364,
+            "nonfinite_count": 0,
+            "p01": 59.89490758,
+            "p05": 60.4170819,
+            "p25": 63.0279535,
+            "p75": 69.942211,
+            "p95": 72.8627454,
+            "p99": 73.44685228,
+            "std": 5.648415708931742
+          },
+          "causal_speed_available_count": 3,
+          "causal_speed_distribution_raw": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 0.5180960719045845,
+            "mean": 0.30603202396819484,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.3590480359522923,
+            "p95": 0.486286464714126,
+            "p99": 0.5117341504664927,
+            "std": 0.14995192634169022
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 3
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 3
+          },
+          "duration_s": 0.139899846,
+          "end_offset_from_metadata_s": 5.297547621,
+          "end_record_time_ns": 1787685018909521505,
+          "end_time_utc": "2026-08-25T19:10:18.909521505Z",
+          "first_steering_index": 77,
+          "last_steering_index": 79,
+          "maximum_inter_sample_gap_s": 0.073601001,
+          "rounded_6dp_values": [
+            {
+              "count": 3,
+              "value_recorded": 0.735348
+            }
+          ],
+          "sample_count": 3,
+          "side": "above",
+          "start_offset_from_metadata_s": 5.157647775,
+          "start_record_time_ns": 1787685018769621659,
+          "start_time_utc": "2026-08-25T19:10:18.769621659Z",
+          "steering_distribution_recorded": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 0.7353483794903352,
+            "mean": 0.7353483794903352,
+            "median": 0.7353483794903352,
+            "min": 0.7353483794903352,
+            "nonfinite_count": 0,
+            "p01": 0.7353483794903352,
+            "p05": 0.7353483794903352,
+            "p25": 0.7353483794903352,
+            "p75": 0.7353483794903352,
+            "p95": 0.7353483794903352,
+            "p99": 0.7353483794903352,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": 0.735348
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 78.929984,
+            "mean": 66.53018214285714,
+            "median": 66.449574,
+            "min": 49.927194,
+            "nonfinite_count": 0,
+            "p01": 50.470576200000004,
+            "p05": 52.644105,
+            "p25": 61.220534,
+            "p75": 73.9817275,
+            "p95": 77.60633,
+            "p99": 78.6652532,
+            "std": 9.315420455593777
+          },
+          "causal_speed_available_count": 7,
+          "causal_speed_distribution_raw": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 0.2,
+            "mean": 0.2,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.2,
+            "p95": 0.2,
+            "p99": 0.2,
+            "std": 0.0
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 7
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 7
+          },
+          "duration_s": 0.40688699,
+          "end_offset_from_metadata_s": 5.763479769,
+          "end_record_time_ns": 1787685019375453653,
+          "end_time_utc": "2026-08-25T19:10:19.375453653Z",
+          "first_steering_index": 80,
+          "last_steering_index": 86,
+          "maximum_inter_sample_gap_s": 0.078938617,
+          "rounded_6dp_values": [
+            {
+              "count": 7,
+              "value_recorded": 0.80508
+            }
+          ],
+          "sample_count": 7,
+          "side": "above",
+          "start_offset_from_metadata_s": 5.356592779,
+          "start_record_time_ns": 1787685018968566663,
+          "start_time_utc": "2026-08-25T19:10:18.968566663Z",
+          "steering_distribution_recorded": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 0.8050795064359867,
+            "mean": 0.8050795064359867,
+            "median": 0.8050795064359867,
+            "min": 0.8050795064359867,
+            "nonfinite_count": 0,
+            "p01": 0.8050795064359867,
+            "p05": 0.8050795064359867,
+            "p25": 0.8050795064359867,
+            "p75": 0.8050795064359867,
+            "p95": 0.8050795064359867,
+            "p99": 0.8050795064359867,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": 0.80508
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 4,
+            "finite_count": 4,
+            "max": 71.023432,
+            "mean": 65.565875,
+            "median": 66.25499400000001,
+            "min": 58.73008,
+            "nonfinite_count": 0,
+            "p01": 58.907546950000004,
+            "p05": 59.61741475,
+            "p25": 63.16675375,
+            "p75": 68.65411525,
+            "p95": 70.54956865,
+            "p99": 70.92865933,
+            "std": 4.545404274929734
+          },
+          "causal_speed_available_count": 4,
+          "causal_speed_distribution_raw": {
+            "count": 4,
+            "finite_count": 4,
+            "max": 0.6510165469724476,
+            "mean": 0.6499203350631682,
+            "median": 0.6510165469724476,
+            "min": 0.6466316993353298,
+            "nonfinite_count": 0,
+            "p01": 0.6467632447644434,
+            "p05": 0.6472894264808975,
+            "p25": 0.6499203350631682,
+            "p75": 0.6510165469724476,
+            "p95": 0.6510165469724476,
+            "p99": 0.6510165469724476,
+            "std": 0.0018986947227340803
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 4
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 4
+          },
+          "duration_s": 0.197802524,
+          "end_offset_from_metadata_s": 17.624271057,
+          "end_record_time_ns": 1787685031236244941,
+          "end_time_utc": "2026-08-25T19:10:31.236244941Z",
+          "first_steering_index": 261,
+          "last_steering_index": 264,
+          "maximum_inter_sample_gap_s": 0.071043357,
+          "rounded_6dp_values": [
+            {
+              "count": 4,
+              "value_recorded": -0.47227
+            }
+          ],
+          "sample_count": 4,
+          "side": "below",
+          "start_offset_from_metadata_s": 17.426468533,
+          "start_record_time_ns": 1787685031038442417,
+          "start_time_utc": "2026-08-25T19:10:31.038442417Z",
+          "steering_distribution_recorded": {
+            "count": 4,
+            "finite_count": 4,
+            "max": -0.4722700528981235,
+            "mean": -0.4722700528981235,
+            "median": -0.4722700528981235,
+            "min": -0.4722700528981235,
+            "nonfinite_count": 0,
+            "p01": -0.4722700528981235,
+            "p05": -0.4722700528981235,
+            "p25": -0.4722700528981235,
+            "p75": -0.4722700528981235,
+            "p95": -0.4722700528981235,
+            "p99": -0.4722700528981235,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.47227
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 66.170759,
+            "mean": 63.977903500000004,
+            "median": 63.977903500000004,
+            "min": 61.785048,
+            "nonfinite_count": 0,
+            "p01": 61.82890511,
+            "p05": 62.004333550000005,
+            "p25": 62.88147575000001,
+            "p75": 65.07433125,
+            "p95": 65.95147345000001,
+            "p99": 66.12690189,
+            "std": 2.1928555000000003
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.6510165469724476,
+            "mean": 0.6502779045691274,
+            "median": 0.6502779045691274,
+            "min": 0.6495392621658072,
+            "nonfinite_count": 0,
+            "p01": 0.6495540350138735,
+            "p05": 0.6496131264061392,
+            "p25": 0.6499085833674673,
+            "p75": 0.6506472257707875,
+            "p95": 0.6509426827321155,
+            "p99": 0.6510017741243812,
+            "std": 0.0007386424033202221
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.066189085,
+          "end_offset_from_metadata_s": 17.752311318,
+          "end_record_time_ns": 1787685031364285202,
+          "end_time_utc": "2026-08-25T19:10:31.364285202Z",
+          "first_steering_index": 265,
+          "last_steering_index": 266,
+          "maximum_inter_sample_gap_s": 0.066189085,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.475292
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 17.686122233,
+          "start_record_time_ns": 1787685031298096117,
+          "start_time_utc": "2026-08-25T19:10:31.298096117Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.47529188868604366,
+            "mean": -0.47529188868604366,
+            "median": -0.47529188868604366,
+            "min": -0.47529188868604366,
+            "nonfinite_count": 0,
+            "p01": -0.47529188868604366,
+            "p05": -0.47529188868604366,
+            "p25": -0.47529188868604366,
+            "p75": -0.47529188868604366,
+            "p95": -0.47529188868604366,
+            "p99": -0.47529188868604366,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.475292
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 4,
+            "finite_count": 4,
+            "max": 74.37912,
+            "mean": 66.93248075,
+            "median": 66.0360195,
+            "min": 61.278764,
+            "nonfinite_count": 0,
+            "p01": 61.29911954,
+            "p05": 61.3805417,
+            "p25": 61.7876525,
+            "p75": 71.18084775,
+            "p95": 73.73946555,
+            "p99": 74.25118911,
+            "std": 5.529385904921692
+          },
+          "causal_speed_available_count": 4,
+          "causal_speed_distribution_raw": {
+            "count": 4,
+            "finite_count": 4,
+            "max": 0.6525099623481289,
+            "mean": 0.6521366085042085,
+            "median": 0.6525099623481289,
+            "min": 0.6510165469724476,
+            "nonfinite_count": 0,
+            "p01": 0.6510613494337181,
+            "p05": 0.6512405592787998,
+            "p25": 0.6521366085042085,
+            "p75": 0.6525099623481289,
+            "p95": 0.6525099623481289,
+            "p99": 0.6525099623481289,
+            "std": 0.000646667826871127
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 4
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 4
+          },
+          "duration_s": 0.197806617,
+          "end_offset_from_metadata_s": 18.093401593,
+          "end_record_time_ns": 1787685031705375477,
+          "end_time_utc": "2026-08-25T19:10:31.705375477Z",
+          "first_steering_index": 268,
+          "last_steering_index": 271,
+          "maximum_inter_sample_gap_s": 0.074392678,
+          "rounded_6dp_values": [
+            {
+              "count": 4,
+              "value_recorded": -0.469228
+            }
+          ],
+          "sample_count": 4,
+          "side": "below",
+          "start_offset_from_metadata_s": 17.895594976,
+          "start_record_time_ns": 1787685031507568860,
+          "start_time_utc": "2026-08-25T19:10:31.507568860Z",
+          "steering_distribution_recorded": {
+            "count": 4,
+            "finite_count": 4,
+            "max": -0.4692280583083893,
+            "mean": -0.4692280583083893,
+            "median": -0.4692280583083893,
+            "min": -0.4692280583083893,
+            "nonfinite_count": 0,
+            "p01": -0.4692280583083893,
+            "p05": -0.4692280583083893,
+            "p25": -0.4692280583083893,
+            "p75": -0.4692280583083893,
+            "p95": -0.4692280583083893,
+            "p99": -0.4692280583083893,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.469228
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 67.157298,
+            "mean": 66.1252715,
+            "median": 66.1252715,
+            "min": 65.093245,
+            "nonfinite_count": 0,
+            "p01": 65.11388552999999,
+            "p05": 65.19644765,
+            "p25": 65.60925825,
+            "p75": 66.64128475,
+            "p95": 67.05409535,
+            "p99": 67.13665747,
+            "std": 1.0320265000000006
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.6540193960344173,
+            "mean": 0.6532646791912731,
+            "median": 0.6532646791912731,
+            "min": 0.6525099623481289,
+            "nonfinite_count": 0,
+            "p01": 0.6525250566849917,
+            "p05": 0.6525854340324433,
+            "p25": 0.652887320769701,
+            "p75": 0.6536420376128451,
+            "p95": 0.6539439243501028,
+            "p99": 0.6540043016975544,
+            "std": 0.0007547168431442097
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.067257553,
+          "end_offset_from_metadata_s": 18.225831125,
+          "end_record_time_ns": 1787685031837805009,
+          "end_time_utc": "2026-08-25T19:10:31.837805009Z",
+          "first_steering_index": 272,
+          "last_steering_index": 273,
+          "maximum_inter_sample_gap_s": 0.067257553,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.466166
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 18.158573572,
+          "start_record_time_ns": 1787685031770547456,
+          "start_time_utc": "2026-08-25T19:10:31.770547456Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.4661664743197866,
+            "mean": -0.4661664743197866,
+            "median": -0.4661664743197866,
+            "min": -0.4661664743197866,
+            "nonfinite_count": 0,
+            "p01": -0.4661664743197866,
+            "p05": -0.4661664743197866,
+            "p25": -0.4661664743197866,
+            "p75": -0.4661664743197866,
+            "p95": -0.4661664743197866,
+            "p99": -0.4661664743197866,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.466166
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 72.058588,
+            "mean": 66.5181905,
+            "median": 66.5181905,
+            "min": 60.977793,
+            "nonfinite_count": 0,
+            "p01": 61.08860095,
+            "p05": 61.53183275,
+            "p25": 63.74799175,
+            "p75": 69.28838925,
+            "p95": 71.50454825,
+            "p99": 71.94778005,
+            "std": 5.540397500000001
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.6619413502432577,
+            "mean": 0.6611563858670831,
+            "median": 0.6611563858670831,
+            "min": 0.6603714214909086,
+            "nonfinite_count": 0,
+            "p01": 0.6603871207784321,
+            "p05": 0.660449917928526,
+            "p25": 0.6607639036789958,
+            "p75": 0.6615488680551704,
+            "p95": 0.6618628538056402,
+            "p99": 0.6619256509557342,
+            "std": 0.0007849643761745906
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.07212385,
+          "end_offset_from_metadata_s": 18.492675593,
+          "end_record_time_ns": 1787685032104649477,
+          "end_time_utc": "2026-08-25T19:10:32.104649477Z",
+          "first_steering_index": 276,
+          "last_steering_index": 277,
+          "maximum_inter_sample_gap_s": 0.07212385,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.453425
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 18.420551743,
+          "start_record_time_ns": 1787685032032525627,
+          "start_time_utc": "2026-08-25T19:10:32.032525627Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.4534245868725428,
+            "mean": -0.4534245868725428,
+            "median": -0.4534245868725428,
+            "min": -0.4534245868725428,
+            "nonfinite_count": 0,
+            "p01": -0.4534245868725428,
+            "p05": -0.4534245868725428,
+            "p25": -0.4534245868725428,
+            "p75": -0.4534245868725428,
+            "p95": -0.4534245868725428,
+            "p99": -0.4534245868725428,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.453425
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 67.183172,
+            "mean": 63.304213000000004,
+            "median": 63.304213000000004,
+            "min": 59.425254,
+            "nonfinite_count": 0,
+            "p01": 59.50283318,
+            "p05": 59.8131499,
+            "p25": 61.3647335,
+            "p75": 65.2436925,
+            "p95": 66.7952761,
+            "p99": 67.10559282,
+            "std": 3.8789589999999983
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.670048147547556,
+            "mean": 0.6692200200162615,
+            "median": 0.6692200200162615,
+            "min": 0.6683918924849669,
+            "nonfinite_count": 0,
+            "p01": 0.6684084550355928,
+            "p05": 0.6684747052380964,
+            "p25": 0.6688059562506141,
+            "p75": 0.6696340837819088,
+            "p95": 0.6699653347944265,
+            "p99": 0.6700315849969302,
+            "std": 0.0008281275312945757
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.059486908,
+          "end_offset_from_metadata_s": 18.885340319,
+          "end_record_time_ns": 1787685032497314203,
+          "end_time_utc": "2026-08-25T19:10:32.497314203Z",
+          "first_steering_index": 282,
+          "last_steering_index": 283,
+          "maximum_inter_sample_gap_s": 0.059486908,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.437657
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 18.825853411,
+          "start_record_time_ns": 1787685032437827295,
+          "start_time_utc": "2026-08-25T19:10:32.437827295Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.4376568588261601,
+            "mean": -0.4376568588261601,
+            "median": -0.4376568588261601,
+            "min": -0.4376568588261601,
+            "nonfinite_count": 0,
+            "p01": -0.4376568588261601,
+            "p05": -0.4376568588261601,
+            "p25": -0.4376568588261601,
+            "p75": -0.4376568588261601,
+            "p95": -0.4376568588261601,
+            "p99": -0.4376568588261601,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.437657
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 4,
+            "finite_count": 4,
+            "max": 73.748236,
+            "mean": 66.71317625,
+            "median": 66.390114,
+            "min": 60.324241,
+            "nonfinite_count": 0,
+            "p01": 60.49759357,
+            "p05": 61.19100385,
+            "p25": 64.65805525,
+            "p75": 68.445235,
+            "p95": 72.6876358,
+            "p99": 73.53611596,
+            "std": 4.761421987015665
+          },
+          "causal_speed_available_count": 4,
+          "causal_speed_distribution_raw": {
+            "count": 4,
+            "finite_count": 4,
+            "max": 0.670048147547556,
+            "mean": 0.6696340837819088,
+            "median": 0.670048147547556,
+            "min": 0.6683918924849669,
+            "nonfinite_count": 0,
+            "p01": 0.6684415801368445,
+            "p05": 0.6686403307443552,
+            "p25": 0.6696340837819088,
+            "p75": 0.670048147547556,
+            "p95": 0.670048147547556,
+            "p99": 0.670048147547556,
+            "std": 0.0007171794796743953
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 4
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 4
+          },
+          "duration_s": 0.200257835,
+          "end_offset_from_metadata_s": 19.152289275,
+          "end_record_time_ns": 1787685032764263159,
+          "end_time_utc": "2026-08-25T19:10:32.764263159Z",
+          "first_steering_index": 284,
+          "last_steering_index": 287,
+          "maximum_inter_sample_gap_s": 0.073760864,
+          "rounded_6dp_values": [
+            {
+              "count": 4,
+              "value_recorded": -0.434444
+            }
+          ],
+          "sample_count": 4,
+          "side": "below",
+          "start_offset_from_metadata_s": 18.95203144,
+          "start_record_time_ns": 1787685032564005324,
+          "start_time_utc": "2026-08-25T19:10:32.564005324Z",
+          "steering_distribution_recorded": {
+            "count": 4,
+            "finite_count": 4,
+            "max": -0.43444448477606146,
+            "mean": -0.43444448477606146,
+            "median": -0.43444448477606146,
+            "min": -0.43444448477606146,
+            "nonfinite_count": 0,
+            "p01": -0.43444448477606146,
+            "p05": -0.43444448477606146,
+            "p25": -0.43444448477606146,
+            "p75": -0.43444448477606146,
+            "p95": -0.43444448477606146,
+            "p99": -0.43444448477606146,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.434444
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 69.156995,
+            "mean": 64.296247,
+            "median": 64.296247,
+            "min": 59.435499,
+            "nonfinite_count": 0,
+            "p01": 59.53271396,
+            "p05": 59.9215738,
+            "p25": 61.865873,
+            "p75": 66.726621,
+            "p95": 68.6709202,
+            "p99": 69.05978003999999,
+            "std": 4.860747999999997
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.6667532030982626,
+            "mean": 0.6659426347351021,
+            "median": 0.6659426347351021,
+            "min": 0.6651320663719414,
+            "nonfinite_count": 0,
+            "p01": 0.6651482777392047,
+            "p05": 0.6652131232082575,
+            "p25": 0.6655373505535217,
+            "p75": 0.6663479189166823,
+            "p95": 0.6666721462619465,
+            "p99": 0.6667369917309993,
+            "std": 0.0008105683631605687
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.059531244,
+          "end_offset_from_metadata_s": 19.621136997,
+          "end_record_time_ns": 1787685033233110881,
+          "end_time_utc": "2026-08-25T19:10:33.233110881Z",
+          "first_steering_index": 293,
+          "last_steering_index": 294,
+          "maximum_inter_sample_gap_s": 0.059531244,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.444023
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 19.561605753,
+          "start_record_time_ns": 1787685033173579637,
+          "start_time_utc": "2026-08-25T19:10:33.173579637Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.44402286891865844,
+            "mean": -0.44402286891865844,
+            "median": -0.44402286891865844,
+            "min": -0.44402286891865844,
+            "nonfinite_count": 0,
+            "p01": -0.44402286891865844,
+            "p05": -0.44402286891865844,
+            "p25": -0.44402286891865844,
+            "p75": -0.44402286891865844,
+            "p95": -0.44402286891865844,
+            "p99": -0.44402286891865844,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.444023
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 8,
+            "finite_count": 8,
+            "max": 78.922795,
+            "mean": 68.068634375,
+            "median": 66.95559,
+            "min": 60.216395,
+            "nonfinite_count": 0,
+            "p01": 60.49537923,
+            "p05": 61.61131615,
+            "p25": 64.95085425,
+            "p75": 69.9466625,
+            "p95": 76.93771575,
+            "p99": 78.52577914999999,
+            "std": 5.400798722106686
+          },
+          "causal_speed_available_count": 8,
+          "causal_speed_distribution_raw": {
+            "count": 8,
+            "finite_count": 8,
+            "max": 0.5047569582885387,
+            "mean": 0.27559461978606736,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.275,
+            "p95": 0.5030920228875502,
+            "p99": 0.504423971208341,
+            "std": 0.13093912292573287
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 8
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 8
+          },
+          "duration_s": 0.477156537,
+          "end_offset_from_metadata_s": 22.963220831,
+          "end_record_time_ns": 1787685036575194715,
+          "end_time_utc": "2026-08-25T19:10:36.575194715Z",
+          "first_steering_index": 337,
+          "last_steering_index": 344,
+          "maximum_inter_sample_gap_s": 0.078937218,
+          "rounded_6dp_values": [
+            {
+              "count": 8,
+              "value_recorded": 0.90108
+            }
+          ],
+          "sample_count": 8,
+          "side": "above",
+          "start_offset_from_metadata_s": 22.486064294,
+          "start_record_time_ns": 1787685036098038178,
+          "start_time_utc": "2026-08-25T19:10:36.098038178Z",
+          "steering_distribution_recorded": {
+            "count": 8,
+            "finite_count": 8,
+            "max": 0.9010799021144507,
+            "mean": 0.9010799021144507,
+            "median": 0.9010799021144507,
+            "min": 0.9010799021144507,
+            "nonfinite_count": 0,
+            "p01": 0.9010799021144507,
+            "p05": 0.9010799021144507,
+            "p25": 0.9010799021144507,
+            "p75": 0.9010799021144507,
+            "p95": 0.9010799021144507,
+            "p99": 0.9010799021144507,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": 0.90108
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 67.065369,
+            "mean": 66.56045449999999,
+            "median": 66.56045449999999,
+            "min": 66.05554,
+            "nonfinite_count": 0,
+            "p01": 66.06563829,
+            "p05": 66.10603144999999,
+            "p25": 66.30799725,
+            "p75": 66.81291175,
+            "p95": 67.01487755000001,
+            "p99": 67.05527071,
+            "std": 0.5049145000000053
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.5183878112483741,
+            "mean": 0.5130525003757618,
+            "median": 0.5130525003757618,
+            "min": 0.5077171895031496,
+            "nonfinite_count": 0,
+            "p01": 0.5078238957206018,
+            "p05": 0.5082507205904108,
+            "p25": 0.5103848449394557,
+            "p75": 0.515720155812068,
+            "p95": 0.5178542801611129,
+            "p99": 0.5182811050309218,
+            "std": 0.005335310872612242
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.066112539,
+          "end_offset_from_metadata_s": 38.686899065,
+          "end_record_time_ns": 1787685052298872949,
+          "end_time_utc": "2026-08-25T19:10:52.298872949Z",
+          "first_steering_index": 579,
+          "last_steering_index": 580,
+          "maximum_inter_sample_gap_s": 0.066112539,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.837354
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 38.620786526,
+          "start_record_time_ns": 1787685052232760410,
+          "start_time_utc": "2026-08-25T19:10:52.232760410Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.8373542227635883,
+            "mean": -0.8373542227635883,
+            "median": -0.8373542227635883,
+            "min": -0.8373542227635883,
+            "nonfinite_count": 0,
+            "p01": -0.8373542227635883,
+            "p05": -0.8373542227635883,
+            "p25": -0.8373542227635883,
+            "p75": -0.8373542227635883,
+            "p95": -0.8373542227635883,
+            "p99": -0.8373542227635883,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.837354
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 66.897203,
+            "mean": 63.77269750000001,
+            "median": 63.77269750000001,
+            "min": 60.648192,
+            "nonfinite_count": 0,
+            "p01": 60.71068211,
+            "p05": 60.96064255,
+            "p25": 62.21044475,
+            "p75": 65.33495025,
+            "p95": 66.58475245000001,
+            "p99": 66.83471289,
+            "std": 3.1245055000000015
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.5,
+            "mean": 0.35,
+            "median": 0.35,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.203,
+            "p05": 0.21500000000000002,
+            "p25": 0.275,
+            "p75": 0.425,
+            "p95": 0.485,
+            "p99": 0.497,
+            "std": 0.15
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.060705015,
+          "end_offset_from_metadata_s": 38.814584639,
+          "end_record_time_ns": 1787685052426558523,
+          "end_time_utc": "2026-08-25T19:10:52.426558523Z",
+          "first_steering_index": 581,
+          "last_steering_index": 582,
+          "maximum_inter_sample_gap_s": 0.060705015,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.934881
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 38.753879624,
+          "start_record_time_ns": 1787685052365853508,
+          "start_time_utc": "2026-08-25T19:10:52.365853508Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.9348813876338145,
+            "mean": -0.9348813876338145,
+            "median": -0.9348813876338145,
+            "min": -0.9348813876338145,
+            "nonfinite_count": 0,
+            "p01": -0.9348813876338145,
+            "p05": -0.9348813876338145,
+            "p25": -0.9348813876338145,
+            "p75": -0.9348813876338145,
+            "p95": -0.9348813876338145,
+            "p99": -0.9348813876338145,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.934881
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 68.580847,
+            "mean": 66.7651285,
+            "median": 66.7651285,
+            "min": 64.94941,
+            "nonfinite_count": 0,
+            "p01": 64.98572437,
+            "p05": 65.13098185,
+            "p25": 65.85726925,
+            "p75": 67.67298775,
+            "p95": 68.39927515000001,
+            "p99": 68.54453263,
+            "std": 1.8157185000000027
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.7164365094022621,
+            "mean": 0.7130437668146545,
+            "median": 0.7130437668146545,
+            "min": 0.7096510242270471,
+            "nonfinite_count": 0,
+            "p01": 0.7097188790787993,
+            "p05": 0.7099902984858079,
+            "p25": 0.7113473955208508,
+            "p75": 0.7147401381084584,
+            "p95": 0.7160972351435013,
+            "p99": 0.7163686545505099,
+            "std": 0.0033927425876075223
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.068666697,
+          "end_offset_from_metadata_s": 44.356604464,
+          "end_record_time_ns": 1787685057968578348,
+          "end_time_utc": "2026-08-25T19:10:57.968578348Z",
+          "first_steering_index": 664,
+          "last_steering_index": 665,
+          "maximum_inter_sample_gap_s": 0.068666697,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": 0.350138
+            }
+          ],
+          "sample_count": 2,
+          "side": "above",
+          "start_offset_from_metadata_s": 44.287937767,
+          "start_record_time_ns": 1787685057899911651,
+          "start_time_utc": "2026-08-25T19:10:57.899911651Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.3501381979590819,
+            "mean": 0.3501381979590819,
+            "median": 0.3501381979590819,
+            "min": 0.3501381979590819,
+            "nonfinite_count": 0,
+            "p01": 0.3501381979590819,
+            "p05": 0.3501381979590819,
+            "p25": 0.3501381979590819,
+            "p75": 0.3501381979590819,
+            "p95": 0.3501381979590819,
+            "p99": 0.3501381979590819,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": 0.350138
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 64.677592,
+            "mean": 62.7015545,
+            "median": 62.7015545,
+            "min": 60.725517,
+            "nonfinite_count": 0,
+            "p01": 60.765037750000005,
+            "p05": 60.92312075,
+            "p25": 61.713535750000005,
+            "p75": 63.68957325,
+            "p95": 64.47998825,
+            "p99": 64.63807125000001,
+            "std": 1.9760375000000003
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.5915971253934116,
+            "mean": 0.5897791086328708,
+            "median": 0.5897791086328708,
+            "min": 0.5879610918723298,
+            "nonfinite_count": 0,
+            "p01": 0.5879974522075406,
+            "p05": 0.5881428935483839,
+            "p25": 0.5888701002526002,
+            "p75": 0.5906881170131412,
+            "p95": 0.5914153237173575,
+            "p99": 0.5915607650582008,
+            "std": 0.001818016760540886
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.060822478,
+          "end_offset_from_metadata_s": 45.944650719,
+          "end_record_time_ns": 1787685059556624603,
+          "end_time_utc": "2026-08-25T19:10:59.556624603Z",
+          "first_steering_index": 688,
+          "last_steering_index": 689,
+          "maximum_inter_sample_gap_s": 0.060822478,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.604621
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 45.883828241,
+          "start_record_time_ns": 1787685059495802125,
+          "start_time_utc": "2026-08-25T19:10:59.495802125Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.6046214169495336,
+            "mean": -0.6046214169495336,
+            "median": -0.6046214169495336,
+            "min": -0.6046214169495336,
+            "nonfinite_count": 0,
+            "p01": -0.6046214169495336,
+            "p05": -0.6046214169495336,
+            "p25": -0.6046214169495336,
+            "p75": -0.6046214169495336,
+            "p95": -0.6046214169495336,
+            "p99": -0.6046214169495336,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.604621
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 82.315026,
+            "mean": 69.379513,
+            "median": 69.379513,
+            "min": 56.444,
+            "nonfinite_count": 0,
+            "p01": 56.70271026,
+            "p05": 57.7375513,
+            "p25": 62.9117565,
+            "p75": 75.84726950000001,
+            "p95": 81.0214747,
+            "p99": 82.05631574,
+            "std": 12.935513
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.5625899023078222,
+            "mean": 0.5442374086782318,
+            "median": 0.5442374086782318,
+            "min": 0.5258849150486413,
+            "nonfinite_count": 0,
+            "p01": 0.5262519649212332,
+            "p05": 0.5277201644116004,
+            "p25": 0.5350611618634366,
+            "p75": 0.553413655493027,
+            "p95": 0.5607546529448632,
+            "p99": 0.5622228524352304,
+            "std": 0.01835249362959046
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.082330125,
+          "end_offset_from_metadata_s": 51.625227547,
+          "end_record_time_ns": 1787685065237201431,
+          "end_time_utc": "2026-08-25T19:11:05.237201431Z",
+          "first_steering_index": 773,
+          "last_steering_index": 774,
+          "maximum_inter_sample_gap_s": 0.082330125,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.781563
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 51.542897422,
+          "start_record_time_ns": 1787685065154871306,
+          "start_time_utc": "2026-08-25T19:11:05.154871306Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.7815633032482878,
+            "mean": -0.7815633032482878,
+            "median": -0.7815633032482878,
+            "min": -0.7815633032482878,
+            "nonfinite_count": 0,
+            "p01": -0.7815633032482878,
+            "p05": -0.7815633032482878,
+            "p25": -0.7815633032482878,
+            "p75": -0.7815633032482878,
+            "p95": -0.7815633032482878,
+            "p99": -0.7815633032482878,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.781563
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 76.020568,
+            "mean": 64.637087,
+            "median": 61.760716,
+            "min": 56.129977,
+            "nonfinite_count": 0,
+            "p01": 56.24259178,
+            "p05": 56.693050899999996,
+            "p25": 58.9453465,
+            "p75": 68.890642,
+            "p95": 74.5945828,
+            "p99": 75.73537096,
+            "std": 8.371142302758566
+          },
+          "causal_speed_available_count": 3,
+          "causal_speed_distribution_raw": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 1.1,
+            "mean": 0.6087611077180126,
+            "median": 0.5262833231540378,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.20652566646308076,
+            "p05": 0.2326283323154038,
+            "p25": 0.3631416615770189,
+            "p75": 0.813141661577019,
+            "p95": 1.0426283323154037,
+            "p99": 1.088525666463081,
+            "std": 0.3720232418455744
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 3
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 3
+          },
+          "duration_s": 0.137807648,
+          "end_offset_from_metadata_s": 51.819257439,
+          "end_record_time_ns": 1787685065431231323,
+          "end_time_utc": "2026-08-25T19:11:05.431231323Z",
+          "first_steering_index": 775,
+          "last_steering_index": 777,
+          "maximum_inter_sample_gap_s": 0.076032058,
+          "rounded_6dp_values": [
+            {
+              "count": 3,
+              "value_recorded": -0.780376
+            }
+          ],
+          "sample_count": 3,
+          "side": "below",
+          "start_offset_from_metadata_s": 51.681449791,
+          "start_record_time_ns": 1787685065293423675,
+          "start_time_utc": "2026-08-25T19:11:05.293423675Z",
+          "steering_distribution_recorded": {
+            "count": 3,
+            "finite_count": 3,
+            "max": -0.7803762455953782,
+            "mean": -0.7803762455953782,
+            "median": -0.7803762455953782,
+            "min": -0.7803762455953782,
+            "nonfinite_count": 0,
+            "p01": -0.7803762455953782,
+            "p05": -0.7803762455953782,
+            "p25": -0.7803762455953782,
+            "p75": -0.7803762455953782,
+            "p95": -0.7803762455953782,
+            "p99": -0.7803762455953782,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.780376
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 72.569331,
+            "mean": 69.1397565,
+            "median": 69.1397565,
+            "min": 65.710182,
+            "nonfinite_count": 0,
+            "p01": 65.77877349,
+            "p05": 66.05313945,
+            "p25": 67.42496925,
+            "p75": 70.85454375,
+            "p95": 72.22637355,
+            "p99": 72.50073951,
+            "std": 3.429574500000001
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.7094282537580061,
+            "mean": 0.7031239992805907,
+            "median": 0.7031239992805907,
+            "min": 0.6968197448031751,
+            "nonfinite_count": 0,
+            "p01": 0.6969458298927234,
+            "p05": 0.6974501702509166,
+            "p25": 0.6999718720418828,
+            "p75": 0.7062761265192984,
+            "p95": 0.7087978283102646,
+            "p99": 0.7093021686684579,
+            "std": 0.006304254477415505
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.06576778,
+          "end_offset_from_metadata_s": 58.480123481,
+          "end_record_time_ns": 1787685072092097365,
+          "end_time_utc": "2026-08-25T19:11:12.092097365Z",
+          "first_steering_index": 876,
+          "last_steering_index": 877,
+          "maximum_inter_sample_gap_s": 0.06576778,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.384502
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 58.414355701,
+          "start_record_time_ns": 1787685072026329585,
+          "start_time_utc": "2026-08-25T19:11:12.026329585Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.3845020011828356,
+            "mean": -0.3845020011828356,
+            "median": -0.3845020011828356,
+            "min": -0.3845020011828356,
+            "nonfinite_count": 0,
+            "p01": -0.3845020011828356,
+            "p05": -0.3845020011828356,
+            "p25": -0.3845020011828356,
+            "p75": -0.3845020011828356,
+            "p95": -0.3845020011828356,
+            "p99": -0.3845020011828356,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.384502
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 68.720965,
+            "mean": 64.782355,
+            "median": 64.782355,
+            "min": 60.843745,
+            "nonfinite_count": 0,
+            "p01": 60.9225172,
+            "p05": 61.237606,
+            "p25": 62.813050000000004,
+            "p75": 66.75166,
+            "p95": 68.327104,
+            "p99": 68.6421928,
+            "std": 3.938610000000004
+          },
+          "causal_speed_available_count": 2,
+          "causal_speed_distribution_raw": {
+            "count": 2,
+            "finite_count": 2,
+            "max": 0.6968197448031751,
+            "mean": 0.6958618258833986,
+            "median": 0.6958618258833986,
+            "min": 0.6949039069636223,
+            "nonfinite_count": 0,
+            "p01": 0.6949230653420178,
+            "p05": 0.6949996988555999,
+            "p25": 0.6953828664235104,
+            "p75": 0.6963407853432869,
+            "p95": 0.6967239529111975,
+            "p99": 0.6968005864247796,
+            "std": 0.0009579189197764237
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 2
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 2
+          },
+          "duration_s": 0.060935135,
+          "end_offset_from_metadata_s": 58.74110023,
+          "end_record_time_ns": 1787685072353074114,
+          "end_time_utc": "2026-08-25T19:11:12.353074114Z",
+          "first_steering_index": 880,
+          "last_steering_index": 881,
+          "maximum_inter_sample_gap_s": 0.060935135,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.387956
+            }
+          ],
+          "sample_count": 2,
+          "side": "below",
+          "start_offset_from_metadata_s": 58.680165095,
+          "start_record_time_ns": 1787685072292138979,
+          "start_time_utc": "2026-08-25T19:11:12.292138979Z",
+          "steering_distribution_recorded": {
+            "count": 2,
+            "finite_count": 2,
+            "max": -0.3879560825549495,
+            "mean": -0.3879560825549495,
+            "median": -0.3879560825549495,
+            "min": -0.3879560825549495,
+            "nonfinite_count": 0,
+            "p01": -0.3879560825549495,
+            "p05": -0.3879560825549495,
+            "p25": -0.3879560825549495,
+            "p75": -0.3879560825549495,
+            "p95": -0.3879560825549495,
+            "p99": -0.3879560825549495,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.387956
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 74.904761,
+            "mean": 68.94465100000001,
+            "median": 66.159486,
+            "min": 65.769706,
+            "nonfinite_count": 0,
+            "p01": 65.7775016,
+            "p05": 65.808684,
+            "p25": 65.964596,
+            "p75": 70.5321235,
+            "p95": 74.0302335,
+            "p99": 74.7298555,
+            "std": 4.217437256689973
+          },
+          "causal_speed_available_count": 3,
+          "causal_speed_distribution_raw": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 0.6949039069636223,
+            "mean": 0.6936401761487948,
+            "median": 0.693008310741381,
+            "min": 0.693008310741381,
+            "nonfinite_count": 0,
+            "p01": 0.693008310741381,
+            "p05": 0.693008310741381,
+            "p25": 0.693008310741381,
+            "p75": 0.6939561088525017,
+            "p95": 0.6947143473413981,
+            "p99": 0.6948659950391775,
+            "std": 0.0008935926287589145
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 3
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 3
+          },
+          "duration_s": 0.140743435,
+          "end_offset_from_metadata_s": 58.94801885,
+          "end_record_time_ns": 1787685072559992734,
+          "end_time_utc": "2026-08-25T19:11:12.559992734Z",
+          "first_steering_index": 882,
+          "last_steering_index": 884,
+          "maximum_inter_sample_gap_s": 0.074918797,
+          "rounded_6dp_values": [
+            {
+              "count": 3,
+              "value_recorded": -0.391391
+            }
+          ],
+          "sample_count": 3,
+          "side": "below",
+          "start_offset_from_metadata_s": 58.807275415,
+          "start_record_time_ns": 1787685072419249299,
+          "start_time_utc": "2026-08-25T19:11:12.419249299Z",
+          "steering_distribution_recorded": {
+            "count": 3,
+            "finite_count": 3,
+            "max": -0.3913913405032551,
+            "mean": -0.39139134050325514,
+            "median": -0.3913913405032551,
+            "min": -0.3913913405032551,
+            "nonfinite_count": 0,
+            "p01": -0.3913913405032551,
+            "p05": -0.3913913405032551,
+            "p25": -0.3913913405032551,
+            "p75": -0.3913913405032551,
+            "p95": -0.3913913405032551,
+            "p99": -0.3913913405032551,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": -0.391391
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 74.042361,
+            "mean": 66.754521,
+            "median": 66.211615,
+            "min": 60.009587,
+            "nonfinite_count": 0,
+            "p01": 60.13362756,
+            "p05": 60.629789800000005,
+            "p25": 63.110601,
+            "p75": 70.126988,
+            "p95": 73.2592864,
+            "p99": 73.88574608,
+            "std": 5.741703970506547
+          },
+          "causal_speed_available_count": 3,
+          "causal_speed_distribution_raw": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 0.5180960719045845,
+            "mean": 0.30603202396819484,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.3590480359522923,
+            "p95": 0.486286464714126,
+            "p99": 0.5117341504664927,
+            "std": 0.14995192634169022
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 3
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 3
+          },
+          "duration_s": 0.134122125,
+          "end_offset_from_metadata_s": 67.063198103,
+          "end_record_time_ns": 1787685080675171987,
+          "end_time_utc": "2026-08-25T19:11:20.675171987Z",
+          "first_steering_index": 1000,
+          "last_steering_index": 1002,
+          "maximum_inter_sample_gap_s": 0.074049889,
+          "rounded_6dp_values": [
+            {
+              "count": 3,
+              "value_recorded": 0.735348
+            }
+          ],
+          "sample_count": 3,
+          "side": "above",
+          "start_offset_from_metadata_s": 66.929075978,
+          "start_record_time_ns": 1787685080541049862,
+          "start_time_utc": "2026-08-25T19:11:20.541049862Z",
+          "steering_distribution_recorded": {
+            "count": 3,
+            "finite_count": 3,
+            "max": 0.7353483794903352,
+            "mean": 0.7353483794903352,
+            "median": 0.7353483794903352,
+            "min": 0.7353483794903352,
+            "nonfinite_count": 0,
+            "p01": 0.7353483794903352,
+            "p05": 0.7353483794903352,
+            "p25": 0.7353483794903352,
+            "p75": 0.7353483794903352,
+            "p95": 0.7353483794903352,
+            "p99": 0.7353483794903352,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": 0.735348
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 79.29901,
+            "mean": 66.50280457142857,
+            "median": 64.917674,
+            "min": 58.7182,
+            "nonfinite_count": 0,
+            "p01": 58.8533629,
+            "p05": 59.394014500000004,
+            "p25": 62.027294999999995,
+            "p75": 69.265079,
+            "p95": 77.55774819999999,
+            "p99": 78.95075763999999,
+            "std": 6.763233557548084
+          },
+          "causal_speed_available_count": 7,
+          "causal_speed_distribution_raw": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 0.2,
+            "mean": 0.2,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.2,
+            "p95": 0.2,
+            "p99": 0.2,
+            "std": 0.0
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 7
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 7
+          },
+          "duration_s": 0.400765462,
+          "end_offset_from_metadata_s": 67.528977621,
+          "end_record_time_ns": 1787685081140951505,
+          "end_time_utc": "2026-08-25T19:11:21.140951505Z",
+          "first_steering_index": 1003,
+          "last_steering_index": 1009,
+          "maximum_inter_sample_gap_s": 0.079356713,
+          "rounded_6dp_values": [
+            {
+              "count": 7,
+              "value_recorded": 0.80508
+            }
+          ],
+          "sample_count": 7,
+          "side": "above",
+          "start_offset_from_metadata_s": 67.128212159,
+          "start_record_time_ns": 1787685080740186043,
+          "start_time_utc": "2026-08-25T19:11:20.740186043Z",
+          "steering_distribution_recorded": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 0.8050795064359867,
+            "mean": 0.8050795064359867,
+            "median": 0.8050795064359867,
+            "min": 0.8050795064359867,
+            "nonfinite_count": 0,
+            "p01": 0.8050795064359867,
+            "p05": 0.8050795064359867,
+            "p25": 0.8050795064359867,
+            "p75": 0.8050795064359867,
+            "p95": 0.8050795064359867,
+            "p99": 0.8050795064359867,
+            "std": 0.0
+          },
+          "value_recorded_rounded_6dp": 0.80508
+        }
+      ],
+      "resolved_by_confirmed_rescaling": true,
+      "temporal_location_episode_count": 18,
+      "temporal_locations": [
+        {
+          "causal_speed_age_ms": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 78.929984,
+            "mean": 66.66726128571429,
+            "median": 66.3705585,
+            "min": 49.927194,
+            "nonfinite_count": 0,
+            "p01": 51.1045221,
+            "p05": 55.8138345,
+            "p25": 63.830233,
+            "p75": 72.4433255,
+            "p95": 76.062067,
+            "p99": 78.3564006,
+            "std": 7.149452287123693
+          },
+          "causal_speed_available_count": 14,
+          "causal_speed_distribution_raw": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 0.902081291531267,
+            "mean": 0.35684596200534197,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.5360177810286916,
+            "p95": 0.7634498331854578,
+            "p99": 0.874354999862105,
+            "std": 0.2274889007182609
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 14
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 14
+          },
+          "duration_s": 0.866127076,
+          "end_offset_from_metadata_s": 5.763479769,
+          "end_record_time_ns": 1787685019375453653,
+          "end_time_utc": "2026-08-25T19:10:19.375453653Z",
+          "first_steering_index": 73,
+          "last_steering_index": 86,
+          "maximum_inter_sample_gap_s": 0.078938617,
+          "rounded_6dp_values": [
+            {
+              "count": 8,
+              "value_recorded": 0.80508
+            },
+            {
+              "count": 3,
+              "value_recorded": 0.735348
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.399077
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.72664
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.734761
+            }
+          ],
+          "sample_count": 14,
+          "side": "above",
+          "start_offset_from_metadata_s": 4.897352693,
+          "start_record_time_ns": 1787685018509326577,
+          "start_time_utc": "2026-08-25T19:10:18.509326577Z",
+          "steering_distribution_recorded": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 0.8050795064359867,
+            "mean": 0.7505113920053015,
+            "median": 0.8050795064359867,
+            "min": 0.39907732700945203,
+            "nonfinite_count": 0,
+            "p01": 0.44166052268925127,
+            "p05": 0.6119933054084481,
+            "p25": 0.7353483794903352,
+            "p75": 0.8050795064359867,
+            "p95": 0.8050795064359867,
+            "p99": 0.8050795064359867,
+            "std": 0.10310708680071422
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 6,
+            "finite_count": 6,
+            "max": 71.927128,
+            "mean": 66.79841716666667,
+            "median": 66.7464085,
+            "min": 60.815051,
+            "nonfinite_count": 0,
+            "p01": 61.10493219999999,
+            "p05": 62.26445699999999,
+            "p25": 66.64334525,
+            "p75": 67.64648925,
+            "p95": 70.93105399999999,
+            "p99": 71.7279132,
+            "std": 3.2520297527831965
+          },
+          "causal_speed_available_count": 6,
+          "causal_speed_distribution_raw": {
+            "count": 6,
+            "finite_count": 6,
+            "max": 0.7193572042432091,
+            "mean": 0.6117527484554385,
+            "median": 0.5954982667638916,
+            "min": 0.5496621533611644,
+            "nonfinite_count": 0,
+            "p01": 0.5500300873314191,
+            "p05": 0.5515018232124377,
+            "p25": 0.5624341292853552,
+            "p75": 0.6431904537969457,
+            "p95": 0.7028878448909609,
+            "p99": 0.7160633323727595,
+            "std": 0.059533204388652464
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 6
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 6
+          },
+          "duration_s": 0.334246304,
+          "end_offset_from_metadata_s": 6.297984388,
+          "end_record_time_ns": 1787685019909958272,
+          "end_time_utc": "2026-08-25T19:10:19.909958272Z",
+          "first_steering_index": 89,
+          "last_steering_index": 94,
+          "maximum_inter_sample_gap_s": 0.071941883,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": 0.377171
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.46726
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.555814
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.636632
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.693195
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.713301
+            }
+          ],
+          "sample_count": 6,
+          "side": "above",
+          "start_offset_from_metadata_s": 5.963738084,
+          "start_record_time_ns": 1787685019575711968,
+          "start_time_utc": "2026-08-25T19:10:19.575711968Z",
+          "steering_distribution_recorded": {
+            "count": 6,
+            "finite_count": 6,
+            "max": 0.713300729018568,
+            "mean": 0.573895298940151,
+            "median": 0.5962231629949102,
+            "min": 0.37717068632270134,
+            "nonfinite_count": 0,
+            "p01": 0.3816751271779634,
+            "p05": 0.39969289059901186,
+            "p25": 0.4893981908111134,
+            "p75": 0.6790539299187043,
+            "p95": 0.7082741839843943,
+            "p99": 0.7122954200117333,
+            "std": 0.12110654958398322
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 43,
+            "finite_count": 43,
+            "max": 74.37912,
+            "mean": 66.71108439534883,
+            "median": 66.616173,
+            "min": 58.73008,
+            "nonfinite_count": 0,
+            "p01": 59.02205308,
+            "p05": 59.510060700000004,
+            "p25": 64.75891,
+            "p75": 69.635876,
+            "p95": 73.2489556,
+            "p99": 74.11414872,
+            "std": 4.318526654084325
+          },
+          "causal_speed_available_count": 43,
+          "causal_speed_distribution_raw": {
+            "count": 43,
+            "finite_count": 43,
+            "max": 0.717020684489689,
+            "mean": 0.6632708369821967,
+            "median": 0.6635281366947163,
+            "min": 0.6453813430041828,
+            "nonfinite_count": 0,
+            "p01": 0.6459064926632646,
+            "p05": 0.6495392621658072,
+            "p25": 0.6525099623481289,
+            "p75": 0.6683918924849669,
+            "p95": 0.685383146101576,
+            "p99": 0.7090233464570364,
+            "std": 0.01335960050777427
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 43
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 43
+          },
+          "duration_s": 2.805532656,
+          "end_offset_from_metadata_s": 19.892014897,
+          "end_record_time_ns": 1787685033503988781,
+          "end_time_utc": "2026-08-25T19:10:33.503988781Z",
+          "first_steering_index": 256,
+          "last_steering_index": 298,
+          "maximum_inter_sample_gap_s": 0.074392678,
+          "rounded_6dp_values": [
+            {
+              "count": 5,
+              "value_recorded": -0.47227
+            },
+            {
+              "count": 5,
+              "value_recorded": -0.444023
+            },
+            {
+              "count": 5,
+              "value_recorded": -0.434444
+            },
+            {
+              "count": 4,
+              "value_recorded": -0.469228
+            },
+            {
+              "count": 4,
+              "value_recorded": -0.44085
+            },
+            {
+              "count": 3,
+              "value_recorded": -0.437657
+            },
+            {
+              "count": 2,
+              "value_recorded": -0.475292
+            },
+            {
+              "count": 2,
+              "value_recorded": -0.466166
+            },
+            {
+              "count": 2,
+              "value_recorded": -0.453425
+            },
+            {
+              "count": 2,
+              "value_recorded": -0.45031
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.483865
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.481277
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.459594
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.450053
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.447176
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.415841
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.404239
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.38242
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.371112
+            }
+          ],
+          "sample_count": 43,
+          "side": "below",
+          "start_offset_from_metadata_s": 17.086482241,
+          "start_record_time_ns": 1787685030698456125,
+          "start_time_utc": "2026-08-25T19:10:30.698456125Z",
+          "steering_distribution_recorded": {
+            "count": 43,
+            "finite_count": 43,
+            "max": -0.3711120038261601,
+            "mean": -0.44867284512997074,
+            "median": -0.447176458074031,
+            "min": -0.4838654796904607,
+            "nonfinite_count": 0,
+            "p01": -0.48277814124818424,
+            "p05": -0.47529188868604366,
+            "p25": -0.4692280583083893,
+            "p75": -0.4376568588261601,
+            "p95": -0.4053988920125902,
+            "p99": -0.37586132470916633,
+            "std": 0.02370630566380567
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 22,
+            "finite_count": 22,
+            "max": 78.922795,
+            "mean": 66.5329769090909,
+            "median": 66.90862,
+            "min": 60.216395,
+            "nonfinite_count": 0,
+            "p01": 60.26495309,
+            "p05": 60.451932049999996,
+            "p25": 62.206382250000004,
+            "p75": 68.7540715,
+            "p95": 73.30014005,
+            "p99": 77.74257904,
+            "std": 4.7848413264750995
+          },
+          "causal_speed_available_count": 22,
+          "causal_speed_distribution_raw": {
+            "count": 22,
+            "finite_count": 22,
+            "max": 0.7210759542979179,
+            "mean": 0.44759992971788504,
+            "median": 0.5219328121545124,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.5596132711176015,
+            "p95": 0.663291238482412,
+            "p99": 0.7094601766235417,
+            "std": 0.176329490828088
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 22
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 22
+          },
+          "duration_s": 1.397637648,
+          "end_offset_from_metadata_s": 23.621081267,
+          "end_record_time_ns": 1787685037233055151,
+          "end_time_utc": "2026-08-25T19:10:37.233055151Z",
+          "first_steering_index": 333,
+          "last_steering_index": 354,
+          "maximum_inter_sample_gap_s": 0.078937218,
+          "rounded_6dp_values": [
+            {
+              "count": 8,
+              "value_recorded": 0.90108
+            },
+            {
+              "count": 2,
+              "value_recorded": 0.784415
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.357943
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.442787
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.546712
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.613137
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.661088
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.684568
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.691199
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.738234
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.743623
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.802516
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.812759
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.846762
+            }
+          ],
+          "sample_count": 22,
+          "side": "above",
+          "start_offset_from_metadata_s": 22.223443619,
+          "start_record_time_ns": 1787685035835417503,
+          "start_time_utc": "2026-08-25T19:10:35.835417503Z",
+          "steering_distribution_recorded": {
+            "count": 22,
+            "finite_count": 22,
+            "max": 0.9010799021144507,
+            "mean": 0.7599452603253823,
+            "median": 0.7934654023584189,
+            "min": 0.35794338534899395,
+            "nonfinite_count": 0,
+            "p01": 0.37576049225803665,
+            "p05": 0.44798301157773496,
+            "p25": 0.6862255908166017,
+            "p75": 0.9010799021144507,
+            "p95": 0.9010799021144507,
+            "p99": 0.9010799021144507,
+            "std": 0.15415793102451247
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 11,
+            "finite_count": 11,
+            "max": 74.076734,
+            "mean": 67.11410481818181,
+            "median": 66.903984,
+            "min": 60.225456,
+            "nonfinite_count": 0,
+            "p01": 60.703265900000005,
+            "p05": 62.61450550000001,
+            "p25": 65.62769449999999,
+            "p75": 67.98680350000001,
+            "p95": 72.556714,
+            "p99": 73.77273,
+            "std": 3.3337559944158213
+          },
+          "causal_speed_available_count": 11,
+          "causal_speed_distribution_raw": {
+            "count": 11,
+            "finite_count": 11,
+            "max": 0.7216364699524814,
+            "mean": 0.6449502741643465,
+            "median": 0.6341161818943237,
+            "min": 0.5901381139745362,
+            "nonfinite_count": 0,
+            "p01": 0.5915280854041516,
+            "p05": 0.5970879711226129,
+            "p25": 0.6116101386094226,
+            "p75": 0.6751927645826985,
+            "p95": 0.7119166114671316,
+            "p99": 0.7196924982554115,
+            "std": 0.04152533653752763
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 11
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 11
+          },
+          "duration_s": 0.671722927,
+          "end_offset_from_metadata_s": 27.822455015,
+          "end_record_time_ns": 1787685041434428899,
+          "end_time_utc": "2026-08-25T19:10:41.434428899Z",
+          "first_steering_index": 407,
+          "last_steering_index": 417,
+          "maximum_inter_sample_gap_s": 0.074090774,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": -0.608173
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.574963
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.574147
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.541091
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.540524
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.508139
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.507613
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.475095
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.442204
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.407356
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.374903
+            }
+          ],
+          "sample_count": 11,
+          "side": "below",
+          "start_offset_from_metadata_s": 27.150732088,
+          "start_record_time_ns": 1787685040762705972,
+          "start_time_utc": "2026-08-25T19:10:40.762705972Z",
+          "steering_distribution_recorded": {
+            "count": 11,
+            "finite_count": 11,
+            "max": -0.3749025544380997,
+            "mean": -0.5049278901653724,
+            "median": -0.5081391569380997,
+            "min": -0.6081729029380997,
+            "nonfinite_count": 0,
+            "p01": -0.6048519112880997,
+            "p05": -0.5915679446880997,
+            "p25": -0.5576187981880997,
+            "p75": -0.4586493919380997,
+            "p95": -0.39112912843809977,
+            "p99": -0.37814786923809973,
+            "std": 0.07019408888033214
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 17,
+            "finite_count": 17,
+            "max": 73.799055,
+            "mean": 66.3263791764706,
+            "median": 67.338327,
+            "min": 57.244817,
+            "nonfinite_count": 0,
+            "p01": 57.51611572,
+            "p05": 58.601310600000005,
+            "p25": 62.06705,
+            "p75": 68.834991,
+            "p95": 73.4780022,
+            "p99": 73.73484444,
+            "std": 4.963549255840779
+          },
+          "causal_speed_available_count": 17,
+          "causal_speed_distribution_raw": {
+            "count": 17,
+            "finite_count": 17,
+            "max": 0.728213286788809,
+            "mean": 0.4855642768857057,
+            "median": 0.5295907249917566,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.5,
+            "p75": 0.5859303944755633,
+            "p95": 0.6797031113039879,
+            "p99": 0.7185112516918448,
+            "std": 0.1683439037574271
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 17
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 17
+          },
+          "duration_s": 1.060193439,
+          "end_offset_from_metadata_s": 32.217852001,
+          "end_record_time_ns": 1787685045829825885,
+          "end_time_utc": "2026-08-25T19:10:45.829825885Z",
+          "first_steering_index": 467,
+          "last_steering_index": 483,
+          "maximum_inter_sample_gap_s": 0.073809758,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": 0.354049
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.439246
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.530232
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.558807
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.618503
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.677755
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.695048
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.707076
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.717298
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.747366
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.758718
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.77058
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.784415
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.790767
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.834797
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.874336
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.890924
+            }
+          ],
+          "sample_count": 17,
+          "side": "above",
+          "start_offset_from_metadata_s": 31.157658562,
+          "start_record_time_ns": 1787685044769632446,
+          "start_time_utc": "2026-08-25T19:10:44.769632446Z",
+          "steering_distribution_recorded": {
+            "count": 17,
+            "finite_count": 17,
+            "max": 0.8909236099341324,
+            "mean": 0.6911715661502865,
+            "median": 0.717297852596901,
+            "min": 0.3540488019212368,
+            "nonfinite_count": 0,
+            "p01": 0.3676802910875893,
+            "p05": 0.42220624775299936,
+            "p25": 0.6185034387140683,
+            "p75": 0.7844149030954422,
+            "p95": 0.8776533963528858,
+            "p99": 0.8882695672178831,
+            "std": 0.1442362602531767
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 17,
+            "finite_count": 17,
+            "max": 73.362779,
+            "mean": 66.42184476470588,
+            "median": 67.593977,
+            "min": 56.829138,
+            "nonfinite_count": 0,
+            "p01": 57.1477036,
+            "p05": 58.421966,
+            "p25": 64.572375,
+            "p75": 70.060804,
+            "p95": 72.01944619999999,
+            "p99": 73.09411244,
+            "std": 4.947934017543728
+          },
+          "causal_speed_available_count": 17,
+          "causal_speed_distribution_raw": {
+            "count": 17,
+            "finite_count": 17,
+            "max": 0.7306407514176865,
+            "mean": 0.6211103985569162,
+            "median": 0.6015862533343829,
+            "min": 0.5593978000559892,
+            "nonfinite_count": 0,
+            "p01": 0.5599403400375284,
+            "p05": 0.5621104999636849,
+            "p25": 0.5776831065173805,
+            "p75": 0.6551897976275356,
+            "p95": 0.7123340769972368,
+            "p99": 0.7269794165335965,
+            "std": 0.05266533011382499
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 17
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 17
+          },
+          "duration_s": 1.070763809,
+          "end_offset_from_metadata_s": 35.219020101,
+          "end_record_time_ns": 1787685048830993985,
+          "end_time_utc": "2026-08-25T19:10:48.830993985Z",
+          "first_steering_index": 512,
+          "last_steering_index": 528,
+          "maximum_inter_sample_gap_s": 0.073410046,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": 0.677755
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.357943
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.36512
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.398787
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.432107
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.463802
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.477516
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.501343
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.549767
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.58072
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.592097
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.615831
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.628987
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.639139
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.646448
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.686798
+            }
+          ],
+          "sample_count": 17,
+          "side": "above",
+          "start_offset_from_metadata_s": 34.148256292,
+          "start_record_time_ns": 1787685047760230176,
+          "start_time_utc": "2026-08-25T19:10:47.760230176Z",
+          "steering_distribution_recorded": {
+            "count": 17,
+            "finite_count": 17,
+            "max": 0.6867982820041552,
+            "mean": 0.546583331673358,
+            "median": 0.5807204286744154,
+            "min": 0.35794338534899395,
+            "nonfinite_count": 0,
+            "p01": 0.3590916368221816,
+            "p05": 0.36368464271493206,
+            "p25": 0.4638015230730563,
+            "p75": 0.6391389681828533,
+            "p95": 0.679563881457879,
+            "p99": 0.6853514018949,
+            "std": 0.10969920665255177
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 78.688216,
+            "mean": 66.70582035714285,
+            "median": 66.2249615,
+            "min": 58.098693,
+            "nonfinite_count": 0,
+            "p01": 58.43012787,
+            "p05": 59.75586735,
+            "p25": 63.8761855,
+            "p75": 67.02332750000001,
+            "p95": 76.1974901,
+            "p99": 78.19007081999999,
+            "std": 5.19328879076259
+          },
+          "causal_speed_available_count": 14,
+          "causal_speed_distribution_raw": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 0.6510165469724476,
+            "mean": 0.47561016984726506,
+            "median": 0.5168965721044119,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.5,
+            "p75": 0.5666482682909774,
+            "p95": 0.626027000080486,
+            "p99": 0.6460186375940552,
+            "std": 0.1506227957738224
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 14
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 14
+          },
+          "duration_s": 0.871159749,
+          "end_offset_from_metadata_s": 39.353356975,
+          "end_record_time_ns": 1787685052965330859,
+          "end_time_utc": "2026-08-25T19:10:52.965330859Z",
+          "first_steering_index": 577,
+          "last_steering_index": 590,
+          "maximum_inter_sample_gap_s": 0.078695487,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.934881
+            },
+            {
+              "count": 2,
+              "value_recorded": -0.837354
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.894553
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.813342
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.804188
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.776731
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.729911
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.647769
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.565906
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.555247
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.47227
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.37462
+            }
+          ],
+          "sample_count": 14,
+          "side": "below",
+          "start_offset_from_metadata_s": 38.482197226,
+          "start_record_time_ns": 1787685052094171110,
+          "start_time_utc": "2026-08-25T19:10:52.094171110Z",
+          "steering_distribution_recorded": {
+            "count": 14,
+            "finite_count": 14,
+            "max": -0.37462026407089394,
+            "mean": -0.7270720599891922,
+            "median": -0.7904594750641117,
+            "min": -0.9348813876338145,
+            "nonfinite_count": 0,
+            "p01": -0.9348813876338145,
+            "p05": -0.9348813876338145,
+            "p25": -0.8373542227635883,
+            "p75": -0.586372065923831,
+            "p95": -0.4380926268085932,
+            "p99": -0.38731473661843385,
+            "std": 0.1701974905425117
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 6,
+            "finite_count": 6,
+            "max": 73.653308,
+            "mean": 66.69077016666667,
+            "median": 66.259005,
+            "min": 60.523252,
+            "nonfinite_count": 0,
+            "p01": 60.78573215,
+            "p05": 61.83565275,
+            "p25": 65.890366,
+            "p75": 67.32667475,
+            "p95": 72.15928,
+            "p99": 73.3545024,
+            "std": 3.845000622440148
+          },
+          "causal_speed_available_count": 6,
+          "causal_speed_distribution_raw": {
+            "count": 6,
+            "finite_count": 6,
+            "max": 0.7357700432887961,
+            "mean": 0.6686096713050153,
+            "median": 0.6559772649036288,
+            "min": 0.6299238127947877,
+            "nonfinite_count": 0,
+            "p01": 0.6304776887149418,
+            "p05": 0.6326931923955581,
+            "p25": 0.6420513300756507,
+            "p75": 0.6864445338306014,
+            "p95": 0.7250796101519423,
+            "p99": 0.7336319566614253,
+            "std": 0.03632267963320692
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 6
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 6
+          },
+          "duration_s": 0.332582178,
+          "end_offset_from_metadata_s": 41.212446295,
+          "end_record_time_ns": 1787685054824420179,
+          "end_time_utc": "2026-08-25T19:10:54.824420179Z",
+          "first_steering_index": 613,
+          "last_steering_index": 618,
+          "maximum_inter_sample_gap_s": 0.073661416,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": -0.516649
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.493008
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.484239
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.44085
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.418186
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.391391
+            }
+          ],
+          "sample_count": 6,
+          "side": "below",
+          "start_offset_from_metadata_s": 40.879864117,
+          "start_record_time_ns": 1787685054491838001,
+          "start_time_utc": "2026-08-25T19:10:54.491838001Z",
+          "steering_distribution_recorded": {
+            "count": 6,
+            "finite_count": 6,
+            "max": -0.3913913405032551,
+            "mean": -0.4573871828367347,
+            "median": -0.46254437006881544,
+            "min": -0.516649076494911,
+            "nonfinite_count": 0,
+            "p01": -0.5154670062314402,
+            "p05": -0.5107387251775566,
+            "p25": -0.49081549579320893,
+            "p75": -0.4238521441546573,
+            "p95": -0.39809007254222073,
+            "p99": -0.3927310869110482,
+            "std": 0.0440973516960096
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 16,
+            "finite_count": 16,
+            "max": 73.871929,
+            "mean": 67.21329887499999,
+            "median": 67.752497,
+            "min": 58.444261,
+            "nonfinite_count": 0,
+            "p01": 59.0966812,
+            "p05": 61.706362,
+            "p25": 63.7610905,
+            "p75": 70.53416324999999,
+            "p95": 72.39370749999999,
+            "p99": 73.57628469999999,
+            "std": 4.184104367492385
+          },
+          "causal_speed_available_count": 16,
+          "causal_speed_distribution_raw": {
+            "count": 16,
+            "finite_count": 16,
+            "max": 0.8443260032252065,
+            "mean": 0.6117521596855022,
+            "median": 0.5869073037467338,
+            "min": 0.5,
+            "nonfinite_count": 0,
+            "p01": 0.5023391956213568,
+            "p05": 0.5116959781067836,
+            "p25": 0.5286415814107244,
+            "p75": 0.6970320318602219,
+            "p95": 0.7484088828579982,
+            "p99": 0.8251425791517648,
+            "std": 0.09618017503556692
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 16
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 16
+          },
+          "duration_s": 1.002499914,
+          "end_offset_from_metadata_s": 44.356604464,
+          "end_record_time_ns": 1787685057968578348,
+          "end_time_utc": "2026-08-25T19:10:57.968578348Z",
+          "first_steering_index": 650,
+          "last_steering_index": 665,
+          "maximum_inter_sample_gap_s": 0.071963003,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": 0.350138
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.361822
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.373358
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.387747
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.460324
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.555814
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.57346
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.661088
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.698499
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.758181
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.767156
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.792311
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.802516
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.812759
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.883284
+            }
+          ],
+          "sample_count": 16,
+          "side": "above",
+          "start_offset_from_metadata_s": 43.35410455,
+          "start_record_time_ns": 1787685056966078434,
+          "start_time_utc": "2026-08-25T19:10:56.966078434Z",
+          "steering_distribution_recorded": {
+            "count": 16,
+            "finite_count": 16,
+            "max": 0.8832835637089073,
+            "mean": 0.5992871165963157,
+            "median": 0.617273626428773,
+            "min": 0.3501381979590819,
+            "nonfinite_count": 0,
+            "p01": 0.3501381979590819,
+            "p05": 0.3501381979590819,
+            "p25": 0.3841496944386025,
+            "p75": 0.7734448729798629,
+            "p95": 0.8303898458880998,
+            "p99": 0.8727048201447457,
+            "std": 0.1887582174167206
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 16,
+            "finite_count": 16,
+            "max": 75.437215,
+            "mean": 66.4762039375,
+            "median": 65.22455500000001,
+            "min": 57.308853,
+            "nonfinite_count": 0,
+            "p01": 57.7832118,
+            "p05": 59.680647,
+            "p25": 62.342289,
+            "p75": 71.07341550000001,
+            "p95": 75.029476,
+            "p99": 75.3556672,
+            "std": 5.360531656364954
+          },
+          "causal_speed_available_count": 16,
+          "causal_speed_distribution_raw": {
+            "count": 16,
+            "finite_count": 16,
+            "max": 0.7592699603574173,
+            "mean": 0.6298250796227891,
+            "median": 0.5998884757599766,
+            "min": 0.5591998362886255,
+            "nonfinite_count": 0,
+            "p01": 0.5602935697104006,
+            "p05": 0.5646685033975012,
+            "p25": 0.587285920126718,
+            "p75": 0.6747042977639115,
+            "p95": 0.7243677768519861,
+            "p99": 0.7522895236563311,
+            "std": 0.05909075770142992
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 16
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 16
+          },
+          "duration_s": 0.993594046,
+          "end_offset_from_metadata_s": 46.411290456,
+          "end_record_time_ns": 1787685060023264340,
+          "end_time_utc": "2026-08-25T19:11:00.023264340Z",
+          "first_steering_index": 681,
+          "last_steering_index": 696,
+          "maximum_inter_sample_gap_s": 0.075449495,
+          "rounded_6dp_values": [
+            {
+              "count": 2,
+              "value_recorded": -0.604621
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.687329
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.667989
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.622343
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.620161
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.613501
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.597743
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.571932
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.536937
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.487182
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.437657
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.390242
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.37462
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.357028
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.356488
+            }
+          ],
+          "sample_count": 16,
+          "side": "below",
+          "start_offset_from_metadata_s": 45.41769641,
+          "start_record_time_ns": 1787685059029670294,
+          "start_time_utc": "2026-08-25T19:10:59.029670294Z",
+          "steering_distribution_recorded": {
+            "count": 16,
+            "finite_count": 16,
+            "max": -0.3564876869295903,
+            "mean": -0.5331495590585246,
+            "median": -0.5848375181979417,
+            "min": -0.6873291806452193,
+            "nonfinite_count": 0,
+            "p01": -0.6844281306001209,
+            "p05": -0.672823930419727,
+            "p25": -0.6151661559766413,
+            "p75": -0.4258031111020177,
+            "p95": -0.3568925819295903,
+            "p99": -0.3565686659295903,
+            "std": 0.11148354850930613
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 12,
+            "finite_count": 12,
+            "max": 73.668738,
+            "mean": 66.84250075,
+            "median": 65.26600400000001,
+            "min": 61.332135,
+            "nonfinite_count": 0,
+            "p01": 61.33578513,
+            "p05": 61.35038565,
+            "p25": 64.146353,
+            "p75": 69.82010525000001,
+            "p95": 73.64226705,
+            "p99": 73.66344381,
+            "std": 4.179481609697969
+          },
+          "causal_speed_available_count": 12,
+          "causal_speed_distribution_raw": {
+            "count": 12,
+            "finite_count": 12,
+            "max": 0.7258101664399106,
+            "mean": 0.6562648053848713,
+            "median": 0.6526513773177488,
+            "min": 0.6149817875623604,
+            "nonfinite_count": 0,
+            "p01": 0.6151304155827132,
+            "p05": 0.6157249276641242,
+            "p25": 0.6265404205773046,
+            "p75": 0.676538883458502,
+            "p95": 0.7157036483523697,
+            "p99": 0.7237888628224024,
+            "std": 0.03520027347358036
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 12
+          },
+          "duration_s": 0.728882542,
+          "end_offset_from_metadata_s": 50.286499264,
+          "end_record_time_ns": 1787685063898473148,
+          "end_time_utc": "2026-08-25T19:11:03.898473148Z",
+          "first_steering_index": 743,
+          "last_steering_index": 754,
+          "maximum_inter_sample_gap_s": 0.073667305,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": 0.365684
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.402819
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.41025
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.42851
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.442787
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.463802
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.474117
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.511155
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.517596
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.543636
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.546712
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.549767
+            }
+          ],
+          "sample_count": 12,
+          "side": "above",
+          "start_offset_from_metadata_s": 49.557616722,
+          "start_record_time_ns": 1787685063169590606,
+          "start_time_utc": "2026-08-25T19:11:03.169590606Z",
+          "steering_distribution_recorded": {
+            "count": 12,
+            "finite_count": 12,
+            "max": 0.5497666195152106,
+            "mean": 0.47140282910626835,
+            "median": 0.4689591975263335,
+            "min": 0.3656837504616318,
+            "nonfinite_count": 0,
+            "p01": 0.3697686499229083,
+            "p05": 0.38610824776801417,
+            "p25": 0.4239450866577066,
+            "p75": 0.5241057549233767,
+            "p95": 0.5480865520994851,
+            "p99": 0.5494306060320655,
+            "std": 0.05992204425136966
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 82.315026,
+            "mean": 66.37275028571428,
+            "median": 63.2535185,
+            "min": 56.129977,
+            "nonfinite_count": 0,
+            "p01": 56.169377139999995,
+            "p05": 56.3269777,
+            "p25": 57.60111975,
+            "p75": 73.51844425,
+            "p95": 81.8203526,
+            "p99": 82.21609132,
+            "std": 9.10957322173121
+          },
+          "causal_speed_available_count": 14,
+          "causal_speed_distribution_raw": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 1.1,
+            "mean": 0.6407594035442733,
+            "median": 0.5692362493343461,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.24092683185142383,
+            "p05": 0.4046341592571191,
+            "p25": 0.5259845170749904,
+            "p75": 0.6509844259138915,
+            "p95": 1.1,
+            "p99": 1.1,
+            "std": 0.23140513249176775
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 14
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 14
+          },
+          "duration_s": 0.86496162,
+          "end_offset_from_metadata_s": 52.277605901,
+          "end_record_time_ns": 1787685065889579785,
+          "end_time_utc": "2026-08-25T19:11:05.889579785Z",
+          "first_steering_index": 771,
+          "last_steering_index": 784,
+          "maximum_inter_sample_gap_s": 0.082330125,
+          "rounded_6dp_values": [
+            {
+              "count": 3,
+              "value_recorded": -0.780376
+            },
+            {
+              "count": 2,
+              "value_recorded": -0.781563
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.815144
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.789036
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.723455
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.678283
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.643714
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.547518
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.481277
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.46938
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.384502
+            }
+          ],
+          "sample_count": 14,
+          "side": "below",
+          "start_offset_from_metadata_s": 51.412644281,
+          "start_record_time_ns": 1787685065024618165,
+          "start_time_utc": "2026-08-25T19:11:05.024618165Z",
+          "steering_distribution_recorded": {
+            "count": 14,
+            "finite_count": 14,
+            "max": -0.3845020011828356,
+            "mean": -0.6740401492568715,
+            "median": -0.751915682096616,
+            "min": -0.8151438255953781,
+            "nonfinite_count": 0,
+            "p01": -0.8117497575141743,
+            "p05": -0.7981734851893593,
+            "p25": -0.7812665388350604,
+            "p75": -0.5715665393977865,
+            "p95": -0.43967254756141855,
+            "p99": -0.39553611045855225,
+            "std": 0.1394996867994137
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 13,
+            "finite_count": 13,
+            "max": 74.188913,
+            "mean": 66.65067515384615,
+            "median": 67.123342,
+            "min": 61.360561,
+            "nonfinite_count": 0,
+            "p01": 61.39605508,
+            "p05": 61.5380314,
+            "p25": 65.357145,
+            "p75": 67.467613,
+            "p95": 71.7684932,
+            "p99": 73.70482903999999,
+            "std": 3.1805884276753877
+          },
+          "causal_speed_available_count": 13,
+          "causal_speed_distribution_raw": {
+            "count": 13,
+            "finite_count": 13,
+            "max": 0.7234311671159176,
+            "mean": 0.5888011644699958,
+            "median": 0.5806896638551127,
+            "min": 0.5307551563569922,
+            "nonfinite_count": 0,
+            "p01": 0.5311964801749678,
+            "p05": 0.5329617754468701,
+            "p25": 0.5448722957234691,
+            "p75": 0.6123225146851343,
+            "p95": 0.6716055031355649,
+            "p99": 0.7130660343198469,
+            "std": 0.051388118222789686
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 13
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 13
+          },
+          "duration_s": 0.805490363,
+          "end_offset_from_metadata_s": 54.61519641,
+          "end_record_time_ns": 1787685068227170294,
+          "end_time_utc": "2026-08-25T19:11:08.227170294Z",
+          "first_steering_index": 807,
+          "last_steering_index": 819,
+          "maximum_inter_sample_gap_s": 0.074196742,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": 0.413938
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.501343
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.517596
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.555814
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.589284
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.621156
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.631556
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.636632
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.691199
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.72664
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.734446
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.756425
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.767156
+            }
+          ],
+          "sample_count": 13,
+          "side": "above",
+          "start_offset_from_metadata_s": 53.809706047,
+          "start_record_time_ns": 1787685067421679931,
+          "start_time_utc": "2026-08-25T19:11:07.421679931Z",
+          "steering_distribution_recorded": {
+            "count": 13,
+            "finite_count": 13,
+            "max": 0.767156215687595,
+            "mean": 0.6263988993616405,
+            "median": 0.6315560925876437,
+            "min": 0.41393811286163384,
+            "nonfinite_count": 0,
+            "p01": 0.4244267415559099,
+            "p05": 0.4663812563330142,
+            "p25": 0.5558142529606233,
+            "p75": 0.7266403707002153,
+            "p95": 0.760717517033215,
+            "p99": 0.7658684759567189,
+            "std": 0.10443115401484003
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 20,
+            "finite_count": 20,
+            "max": 76.211071,
+            "mean": 66.72680005,
+            "median": 67.1501895,
+            "min": 59.195248,
+            "nonfinite_count": 0,
+            "p01": 59.19577335,
+            "p05": 59.197874750000004,
+            "p25": 62.00132775,
+            "p75": 71.55835925,
+            "p95": 73.62114015,
+            "p99": 75.69308483,
+            "std": 5.249843805690227
+          },
+          "causal_speed_available_count": 20,
+          "causal_speed_distribution_raw": {
+            "count": 20,
+            "finite_count": 20,
+            "max": 0.7631589549891983,
+            "mean": 0.5934634019304538,
+            "median": 0.5843406997046356,
+            "min": 0.5115736709131598,
+            "nonfinite_count": 0,
+            "p01": 0.5120418807994477,
+            "p05": 0.5139147203445995,
+            "p25": 0.5283159847115732,
+            "p75": 0.6448670833895116,
+            "p95": 0.6998291679628812,
+            "p99": 0.7504929975839347,
+            "std": 0.06971952840645224
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 20
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 20
+          },
+          "duration_s": 1.273094367,
+          "end_offset_from_metadata_s": 56.351141921,
+          "end_record_time_ns": 1787685069963115805,
+          "end_time_utc": "2026-08-25T19:11:09.963115805Z",
+          "first_steering_index": 826,
+          "last_steering_index": 845,
+          "maximum_inter_sample_gap_s": 0.076221338,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": 0.351149
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.385084
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.417827
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.451719
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.484256
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.485159
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.51697
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.552636
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.584923
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.618503
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.626397
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.682317
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.72664
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.73635
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.773932
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.77558
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.801005
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.802516
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.817569
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.825234
+            }
+          ],
+          "sample_count": 20,
+          "side": "above",
+          "start_offset_from_metadata_s": 55.078047554,
+          "start_record_time_ns": 1787685068690021438,
+          "start_time_utc": "2026-08-25T19:11:08.690021438Z",
+          "steering_distribution_recorded": {
+            "count": 20,
+            "finite_count": 20,
+            "max": 0.8252341937031653,
+            "mean": 0.6207884264123319,
+            "median": 0.6224503318002521,
+            "min": 0.3511494937140683,
+            "nonfinite_count": 0,
+            "p01": 0.3575971240490683,
+            "p05": 0.38338764538906833,
+            "p25": 0.4849330565089636,
+            "p75": 0.7743438360067877,
+            "p95": 0.8179523695573442,
+            "p99": 0.8237778288740011,
+            "std": 0.1538837065480017
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 12,
+            "finite_count": 12,
+            "max": 74.904761,
+            "mean": 66.72748108333333,
+            "median": 66.022521,
+            "min": 60.843745,
+            "nonfinite_count": 0,
+            "p01": 60.94267933,
+            "p05": 61.33841665,
+            "p25": 65.4078315,
+            "p75": 67.6422985,
+            "p95": 73.6202745,
+            "p99": 74.6478637,
+            "std": 3.793514046630368
+          },
+          "causal_speed_available_count": 12,
+          "causal_speed_distribution_raw": {
+            "count": 12,
+            "finite_count": 12,
+            "max": 0.728914511217453,
+            "mean": 0.7006814846961392,
+            "median": 0.6958618258833986,
+            "min": 0.693008310741381,
+            "nonfinite_count": 0,
+            "p01": 0.693008310741381,
+            "p05": 0.693008310741381,
+            "p25": 0.694430007908062,
+            "p75": 0.6999718720418828,
+            "p95": 0.721613070167376,
+            "p99": 0.7274542230074376,
+            "std": 0.010873726114443484
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 12
+          },
+          "duration_s": 0.73953758,
+          "end_offset_from_metadata_s": 59.081309531,
+          "end_record_time_ns": 1787685072693283415,
+          "end_time_utc": "2026-08-25T19:11:12.693283415Z",
+          "first_steering_index": 875,
+          "last_steering_index": 886,
+          "maximum_inter_sample_gap_s": 0.074918797,
+          "rounded_6dp_values": [
+            {
+              "count": 3,
+              "value_recorded": -0.391391
+            },
+            {
+              "count": 3,
+              "value_recorded": -0.387956
+            },
+            {
+              "count": 3,
+              "value_recorded": -0.384502
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.362209
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.354436
+            },
+            {
+              "count": 1,
+              "value_recorded": -0.3515
+            }
+          ],
+          "sample_count": 12,
+          "side": "below",
+          "start_offset_from_metadata_s": 58.341771951,
+          "start_record_time_ns": 1787685071953745835,
+          "start_time_utc": "2026-08-25T19:11:11.953745835Z",
+          "steering_distribution_recorded": {
+            "count": 12,
+            "finite_count": 12,
+            "max": -0.35150021518283564,
+            "mean": -0.3799744800310291,
+            "median": -0.38622904186889256,
+            "min": -0.3913913405032551,
+            "nonfinite_count": 0,
+            "p01": -0.3913913405032551,
+            "p05": -0.3913913405032551,
+            "p25": -0.3888148970420259,
+            "p75": -0.37892870536498763,
+            "p95": -0.3531151468374983,
+            "p99": -0.35182320151376817,
+            "std": 0.014207511638290093
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 79.29901,
+            "mean": 66.77662485714286,
+            "median": 65.62348449999999,
+            "min": 58.7182,
+            "nonfinite_count": 0,
+            "p01": 58.790318930000005,
+            "p05": 59.078794650000006,
+            "p25": 61.499105,
+            "p75": 71.96818125,
+            "p95": 75.88218814999999,
+            "p99": 78.61564562999999,
+            "std": 6.095140848165608
+          },
+          "causal_speed_available_count": 14,
+          "causal_speed_distribution_raw": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 0.902081291531267,
+            "mean": 0.35684596200534197,
+            "median": 0.2,
+            "min": 0.2,
+            "nonfinite_count": 0,
+            "p01": 0.2,
+            "p05": 0.2,
+            "p25": 0.2,
+            "p75": 0.5360177810286916,
+            "p95": 0.7634498331854578,
+            "p99": 0.874354999862105,
+            "std": 0.2274889007182609
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 0,
+            "negative": 0,
+            "positive": 14
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 14
+          },
+          "duration_s": 0.866172452,
+          "end_offset_from_metadata_s": 67.528977621,
+          "end_record_time_ns": 1787685081140951505,
+          "end_time_utc": "2026-08-25T19:11:21.140951505Z",
+          "first_steering_index": 996,
+          "last_steering_index": 1009,
+          "maximum_inter_sample_gap_s": 0.079356713,
+          "rounded_6dp_values": [
+            {
+              "count": 8,
+              "value_recorded": 0.80508
+            },
+            {
+              "count": 3,
+              "value_recorded": 0.735348
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.399077
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.72664
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.734761
+            }
+          ],
+          "sample_count": 14,
+          "side": "above",
+          "start_offset_from_metadata_s": 66.662805169,
+          "start_record_time_ns": 1787685080274779053,
+          "start_time_utc": "2026-08-25T19:11:20.274779053Z",
+          "steering_distribution_recorded": {
+            "count": 14,
+            "finite_count": 14,
+            "max": 0.8050795064359867,
+            "mean": 0.7505113920053015,
+            "median": 0.8050795064359867,
+            "min": 0.39907732700945203,
+            "nonfinite_count": 0,
+            "p01": 0.44166052268925127,
+            "p05": 0.6119933054084481,
+            "p25": 0.7353483794903352,
+            "p75": 0.8050795064359867,
+            "p95": 0.8050795064359867,
+            "p99": 0.8050795064359867,
+            "std": 0.10310708680071422
+          }
+        },
+        {
+          "causal_speed_age_ms": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 75.079905,
+            "mean": 66.77166714285714,
+            "median": 65.307866,
+            "min": 58.83692,
+            "nonfinite_count": 0,
+            "p01": 59.20757432,
+            "p05": 60.6901916,
+            "p25": 65.084236,
+            "p75": 69.0042535,
+            "p95": 73.8636897,
+            "p99": 74.83666194,
+            "std": 4.750593035461283
+          },
+          "causal_speed_available_count": 7,
+          "causal_speed_distribution_raw": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 0.7157100864032336,
+            "mean": 0.5233580750364586,
+            "median": 0.5786740188426489,
+            "min": 0.0,
+            "nonfinite_count": 0,
+            "p01": 0.03297972920166986,
+            "p05": 0.16489864600834936,
+            "p25": 0.5516600692449886,
+            "p75": 0.6329011407596753,
+            "p95": 0.6970409905325283,
+            "p99": 0.7119762672290926,
+            "std": 0.22052506819222925
+          },
+          "causal_speed_state_counts": {
+            "exact_zero": 1,
+            "negative": 0,
+            "positive": 6
+          },
+          "driving_phase_counts": {
+            "active_nonzero_speed": 6,
+            "zero_speed_inside_active_envelope": 1
+          },
+          "duration_s": 0.402445766,
+          "end_offset_from_metadata_s": 68.063289612,
+          "end_record_time_ns": 1787685081675263496,
+          "end_time_utc": "2026-08-25T19:11:21.675263496Z",
+          "first_steering_index": 1011,
+          "last_steering_index": 1017,
+          "maximum_inter_sample_gap_s": 0.075091275,
+          "rounded_6dp_values": [
+            {
+              "count": 1,
+              "value_recorded": 0.351379
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.377171
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.46726
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.555814
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.636632
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.702325
+            },
+            {
+              "count": 1,
+              "value_recorded": 0.713301
+            }
+          ],
+          "sample_count": 7,
+          "side": "above",
+          "start_offset_from_metadata_s": 67.660843846,
+          "start_record_time_ns": 1787685081272817730,
+          "start_time_utc": "2026-08-25T19:11:21.272817730Z",
+          "steering_distribution_recorded": {
+            "count": 7,
+            "finite_count": 7,
+            "max": 0.713300729018568,
+            "mean": 0.5434116464749837,
+            "median": 0.5558142529606233,
+            "min": 0.3513789495396286,
+            "nonfinite_count": 0,
+            "p01": 0.35292645374661297,
+            "p05": 0.35911647057455043,
+            "p25": 0.4222150948753224,
+            "p75": 0.6694787020277106,
+            "p95": 0.7100081096208649,
+            "p99": 0.7126422051390274,
+            "std": 0.13798110351732673
+          }
+        }
+      ],
+      "unscaled_numeric_comparison_range": [
+        -0.35,
+        0.35
+      ]
+    },
+    "probable_saturation": {
+      "assessment": "no repeated near-limit physical-radian saturation value detected",
+      "diagnostic_only": true,
+      "evaluated_after_confirmed_rescaling": true,
+      "maximum_exact_repeat_count": 8,
+      "minimum_exact_repeat_count": 2,
+      "near_confirmed_limit_count": 0,
+      "near_confirmed_limit_fraction": 0.0,
+      "repeated_near_limit_candidates": [],
+      "repeated_out_of_range_plateau_candidates": []
+    },
+    "range_check": {
+      "above_confirmed_range_count": 0,
+      "all_finite_values_within_confirmed_approximate_range": true,
+      "assessment": "all converted physical-radian values are within the confirmed approximate range",
+      "below_confirmed_range_count": 0,
+      "evaluated_after_confirmed_rescaling": true,
+      "outside_confirmed_range_count": 0,
+      "outside_confirmed_range_fraction": 0.0
+    },
+    "recorded_numeric_range": [
+      -1.0,
+      1.0
+    ],
+    "recorded_range_check": {
+      "above_expected_recorded_range_count": 0,
+      "all_finite_values_within_expected_recorded_range": true,
+      "below_expected_recorded_range_count": 0,
+      "expected_recorded_range": [
+        -1.0,
+        1.0
+      ]
+    },
+    "recorded_representation": "normalized_raw",
+    "recorded_to_radians": {
+      "applies_to": "every finite steering sample",
+      "clipping_applied": false,
+      "evidence": "User-confirmed on 2026-08-26: these bags mistakenly stored steering on a -1 to +1 scale and the entire stream must be rescaled to the physical +/-0.35 rad range.",
+      "formula": "steering_rad = steering_recorded * 0.35",
+      "offset": 0.0,
+      "required": true,
+      "scale": 0.35
+    },
+    "repeated_recorded_values": {
+      "consecutive_repeat_count": 242,
+      "consecutive_repeat_fraction": 0.22637979420018708,
+      "most_frequent_values": [
+        {
+          "count": 73,
+          "fraction": 0.06822429906542056,
+          "value": 0.06982209748223092
+        },
+        {
+          "count": 24,
+          "fraction": 0.022429906542056073,
+          "value": 0.047574003717857256
+        },
+        {
+          "count": 22,
+          "fraction": 0.020560747663551402,
+          "value": 0.03867215040857527
+        },
+        {
+          "count": 22,
+          "fraction": 0.020560747663551402,
+          "value": 0.05202491085316113
+        },
+        {
+          "count": 21,
+          "fraction": 0.019626168224299065,
+          "value": 0.02977193753189224
+        },
+        {
+          "count": 21,
+          "fraction": 0.019626168224299065,
+          "value": 0.03422172575817399
+        },
+        {
+          "count": 20,
+          "fraction": 0.018691588785046728,
+          "value": 0.011984698188081046
+        },
+        {
+          "count": 20,
+          "fraction": 0.018691588785046728,
+          "value": 0.05647541156190029
+        },
+        {
+          "count": 18,
+          "fraction": 0.016822429906542057,
+          "value": 0.02532312421340945
+        },
+        {
+          "count": 16,
+          "fraction": 0.014953271028037384,
+          "value": 0.0031018720249242344
+        }
+      ],
+      "records_in_repeated_values_fraction": 0.7158878504672898,
+      "repeated_excess_fraction": 0.6009345794392523,
+      "repeated_excess_record_count": 643,
+      "unique_value_count": 427
+    },
+    "repeated_values": {
+      "consecutive_repeat_count": 242,
+      "consecutive_repeat_fraction": 0.22637979420018708,
+      "most_frequent_values": [
+        {
+          "count": 73,
+          "fraction": 0.06822429906542056,
+          "value": 0.02443773411878082
+        },
+        {
+          "count": 24,
+          "fraction": 0.022429906542056073,
+          "value": 0.016650901301250038
+        },
+        {
+          "count": 22,
+          "fraction": 0.020560747663551402,
+          "value": 0.013535252643001344
+        },
+        {
+          "count": 22,
+          "fraction": 0.020560747663551402,
+          "value": 0.018208718798606395
+        },
+        {
+          "count": 21,
+          "fraction": 0.019626168224299065,
+          "value": 0.010420178136162283
+        },
+        {
+          "count": 21,
+          "fraction": 0.019626168224299065,
+          "value": 0.011977604015360896
+        },
+        {
+          "count": 20,
+          "fraction": 0.018691588785046728,
+          "value": 0.004194644365828366
+        },
+        {
+          "count": 20,
+          "fraction": 0.018691588785046728,
+          "value": 0.019766394046665102
+        },
+        {
+          "count": 18,
+          "fraction": 0.016822429906542057,
+          "value": 0.008863093474693306
+        },
+        {
+          "count": 16,
+          "fraction": 0.014953271028037384,
+          "value": 0.001085655208723482
+        }
+      ],
+      "records_in_repeated_values_fraction": 0.7158878504672898,
+      "repeated_excess_fraction": 0.6009345794392523,
+      "repeated_excess_record_count": 643,
+      "unique_value_count": 427
+    },
+    "semantics": {
+      "command_or_actual_actuator_feedback": "command",
+      "left_right_sign_convention": "positive_left_negative_right",
+      "negative_direction": "RIGHT",
+      "physical_unit_after_conversion": "confirmed_radians",
+      "positive_direction": "LEFT",
+      "recorded_representation": "normalized_raw",
+      "selective_clipping_permitted": false
+    },
+    "sign_counts": {
+      "near_zero": 153,
+      "near_zero_threshold_abs_rad": 0.01,
+      "negative": 250,
+      "positive": 667
+    },
+    "timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 1070,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644054462,
+      "first_time_utc": "2026-08-25T19:10:13.644054462Z",
+      "gap_s": {
+        "count": 1069,
+        "finite_count": 1069,
+        "max": 1.129736934,
+        "mean": 0.06804037891019644,
+        "median": 0.066648905,
+        "min": 0.032943972,
+        "nonfinite_count": 0,
+        "p01": 0.05694932244,
+        "p05": 0.0590775012,
+        "p25": 0.063634658,
+        "p75": 0.069599781,
+        "p95": 0.0739860996,
+        "p99": 0.07877284091999998,
+        "std": 0.03453137313976916
+      },
+      "last_time_ns": 1787685086379219517,
+      "last_time_utc": "2026-08-25T19:11:26.379219517Z",
+      "maximum_time_ns": 1787685086379219517,
+      "measured_rate_hz": 14.697155071988309,
+      "minimum_time_ns": 1787685013644054462,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 72.735165055,
+      "strictly_increasing": true
+    },
+    "unit": "radians_after_rescaling"
+  },
+  "three_frame_temporal_readiness": {
+    "adjacent_frame_gap_s": {
+      "count": 1067,
+      "finite_count": 1067,
+      "max": 0.357921377,
+      "mean": 0.06687839569540768,
+      "median": 0.066674831,
+      "min": 0.039547205,
+      "nonfinite_count": 0,
+      "p01": 0.060420888660000005,
+      "p05": 0.06359187969999999,
+      "p25": 0.065487615,
+      "p75": 0.067798742,
+      "p95": 0.06960835679999999,
+      "p99": 0.072285292,
+      "std": 0.00918327326348453
+    },
+    "architecture_assessment": "typical complete-bag spacing is compatible, but diagnostic >0.120 s gaps require a real-data policy",
+    "candidate_three_frame_sequences": 1066,
+    "frame_order": [
+      "t_minus_2",
+      "t_minus_1",
+      "t"
+    ],
+    "oldest_to_current_span_s": {
+      "count": 1066,
+      "finite_count": 1066,
+      "max": 0.422717297,
+      "mean": 0.13375809233771105,
+      "median": 0.133336081,
+      "min": 0.099006449,
+      "nonfinite_count": 0,
+      "p01": 0.1249864538,
+      "p05": 0.13000768975,
+      "p25": 0.13221213625,
+      "p75": 0.13441839825,
+      "p95": 0.1366048675,
+      "p99": 0.1398593352,
+      "std": 0.012236050161308952
+    },
+    "simulator_comparison": {
+      "adjacent_gap_over_0p120_s_count": 1,
+      "adjacent_gaps_over_0p120_s": [
+        {
+          "current_camera_index": 900,
+          "current_offset_from_first_camera_s": 60.272784999,
+          "current_record_time_ns": 1787685073911102408,
+          "gap_s": 0.357921377,
+          "previous_camera_index": 899,
+          "previous_record_time_ns": 1787685073553181031
+        }
+      ],
+      "diagnostic_triplets_exceeding_0p120_s": 2,
+      "existing_0p120_s_adjacent_gate_applied": false,
+      "readable_prefix_spacing_supports_architecture": true,
+      "simulator_train_adjacent_gap_s": {
+        "max": 0.07,
+        "mean": 0.066,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "simulator_train_oldest_to_current_span_s": {
+        "max": 0.135,
+        "mean": 0.132,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "source": "results/high_speed_temporal_dataset_v1/summary.json"
+    },
+    "timestamp_order_failure_count": 0,
+    "valid_strict_causal_sequences": 1066,
+    "valid_strict_causal_sequences_with_current_causal_labels": 1066,
+    "valid_triplet_adjacent_gap_s": {
+      "count": 2132,
+      "finite_count": 2132,
+      "max": 0.357921377,
+      "mean": 0.06687904616885552,
+      "median": 0.0666754405,
+      "min": 0.039547205,
+      "nonfinite_count": 0,
+      "p01": 0.06039003581,
+      "p05": 0.063588043,
+      "p25": 0.065483406,
+      "p75": 0.067800312,
+      "p95": 0.069613239,
+      "p99": 0.072300167,
+      "std": 0.009187551856129367
+    }
+  },
+  "timestamp_domain": {
+    "camera_available": [
+      "header.stamp",
+      "MCAP log_time",
+      "MCAP publish_time"
+    ],
+    "camera_header_use": "diagnostic_only",
+    "mixed_timestamp_domains_used": false,
+    "reason": "Float64 has no header; use one causal MCAP bag-record timestamp domain for camera, steering, and speed.",
+    "selected": "mcap_log_time",
+    "speed_available": [
+      "MCAP log_time",
+      "MCAP publish_time"
+    ],
+    "steering_available": [
+      "MCAP log_time",
+      "MCAP publish_time"
+    ]
+  },
+  "version": "real_bag_audit_v2"
+}
