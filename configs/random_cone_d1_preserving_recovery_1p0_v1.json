@@ -1,0 +1,176 @@
+{
+  "version": "random_cone_d1_preserving_recovery_1p0_v1",
+  "expected_branch": "experiment/random-cone-d1-preserving-recovery-v1",
+  "expected_base_commit": "2c52f4dd3634fe59233acf95df42789a35da1828",
+  "objective": "Preserve frozen Random-Cone D1 while adapting only its steering head to the already-collected 109 DAGGER2_POST_RECOVERY Expert targets.",
+  "frozen_inputs": {
+    "dagger1_config": {
+      "path": "configs/random_cone_dagger1_1p0_v1.json",
+      "sha256": "5ed77c05df1e6f5090b642d3d5ed803e4b2c0c7ea2dc2cc362a1ad4ab8900979"
+    },
+    "d2_fe_config": {
+      "path": "configs/random_cone_d2_frontier_expansion_1p0_v1.json",
+      "sha256": "f6ea3796f3a93cbe1c9fa501f4da6799c6d7d62d2df06939edce45e2ea744536"
+    },
+    "expert_task_config": {
+      "path": "configs/random_cone_train_data_1p0_v1.json",
+      "sha256": "94c2935bf8c6d505d09cc47a56e13a6cff3cf943936f0a8ed2cab05c504d5767"
+    },
+    "expert_train_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/train_dataset/temporal_manifests/train.csv",
+      "sha256": "a9aaf25991cecbab3937deae545d392842007b228d8b8f571c519fba1772df73",
+      "sequence_count": 6706
+    },
+    "retention_replay_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/aggregate/manifests/aggregate.csv",
+      "sha256": "8442af7dd41e5033722981249a906e8cb68287f2b83e3e2d35eb31f305b3dfc6",
+      "sequence_count": 8189,
+      "provenance_counts": {
+        "EXPERT_BASELINE": 6706,
+        "DAGGER1": 1483
+      }
+    },
+    "post_recovery_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger2_post_recovery/dataset/temporal_manifests/dagger2_post_recovery_train.csv",
+      "sha256": "744ea8ffb8df490c676ce93542b1f2eac3dafb4c23d85037218340f0b4d5aa13",
+      "sequence_count": 109,
+      "provenance": "DAGGER2_POST_RECOVERY"
+    },
+    "validation_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/validation_dataset/temporal_manifests/validation.csv",
+      "sha256": "a1182170a5d853b599209e6ce31f7deaa27077a99bdd62603b92ed817349693b",
+      "sequence_count": 837,
+      "scenario_ids": ["09", "10"]
+    },
+    "d1": {
+      "checkpoint_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/checkpoints/random_cone_temporal_d1_best.pt",
+      "checkpoint_sha256": "b63a8da4401df33d1e8e375c66bd46b35d9cecd70542aa7af8cdbecfdb69a434",
+      "onnx_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/onnx/random_cone_temporal_d1.onnx",
+      "onnx_sha256": "3dee7ab9bb0ce6892dbba0784389af3c87b453e3150e1f7375e6b5301dba128c",
+      "freeze_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/freeze.json",
+      "freeze_sha256": "66dbf7762ab089f111e2c02d22240d861e575730dcb416692bf6fac4e1e3fdc8",
+      "freeze_seal_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/freeze_seal.json",
+      "freeze_seal_sha256": "7781423c7ba69f381e91120687d07d93d006393ff3c0c74af751085ce6ea1840",
+      "training_summary_path": "results/pilotnet_training_d1_random_cone_1p0/summary.json",
+      "training_summary_sha256": "86d493bbc1daf4d1b3650533d5b186bf4e7759c6959442dbfb11d66bf68788c6"
+    },
+    "d2_fe_negative": {
+      "checkpoint_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/d2_frontier_expansion/checkpoints/random_cone_temporal_d2_fe_best.pt",
+      "checkpoint_sha256": "7fcd021bd314640deff44a4fda6184eb944e55381d868a12764a20232966eba7",
+      "training_summary_path": "results/pilotnet_training_d2_fe_random_cone_1p0/summary.json",
+      "training_summary_sha256": "41c7e475b1202eab299bc84943f1d276f8a3e7523327cd50cdd40ff2ee1b573f",
+      "final_summary_path": "results/pilotnet_e2e_d2_fe_random_cone_1p0/summary.json",
+      "final_summary_sha256": "fdf3b5915d2ba73a549e42cf1a8abd16e10031f3ca8d060e51763acf95ef5ab8",
+      "expected_final_category": "REGRESSION",
+      "s09_completion_fraction": 0.41797318226266134
+    },
+    "d1_s09_live": {
+      "path": "results/pilotnet_e2e_d1_random_cone_1p0/validation_scenarios/scenario_09.json",
+      "sha256": "054dad57ac24b2d05f4366f693c6b4248c231773f2a2aa0ddafd4bec0d6b8e58"
+    },
+    "d1_cone_free": {
+      "path": "results/random_cone_d1_cone_free_recheck_v1/d1_cone_free_valid.json",
+      "sha256": "9a06e3287542545e5b1be4075b2b6a19a5cebce39ebc80e3812440133806c8ba"
+    }
+  },
+  "prior_dagger2_negative": {
+    "collection_directory": "results/random_cone_dagger2_collection_1p0_v1",
+    "collection_directory_sha256": "ebe4d24dbab5cd3155676e5af8a4cca77ca45b1ddee7be52ed3977518e394fd1",
+    "dataset_directory": "results/random_cone_dagger2_dataset_1p0_v1",
+    "dataset_directory_sha256": "b9f8f993e0b30153af611720dddc00a4acb718319d1b1607ec7bce5d7dacca48",
+    "sequence_count": 109,
+    "sequences_after_20m": 18,
+    "sequences_after_26m": 0,
+    "historical_result": "FAIL",
+    "training_authorized": false
+  },
+  "architecture": {
+    "name": "Temporal PilotNet",
+    "input_shape": [9, 66, 200],
+    "output_shape": [1],
+    "parameter_count": 255819,
+    "frozen_module": "features",
+    "frozen_parameter_count": 134948,
+    "trainable_module": "regressor",
+    "trainable_parameter_count": 120871
+  },
+  "training": {
+    "seed": 20260826,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "maximum_epochs": 5,
+    "batch_size": 64,
+    "max_steering_rad": 0.349066,
+    "initialization": "exact_frozen_D1",
+    "frozen_module": "features",
+    "trainable_module": "regressor",
+    "post_recovery_target": "frozen_Expert_steering_normalized",
+    "retention_target": "frozen_D1_output_normalized",
+    "post_recovery_coefficient": 1.0,
+    "retention_coefficient": 1.0,
+    "loss": "post_recovery_supervised_MSE_plus_retention_MSE",
+    "augmentation": false,
+    "regularizers": [],
+    "hyperparameter_sweep": false,
+    "model_selection_from_validation": false,
+    "onnx_opset": 17,
+    "onnx_equivalence_samples": 128,
+    "onnx_mean_abs_difference_limit": 0.00001,
+    "onnx_max_abs_difference_limit": 0.0001
+  },
+  "offline": {
+    "route_bins_m": [[0.0, 10.0], [10.0, 20.0], [20.0, 26.0], [26.0, 30.50461070080936]],
+    "s09_phases": ["approach", "avoidance", "pass_return", "post_recovery"],
+    "datasets": ["D1_AGGREGATE", "S09", "S10", "DAGGER2_POST_RECOVERY"],
+    "retraining_after_metrics": false,
+    "structural_check": {
+      "broad_sign_reversal": "strict_majority_of_nonzero_predictions_have_opposite_sign",
+      "severe_output_collapse": "all_adapted_predictions_are_numerically_zero_while_D1_is_not",
+      "gross_prediction_shift": "absolute_adapted_minus_D1_delta_exceeds_full_signed_steering_span",
+      "nonfinite_output": "any_NaN_or_Inf",
+      "zero_tolerance_rad": 0.000001,
+      "full_signed_steering_span_rad": 0.698132
+    }
+  },
+  "disk_gate": {
+    "path": "/",
+    "minimum_before_adaptation_bytes": 5368709120,
+    "minimum_before_live_bytes": 5368709120
+  },
+  "artifact_root": "/home/a/physicar-e2e-artifacts/random_cone_1p0_v1/d1_preserving_recovery_v1",
+  "result_directories": {
+    "training": "results/pilotnet_training_d1_r_random_cone_1p0",
+    "live": "results/pilotnet_e2e_d1_r_random_cone_1p0"
+  },
+  "live": {
+    "validation_order": ["09", "10"],
+    "holdout_order": ["11", "12"],
+    "speed_mps": 1.0,
+    "control_frequency_hz": 15.0,
+    "steering_limit_rad": 0.349066,
+    "maximum_valid_policy_runs_per_scenario": 1,
+    "maximum_infrastructure_replacements_per_scenario": 1,
+    "retry_genuine_policy_failure": false,
+    "freeze_required_before_s09": true,
+    "validation_pass_required_before_holdout": true,
+    "collect_bags": false,
+    "persist_camera_images": false,
+    "generate_expert_labels": false
+  },
+  "permissions": {
+    "adaptation_logical_runs_permitted": 1,
+    "train_from_scratch_permitted": false,
+    "d2_fe_initialization_permitted": false,
+    "new_data_collection_permitted": false,
+    "new_expert_rollouts_permitted": false,
+    "new_dagger_rollouts_permitted": false,
+    "dagger3_permitted": false,
+    "scenario_changes_permitted": false,
+    "speed_changes_permitted": false,
+    "architecture_changes_permitted": false,
+    "retraining_after_offline_or_live_permitted": false,
+    "holdout_access_before_validation_pass_permitted": false,
+    "commit_permitted": false,
+    "push_permitted": false
+  }
+}
