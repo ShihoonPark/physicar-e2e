@@ -1,0 +1,70 @@
+{
+  "version": "random_cone_train_data_1p0_v1",
+  "map_family": "71e69ee938032295503bfed557fde18c",
+  "frozen_expert": {
+    "config_path": "configs/random_cone_expert_1p0_v1.json",
+    "config_sha256": "a6f2573bfaa041dafaca25d957c07b5ea1acbd33399e2aece6e1bda06d238cf5",
+    "result_directory": "results/random_cone_expert_1p0_v1",
+    "result_manifest_sha256": "a6898549beb60036457a554088ffabbd3faa174b2af9fb9d4dc1f69a6a664d00",
+    "summary_sha256": "80f9b009e8682618a12755bfb80e1eb90891dcf878fe982b107614c1db77cc90",
+    "offline_geometry_sha256": "64bcebe136597337fe6256946b765ac2ceb57733bdb64e7a0f17004c34ac030d"
+  },
+  "scenario_roles": {
+    "TRAIN": ["01", "02", "03", "04", "05", "06", "07", "08"],
+    "VALIDATION": ["09", "10"],
+    "UNSEEN_HOLDOUT": ["11", "12"]
+  },
+  "collection": {
+    "repeat_ids": ["R01", "R02"],
+    "episode_order": [
+      "train_s01_r01", "train_s02_r01", "train_s03_r01", "train_s04_r01",
+      "train_s05_r01", "train_s06_r01", "train_s07_r01", "train_s08_r01",
+      "train_s01_r02", "train_s02_r02", "train_s03_r02", "train_s04_r02",
+      "train_s05_r02", "train_s06_r02", "train_s07_r02", "train_s08_r02"
+    ],
+    "required_topics": [
+      "/camera/image_raw", "/steering", "/speed", "/cmd_vel",
+      "/odom", "/clock", "/tf", "/tf_static"
+    ],
+    "container_name": "physicar-sim",
+    "compose_service": "sim",
+    "container_userdata_root": "/opt/physicar/userdata",
+    "data_relative_root": "physicar_e2e/random_cone_1p0_v1/train_raw",
+    "storage_id": "mcap",
+    "recorder_startup_timeout_s": 10.0,
+    "recorder_shutdown_timeout_s": 15.0,
+    "settle_duration_s": 2.0,
+    "minimum_camera_messages": 100,
+    "minimum_free_bytes_before_collection": 8589934592,
+    "minimum_projected_free_bytes": 6442450944,
+    "infrastructure_replacement_attempts_per_episode": 1,
+    "retry_genuine_policy_failure": false
+  },
+  "dataset": {
+    "canonical_extractor_config_path": "configs/dataset_extractor_v1.json",
+    "canonical_extractor_config_sha256": "944f26336062e56b68cad0826e362dda8ef971a4544c3a727bf5b0067c706e2e",
+    "data_relative_root": "physicar_e2e/random_cone_1p0_v1/train_dataset",
+    "history_frames": 3,
+    "maximum_adjacent_gap_s": 0.120,
+    "causal_only": true,
+    "allow_episode_boundary_crossing": false,
+    "allow_reset_boundary_crossing": false,
+    "allow_duplicate_padding": false,
+    "route_region_margin_m": 1.0
+  },
+  "result_directories": {
+    "collection": "results/random_cone_train_collection_1p0_v1",
+    "dataset": "results/random_cone_train_dataset_1p0_v1"
+  },
+  "permissions": {
+    "validation_bag_collection_permitted": false,
+    "holdout_bag_collection_permitted": false,
+    "neural_training_permitted": false,
+    "onnx_export_permitted": false,
+    "neural_closed_loop_permitted": false,
+    "frozen_expert_evidence_changes_permitted": false,
+    "tracked_simulator_source_changes_permitted": false,
+    "commit_permitted": false,
+    "push_permitted": false
+  }
+}
