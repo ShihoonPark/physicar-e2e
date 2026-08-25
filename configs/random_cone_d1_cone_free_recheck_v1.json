@@ -1,0 +1,90 @@
+{
+  "version": "random_cone_d1_cone_free_recheck_v1",
+  "expected_branch": "experiment/random-cone-d1-cone-free-recheck-v1",
+  "result_directory": "results/random_cone_d1_cone_free_recheck_v1",
+  "base_diagnosis_config": {
+    "path": "configs/random_cone_d1_late_lap_diagnosis_v1.json",
+    "sha256": "a1bacfe3a1baf4231f33e7012024ed3e9b6ed9e55c848ec87be253d9ab7bbc8b"
+  },
+  "previous_evidence": {
+    "summary": {
+      "path": "results/random_cone_d1_late_lap_diagnosis_v1/summary.json",
+      "sha256": "728600bb187483953f2ca8625db7c97727aa2767e3262834f20009a8126b6406"
+    },
+    "invalid_d1_run": {
+      "path": "results/random_cone_d1_late_lap_diagnosis_v1/d1_cone_free_run.json",
+      "sha256": "2c1e99bf044448f88c811e1be771bb0ba259bd9ee590b6a51a4d1d392b048cb6"
+    },
+    "offline_distribution": {
+      "path": "results/random_cone_d1_late_lap_diagnosis_v1/offline_distribution.json",
+      "sha256": "03815a5f4aca965f5c8455365b878586b13d39a8a624014a9c0cf8c4689fac7b"
+    },
+    "offline_route_bins": {
+      "path": "results/random_cone_d1_late_lap_diagnosis_v1/offline_route_bins.json",
+      "sha256": "43f7e631d33e01f7824a810048a7cde93699ebe36bcd6ca0765bbb2f3b22c78e"
+    }
+  },
+  "canonical_cone_free_world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1",
+  "canonical_route_length_m": 30.50461070080936,
+  "late_route_regions_m": [
+    [20.0, 26.0],
+    [26.0, 30.50461070080936]
+  ],
+  "disk_gate": {
+    "path": "/",
+    "minimum_free_bytes": 5905580032,
+    "minimum_free_gib": 5.5
+  },
+  "fixed_control": {
+    "speed_mps": 1.0,
+    "control_frequency_hz": 15.0,
+    "lookahead_m": 0.9,
+    "steering_limit_rad": 0.349066,
+    "wheelbase_m": 0.18,
+    "history_frames": 3,
+    "maximum_adjacent_gap_s": 0.12,
+    "off_track_margin_m": 0.05,
+    "off_track_grace_s": 0.5
+  },
+  "frozen_models": {
+    "R1": {
+      "checkpoint_sha256": "b50d5d3c3cdb4f7aa730b2a44c1ffd46d7e0deb7aa0328cb7d40b090ae9022a0",
+      "onnx_sha256": "2ebb6faf79ff015ae79c31d404c1fc7eb932b726c60c9f0b6dc7d7e02e51c993",
+      "freeze_sha256": "ac622a793ce2bc4794170b53cc9421cc343e1691eeb4d2b85e01609714e7e0d7",
+      "freeze_seal_sha256": "3d1c1f647b587ae6a8788c2d545a3ee8a2b0a3b90b9b465059f38ed5b687c798"
+    },
+    "D1": {
+      "checkpoint_sha256": "b63a8da4401df33d1e8e375c66bd46b35d9cecd70542aa7af8cdbecfdb69a434",
+      "onnx_sha256": "3dee7ab9bb0ce6892dbba0784389af3c87b453e3150e1f7375e6b5301dba128c",
+      "freeze_sha256": "66dbf7762ab089f111e2c02d22240d861e575730dcb416692bf6fac4e1e3fdc8",
+      "freeze_seal_sha256": "7781423c7ba69f381e91120687d07d93d006393ff3c0c74af751085ce6ea1840"
+    }
+  },
+  "attempt_policy": {
+    "maximum_physical_attempts_per_policy": 2,
+    "maximum_infrastructure_replacements_per_policy": 1,
+    "replacement_only_after_infrastructure_failure": true,
+    "retry_after_policy_fail": false,
+    "retry_after_full_lap_pass": false,
+    "r1_only_after_d1_policy_fail": true,
+    "shadow_expert_control_authority": false,
+    "record_images": false,
+    "record_bags": false
+  },
+  "protected_scenarios": ["11", "12"],
+  "permissions": {
+    "training_permitted": false,
+    "fine_tuning_permitted": false,
+    "bag_collection_permitted": false,
+    "image_persistence_permitted": false,
+    "dagger_collection_permitted": false,
+    "dagger_iteration2_permitted": false,
+    "dataset_changes_permitted": false,
+    "model_artifact_changes_permitted": false,
+    "architecture_changes_permitted": false,
+    "controller_or_safety_changes_permitted": false,
+    "holdout_access_permitted": false,
+    "commit_permitted": false,
+    "push_permitted": false
+  }
+}
