@@ -1,0 +1,53 @@
+{
+  "accepted_samples": 46,
+  "candidate_frames": 46,
+  "completion_fraction_range": [
+    0.6965789310612979,
+    0.8283394897842208
+  ],
+  "config_sha256": "a70f5e57e278638a07474cd118358f6da047f9e38cb326cd240951ec0782398c",
+  "expert_label_age_ms": {
+    "count": 46,
+    "max": 105.0,
+    "mean": 51.630434782608695,
+    "median": 50.0,
+    "p95": 95.0
+  },
+  "frozen_a_window": {
+    "divergence_sim_time_ns": 2893580000000,
+    "end_sim_time_ns": 2894505000000,
+    "minimum_completion_fraction": 0.6,
+    "route_length_m": 30.50461070080936,
+    "route_s_end_m": 25.363765009741154,
+    "route_s_start_m": 21.02764658863221,
+    "rule": "continuous 2.0 s pre-divergence through final pre-safe-stop interval, then require completion >=60%",
+    "start_sim_time_ns": 2891580000000,
+    "telemetry_frame_count": 44
+  },
+  "future_label_violations": 0,
+  "image_decode_failures": 0,
+  "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration2_v1/extracted/manifests/high_speed_dagger_iter2_rollout_B.csv",
+  "manifest_sha256": "0dc99d8be4a2e9cf65d4fed997aaba4431a3f7e002e49aef59dae4e0beb6eb78",
+  "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration2_v1/extracted/previews/high_speed_dagger_iter2_rollout_B.png",
+  "raw_camera_frames": 226,
+  "result": "PASS",
+  "role": "holdout",
+  "rollout_id": "high_speed_dagger_iter2_rollout_B",
+  "route_s_range_m": [
+    21.248869114410812,
+    25.268173663974707
+  ],
+  "selection_rule": "B frames in the frozen A route-s interval",
+  "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration2_v1/high_speed_dagger_iter2_rollout_B/raw/high_speed_dagger_iter2_rollout_B/bag",
+  "source_mcap_sha256": "e04a7c97c263aa17d439fc09621488a8f87ec21f719634dcdbe35453cbe5ce4c",
+  "source_raw_size_bytes": 117393092,
+  "source_result_sha256": "a70839eebc39c9ef9bbc2ec4ecb31c01d637ab1e7885e54ef2da9443ed6f81b6",
+  "stale_label_rejections": 0,
+  "telemetry_sha256": "5dba2261795959ae244acf91926d9fbeae1001762ef130fad2dbc71f3e8a4ca9",
+  "version": "high_speed_dagger_iteration2_v1",
+  "window_counts": {
+    "divergence": 0,
+    "late_failure": 46,
+    "pre_divergence": 0
+  }
+}
