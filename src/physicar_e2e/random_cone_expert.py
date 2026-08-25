@@ -1,9 +1,10 @@
-"""Deterministic Random Cone Expert V1 geometry, worlds, and live gate.
+"""Deterministic Random Cone Expert geometry, worlds, and live gates.
 
 The benchmark freezes twelve seeded route locations before live driving.  It
-reuses the real fixed-cone/vehicle geometry and the preserved 1.80 m/s Pure
-Pursuit controller, but evaluates practical success solely by positive
-footprint clearance and absence of cone contact/intersection.
+supports the preserved 1.80 m/s stress benchmark and its separate 1.0 m/s
+operational target while reusing the real fixed-cone/vehicle geometry.
+Practical success requires positive footprint clearance and absence of cone
+contact/intersection.
 """
 
 from __future__ import annotations
@@ -72,8 +73,14 @@ from .sim_client import SimClient
 
 
 VERSION = "random_cone_expert_v1"
+OPERATIONAL_VERSION = "random_cone_expert_1p0_v1"
 MAP_FAMILY = "71e69ee938032295503bfed557fde18c"
 EXPECTED_RESULT_DIRECTORY = "results/random_cone_expert_v1"
+OPERATIONAL_RESULT_DIRECTORY = "results/random_cone_expert_1p0_v1"
+STRESS_CONFIG_PATH = "configs/random_cone_expert_v1.json"
+STRESS_CONFIG_SHA256 = "97b6460eb8c4ec63f573f30073403efd671395f45fa142905841d292c763430f"
+STRESS_RESULTS_PATH = "results/random_cone_expert_v1"
+STRESS_RESULTS_MANIFEST_SHA256 = "f776182f8d6b92ca62d9ddc2b1f1f1ebf748af5f32dc51d5d0163f84d8f82e5a"
 SCENARIO_COUNT = 12
 ROLE_IDS = {
     "TRAIN": [f"{number:02d}" for number in range(1, 9)],
@@ -245,6 +252,7 @@ class FrozenScenario:
 
 @dataclass(frozen=True)
 class RandomConeConfig:
+    version: str
     payload: dict[str, Any]
     path: Path
     baseline_path: Path
@@ -259,6 +267,8 @@ class RandomConeConfig:
     scenarios: tuple[FrozenScenario, ...]
     live_protocol: dict[str, Any]
     permissions: dict[str, bool]
+    result_directory: str
+    preserved_stress_baseline: dict[str, Any] | None
 
     @classmethod
     def load(
@@ -273,6 +283,10 @@ class RandomConeConfig:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as exc:
             raise RandomConeError(f"cannot load Random Cone config {path}: {exc}") from exc
+        if isinstance(payload, dict) and payload.get("version") == OPERATIONAL_VERSION:
+            return cls._load_operational(
+                payload, path, repo_root, sim_root, allow_unfrozen=allow_unfrozen
+            )
         required = {
             "version", "map_family", "baseline_expert_config", "baseline_expert_sha256",
             "fixed_cone_environment_config", "fixed_cone_environment_sha256",
@@ -436,12 +450,127 @@ class RandomConeConfig:
         # makes even proposal generation provenance-gated.
         verify_canonical_hashes(environment, share_path(sim_root))
         return cls(
-            payload=payload, path=path.resolve(), baseline_path=baseline_path,
+            version=VERSION, payload=payload, path=path.resolve(), baseline_path=baseline_path,
             baseline=baseline, environment_path=environment_path, environment=environment,
             random_seed=seed, sampling=dict(sampling), avoidance=dict(avoidance),
             return_to_route={key: float(value) for key, value in return_contract.items()},
             worlds={key: str(value) for key, value in worlds.items()}, scenarios=scenarios,
             live_protocol=dict(live), permissions=dict(payload["permissions"]),
+            result_directory=EXPECTED_RESULT_DIRECTORY, preserved_stress_baseline=None,
+        )
+
+    @classmethod
+    def _load_operational(
+        cls,
+        payload: dict[str, Any],
+        path: Path,
+        repo_root: Path,
+        sim_root: Path,
+        *,
+        allow_unfrozen: bool,
+    ) -> "RandomConeConfig":
+        if allow_unfrozen:
+            raise RandomConeError("the 1.0 m/s target must inherit the already-frozen scenarios")
+        required = {
+            "version", "map_family", "parent_stress_baseline", "target_control",
+            "sampling_overrides", "scenario_roles", "reuse_parent_worlds",
+            "live_protocol", "permissions", "future_neural_split",
+        }
+        if set(payload) != required or payload["map_family"] != MAP_FAMILY:
+            raise RandomConeError("1.0 m/s operational config fields/map do not match V1")
+        stress = payload["parent_stress_baseline"]
+        expected_stress = {
+            "config_path": STRESS_CONFIG_PATH,
+            "config_sha256": STRESS_CONFIG_SHA256,
+            "results_path": STRESS_RESULTS_PATH,
+            "results_manifest_sha256": STRESS_RESULTS_MANIFEST_SHA256,
+            "expected_result": "FAIL",
+            "expected_success": "11/12",
+            "failure_scenario_id": "01",
+            "failure_mode": "return_off_track",
+        }
+        if stress != expected_stress:
+            raise RandomConeError("preserved 1.8 m/s stress-baseline identity changed")
+        parent_path = (repo_root / STRESS_CONFIG_PATH).resolve()
+        if sha256_file(parent_path) != STRESS_CONFIG_SHA256:
+            raise RandomConeError("preserved 1.8 m/s Random Cone config changed")
+        if directory_file_manifest_sha256(repo_root / STRESS_RESULTS_PATH) != STRESS_RESULTS_MANIFEST_SHA256:
+            raise RandomConeError("preserved 1.8 m/s Random Cone results changed")
+        stress_summary = _read_json(repo_root / STRESS_RESULTS_PATH / "summary.json")
+        stress_scenarios = stress_summary.get("scenarios")
+        if (
+            stress_summary.get("result") != "FAIL"
+            or stress_summary.get("aggregate", {}).get("success") != "11/12"
+            or stress_summary.get("aggregate", {}).get("cone_contact_or_intersection_count") != 0
+            or not isinstance(stress_scenarios, list)
+            or len(stress_scenarios) != SCENARIO_COUNT
+            or stress_scenarios[0].get("scenario", {}).get("scenario_id") != "01"
+            or stress_scenarios[0].get("result") != "RANDOM_CONE_EXPERT_FAIL"
+        ):
+            raise RandomConeError("preserved 1.8 m/s stress result is not the registered 11/12 failure")
+        parent = cls.load(parent_path, repo_root, sim_root)
+        target_control = payload["target_control"]
+        expected_control = {
+            "speed_mps": 1.0,
+            "lookahead_m": 0.90,
+            "control_frequency_hz": 15.0,
+            "steering_limit_rad": 0.349066,
+            "wheelbase_m": 0.18,
+        }
+        if target_control != expected_control:
+            raise RandomConeError("1.0 m/s operational control contract changed")
+        expected_override = {
+            "maximum_continuous_steering_saturation_s": 0.90,
+            "rationale": "preserve_the_0p90m_spatial_saturation_allowance_from_1p8mps",
+        }
+        if payload["sampling_overrides"] != expected_override:
+            raise RandomConeError("1.0 m/s preregistered offline-gate override changed")
+        if payload["scenario_roles"] != ROLE_IDS or payload["reuse_parent_worlds"] is not True:
+            raise RandomConeError("1.0 m/s target must reuse the exact frozen 8/2/2 worlds")
+        expected_live = {
+            "maximum_valid_policy_runs": 12,
+            "infrastructure_replacement_attempts_per_scenario": 1,
+            "retry_genuine_policy_failure": False,
+            "success_contract": "positive_clearance_and_no_cone_contact_or_intersection",
+            "result_directory": OPERATIONAL_RESULT_DIRECTORY,
+        }
+        if payload["live_protocol"] != expected_live:
+            raise RandomConeError("1.0 m/s live protocol changed")
+        expected_permissions = {
+            "neural_training_permitted": False,
+            "training_bag_collection_permitted": False,
+            "v9_model_changes_permitted": False,
+            "c1_model_changes_permitted": False,
+            "fixed_cone_evidence_changes_permitted": False,
+            "stress_baseline_changes_permitted": False,
+            "tracked_simulator_source_changes_permitted": False,
+            "commit_permitted": False,
+            "push_permitted": False,
+        }
+        if payload["permissions"] != expected_permissions:
+            raise RandomConeError("1.0 m/s forbidden-action permissions changed")
+        if payload["future_neural_split"] != {
+            "TRAIN": ROLE_IDS["TRAIN"],
+            "VALIDATION": ROLE_IDS["VALIDATION"],
+            "UNSEEN_HOLDOUT": ROLE_IDS["UNSEEN_HOLDOUT"],
+            "holdout_training_or_tuning_permitted": False,
+        }:
+            raise RandomConeError("future neural 8/2/2 information boundary changed")
+        active_driver = replace(parent.baseline, fixed_speed_mps=1.0)
+        active_driver.validate()
+        sampling = dict(parent.sampling)
+        sampling["maximum_continuous_steering_saturation_s"] = 0.90
+        return cls(
+            version=OPERATIONAL_VERSION, payload=payload, path=path.resolve(),
+            baseline_path=parent.baseline_path, baseline=active_driver,
+            environment_path=parent.environment_path, environment=parent.environment,
+            random_seed=parent.random_seed, sampling=sampling,
+            avoidance=dict(parent.avoidance), return_to_route=dict(parent.return_to_route),
+            worlds=dict(parent.worlds), scenarios=parent.scenarios,
+            live_protocol=dict(payload["live_protocol"]),
+            permissions=dict(payload["permissions"]),
+            result_directory=OPERATIONAL_RESULT_DIRECTORY,
+            preserved_stress_baseline=dict(stress),
         )
 
     def driver_for(self, scenario: FrozenScenario) -> DriverConfig:
@@ -471,6 +600,19 @@ class ScenarioBundle:
     plan: BypassPlan
     geometry: dict[str, Any]
     side_evaluations: dict[str, dict[str, Any]]
+
+
+def directory_file_manifest_sha256(root: Path) -> str:
+    """Hash the exact relative-file/SHA manifest of a preserved result tree."""
+    if not root.is_dir():
+        raise RandomConeError(f"preserved result directory is missing: {root}")
+    manifest = {
+        path.relative_to(root).as_posix(): sha256_file(path)
+        for path in sorted(root.rglob("*"))
+        if path.is_file()
+    }
+    encoded = json.dumps(manifest, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def _hash_text(value: str) -> str:
@@ -1318,7 +1460,43 @@ def verify_all_scenario_worlds(
     }
 
 
-def audit_preserved_state(repo_root: Path, sim_root: Path) -> dict[str, Any]:
+def audit_stress_baseline(repo_root: Path) -> dict[str, Any]:
+    config_path = repo_root / STRESS_CONFIG_PATH
+    results_path = repo_root / STRESS_RESULTS_PATH
+    config_hash = sha256_file(config_path)
+    results_hash = directory_file_manifest_sha256(results_path)
+    if config_hash != STRESS_CONFIG_SHA256 or results_hash != STRESS_RESULTS_MANIFEST_SHA256:
+        raise RandomConeError("preserved 1.8 m/s Random Cone stress evidence changed")
+    summary = _read_json(results_path / "summary.json")
+    scenarios = summary.get("scenarios")
+    if (
+        summary.get("result") != "FAIL"
+        or summary.get("aggregate", {}).get("success") != "11/12"
+        or summary.get("aggregate", {}).get("cone_contact_or_intersection_count") != 0
+        or not isinstance(scenarios, list)
+        or len(scenarios) != SCENARIO_COUNT
+        or scenarios[0].get("scenario", {}).get("scenario_id") != "01"
+        or scenarios[0].get("result") != "RANDOM_CONE_EXPERT_FAIL"
+    ):
+        raise RandomConeError("preserved 1.8 m/s Random Cone stress result changed")
+    return {
+        "result": "PASS",
+        "speed_mps": 1.8,
+        "success": "11/12",
+        "cone_contact_or_intersection": "0/12",
+        "failure_scenario_id": "01",
+        "failure_mode": "return_off_track",
+        "config": {"path": STRESS_CONFIG_PATH, "sha256": config_hash},
+        "results": {"path": STRESS_RESULTS_PATH, "manifest_sha256": results_hash},
+        "evidence_unchanged": True,
+    }
+
+
+def audit_preserved_state(
+    repo_root: Path,
+    sim_root: Path,
+    config: RandomConeConfig | None = None,
+) -> dict[str, Any]:
     identities: dict[str, Any] = {}
     for label, (relative, expected) in PRESERVED_REPOSITORY_FILES.items():
         path = repo_root / relative
@@ -1357,7 +1535,7 @@ def audit_preserved_state(repo_root: Path, sim_root: Path) -> dict[str, Any]:
         for item in c1_attempts
     ):
         raise RandomConeError("preserved practical C1 evidence is not collision-free 3/3 PASS")
-    return {
+    result = {
         "result": "PASS", "identities": identities,
         "temporal_pilotnet_v9": {
             "speed_mps": 1.80, "observation": "causal three-frame camera",
@@ -1375,6 +1553,9 @@ def audit_preserved_state(repo_root: Path, sim_root: Path) -> dict[str, Any]:
         },
         "no_training_or_bag_collection": True,
     }
+    if config is not None and config.version == OPERATIONAL_VERSION:
+        result["random_cone_expert_1p8_stress"] = audit_stress_baseline(repo_root)
+    return result
 
 
 def simulator_tracked_status(sim_root: Path) -> dict[str, Any]:
@@ -1415,7 +1596,7 @@ def offline_report(
         })
     config_hash = sha256_file(config.path)
     return {
-        "version": VERSION,
+        "version": config.version,
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "result": "PASS",
         "config": str(config.path.relative_to(repo_root)),
@@ -1441,7 +1622,7 @@ def offline_report(
         },
         "cone_geometry": cone_geometry_dict(bundles[0].plan.cone),
         "vehicle_footprint": vehicle_footprint_dict(bundles[0].plan.footprint),
-        "baseline_audit": audit_preserved_state(repo_root, sim_root),
+        "baseline_audit": audit_preserved_state(repo_root, sim_root, config),
         "world_reproducibility": environments,
         "simulator_tracked_status": simulator_tracked_status(sim_root),
         "scenarios": scenarios,
@@ -1457,6 +1638,8 @@ def write_overview_plot(
     path: Path,
     bundles: Sequence[ScenarioBundle],
     route_data: RouteData,
+    *,
+    title: str = "Random Cone Expert V1 — 12 frozen seeded scenarios",
 ) -> None:
     try:
         import matplotlib
@@ -1496,7 +1679,7 @@ def write_overview_plot(
         axis.tick_params(labelsize=7)
     handles, labels = axes.flat[0].get_legend_handles_labels()
     figure.legend(handles, labels, loc="lower center", ncol=2)
-    figure.suptitle("Random Cone Expert V1 — 12 frozen seeded scenarios", fontsize=14)
+    figure.suptitle(title, fontsize=14)
     path.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(path, dpi=150)
     plt.close(figure)
@@ -1888,7 +2071,7 @@ def run_live_benchmark(
                     f"scenario_{bundle.scenario.scenario_id}_attempt_{attempt_number:02d}.json"
                 ),
                 {
-                    "version": VERSION,
+                    "version": config.version,
                     "scenario": bundle.scenario.to_dict(),
                     "planned_bypass": bundle.geometry,
                     **attempt,
@@ -2066,15 +2249,29 @@ def write_markdown_report(path: Path, report: dict[str, Any]) -> None:
             )
     result = report.get("result", "INCONCLUSIVE")
     aggregate = report.get("aggregate", {})
+    control = report.get("fixed_control", {})
+    operational = report.get("version") == OPERATIONAL_VERSION
+    title = "Random Cone Expert 1.0 m/s V1" if operational else "Random Cone Expert V1"
+    failure_note = (
+        ["Genuine policy failures listed above are preserved without retry or scenario replacement."]
+        if failure_rows else
+        ["No genuine policy failure occurred in the twelve valid runs."]
+    )
     content = [
-        "# Random Cone Expert V1", "",
+        f"# {title}", "",
         f"Final simulation gate: **{result}**.", "",
         "This is simulator-only evidence. It is not real-robot evidence.", "",
         "## Frozen contract", "",
         f"- Seed: `{report.get('random_seed')}`",
         f"- Map family: `{MAP_FAMILY}`",
         "- Split: scenarios 01–08 TRAIN, 09–10 VALIDATION, 11–12 UNSEEN_HOLDOUT",
-        "- Control: 1.80 m/s, 0.90 m lookahead, 15 Hz, ±0.349066 rad, 0.18 m wheelbase",
+        "- Control: {speed:.2f} m/s, {lookahead:.2f} m lookahead, {frequency:.0f} Hz, ±{steering:.6f} rad, {wheelbase:.2f} m wheelbase".format(
+            speed=float(control.get("speed_mps", math.nan)),
+            lookahead=float(control.get("lookahead_m", math.nan)),
+            frequency=float(control.get("control_frequency_hz", math.nan)),
+            steering=float(control.get("steering_limit_rad", math.nan)),
+            wheelbase=float(control.get("wheelbase_m", math.nan)),
+        ),
         "- Practical pass condition: positive footprint clearance and no cone contact/intersection",
         "- No neural training and no training-bag collection", "",
         "## Scenario results", "",
@@ -2094,19 +2291,19 @@ def write_markdown_report(path: Path, report: dict[str, Any]) -> None:
         f"- Per-scenario safe stops: `{aggregate.get('safe_stop_success_count', 0)}/12`",
         f"- Final safe stop: `{str(bool(report.get('final_safe_stop_success'))).lower()}`",
         *failure_rows, "",
-        "Scenario 01 cleared the cone but failed during the return: this is a moderate-left/right-side bypass in the complex multi-turn region around s=19–21 m. The other moderate-left scenarios passed, so the observed failure is not a general cone-collision or curvature-class failure. The offline ideal-bicycle preview underpredicted simulator return-path tracking divergence at this site.", "",
+        *failure_note, "",
         "## Infrastructure-only attempts", "",
         *(infrastructure_rows or ["None."]), "",
         "Each listed attempt stopped safely and received at most the one permitted fresh replacement. No genuine policy run was retried.", "",
         "## Baselines and disposition", "",
-        "Temporal PilotNet V9, Fixed Cone Avoidance Expert V1, and practical Temporal PilotNet C1 evidence/models were hash-audited and left unchanged.", "",
+        "Temporal PilotNet V9, Fixed Cone Avoidance Expert V1, practical Temporal PilotNet C1, and the 1.8 m/s Random Cone stress evidence were hash-audited as applicable and left unchanged.", "",
         f"- Config SHA-256: `{report.get('config_sha256')}`",
         f"- Offline evidence SHA-256: `{report.get('offline_geometry_sha256')}`",
         f"- Baseline audit before/after: `{report.get('baseline_audit_before', {}).get('result')}/{report.get('baseline_audit_after', {}).get('result')}`",
         f"- Tracked simulator source changes after run: `{len(report.get('simulator_status_after', {}).get('tracked_source_changes', []))}`",
         f"- Neural training performed: `{str(bool(report.get('neural_training_performed'))).lower()}`",
         f"- Training bags collected: `{str(bool(report.get('training_bags_collected'))).lower()}`", "",
-        f"Random Cone Expert V1 frozen: **{str(bool(report.get('random_cone_expert_frozen'))).lower()}**.",
+        f"{title} frozen: **{str(bool(report.get('random_cone_expert_frozen'))).lower()}**.",
         f"PASS-qualified 8/2/2 split release frozen: **{str(bool(report.get('exact_8_2_2_split_frozen'))).lower()}**.",
         f"Random-cone bag collection justified: **{str(bool(report.get('random_cone_bag_collection_justified'))).lower()}**.", "",
         "## Limitations", "",
@@ -2130,7 +2327,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--sim-root", type=Path, required=True)
-    parser.add_argument("--result-dir", type=Path, default=Path(EXPECTED_RESULT_DIRECTORY))
+    parser.add_argument("--result-dir", type=Path)
     parser.add_argument("--scenario-id", choices=[f"{number:02d}" for number in range(1, 13)])
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--propose-freeze", action="store_true")
@@ -2142,17 +2339,21 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     repo_root = Path(__file__).resolve().parents[2]
     sim_root = args.sim_root.expanduser().resolve()
-    result_dir = args.result_dir
-    if not result_dir.is_absolute():
-        result_dir = (repo_root / result_dir).resolve()
-    expected_result = (repo_root / EXPECTED_RESULT_DIRECTORY).resolve()
-    if not (args.propose_freeze or args.generate_worlds or args.verify_worlds) and result_dir != expected_result:
-        print(f"ERROR: result directory must be {EXPECTED_RESULT_DIRECTORY}", file=sys.stderr)
-        return 2
     try:
         config = RandomConeConfig.load(
             args.config, repo_root, sim_root, allow_unfrozen=args.propose_freeze
         )
+        result_dir = args.result_dir or Path(config.result_directory)
+        if not result_dir.is_absolute():
+            result_dir = (repo_root / result_dir).resolve()
+        expected_result = (repo_root / config.result_directory).resolve()
+        if (
+            not (args.propose_freeze or args.generate_worlds or args.verify_worlds)
+            and result_dir != expected_result
+        ):
+            raise RandomConeError(
+                f"result directory must be {config.result_directory}"
+            )
         if args.propose_freeze:
             bundles = derive_frozen_scenarios(config, sim_root)
             print(json.dumps({
@@ -2179,7 +2380,12 @@ def main(argv: list[str] | None = None) -> int:
                 share_path(sim_root), config.environment.canonical_cone_free_world
             )
             write_overview_plot(
-                result_dir / "overview.png", bundles, load_route(cone_free.route)
+                result_dir / "overview.png", bundles, load_route(cone_free.route),
+                title=(
+                    "Random Cone Expert 1.0 m/s V1 — same 12 frozen scenarios"
+                    if config.version == OPERATIONAL_VERSION else
+                    "Random Cone Expert V1 — 12 frozen seeded scenarios"
+                ),
             )
             report["overview_plot"] = str(
                 (result_dir / "overview.png").relative_to(repo_root)
@@ -2202,7 +2408,7 @@ def main(argv: list[str] | None = None) -> int:
                     client, config, bundle, sim_root
                 )
                 result = {
-                    "version": VERSION, "result": "PREFLIGHT_PASS",
+                    "version": config.version, "result": "PREFLIGHT_PASS",
                     "scenario": bundle.scenario.to_dict(),
                     "world_activation": activation, "preflight": preflight_result,
                     "offline_geometry_sha256": sha256_file(offline_path),
@@ -2224,12 +2430,12 @@ def main(argv: list[str] | None = None) -> int:
             )
         original_status = client.status()
         original_world = str(original_status.get("current") or "") or None
-        baseline_before = audit_preserved_state(repo_root, sim_root)
+        baseline_before = audit_preserved_state(repo_root, sim_root, config)
         simulator_before = simulator_tracked_status(sim_root)
         if simulator_before["result"] != "PASS":
             raise RandomConeError("simulator already has tracked source changes")
         write_json(marker, {
-            "status": "RANDOM_CONE_EXPERT_V1_STARTED_DO_NOT_REPEAT",
+            "status": f"{config.version.upper()}_STARTED_DO_NOT_REPEAT",
             "started_utc": datetime.now(timezone.utc).isoformat(),
             "config_sha256": sha256_file(config.path),
             "offline_geometry_sha256": sha256_file(offline_path),
@@ -2239,12 +2445,20 @@ def main(argv: list[str] | None = None) -> int:
             "original_world": original_world,
         })
         report: dict[str, Any] = {
-            "version": VERSION,
+            "version": config.version,
             "generated_utc": datetime.now(timezone.utc).isoformat(),
             "result": "INCONCLUSIVE",
             "random_seed": config.random_seed,
             "map_family": MAP_FAMILY,
             "scenario_roles": ROLE_IDS,
+            "fixed_control": {
+                "speed_mps": config.baseline.fixed_speed_mps,
+                "lookahead_m": config.baseline.lookahead_m,
+                "control_frequency_hz": config.baseline.control_frequency_hz,
+                "steering_limit_rad": config.baseline.max_steering_rad,
+                "wheelbase_m": config.baseline.wheelbase_m,
+            },
+            "parent_stress_baseline": config.preserved_stress_baseline,
             "config_sha256": sha256_file(config.path),
             "offline_geometry_sha256": sha256_file(offline_path),
             "baseline_audit_before": baseline_before,
@@ -2277,7 +2491,7 @@ def main(argv: list[str] | None = None) -> int:
             if final_stop_errors:
                 code = 2
             try:
-                report["baseline_audit_after"] = audit_preserved_state(repo_root, sim_root)
+                report["baseline_audit_after"] = audit_preserved_state(repo_root, sim_root, config)
                 report["simulator_status_after"] = simulator_tracked_status(sim_root)
             except Exception as exc:
                 report["post_run_audit_failure"] = f"{type(exc).__name__}: {exc}"

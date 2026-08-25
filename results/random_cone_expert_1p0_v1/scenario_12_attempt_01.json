@@ -1,0 +1,337 @@
+{
+  "attempt_number": 1,
+  "classification": "RANDOM_CONE_EXPERT_PASS",
+  "infrastructure_replacement": false,
+  "metrics": {
+    "api_failures": 0,
+    "chosen_side": "right",
+    "classification": "RANDOM_CONE_EXPERT_PASS",
+    "clearance_measured_not_enforced_as_5cm_margin": true,
+    "clock_failures": 0,
+    "cone_contact_or_intersection_occurred": false,
+    "cone_contact_or_movement_occurred": false,
+    "cone_count": 1,
+    "cone_s_m": 14.150000000000002,
+    "cone_x_m": 10.495407688467004,
+    "cone_y_m": 3.6759072118886156,
+    "control_iterations": 422,
+    "control_loop_frequency_hz": 15.000266558477996,
+    "control_reference": "nominal route outside generated local bypass; automatic quintic bypass inside span",
+    "curvature_class": "moderate_right_curve",
+    "dry_run": false,
+    "elapsed_s": 28.085722469997563,
+    "failure": null,
+    "final_distance_to_start_m": 0.22412092316425963,
+    "final_route_s_m": 30.2850771273936,
+    "footprint_cone_intersection_occurred": false,
+    "lap_time_s": 28.085722469997563,
+    "local_curvature_per_m": -0.35001343715951727,
+    "max_absolute_steering_rad": 0.349066,
+    "max_centerline_error_m": 0.37295822125014993,
+    "max_loop_period_s": 0.06835073699767236,
+    "maximum_lateral_avoidance_offset_reached_m": 0.37295822125014993,
+    "mean_absolute_command_delta_rad": 0.01062331124391524,
+    "mean_absolute_steering_rad": 0.08604583526457159,
+    "mean_centerline_error_m": 0.07902701755510004,
+    "mean_loop_period_s": 0.06666548198337251,
+    "minimum_cone_clearance_route_s_m": 14.173471794719719,
+    "minimum_footprint_to_cone_clearance_m": 0.13748040932435188,
+    "nominal_route_used_for_progress": true,
+    "off_track_event_count": 0,
+    "off_track_total_duration_s": 0.0,
+    "p95_loop_period_s": 0.06669344100009766,
+    "period_slip_count": 0,
+    "planned_lateral_offset_m": 0.29427038061476574,
+    "planned_minimum_clearance_m": 0.05968529346428313,
+    "pose_failures": 0,
+    "post_scenario_safe_stop_errors": [],
+    "post_scenario_safe_stop_success": true,
+    "practical_success_contract": "strictly positive clearance and no cone contact/intersection",
+    "recovery_cte_m": 0.036804055877182676,
+    "recovery_success": true,
+    "recovery_time_s": 0.33771764999983134,
+    "rejected_progress_jumps": 0,
+    "result": "PASS",
+    "return_contract": {
+      "maximum_absolute_nominal_cte_m": 0.08,
+      "minimum_stable_duration_s": 0.3
+    },
+    "role": "UNSEEN_HOLDOUT",
+    "route_completion_fraction": 0.992803265854826,
+    "route_length_m": 30.50461070080936,
+    "route_points_api": 388,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "scenario_id": "12",
+    "steering_saturation_fraction": 0.009478672985781991,
+    "timestamp_utc": "2026-08-25T10:35:09.690364+00:00",
+    "timing_slips": 0,
+    "total_unwrapped_progress_m": 30.285077127393606,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_random_cone_v1_12"
+  },
+  "planned_bypass": {
+    "added_profile_curvature_bound_per_m": 0.5243737143903352,
+    "algorithm": "automatic_symmetric_quintic_route_normal_v1",
+    "available_left_logical_track_clearance_m": 0.3500042760330857,
+    "available_right_logical_track_clearance_m": 0.34999758678368886,
+    "chosen_side": "right",
+    "clearance_success_contract": "strictly positive; 0.05 m is not a live pass threshold",
+    "cone_s_m": 14.150000000000002,
+    "departure_start_s_m": 11.450000000000001,
+    "design_added_curvature_limit_per_m": 1.011028899126822,
+    "end_heading_error_rad": 6.280984478745921e-06,
+    "end_position_error_m": 0.0,
+    "gates": {
+      "added_profile_curvature_within_design_limit": true,
+      "automatic_planning_clearance_target_achieved": true,
+      "cone_clear_of_nearby_world_collisions": true,
+      "exactly_one_cone_in_expected_world": true,
+      "finite_smooth_bypass": true,
+      "local_combined_curvature_within_steering_limit": true,
+      "no_planned_footprint_cone_intersection": true,
+      "positive_planned_footprint_clearance": true,
+      "preview_completed_remaining_lap": true,
+      "preview_no_cone_intersection": true,
+      "preview_no_sustained_offtrack": true,
+      "preview_positive_cone_clearance": true,
+      "preview_smooth_return_to_nominal": true,
+      "preview_steering_feasible": true,
+      "reference_center_track_feasible": true,
+      "smooth_departure_and_return_heading": true,
+      "smooth_departure_and_return_position": true
+    },
+    "kinematic_preview": {
+      "completed_remaining_lap": true,
+      "control_steps": 270,
+      "evidence_role": "offline feasibility gate only; not live simulator evidence",
+      "final_unwrapped_route_s_m": 30.380315885234136,
+      "footprint_cone_intersection": false,
+      "maximum_applied_steering_rad": 0.33271110653807373,
+      "maximum_continuous_offtrack_s": 0.0,
+      "maximum_continuous_steering_saturation_s": 0.0,
+      "maximum_outside_logical_track_m": 0.03773047226109864,
+      "maximum_requested_steering_rad": 0.33271110653807373,
+      "minimum_clearance_route_s_m": 14.148981549794197,
+      "minimum_footprint_to_cone_clearance_m": 0.140056484256509,
+      "minimum_logical_track_clearance_m": -0.03773047226109864,
+      "model": "ideal kinematic bicycle; frozen 15 Hz Pure Pursuit; full remaining-lap preview",
+      "recovery_success": true,
+      "recovery_time_s": 0.3333333333333277,
+      "steering_saturation_fraction": 0.0
+    },
+    "local_combined_curvature_bound_per_m": 0.8743871515498525,
+    "local_combined_equivalent_steering_rad": 0.15610907410565242,
+    "minimum_planned_clearance_route_s_m": 13.940000000000001,
+    "minimum_planned_footprint_to_cone_clearance_m": 0.05968529346428313,
+    "minimum_reference_center_track_clearance_m": 0.055727103205678426,
+    "nearby_collision_clearance": {
+      "checked_explicit_box_collisions": 5,
+      "minimum_clearance_m": 1.4145728183457322,
+      "nearest_collision": "collision",
+      "nearest_model": "wall_3",
+      "result": "PASS"
+    },
+    "physical_curvature_limit_per_m": 2.022057798253644,
+    "planned_footprint_cone_intersection": false,
+    "planned_lateral_offset_m": 0.29427038061476574,
+    "plateau_end_s_m": 15.050000000000002,
+    "plateau_half_length_m": 0.9,
+    "plateau_start_s_m": 13.250000000000002,
+    "profile": "symmetric_quintic_with_flat_pass",
+    "required_center_offset_m": 0.2492703806147657,
+    "result": "PASS",
+    "return_end_s_m": 16.85,
+    "start_heading_error_rad": 6.280984548467927e-06,
+    "start_position_error_m": 0.0,
+    "transition_length_m": 1.8
+  },
+  "preflight": {
+    "bounds": {
+      "maxX": 12.0,
+      "maxY": 7.0,
+      "minX": 0.0,
+      "minY": 0.0
+    },
+    "camera": {
+      "acquisition_ms": 4.215400000248337,
+      "dimensions": [
+        480,
+        360
+      ],
+      "mode": "RGB",
+      "result": "PASS"
+    },
+    "clock_health": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.15657131799889612,
+      "observed_real_time_factor": 0.9835545939314614,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 40,
+      "sim_delta_s": {
+        "max": 0.1050000000000001,
+        "mean": 0.05128205128205128,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 2.0,
+      "wall_elapsed_s": 2.03344075899804,
+      "wall_interval_s": {
+        "max": 0.05434761600190541,
+        "mean": 0.052139506640975386,
+        "min": 0.050732039999275
+      }
+    },
+    "cone_count": 1,
+    "control_api": "PASS",
+    "environment": {
+      "canonical_hashes": {
+        "canonical_cone_free_world": "8a4e2b21f1cb2e4ee97684d152442610cb05f03e2ef58f6b805c5bc527d309e1",
+        "canonical_cone_world": "229c12ad677e862f0fa489e4f05891a19a43d21baacb1746f1118f4f66441107",
+        "canonical_route": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+        "cone_mesh": "86254b20a702627178dfa02318d761e18ae2cc859af07f55c0b9106be0890d50",
+        "vehicle_sdf": "443b9074cbe3359e957365305bf3ad9a244b7b84e7bc8583e16d82b79de1d23d"
+      },
+      "cone_count": 1,
+      "cone_geometry": {
+        "collision_2d_half_extents_m": [
+          0.09,
+          0.09
+        ],
+        "collision_name": "cone",
+        "collision_size_xyz_m": [
+          0.18,
+          0.18,
+          0.38
+        ],
+        "source_model": "cone2",
+        "source_pose_z_m": 0.19,
+        "source_world": "custom_71e69ee938032295503bfed557fde18c",
+        "visual_uri": "model://meshes/custom_71e69ee938032295503bfed557fde18c/cone2.dae"
+      },
+      "cone_model": "cone_random_v1_12",
+      "model_metadata_identical": true,
+      "other_world_collision_clearance": {
+        "checked_explicit_box_collisions": 5,
+        "minimum_clearance_m": 1.4145728183457322,
+        "nearest_collision": "collision",
+        "nearest_model": "wall_3",
+        "result": "PASS"
+      },
+      "result": "PASS",
+      "route_byte_identical": true,
+      "route_sha256": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+      "scenario_id": "12",
+      "vehicle_footprint": {
+        "collision_elements": [
+          "base_footprint_fixed_joint_lump__base_collision_collision",
+          "base_footprint_fixed_joint_lump__lidar_collision_collision_1",
+          "front_left_wheel_link_collision",
+          "front_right_wheel_link_collision",
+          "rear_left_wheel_link_collision",
+          "rear_right_wheel_link_collision"
+        ],
+        "conservative_simplification": "axis-aligned base-frame rectangle enclosing the body box, lidar cylinder, rear wheel cylinders, and both front wheel cylinders for every steering angle within the Expert command clamp",
+        "length_m": 0.27,
+        "source_sdf": "/home/a/physicar-ai-sim-docker/src/physicar-sim/share/models/physicar/model.sdf",
+        "steering_envelope_rad": 0.349066,
+        "vertices_base_frame_m": [
+          [
+            -0.135,
+            -0.10927038061476568
+          ],
+          [
+            0.135,
+            -0.10927038061476568
+          ],
+          [
+            0.135,
+            0.10927038061476568
+          ],
+          [
+            -0.135,
+            0.10927038061476568
+          ]
+        ],
+        "width_m": 0.21854076122953137,
+        "x_extent_m": [
+          -0.135,
+          0.135
+        ],
+        "y_extent_m": [
+          -0.10927038061476568,
+          0.10927038061476568
+        ]
+      },
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_random_cone_v1_12"
+    },
+    "fixed_control": {
+      "control_frequency_hz": 15.0,
+      "lookahead_m": 0.9,
+      "speed_mps": 1.0,
+      "steering_limit_rad": 0.349066,
+      "wheelbase_m": 0.18
+    },
+    "offline_geometry_gate": "PASS",
+    "pose": {
+      "q": [
+        0.0,
+        0.0,
+        -0.707065,
+        0.707148
+      ],
+      "x": 1.400001,
+      "y": 3.394607,
+      "yaw": -1.570679,
+      "z": -0.00384
+    },
+    "result": "PASS",
+    "role": "UNSEEN_HOLDOUT",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "scenario_id": "12",
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_random_cone_v1_12"
+  },
+  "scenario": {
+    "chosen_side": "right",
+    "curvature_class": "moderate_right_curve",
+    "left_logical_track_clearance_m": 0.3500042760330857,
+    "local_curvature_per_m": -0.35001343715951727,
+    "nearby_collision_clearance_m": 1.4145728183457322,
+    "nearby_collision_model": "wall_3",
+    "nearby_collision_name": "collision",
+    "nonlocal_route_clearance_m": 1.9142698551592894,
+    "provenance": {
+      "algorithm": "sha256_ranked_stratified_route_grid_v1",
+      "assignment_sha256": "f4ae4177de2ae8fe675ad16841865f8ae28778ba7fe406164543d1288a954d5b",
+      "candidate_grid_index": 169,
+      "class_rank": 20,
+      "random_seed": 20260825,
+      "rank_sha256": "a83ec7f18d562dd2f4bc179c1d20a6c36a020a151a741136cfcf36f9e5f62772"
+    },
+    "right_logical_track_clearance_m": 0.34999758678368886,
+    "role": "UNSEEN_HOLDOUT",
+    "route_s_m": 14.150000000000002,
+    "scenario_id": "12",
+    "x_m": 10.495407688467004,
+    "y_m": 3.6759072118886156,
+    "yaw_rad": 1.57101294122709
+  },
+  "version": "random_cone_expert_1p0_v1",
+  "world_activation": {
+    "action": "switched",
+    "response": {
+      "ok": true,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_random_cone_v1_12.world"
+    },
+    "result": "PASS",
+    "status": {
+      "assets_version": 1787650931,
+      "current": "custom_71e69ee938032295503bfed557fde18c_e2e_random_cone_v1_12",
+      "running": true,
+      "switching": false,
+      "websocket": true
+    }
+  }
+}
