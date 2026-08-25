@@ -1,0 +1,125 @@
+{
+  "all_required_topics": [
+    "/camera/image_raw",
+    "/steering",
+    "/speed",
+    "/cmd_vel",
+    "/odom",
+    "/clock",
+    "/tf",
+    "/tf_static"
+  ],
+  "bag_sizes_bytes": [
+    144869439,
+    144872970,
+    145912048,
+    145391161,
+    144349692,
+    144871917,
+    144868725,
+    144871169,
+    145395272,
+    145394383,
+    145393353,
+    145390359
+  ],
+  "collector": "rosbag_collector_v1",
+  "completed_episode_count": 12,
+  "environment_verification": "PASS: canonical inputs valid (six expected cones present)\nPASS: derived world valid (world name correct; cone count 0)\nPASS: derived route byte-identical (SHA-256)\nPASS: derived model metadata matches canonical directory\nPASS: canonical asset integrity unchanged during verification",
+  "episode_results": [
+    {
+      "episode_id": "episode_001",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_002",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_003",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_004",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_005",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_006",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_007",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_008",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_009",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_010",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_011",
+      "result": "PASS"
+    },
+    {
+      "episode_id": "episode_012",
+      "result": "PASS"
+    }
+  ],
+  "expert_config": {
+    "api_timeout_s": 0.5,
+    "base_url": "http://localhost:8080",
+    "closed_route_tolerance_m": 0.15,
+    "control_frequency_hz": 15.0,
+    "expected_world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1",
+    "fixed_speed_mps": 1.8,
+    "lookahead_m": 0.9,
+    "max_steering_rad": 0.349066,
+    "maximum_progress_jump_m": 1.0,
+    "maximum_runtime_s": 120.0,
+    "minimum_lap_progress_fraction": 0.9,
+    "minimum_route_points": 20,
+    "off_track_grace_s": 0.5,
+    "off_track_margin_m": 0.05,
+    "pose_motion_translation_threshold_m": 0.005,
+    "pose_motion_yaw_threshold_rad": 0.01,
+    "pose_stale_timeout_s": 0.75,
+    "reset_wait_timeout_s": 10.0,
+    "spawn_route_tolerance_m": 0.5,
+    "start_gate_radius_m": 0.3,
+    "wheelbase_m": 0.18,
+    "world_check_interval_s": 1.0
+  },
+  "expert_config_sha256": "3afdc5d3204143e8d1f64c1ec68b2bda2de08912b779f2ece69a7d86c99503c9",
+  "failure_reason": null,
+  "generated_utc": "2026-08-24T07:10:46.603635+00:00",
+  "mean_bag_size_bytes": 145131707.33333334,
+  "mean_storage_rate_bytes_per_s": 7908786.1383283045,
+  "passed_episode_count": 12,
+  "projected_50_episode_storage_bytes": 7256585366.666667,
+  "raw_root": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/raw",
+  "requested_episode_count": 12,
+  "result": "PASS",
+  "topic_types": {
+    "/camera/image_raw": "sensor_msgs/msg/Image",
+    "/clock": "rosgraph_msgs/msg/Clock",
+    "/cmd_vel": "geometry_msgs/msg/Twist",
+    "/odom": "nav_msgs/msg/Odometry",
+    "/speed": "std_msgs/msg/Float64",
+    "/steering": "std_msgs/msg/Float64",
+    "/tf": "tf2_msgs/msg/TFMessage",
+    "/tf_static": "tf2_msgs/msg/TFMessage"
+  },
+  "total_bag_size_bytes": 1741580488,
+  "version": "high_speed_collection_v1"
+}

@@ -1,0 +1,6 @@
+{
+  "maximum_attempts": 5,
+  "started_utc": "2026-08-24T07:15:10.885466+00:00",
+  "status": "V5_LIVE_STARTED",
+  "target_policy_passes": 3
+}

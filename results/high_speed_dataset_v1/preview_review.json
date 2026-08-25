@@ -1,0 +1,17 @@
+{
+  "contact_sheets_generated": 12,
+  "episodes_reviewed": [
+    "episode_001",
+    "episode_006",
+    "episode_012"
+  ],
+  "findings": {
+    "cone_free_route": true,
+    "full_lap_route_coverage": true,
+    "malformed_crops_observed": false,
+    "reset_frames_observed": false,
+    "route_visually_intact": true
+  },
+  "result": "PASS",
+  "review_scope": "Representative beginning, middle, and final collection episodes"
+}

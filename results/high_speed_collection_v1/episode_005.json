@@ -1,0 +1,176 @@
+{
+  "actual_topic_message_counts": {
+    "/camera/image_raw": 276,
+    "/clock": 3650,
+    "/cmd_vel": 484,
+    "/odom": 548,
+    "/speed": 242,
+    "/steering": 242,
+    "/tf": 913,
+    "/tf_static": 1
+  },
+  "bag_container_path": "/opt/physicar/userdata/physicar_e2e/high_speed_v1/raw/episode_005/bag",
+  "bag_duration_s": 18.260413218,
+  "bag_host_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/raw/episode_005/bag",
+  "bag_size_bytes": 144349692,
+  "canonical_expert_config": {
+    "api_timeout_s": 0.5,
+    "base_url": "http://localhost:8080",
+    "closed_route_tolerance_m": 0.15,
+    "control_frequency_hz": 15.0,
+    "expected_world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1",
+    "fixed_speed_mps": 1.8,
+    "lookahead_m": 0.9,
+    "max_steering_rad": 0.349066,
+    "maximum_progress_jump_m": 1.0,
+    "maximum_runtime_s": 120.0,
+    "minimum_lap_progress_fraction": 0.9,
+    "minimum_route_points": 20,
+    "off_track_grace_s": 0.5,
+    "off_track_margin_m": 0.05,
+    "pose_motion_translation_threshold_m": 0.005,
+    "pose_motion_yaw_threshold_rad": 0.01,
+    "pose_stale_timeout_s": 0.75,
+    "reset_wait_timeout_s": 10.0,
+    "spawn_route_tolerance_m": 0.5,
+    "start_gate_radius_m": 0.3,
+    "wheelbase_m": 0.18,
+    "world_check_interval_s": 1.0
+  },
+  "canonical_expert_config_path": "/home/a/physicar-e2e/configs/high_speed_expert_v1.json",
+  "canonical_expert_config_sha256": "3afdc5d3204143e8d1f64c1ec68b2bda2de08912b779f2ece69a7d86c99503c9",
+  "episode_id": "episode_005",
+  "expert_driving_end_utc": "2026-08-24T07:08:09.016347+00:00",
+  "expert_driving_start_utc": "2026-08-24T07:07:50.995050+00:00",
+  "expert_result_metrics": {
+    "clock_health_preflight": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.107922191004036,
+      "observed_real_time_factor": 0.9792200737353496,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 39,
+      "sim_delta_s": {
+        "max": 0.10500000000320142,
+        "mean": 0.051578947368398076,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 1.9599999999991269,
+      "wall_elapsed_s": 2.0015929539949866,
+      "wall_interval_s": {
+        "max": 0.05528987500292715,
+        "mean": 0.05267349878934175,
+        "min": 0.05182611499913037
+      }
+    },
+    "cone_count": 0,
+    "control_iterations": 241,
+    "dry_run": false,
+    "elapsed_s": 16.017043699997885,
+    "environment_preflight": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "bounds_height_m": 7.0,
+      "bounds_width_m": 12.0,
+      "cone_count": 0,
+      "pose": {
+        "q": [
+          0.0,
+          0.0,
+          -0.707065,
+          0.707148
+        ],
+        "x": 1.400001,
+        "y": 3.393312,
+        "yaw": -1.570679,
+        "z": -2.8e-05
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+    },
+    "failure": null,
+    "final_distance_to_start_m": 0.2560839992053389,
+    "final_route_s_m": 30.251824833303683,
+    "max_absolute_steering_rad": 0.349066,
+    "max_centerline_error_m": 0.1935511426111552,
+    "max_loop_period_s": 0.06894082899816567,
+    "mean_absolute_steering_rad": 0.1096728153416671,
+    "mean_centerline_error_m": 0.049808177140757075,
+    "mean_loop_period_s": 0.06666497148332079,
+    "off_track_event_count": 0,
+    "off_track_total_duration_s": 0.0,
+    "p95_loop_period_s": 0.06668929099396337,
+    "period_slip_count": 0,
+    "rejected_progress_jumps": 0,
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points_api": 388,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "steering_saturation_fraction": 0.04979253112033195,
+    "timestamp_utc": "2026-08-24T07:08:09.016205+00:00",
+    "total_unwrapped_progress_m": 30.25052983331149,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "failure_reason": null,
+  "physicar_e2e_git_commit": "28cda55e9cd65aac8de2bf6c5f867ba4ff32aa1d",
+  "recorder_graceful_shutdown": true,
+  "recorder_orphaned": false,
+  "recording_end_utc": "2026-08-24T07:08:09.542787+00:00",
+  "recording_start_utc": "2026-08-24T07:07:50.994997+00:00",
+  "required_topics": [
+    "/camera/image_raw",
+    "/steering",
+    "/speed",
+    "/cmd_vel",
+    "/odom",
+    "/clock",
+    "/tf",
+    "/tf_static"
+  ],
+  "result": "PASS",
+  "topic_metrics": {
+    "/camera/image_raw": {
+      "average_recorded_rate_hz": 15.114663436418628,
+      "message_count": 276
+    },
+    "/clock": {
+      "average_recorded_rate_hz": 199.88594761930432,
+      "message_count": 3650
+    },
+    "/cmd_vel": {
+      "average_recorded_rate_hz": 26.505424287052954,
+      "message_count": 484
+    },
+    "/odom": {
+      "average_recorded_rate_hz": 30.010273779555824,
+      "message_count": 548
+    },
+    "/speed": {
+      "average_recorded_rate_hz": 13.252712143526477,
+      "message_count": 242
+    },
+    "/steering": {
+      "average_recorded_rate_hz": 13.252712143526477,
+      "message_count": 242
+    },
+    "/tf": {
+      "average_recorded_rate_hz": 49.99886854148625,
+      "message_count": 913
+    },
+    "/tf_static": {
+      "average_recorded_rate_hz": 0.054763273320357346,
+      "message_count": 1
+    }
+  },
+  "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+}

@@ -1,0 +1,23 @@
+{
+  "camera_topic": "/camera/image_raw",
+  "steering_topic": "/steering",
+  "speed_topic": "/speed",
+  "clock_topic": "/clock",
+  "minimum_drive_speed_mps": 0.10,
+  "maximum_steering_age_s": 0.15,
+  "maximum_speed_age_s": 0.15,
+  "source_width": 480,
+  "source_height": 360,
+  "source_encoding": "rgb8",
+  "roi": {"x_start": 0, "x_end": 480, "y_start": 160, "y_end": 360},
+  "output_width": 200,
+  "output_height": 66,
+  "resize_interpolation": "bilinear",
+  "image_format": "PNG",
+  "stored_color_space": "RGB",
+  "maximum_steering_rad": 0.349066,
+  "near_zero_steering_rad": 0.01,
+  "saturation_fraction_of_limit": 0.99,
+  "preview_frame_count": 9,
+  "steering_histogram_bin_edges_rad": [-0.349066, -0.25, -0.15, -0.05, -0.01, 0.01, 0.05, 0.15, 0.25, 0.349066]
+}

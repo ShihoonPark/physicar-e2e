@@ -1,0 +1,141 @@
+{
+  "artifacts": {
+    "extracted_image_size_bytes": 4030517,
+    "manifest_path": "manifests/episode_005.csv",
+    "preview_path": "previews/episode_005.png"
+  },
+  "camera_headers": {
+    "available_count": 276,
+    "domain_use": "diagnostic only; never used for synchronization",
+    "first_time_ns": 35418970000000,
+    "last_time_ns": 35437120000000,
+    "monotonic_non_decreasing": true
+  },
+  "clock": {
+    "domain_use": "diagnostic only; never compared directly to MCAP record time",
+    "first_record_time_ns": 1787555270872824493,
+    "first_sim_time_ns": 35418935000000,
+    "last_record_time_ns": 1787555289129170342,
+    "last_sim_time_ns": 35437180000000,
+    "record_count": 3650,
+    "sim_duration_s": 18.245
+  },
+  "clock_domain_findings": {
+    "camera_header_and_clock_ranges_overlap": true,
+    "collector_start_minus_mcap_start_ms": -2010.5610000000001,
+    "domains_proven_identical": false,
+    "first_camera_header_minus_first_clock_ms": 35.0,
+    "last_camera_header_minus_last_clock_ms": -60.0,
+    "mcap_record_time_is_unix_epoch_like": true
+  },
+  "counts": {
+    "accepted_camera_samples": 242,
+    "active_window_camera_frames": 242,
+    "active_window_retention_fraction": 1.0,
+    "manifest_row_count": 242,
+    "rejected_camera_frames": 34,
+    "rejection_by_reason": {
+      "after_active_drive_window": 2,
+      "before_active_drive_window": 32,
+      "below_drive_speed": 0,
+      "future_record_violation": 0,
+      "image_decode_error": 0,
+      "no_causal_speed": 0,
+      "no_causal_steering": 0,
+      "stale_speed": 0,
+      "stale_steering": 0
+    },
+    "retention_fraction": 0.8768115942028986,
+    "total_camera_frames": 276
+  },
+  "drive_window": {
+    "collector_expert_duration_s": 16.017043699997885,
+    "duration_difference_s": -0.015899837997885413,
+    "duration_s": 16.001143862,
+    "end_record_time_ns": 1787555289008763191,
+    "method": "dominant contiguous abs(speed) >= threshold segment in MCAP record-time domain",
+    "minimum_drive_speed_mps": 0.1,
+    "speed_record_count": 241,
+    "start_record_time_ns": 1787555273007619329
+  },
+  "episode_id": "episode_005",
+  "extractor_version": "dataset_extractor_v1",
+  "result": "PASS",
+  "source": {
+    "collector_metadata": "results/high_speed_collection_v1/episode_005.json",
+    "collector_reported_bag_size_bytes": 144349692,
+    "expert_config_sha256": "3afdc5d3204143e8d1f64c1ec68b2bda2de08912b779f2ece69a7d86c99503c9",
+    "extractor_config_sha256": "944f26336062e56b68cad0826e362dda8ef971a4544c3a727bf5b0067c706e2e",
+    "extractor_source_commit": "28cda55e9cd65aac8de2bf6c5f867ba4ff32aa1d",
+    "mcap_path": "episode_005/bag/bag_0.mcap",
+    "mcap_sha256": "ba27355b8e61b2f11d1fb7571bac763ad3c04c883931504f422de1e61c91d535",
+    "mcap_size_bytes": 144342285,
+    "physicar_e2e_source_commit": "28cda55e9cd65aac8de2bf6c5f867ba4ff32aa1d"
+  },
+  "steering_distribution": {
+    "histogram": {
+      "above_range": 0,
+      "below_range": 0,
+      "bin_counts": [
+        13,
+        12,
+        11,
+        29,
+        73,
+        10,
+        36,
+        33,
+        25
+      ],
+      "bin_edges_rad": [
+        -0.349066,
+        -0.25,
+        -0.15,
+        -0.05,
+        -0.01,
+        0.01,
+        0.05,
+        0.15,
+        0.25,
+        0.349066
+      ]
+    },
+    "max_rad": 0.349066,
+    "mean_absolute_rad": 0.10994532033816445,
+    "mean_rad": 0.04061542044155302,
+    "min_rad": -0.349066,
+    "near_zero_count": 73,
+    "near_zero_threshold_rad": 0.01,
+    "negative_count": 65,
+    "positive_count": 104,
+    "sample_count": 242,
+    "saturation_count": 12,
+    "saturation_fraction": 0.049586776859504134,
+    "saturation_threshold_rad": 0.34557534,
+    "std_rad": 0.15291210153157545
+  },
+  "synchronization": {
+    "accepted_camera_interval_ms": {
+      "count": 241,
+      "max": 80.399137,
+      "mean": 66.05572236514523,
+      "p95": 71.760753
+    },
+    "future_label_violations": 0,
+    "rule": "causal zero-order hold on MCAP record timestamps",
+    "speed_age_ms": {
+      "count": 242,
+      "max": 68.482641,
+      "mean": 31.82161529752066,
+      "median": 31.159731999999998,
+      "p95": 62.32821425
+    },
+    "steering_age_ms": {
+      "count": 242,
+      "max": 69.38525299999999,
+      "mean": 32.68428654958678,
+      "median": 31.703671,
+      "p95": 62.77737640000001
+    }
+  }
+}

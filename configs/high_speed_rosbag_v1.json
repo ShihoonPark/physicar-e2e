@@ -1,0 +1,15 @@
+{
+  "expected_world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1",
+  "required_topics": ["/camera/image_raw", "/steering", "/speed", "/cmd_vel", "/odom", "/clock", "/tf", "/tf_static"],
+  "container_name": "physicar-sim",
+  "compose_service": "sim",
+  "container_userdata_root": "/opt/physicar/userdata",
+  "data_relative_root": "physicar_e2e/high_speed_v1/raw",
+  "storage_id": "mcap",
+  "recorder_startup_timeout_s": 10.0,
+  "recorder_shutdown_timeout_s": 15.0,
+  "settle_duration_s": 2.0,
+  "pilot_episode_count": 12,
+  "minimum_free_bytes": 1073741824,
+  "minimum_camera_messages": 100
+}

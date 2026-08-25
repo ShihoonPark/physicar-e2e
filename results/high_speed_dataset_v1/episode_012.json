@@ -1,0 +1,141 @@
+{
+  "artifacts": {
+    "extracted_image_size_bytes": 4032803,
+    "manifest_path": "manifests/episode_012.csv",
+    "preview_path": "previews/episode_012.png"
+  },
+  "camera_headers": {
+    "available_count": 278,
+    "domain_use": "diagnostic only; never used for synchronization",
+    "first_time_ns": 35575060000000,
+    "last_time_ns": 35593340000000,
+    "monotonic_non_decreasing": true
+  },
+  "clock": {
+    "domain_use": "diagnostic only; never compared directly to MCAP record time",
+    "first_record_time_ns": 1787555427226737900,
+    "first_sim_time_ns": 35575040000000,
+    "last_record_time_ns": 1787555445580231032,
+    "last_sim_time_ns": 35593355000000,
+    "record_count": 3664,
+    "sim_duration_s": 18.315
+  },
+  "clock_domain_findings": {
+    "camera_header_and_clock_ranges_overlap": true,
+    "collector_start_minus_mcap_start_ms": -2015.219,
+    "domains_proven_identical": false,
+    "first_camera_header_minus_first_clock_ms": 20.0,
+    "last_camera_header_minus_last_clock_ms": -15.0,
+    "mcap_record_time_is_unix_epoch_like": true
+  },
+  "counts": {
+    "accepted_camera_samples": 242,
+    "active_window_camera_frames": 242,
+    "active_window_retention_fraction": 1.0,
+    "manifest_row_count": 242,
+    "rejected_camera_frames": 36,
+    "rejection_by_reason": {
+      "after_active_drive_window": 3,
+      "before_active_drive_window": 33,
+      "below_drive_speed": 0,
+      "future_record_violation": 0,
+      "image_decode_error": 0,
+      "no_causal_speed": 0,
+      "no_causal_steering": 0,
+      "stale_speed": 0,
+      "stale_steering": 0
+    },
+    "retention_fraction": 0.8705035971223022,
+    "total_camera_frames": 278
+  },
+  "drive_window": {
+    "collector_expert_duration_s": 16.08759155000007,
+    "duration_difference_s": -0.018771789000069816,
+    "duration_s": 16.068819761,
+    "end_record_time_ns": 1787555445444471629,
+    "method": "dominant contiguous abs(speed) >= threshold segment in MCAP record-time domain",
+    "minimum_drive_speed_mps": 0.1,
+    "speed_record_count": 242,
+    "start_record_time_ns": 1787555429375651868
+  },
+  "episode_id": "episode_012",
+  "extractor_version": "dataset_extractor_v1",
+  "result": "PASS",
+  "source": {
+    "collector_metadata": "results/high_speed_collection_v1/episode_012.json",
+    "collector_reported_bag_size_bytes": 145390359,
+    "expert_config_sha256": "3afdc5d3204143e8d1f64c1ec68b2bda2de08912b779f2ece69a7d86c99503c9",
+    "extractor_config_sha256": "944f26336062e56b68cad0826e362dda8ef971a4544c3a727bf5b0067c706e2e",
+    "extractor_source_commit": "28cda55e9cd65aac8de2bf6c5f867ba4ff32aa1d",
+    "mcap_path": "episode_012/bag/bag_0.mcap",
+    "mcap_sha256": "29731ed4662eefb3d39ee03e550296689966f29eb94dd33ccf5e9c29fb83cf35",
+    "mcap_size_bytes": 145383421,
+    "physicar_e2e_source_commit": "28cda55e9cd65aac8de2bf6c5f867ba4ff32aa1d"
+  },
+  "steering_distribution": {
+    "histogram": {
+      "above_range": 0,
+      "below_range": 0,
+      "bin_counts": [
+        13,
+        11,
+        11,
+        26,
+        79,
+        9,
+        36,
+        32,
+        25
+      ],
+      "bin_edges_rad": [
+        -0.349066,
+        -0.25,
+        -0.15,
+        -0.05,
+        -0.01,
+        0.01,
+        0.05,
+        0.15,
+        0.25,
+        0.349066
+      ]
+    },
+    "max_rad": 0.349066,
+    "mean_absolute_rad": 0.10950843964629048,
+    "mean_rad": 0.0410248657925516,
+    "min_rad": -0.349066,
+    "near_zero_count": 79,
+    "near_zero_threshold_rad": 0.01,
+    "negative_count": 61,
+    "positive_count": 102,
+    "sample_count": 242,
+    "saturation_count": 11,
+    "saturation_fraction": 0.045454545454545456,
+    "saturation_threshold_rad": 0.34557534,
+    "std_rad": 0.15228310787183624
+  },
+  "synchronization": {
+    "accepted_camera_interval_ms": {
+      "count": 241,
+      "max": 84.228341,
+      "mean": 66.16653465975104,
+      "p95": 70.960163
+    },
+    "future_label_violations": 0,
+    "rule": "causal zero-order hold on MCAP record timestamps",
+    "speed_age_ms": {
+      "count": 242,
+      "max": 67.414029,
+      "mean": 35.41137267768595,
+      "median": 36.519257999999994,
+      "p95": 63.9002921
+    },
+    "steering_age_ms": {
+      "count": 242,
+      "max": 67.515329,
+      "mean": 34.84100559917355,
+      "median": 34.6416955,
+      "p95": 63.2557527
+    }
+  }
+}
