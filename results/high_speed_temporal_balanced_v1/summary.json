@@ -1,0 +1,147 @@
+{
+  "config_sha256": "b2aeaf7617eaf2da155ace6651c4e91b898b31ebf400fb76dc4e3ef60bda385f",
+  "dagger3_A_audit": {
+    "bin_counts": {
+      "85_90_percent": 1474,
+      "90_95_percent": 15,
+      "95_100_percent": 6
+    },
+    "causal_contract_verified": true,
+    "joined_temporal_sequence_count": 1495,
+    "route_progress_metadata": "preserved completion_fraction joined by current timestamp and image path",
+    "source_id": "high_speed_dagger_iter3_rollout_A",
+    "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/extracted/manifests/high_speed_dagger_iter3_rollout_A.csv",
+    "source_manifest_sha256": "a39e32afc78da81783e7a91fd14ea0ad3a94e47f1e7ebe48abc7cf8ab9d66670",
+    "temporal_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/train.csv",
+    "temporal_manifest_sha256": "07d2f6cb6dd668352ae988dcfb771fa42739faed745681c0ed9b682b669834b4"
+  },
+  "dagger3_B_audit": {
+    "bin_counts": {
+      "85_90_percent": 990,
+      "90_95_percent": 7,
+      "95_100_percent": 14
+    },
+    "causal_contract_verified": true,
+    "joined_temporal_sequence_count": 1011,
+    "route_progress_metadata": "preserved completion_fraction joined by current timestamp and image path",
+    "source_id": "high_speed_dagger_iter3_rollout_B",
+    "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/extracted/manifests/high_speed_dagger_iter3_rollout_B.csv",
+    "source_manifest_sha256": "5bf2401270ca7f2a76a4acaa3e8472b72d022fd2dcc804841e9675388367a107",
+    "temporal_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/dagger3_B.csv",
+    "temporal_manifest_sha256": "8872571653a5e3d340ad535c38ba9ca332d9c3efef5268c8544394ed1195d954"
+  },
+  "dagger3_B_v9_offline_metrics": {
+    "bins": {
+      "85_90_percent": {
+        "bias_mean_signed_error_rad": 0.0019857356769552342,
+        "corrective_magnitude_ratio": 0.9803174085545567,
+        "correlation": 0.9763969189038627,
+        "mae_rad": 0.01800806723132254,
+        "max_absolute_error_rad": 0.48288620592689513,
+        "rmse_rad": 0.040720326953203004,
+        "sample_count": 990
+      },
+      "90_95_percent": {
+        "bias_mean_signed_error_rad": -0.006457854218512844,
+        "corrective_magnitude_ratio": 0.9812875709378807,
+        "correlation": 0.38538001910600883,
+        "mae_rad": 0.020669750963091094,
+        "max_absolute_error_rad": 0.06753835442177714,
+        "rmse_rad": 0.02885841014044301,
+        "sample_count": 7
+      },
+      "95_100_percent": {
+        "bias_mean_signed_error_rad": 0.025286934575464746,
+        "corrective_magnitude_ratio": 0.9543687971917404,
+        "correlation": 0.9892598331825769,
+        "mae_rad": 0.028365975396614142,
+        "max_absolute_error_rad": 0.07447807956294471,
+        "rmse_rad": 0.03720607437565236,
+        "sample_count": 14
+      }
+    },
+    "combined_90_100": {
+      "mae_rad": 0.02580056725210646,
+      "sample_count": 21
+    },
+    "final_to_early_mae_ratio": 1.5751815579228545,
+    "overall": {
+      "bias_mean_signed_error_rad": 0.0022498303136922245,
+      "corrective_magnitude_ratio": 0.9799100651107426,
+      "correlation": 0.9768023278934101,
+      "mae_rad": 0.018169886525711044,
+      "max_absolute_error_rad": 0.48288620592689513,
+      "rmse_rad": 0.04060344176919554,
+      "sample_count": 1011
+    }
+  },
+  "decision": {
+    "automatic_followup_optimization": false,
+    "cone_avoidance_v1_status": "preserved V9 already satisfies its 3/3 simulator repeatability gate; this stopped experiment adds no V10 evidence",
+    "user_visual_comparison_required": false,
+    "v10_beats_v9": false,
+    "v9_remains_canonical": true
+  },
+  "generated_utc": "2026-08-25T06:29:03.903121+00:00",
+  "hard_gate": {
+    "actual_k": 6,
+    "name": "minimum_equal_dagger3_A_bin_count",
+    "reason": "K=6 is below the pre-registered minimum 20",
+    "required_minimum": 20,
+    "result": "FAIL"
+  },
+  "no_new_data": {
+    "dagger_iterations_created": 0,
+    "expert_laps_created": 0,
+    "neural_rollouts_created": 0,
+    "raw_bags_created": 0,
+    "synthetic_samples_created": 0,
+    "training_data_collected": false
+  },
+  "original_imbalance": {
+    "85_90_to_90_95_ratio": 98.26666666666667,
+    "85_90_to_95_100_ratio": 245.66666666666666,
+    "max_to_min_ratio": 245.66666666666666
+  },
+  "preserved_v9": {
+    "checkpoint": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/checkpoints/pilotnet_v9_high_speed_temporal_best.pt",
+      "sha256": "1cded5fcc7f3d13242de096c4868fc576d03fa6bc86df6e5c8c7c235d9faa6cc",
+      "size_bytes": 1032805
+    },
+    "dataset_new_training_data_collected": false,
+    "dataset_summary_sha256": "a959e21140f639c1cc66afb5080da76ed7c71acf2a8c1fced6fe31590fa1bfbd",
+    "live_result": "PASS",
+    "live_summary_sha256": "56829cfc312f5cfe353458c60afcd146a54f406374d2e02546e20406cccaa6d2",
+    "onnx": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/onnx/pilotnet_v9_high_speed_temporal.onnx",
+      "sha256": "7f6aa4c2d8c9b3615c580f065660c674efff94ff4cd0b9bdc9357df904000888",
+      "size_bytes": 1026938
+    },
+    "parameter_count": 255819,
+    "policy_pass_count": 3,
+    "trained_from_scratch": true,
+    "training_result": "PASS",
+    "training_summary_sha256": "4c22c0b7f2d408b44b4698ff98d394ff3bde3f8d40c5dc34e6edd0a30d906f87"
+  },
+  "result": "STOP_INSUFFICIENT_LATE_REGION_DIVERSITY",
+  "selection": {
+    "balanced_manifest_created": false,
+    "method": "deterministic_evenly_spaced_ordered_indices",
+    "oversampling": false,
+    "performed": false,
+    "reason": "selection prohibited because K < 20",
+    "selected_count_per_bin": null
+  },
+  "v10": {
+    "checkpoint_created": false,
+    "live_attempts": 0,
+    "live_preflight_executed": false,
+    "offline_evaluation_executed": false,
+    "onnx_created": false,
+    "train_sequence_count": null,
+    "training_executed": false,
+    "training_manifest_created": false
+  },
+  "version": "high_speed_temporal_balanced_v1"
+}

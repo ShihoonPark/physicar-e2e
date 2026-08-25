@@ -1,0 +1,115 @@
+{
+  "version": "high_speed_temporal_balanced_v1",
+  "model_name": "High-Speed Temporal PilotNet V10 Late-Balanced",
+  "preserved_v9": {
+    "checkpoint_sha256": "1cded5fcc7f3d13242de096c4868fc576d03fa6bc86df6e5c8c7c235d9faa6cc",
+    "onnx_sha256": "7f6aa4c2d8c9b3615c580f065660c674efff94ff4cd0b9bdc9357df904000888",
+    "required_policy_passes": 3
+  },
+  "route_bins": [
+    {
+      "name": "85_90_percent",
+      "lower": 0.85,
+      "upper": 0.90,
+      "upper_inclusive": false
+    },
+    {
+      "name": "90_95_percent",
+      "lower": 0.90,
+      "upper": 0.95,
+      "upper_inclusive": false
+    },
+    {
+      "name": "95_100_percent",
+      "lower": 0.95,
+      "upper": 1.00,
+      "upper_inclusive": true
+    }
+  ],
+  "minimum_per_bin": 20,
+  "selection": {
+    "method": "deterministic_evenly_spaced_ordered_indices",
+    "random_selection": false,
+    "oversampling": false,
+    "duplicate_selection": false,
+    "error_based_selection": false
+  },
+  "training_sources": [
+    "nominal_episode_001_008",
+    "high_speed_dagger_rollout_A",
+    "high_speed_dagger_iter2_rollout_A",
+    "balanced_high_speed_dagger_iter3_rollout_A"
+  ],
+  "evaluation_sources": [
+    "nominal_episode_009_010",
+    "nominal_episode_011_012",
+    "high_speed_dagger_rollout_B",
+    "high_speed_dagger_iter2_rollout_B",
+    "high_speed_dagger_iter3_rollout_B"
+  ],
+  "excluded_sources": [
+    "all_B_holdouts",
+    "nominal_validation",
+    "nominal_holdout",
+    "low_speed_v4",
+    "low_speed_dagger",
+    "synthetic_recovery"
+  ],
+  "temporal_contract": {
+    "history_frames": 3,
+    "input_channels": 9,
+    "frame_order": "oldest_to_current",
+    "maximum_adjacent_gap_s": 0.120,
+    "target": "expert_steering_at_t",
+    "future_frames_permitted": false,
+    "boundary_crossing_permitted": false,
+    "duplicate_history_padding": false,
+    "preprocessing_reference": "configs/high_speed_temporal_dataset_v1.json"
+  },
+  "model_contract": {
+    "architecture_reference": "src/physicar_e2e/pilotnet_temporal.py",
+    "parameter_count": 255819,
+    "input_shape": [9, 66, 200],
+    "conv1": {
+      "input_channels": 9,
+      "output_channels": 24,
+      "kernel": [5, 5],
+      "stride": [2, 2]
+    }
+  },
+  "training_contract": {
+    "reference": "configs/pilotnet_training_v9_high_speed_temporal.json",
+    "initialization": "from_scratch",
+    "loss": "MSE",
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_epochs": 35,
+    "seed": 20260824,
+    "augmentation": false,
+    "weighting": false,
+    "oversampling": false,
+    "hyperparameter_sweep": false
+  },
+  "offline_live_gate": {
+    "dagger3_B_90_100_mae_may_worsen": false,
+    "catastrophic_mae_ratio": 1.50,
+    "catastrophic_major_strata": [
+      "nominal_validation",
+      "nominal_holdout",
+      "dagger1_B",
+      "dagger2_B"
+    ]
+  },
+  "live_contract": {
+    "reference": "configs/pilotnet_inference_v9_high_speed_temporal.json",
+    "speed_mps": 1.80,
+    "maximum_valid_policy_evaluations": 3,
+    "maximum_total_attempts": 5,
+    "policy_failure_stops": true,
+    "safe_stop_required": true,
+    "late_diagnostic_bins": ["90_95_percent", "95_100_percent"]
+  },
+  "new_data_collection_permitted": false,
+  "automatic_followup_optimization_permitted": false
+}
