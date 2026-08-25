@@ -1,0 +1,683 @@
+{
+  "counts": {
+    "accepted_camera_samples": 2931,
+    "active_window_camera_frames": 2931,
+    "active_window_retention_fraction": 1.0,
+    "rejected_camera_frames": 42,
+    "rejection_by_reason": {
+      "after_active_drive_window": 25,
+      "before_active_drive_window": 17,
+      "below_drive_speed": 0,
+      "future_record_violation": 0,
+      "image_decode_error": 0,
+      "no_causal_speed": 0,
+      "no_causal_steering": 0,
+      "stale_speed": 0,
+      "stale_steering": 0
+    },
+    "retention_fraction": 0.9858728557013118,
+    "total_camera_frames": 2973
+  },
+  "dataset_metadata_sha256": "50b817dd4cb5ceeb7912b6cc4db13ea99cb7098cdde67dd950d67f887c3aeffd",
+  "dataset_root": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset",
+  "episode_count": 12,
+  "episode_ids": [
+    "cone_episode_001",
+    "cone_episode_002",
+    "cone_episode_003",
+    "cone_episode_004",
+    "cone_episode_005",
+    "cone_episode_006",
+    "cone_episode_007",
+    "cone_episode_008",
+    "cone_episode_009",
+    "cone_episode_010",
+    "cone_episode_011",
+    "cone_episode_012"
+  ],
+  "evaluation_only_fields": [
+    "route_s_m",
+    "route_s_record_time_ns"
+  ],
+  "evaluation_route_s_reanalysis": {
+    "episodes": {
+      "cone_episode_001": {
+        "age_ms": {
+          "count": 245,
+          "max": 35.027686,
+          "mean": 17.25337524897959,
+          "median": 17.057763,
+          "p95": 31.7198698
+        },
+        "count": 245,
+        "future_violations": 0
+      },
+      "cone_episode_002": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.720064,
+          "mean": 16.897302852459017,
+          "median": 16.3363105,
+          "p95": 31.8695269
+        },
+        "count": 244,
+        "future_violations": 0
+      },
+      "cone_episode_003": {
+        "age_ms": {
+          "count": 245,
+          "max": 35.426123,
+          "mean": 16.251057628571427,
+          "median": 16.006431,
+          "p95": 31.578440999999994
+        },
+        "count": 245,
+        "future_violations": 0
+      },
+      "cone_episode_004": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.792203,
+          "mean": 16.537444594262293,
+          "median": 15.899870499999999,
+          "p95": 31.8441196
+        },
+        "count": 244,
+        "future_violations": 0
+      },
+      "cone_episode_005": {
+        "age_ms": {
+          "count": 245,
+          "max": 35.468356,
+          "mean": 16.67780803265306,
+          "median": 16.459489,
+          "p95": 31.6540194
+        },
+        "count": 245,
+        "future_violations": 0
+      },
+      "cone_episode_006": {
+        "age_ms": {
+          "count": 243,
+          "max": 35.902039,
+          "mean": 16.501418769547325,
+          "median": 16.053358,
+          "p95": 31.594530299999995
+        },
+        "count": 243,
+        "future_violations": 0
+      },
+      "cone_episode_007": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.882162,
+          "mean": 16.157633581967215,
+          "median": 15.963023499999998,
+          "p95": 31.342083799999997
+        },
+        "count": 244,
+        "future_violations": 0
+      },
+      "cone_episode_008": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.436836,
+          "mean": 15.612770762295082,
+          "median": 15.5749915,
+          "p95": 30.723395699999998
+        },
+        "count": 244,
+        "future_violations": 0
+      },
+      "cone_episode_009": {
+        "age_ms": {
+          "count": 245,
+          "max": 34.716386,
+          "mean": 16.07814250612245,
+          "median": 16.321851,
+          "p95": 32.1712266
+        },
+        "count": 245,
+        "future_violations": 0
+      },
+      "cone_episode_010": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.690632,
+          "mean": 16.979010479508194,
+          "median": 17.369539500000002,
+          "p95": 32.42865715
+        },
+        "count": 244,
+        "future_violations": 0
+      },
+      "cone_episode_011": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.844171,
+          "mean": 16.40060276639344,
+          "median": 16.258637999999998,
+          "p95": 31.530205499999997
+        },
+        "count": 244,
+        "future_violations": 0
+      },
+      "cone_episode_012": {
+        "age_ms": {
+          "count": 244,
+          "max": 35.738663,
+          "mean": 16.82547183606557,
+          "median": 17.7494765,
+          "p95": 32.11061655
+        },
+        "count": 244,
+        "future_violations": 0
+      }
+    },
+    "generated_utc": "2026-08-25T08:16:48.626923+00:00",
+    "method": "rigid 2D transform from first odom pose to frozen per-episode preflight world pose",
+    "model_input_use": false,
+    "region_counts": {
+      "holdout": {
+        "approach": 16,
+        "departure_avoidance": 52,
+        "pass_return": 40,
+        "recovered": 16
+      },
+      "validation": {
+        "approach": 16,
+        "departure_avoidance": 52,
+        "pass_return": 40,
+        "recovered": 17
+      }
+    },
+    "result": "PASS"
+  },
+  "extractor_config_sha256": "39f0bafd33d2202555ec3622f517425ce6dcdabe810fe670febee773521a4d52",
+  "extractor_version": "dataset_extractor_v1",
+  "future_label_violations": 0,
+  "generated_utc": "2026-08-25T08:05:39.102952+00:00",
+  "neural_input_fields": [
+    "camera_t_minus_2",
+    "camera_t_minus_1",
+    "camera_t"
+  ],
+  "quality_gates": {
+    "causal_zoh": true,
+    "episode_split_no_leakage": true,
+    "first_two_frames_rejected_per_episode": true,
+    "future_label_violations_zero": true,
+    "temporal_gap_maximum_0p120": true,
+    "twelve_readable_episodes": true
+  },
+  "result": "PASS",
+  "source_bag_hashes": {
+    "cone_episode_001": "61fbb228fabd4e04a1c0b25558e41a1ab1db5cab820bd7a830b125a48ea44a3e",
+    "cone_episode_002": "67e2996e5aa08b00f7ff53d2716efcb72e0c63c5adad6aa498a35cd2c36d52f5",
+    "cone_episode_003": "e4e63b44b7f85340e14620c7925285e6c3a086e6bf3e8edd4e0377278e6b3f92",
+    "cone_episode_004": "aafc7a9f46fa6908e1d00b7d329f65a0df41d57bf3e1cae97e85249520c7cf2c",
+    "cone_episode_005": "50dc65dc66d372f014612db9d110b698c5f1dbbb4d9638864dabfb801b2434e2",
+    "cone_episode_006": "e224f73d3d16f48a2454485d1d24ac9fe6a720fae229c6ae42ce21986bf00d8e",
+    "cone_episode_007": "bb41d589dbceae91a2e79acf5cfeb5468b7ed96492cb043edc7c8d7deff4be3e",
+    "cone_episode_008": "c94da2136261d282c9895f6bfc33eb0e76d4be0f933bf0246ffa2d029172fb8e",
+    "cone_episode_009": "bccdee20f5835e6d44c5de4a3aa64fb6b4587adc1e3241037a719c1b540e1e71",
+    "cone_episode_010": "100e528b0fcc28cb6b8e32e1780cd655cc723fad0967fa70c6fbcc7d3784a003",
+    "cone_episode_011": "d554593e7fbd54bb2ad81a378e4119f60cfa1886d72af5bf43846afbaad3f8bf",
+    "cone_episode_012": "ba22b704a7fe3a94bc8467b9e4190ddc80a9d8224871818263f93c235e537cb4"
+  },
+  "split": {
+    "holdout": [
+      "cone_episode_011",
+      "cone_episode_012"
+    ],
+    "train": [
+      "cone_episode_001",
+      "cone_episode_002",
+      "cone_episode_003",
+      "cone_episode_004",
+      "cone_episode_005",
+      "cone_episode_006",
+      "cone_episode_007",
+      "cone_episode_008"
+    ],
+    "validation": [
+      "cone_episode_009",
+      "cone_episode_010"
+    ]
+  },
+  "split_policy": "No frame-level split. Future splitting must preserve whole episode_id groups.",
+  "steering_distribution": {
+    "histogram": {
+      "above_range": 0,
+      "below_range": 0,
+      "bin_counts": [
+        170,
+        136,
+        136,
+        540,
+        451,
+        367,
+        442,
+        383,
+        306
+      ],
+      "bin_edges_rad": [
+        -0.349066,
+        -0.25,
+        -0.15,
+        -0.05,
+        -0.01,
+        0.01,
+        0.05,
+        0.15,
+        0.25,
+        0.349066
+      ]
+    },
+    "max_rad": 0.349066,
+    "mean_absolute_rad": 0.11460326996355794,
+    "mean_rad": 0.04051929154265724,
+    "min_rad": -0.349066,
+    "near_zero_count": 451,
+    "near_zero_threshold_rad": 0.01,
+    "negative_count": 982,
+    "positive_count": 1498,
+    "sample_count": 2931,
+    "saturation_count": 158,
+    "saturation_fraction": 0.053906516547253494,
+    "saturation_threshold_rad": 0.34557534,
+    "std_rad": 0.1545789484532696
+  },
+  "storage": {
+    "derived_bytes_per_accepted_frame": 18762.42238143978,
+    "derived_dataset_total_size_bytes": 54992660,
+    "derived_mebibytes_per_accepted_frame": 0.01789324033874491,
+    "derived_to_raw_fraction": 0.03536605166662824,
+    "raw_to_derived_ratio": 28.27570375755601,
+    "source_mcap_total_size_bytes": 1554956163
+  },
+  "synchronization": {
+    "accepted_camera_interval_ms": {
+      "count": 2919,
+      "max": 123.016181,
+      "mean": 66.18046985954093,
+      "p95": 72.0663278
+    },
+    "future_label_violations": 0,
+    "rule": "causal zero-order hold on MCAP record timestamps",
+    "speed_age_ms": {
+      "count": 2931,
+      "max": 123.072406,
+      "mean": 36.498414345274654,
+      "median": 38.411893,
+      "p95": 63.291507499999994
+    },
+    "steering_age_ms": {
+      "count": 2931,
+      "max": 70.89681,
+      "mean": 36.49031927703855,
+      "median": 38.304672,
+      "p95": 63.761672499999996
+    }
+  },
+  "temporal": {
+    "holdout": {
+      "adjacent_gap_s": {
+        "count": 968,
+        "max": 0.07,
+        "mean": 0.06600723140495866,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "episode_ids": [
+        "cone_episode_011",
+        "cone_episode_012"
+      ],
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/temporal_manifests/holdout.csv",
+      "manifest_sha256": "813f08ea9dce55f870f38230f52a9a1d53e3c151051f854bf3dc7d7a5ba87db3",
+      "rejected_boundary_count": 4,
+      "rejected_gap_count": 0,
+      "sequence_count": 484,
+      "sources": [
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06600206611570246,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13200413223140495,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_011",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_011.csv",
+          "source_manifest_sha256": "ad99b6c6c59dd139058af8a3175370ce74c4db1110cc2d8a6bdbdf69b7506c23",
+          "temporal_candidates": 242
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06601239669421487,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13202479338842976,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_012",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_012.csv",
+          "source_manifest_sha256": "2bbf4dcfd43bec66b1605a45b3f93787155e16f9f31ff8416529614a20fb3cd2",
+          "temporal_candidates": 242
+        }
+      ],
+      "temporal_candidate_count": 484
+    },
+    "train": {
+      "adjacent_gap_s": {
+        "count": 3876,
+        "max": 0.07,
+        "mean": 0.06599845201238388,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "episode_ids": [
+        "cone_episode_001",
+        "cone_episode_002",
+        "cone_episode_003",
+        "cone_episode_004",
+        "cone_episode_005",
+        "cone_episode_006",
+        "cone_episode_007",
+        "cone_episode_008"
+      ],
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/temporal_manifests/train.csv",
+      "manifest_sha256": "1a7ae2b4aee83ace82ce105353f6c6cd88b17110bf4adf464cb966b042411c97",
+      "rejected_boundary_count": 16,
+      "rejected_gap_count": 0,
+      "sequence_count": 1938,
+      "sources": [
+        {
+          "accepted": 243,
+          "adjacent_gap_s": {
+            "count": 486,
+            "max": 0.07,
+            "mean": 0.06599794238683125,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 243,
+            "max": 0.135,
+            "mean": 0.13199588477366256,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 245,
+          "source_id": "cone_episode_001",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_001.csv",
+          "source_manifest_sha256": "abe954b3291d1fbb1fc6f476c0520f3d81b78b0610426d0ffe653c0ad36bf580",
+          "temporal_candidates": 243
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06599173553719007,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13198347107438016,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_002",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_002.csv",
+          "source_manifest_sha256": "4ee3e7c38619dda77fa93f12f53970ad11bdea7700210eabed3e666a237ee190",
+          "temporal_candidates": 242
+        },
+        {
+          "accepted": 243,
+          "adjacent_gap_s": {
+            "count": 486,
+            "max": 0.07,
+            "mean": 0.06599794238683125,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 243,
+            "max": 0.135,
+            "mean": 0.13199588477366256,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 245,
+          "source_id": "cone_episode_003",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_003.csv",
+          "source_manifest_sha256": "c4ba6914691fb203d8dc2a1848ee449f7cc92a79b46cfa1866910f7f3d146420",
+          "temporal_candidates": 243
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06601239669421485,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13202479338842976,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_004",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_004.csv",
+          "source_manifest_sha256": "78a0fee500b77901942afcb2f905f9fcd1a0a1fd2de2b2e5ab18603b79a2c53b",
+          "temporal_candidates": 242
+        },
+        {
+          "accepted": 243,
+          "adjacent_gap_s": {
+            "count": 486,
+            "max": 0.07,
+            "mean": 0.06599794238683127,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 243,
+            "max": 0.135,
+            "mean": 0.13199588477366256,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 245,
+          "source_id": "cone_episode_005",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_005.csv",
+          "source_manifest_sha256": "bf735cff09e61d7f2b5da9383c3c6cc4ab87b748f19ec9af50c7bb5e6a56128c",
+          "temporal_candidates": 243
+        },
+        {
+          "accepted": 241,
+          "adjacent_gap_s": {
+            "count": 482,
+            "max": 0.07,
+            "mean": 0.06599585062240663,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 241,
+            "max": 0.135,
+            "mean": 0.1319917012448133,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 243,
+          "source_id": "cone_episode_006",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_006.csv",
+          "source_manifest_sha256": "5132a87ee1301fbc8695c6afe60e877c02555782410402f7b92bf98429b286e5",
+          "temporal_candidates": 241
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06599173553719007,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13198347107438016,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_007",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_007.csv",
+          "source_manifest_sha256": "8d93548a43da223699aeb06012a8b891fe6a20987293a8cbc75f41b2a6980d89",
+          "temporal_candidates": 242
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06600206611570246,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13200413223140495,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_008",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_008.csv",
+          "source_manifest_sha256": "a43aea7e0a66aa4dbd59a31fceab419f8a0f6d60cdfe755ddd3fd8dd29e718dd",
+          "temporal_candidates": 242
+        }
+      ],
+      "temporal_candidate_count": 1938
+    },
+    "validation": {
+      "adjacent_gap_s": {
+        "count": 970,
+        "max": 0.07,
+        "mean": 0.06600515463917525,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "episode_ids": [
+        "cone_episode_009",
+        "cone_episode_010"
+      ],
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/temporal_manifests/validation.csv",
+      "manifest_sha256": "5858735ac9f3b788b0b3742241ed7bd86183e6393a79124d04c2a9aa6438f1aa",
+      "rejected_boundary_count": 4,
+      "rejected_gap_count": 0,
+      "sequence_count": 485,
+      "sources": [
+        {
+          "accepted": 243,
+          "adjacent_gap_s": {
+            "count": 486,
+            "max": 0.07,
+            "mean": 0.06599794238683125,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 243,
+            "max": 0.135,
+            "mean": 0.13199588477366256,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 245,
+          "source_id": "cone_episode_009",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_009.csv",
+          "source_manifest_sha256": "0766782adb7ffa266c54d8cd9fe277935432032a6c021cd1ff6f565db5bb0256",
+          "temporal_candidates": 243
+        },
+        {
+          "accepted": 242,
+          "adjacent_gap_s": {
+            "count": 484,
+            "max": 0.07,
+            "mean": 0.06601239669421487,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "oldest_to_current_span_s": {
+            "count": 242,
+            "max": 0.135,
+            "mean": 0.13202479338842976,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "rejected_boundary": 2,
+          "rejected_gap": 0,
+          "source_frames": 244,
+          "source_id": "cone_episode_010",
+          "source_manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/dataset/manifests/cone_episode_010.csv",
+          "source_manifest_sha256": "54aef7779efa9d6f07321b37eb3a17a4130836c918be7403f24e07fa4915847d",
+          "temporal_candidates": 242
+        }
+      ],
+      "temporal_candidate_count": 485
+    }
+  },
+  "version": "cone_avoidance_dataset_v1"
+}

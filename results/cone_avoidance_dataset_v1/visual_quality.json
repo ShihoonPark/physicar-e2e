@@ -1,0 +1,30 @@
+{
+  "version": "cone_avoidance_dataset_visual_quality_v1",
+  "result": "PASS",
+  "inspection": "Manual inspection of actual generated contact sheets before training",
+  "checks": {
+    "expected_roi_and_aspect": true,
+    "color_and_decode_valid": true,
+    "cone_visible_in_approach_samples": true,
+    "normal_lane_and_recovery_coverage_visible": true,
+    "obvious_duplicate_or_corrupt_frames": false
+  },
+  "contact_sheets": [
+    {
+      "split": "train",
+      "episode_id": "cone_episode_001",
+      "sha256": "8ace6ef3af81083d665d8cc7015bd555b305e37fbe040aeffe4d8edf8f0b270a"
+    },
+    {
+      "split": "validation",
+      "episode_id": "cone_episode_009",
+      "sha256": "95964a2d9c7ee3c0c752f9f57f5ca6edb9a5ec9d2b9b43b3ff90fd2a4ef05b6e"
+    },
+    {
+      "split": "holdout",
+      "episode_id": "cone_episode_011",
+      "sha256": "9ec40556cc39b2f454a8d9eeffe17c217c3a525573c96d40971d63fa4e67d828"
+    }
+  ],
+  "limitations": "Nine uniformly sampled frames per episode are a compact quality check, not exhaustive frame-by-frame visual review."
+}

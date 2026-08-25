@@ -1,0 +1,719 @@
+{
+  "aggregate": null,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "classification": "CONE_POLICY_FAIL",
+      "preflight": {
+        "bounds": {
+          "maxX": 12.0,
+          "maxY": 7.0,
+          "minX": 0.0,
+          "minY": 0.0
+        },
+        "camera": {
+          "acquisition_ms": 4.953735002345638,
+          "dimensions": [
+            480,
+            360
+          ],
+          "mode": "RGB",
+          "result": "PASS"
+        },
+        "clock_health": {
+          "maximum_allowed_stall_s": 0.5,
+          "maximum_observed_clock_stall_s": 0.1054310860017722,
+          "observed_real_time_factor": 1.0158398025780149,
+          "paused_exposed": true,
+          "paused_observed": false,
+          "requested_duration_s": 2.0,
+          "result": "PASS",
+          "sample_count": 40,
+          "sim_delta_s": {
+            "max": 0.10500000000001819,
+            "mean": 0.053076923076927275,
+            "min": 0.0
+          },
+          "sim_elapsed_s": 2.0700000000001637,
+          "wall_elapsed_s": 2.0377228719989944,
+          "wall_interval_s": {
+            "max": 0.05320028099959018,
+            "mean": 0.052249304410230624,
+            "min": 0.05118889500226942
+          }
+        },
+        "cone_count": 1,
+        "control_api": "PASS",
+        "environment": {
+          "canonical_cone_free_world_unchanged": true,
+          "canonical_hashes": {
+            "canonical_cone_free_world": "8a4e2b21f1cb2e4ee97684d152442610cb05f03e2ef58f6b805c5bc527d309e1",
+            "canonical_cone_world": "229c12ad677e862f0fa489e4f05891a19a43d21baacb1746f1118f4f66441107",
+            "canonical_route": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+            "cone_mesh": "86254b20a702627178dfa02318d761e18ae2cc859af07f55c0b9106be0890d50",
+            "vehicle_sdf": "443b9074cbe3359e957365305bf3ad9a244b7b84e7bc8583e16d82b79de1d23d"
+          },
+          "cone_count": 1,
+          "cone_geometry": {
+            "collision_2d_half_extents_m": [
+              0.09,
+              0.09
+            ],
+            "collision_name": "cone",
+            "collision_size_xyz_m": [
+              0.18,
+              0.18,
+              0.38
+            ],
+            "source_model": "cone2",
+            "source_pose_z_m": 0.19,
+            "source_world": "custom_71e69ee938032295503bfed557fde18c",
+            "visual_uri": "model://meshes/custom_71e69ee938032295503bfed557fde18c/cone2.dae"
+          },
+          "cone_site": {
+            "chosen_side": "right",
+            "left_clearance_m": 0.3500003028533451,
+            "local_curvature_per_m": -1.791969350684056e-15,
+            "nonlocal_route_clearance_m": 2.0072800628053105,
+            "reason": "midpoint sample of the longest eligible low-curvature run after spawn/final-region exclusions; deterministic side uses greater ray clearance with a frozen tie-break",
+            "right_clearance_m": 0.3500046081131266,
+            "route_s_m": 6.9,
+            "straight_run_end_s_m": 10.600000000000001,
+            "straight_run_length_m": 7.450000000000001,
+            "straight_run_start_s_m": 3.15,
+            "x_m": 6.165700204349249,
+            "y_m": 1.2298027858176892,
+            "yaw_rad": -0.00439402928251829
+          },
+          "derived_world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1",
+          "model_metadata_identical": true,
+          "other_world_collision_clearance": {
+            "checked_explicit_box_collisions": 5,
+            "minimum_clearance_m": 1.1394081932906288,
+            "nearest_collision": "collision",
+            "nearest_model": "wall_0",
+            "result": "PASS"
+          },
+          "result": "PASS",
+          "route_byte_identical": true,
+          "route_sha256": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+          "vehicle_footprint": {
+            "collision_elements": [
+              "base_footprint_fixed_joint_lump__base_collision_collision",
+              "base_footprint_fixed_joint_lump__lidar_collision_collision_1",
+              "front_left_wheel_link_collision",
+              "front_right_wheel_link_collision",
+              "rear_left_wheel_link_collision",
+              "rear_right_wheel_link_collision"
+            ],
+            "conservative_simplification": "axis-aligned base-frame rectangle enclosing the body box, lidar cylinder, rear wheel cylinders, and both front wheel cylinders for every steering angle within the Expert command clamp",
+            "length_m": 0.27,
+            "source_sdf": "/home/a/physicar-ai-sim-docker/src/physicar-sim/share/models/physicar/model.sdf",
+            "steering_envelope_rad": 0.349066,
+            "vertices_base_frame_m": [
+              [
+                -0.135,
+                -0.10927038061476568
+              ],
+              [
+                0.135,
+                -0.10927038061476568
+              ],
+              [
+                0.135,
+                0.10927038061476568
+              ],
+              [
+                -0.135,
+                0.10927038061476568
+              ]
+            ],
+            "width_m": 0.21854076122953137,
+            "x_extent_m": [
+              -0.135,
+              0.135
+            ],
+            "y_extent_m": [
+              -0.10927038061476568,
+              0.10927038061476568
+            ]
+          }
+        },
+        "fixed_contract": {
+          "control_frequency_hz": 15.0,
+          "lookahead_m": 0.9,
+          "speed_mps": 1.8,
+          "steering_limit_rad": 0.349066,
+          "wheelbase_m": 0.18
+        },
+        "offline_geometry_gate": "PASS",
+        "pose": {
+          "q": [
+            -4e-06,
+            -4e-06,
+            -0.707065,
+            0.707148
+          ],
+          "x": 1.400001,
+          "y": 3.394566,
+          "yaw": -1.570679,
+          "z": -0.001162
+        },
+        "result": "PASS",
+        "route_length_m": 30.50461070080936,
+        "route_points": 388,
+        "switching": false,
+        "world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1"
+      },
+      "run": {
+        "api_failures": 0,
+        "camera_acquisition_latency": {
+          "count": 59,
+          "max_ms": 4.5496670027205255,
+          "mean_ms": 2.4941849490352395,
+          "median_ms": 2.4263429986604024,
+          "p95_ms": 3.8051850016927338
+        },
+        "classification": "CONE_POLICY_FAIL",
+        "clock_failures": 0,
+        "control_loop_frequency_hz": 15.185595559224554,
+        "control_loop_period": {
+          "count": 58,
+          "max_ms": 66.75058900145814,
+          "mean_ms": 65.85187891380036,
+          "median_ms": 66.66494399905787,
+          "p95_ms": 66.69024734856066
+        },
+        "elapsed_s": 3.9926513290010917,
+        "failure": "cone clearance 0.043583m is below 0.050m",
+        "failure_category": "other implementation/runtime error",
+        "final_distance_to_start_m": 5.064790970569467,
+        "final_route_s_m": 6.592085982909519,
+        "footprint_cone_intersection_occurred": false,
+        "liveness_failures": 0,
+        "max_absolute_predicted_steering_rad": 0.349066,
+        "max_cte_m": 0.24274021434067178,
+        "maximum_lateral_avoidance_offset_reached_m": 0.24274021434067178,
+        "mean_absolute_command_delta_rad": 0.01543815563967391,
+        "mean_absolute_predicted_steering_rad": 0.06308770095677534,
+        "mean_cte_m": 0.07226271023237614,
+        "minimum_cone_clearance_route_s_m": 6.700089766318251,
+        "minimum_footprint_to_cone_clearance_m": 0.043582666949213776,
+        "model_observation_only": [
+          "camera_yuv_t_minus_2",
+          "camera_yuv_t_minus_1",
+          "camera_yuv_t"
+        ],
+        "neural_observation_fields": [
+          "camera_yuv_t_minus_2",
+          "camera_yuv_t_minus_1",
+          "camera_yuv_t"
+        ],
+        "nominal_route_used_for_progress": true,
+        "off_track_events": 0,
+        "off_track_total_duration_s": 0.0,
+        "onnx_inference_latency": {
+          "count": 59,
+          "max_ms": 4.46536000163178,
+          "mean_ms": 1.881494033776847,
+          "median_ms": 0.8686069995746948,
+          "p95_ms": 4.255929999271757
+        },
+        "pose_failures": 0,
+        "preprocessing_latency": {
+          "count": 59,
+          "max_ms": 2.6544990032562055,
+          "mean_ms": 1.9730121527834976,
+          "median_ms": 1.9354830001248047,
+          "p95_ms": 2.6025556991953636
+        },
+        "privileged_metrics_only": [
+          "pose",
+          "route",
+          "cte",
+          "cone_pose",
+          "footprint_clearance",
+          "recovery"
+        ],
+        "recovery_cte_m": null,
+        "recovery_success": false,
+        "recovery_time_s": null,
+        "result": "FAIL",
+        "route_completion_fraction": 0.21606274695850305,
+        "route_length_m": 30.50461070080936,
+        "safe_stop_errors": [],
+        "safe_stop_success": true,
+        "speed_mps": 1.8,
+        "steering_saturation_fraction": 0.034482758620689655,
+        "temporal_frame_gaps": {
+          "middle_to_current_s": {
+            "count": 59,
+            "max": 0.07048001200018916,
+            "mean": 0.06480755201692326,
+            "median": 0.06657542100219871,
+            "p95": 0.06837485130163258
+          },
+          "oldest_to_current_s": {
+            "count": 59,
+            "max": 0.1364047249990108,
+            "mean": 0.12967834071180007,
+            "median": 0.1333639009972103,
+            "p95": 0.13494479859800776
+          },
+          "oldest_to_middle_s": {
+            "count": 59,
+            "max": 0.07101298899942776,
+            "mean": 0.06487078869487682,
+            "median": 0.06657542100219871,
+            "p95": 0.06878538799755915
+          }
+        },
+        "temporal_input_failure": false,
+        "temporal_invalid_history_count": 0,
+        "timing_slips_over_100ms": 0,
+        "total_temporal_model_path_latency": {
+          "count": 59,
+          "max_ms": 6.908314000611426,
+          "mean_ms": 3.862449491307262,
+          "median_ms": 2.9230129985080566,
+          "p95_ms": 6.5333656977600185
+        },
+        "total_unwrapped_progress_m": 6.590909982916617,
+        "warmup": {
+          "adjacent_gaps_s": [
+            0.07103211499997997,
+            0.07101298899942776
+          ],
+          "camera_acquisition_latency": {
+            "count": 3,
+            "max_ms": 3.81793799897423,
+            "mean_ms": 2.9392600008577574,
+            "median_ms": 2.5981850012612995,
+            "p95_ms": 3.695962699202937
+          },
+          "duplicate_padding_frames": 0,
+          "oldest_to_current_span_s": 0.14204510399940773,
+          "preprocessing_latency": {
+            "count": 3,
+            "max_ms": 1.8834059992514085,
+            "mean_ms": 1.758361999236513,
+            "median_ms": 1.7387549996783491,
+            "p95_ms": 1.8689408992941026
+          },
+          "real_frame_acquisitions": 3,
+          "result": "PASS",
+          "vehicle_motion_during_warmup": false
+        }
+      },
+      "valid_policy_run_number": 1
+    }
+  ],
+  "audit": {
+    "avoidance": {
+      "departure_s_m": 4.2,
+      "maximum_lateral_offset_m": 0.2542703806147657,
+      "return_s_m": 9.600000000000001,
+      "side": "right"
+    },
+    "baseline_audit": {
+      "high_speed_expert_v1": {
+        "control_frequency_hz": 15.0,
+        "lookahead_m": 0.9,
+        "max_steering_rad": 0.349066,
+        "speed_mps": 1.8,
+        "success": "3/3",
+        "wheelbase_m": 0.18
+      },
+      "identities": {
+        "high_speed_expert": {
+          "path": "results/expert_speed_1p8_repeatability_v1/summary.json",
+          "sha256": "aa0195ebeb2a15d1e6536896afaa5115bbf3c7c7cde7df319768dcff1bb42672"
+        },
+        "pilotnet_v4": {
+          "path": "results/pilotnet_v4_repeatability_v1/summary.json",
+          "sha256": "15fd6c61ce94f3962aeb6c7c64bd7462a1e60ab9161282ea926cd9fd60dc8503"
+        },
+        "temporal_pilotnet_v9_live": {
+          "path": "results/pilotnet_e2e_v9_high_speed_temporal/summary.json",
+          "sha256": "56829cfc312f5cfe353458c60afcd146a54f406374d2e02546e20406cccaa6d2"
+        },
+        "temporal_pilotnet_v9_training": {
+          "path": "results/pilotnet_training_v9_high_speed_temporal/summary.json",
+          "sha256": "4c22c0b7f2d408b44b4698ff98d394ff3bde3f8d40c5dc34e6edd0a30d906f87"
+        }
+      },
+      "pilotnet_v4": {
+        "observation": "single camera frame",
+        "speed_mps": 0.5,
+        "success": "3/3"
+      },
+      "preserved_files_unchanged": true,
+      "result": "PASS",
+      "temporal_pilotnet_v9": {
+        "observation": "causal three-frame camera",
+        "parameter_count": 255819,
+        "speed_mps": 1.8,
+        "success": "3/3 same-map/same-spawn"
+      }
+    },
+    "cone": {
+      "route_s_m": 6.9,
+      "x_m": 6.165700204349249,
+      "y_m": 1.2298027858176892
+    },
+    "environment": {
+      "canonical_cone_free_world_unchanged": true,
+      "canonical_hashes": {
+        "canonical_cone_free_world": "8a4e2b21f1cb2e4ee97684d152442610cb05f03e2ef58f6b805c5bc527d309e1",
+        "canonical_cone_world": "229c12ad677e862f0fa489e4f05891a19a43d21baacb1746f1118f4f66441107",
+        "canonical_route": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+        "cone_mesh": "86254b20a702627178dfa02318d761e18ae2cc859af07f55c0b9106be0890d50",
+        "vehicle_sdf": "443b9074cbe3359e957365305bf3ad9a244b7b84e7bc8583e16d82b79de1d23d"
+      },
+      "cone_count": 1,
+      "cone_geometry": {
+        "collision_2d_half_extents_m": [
+          0.09,
+          0.09
+        ],
+        "collision_name": "cone",
+        "collision_size_xyz_m": [
+          0.18,
+          0.18,
+          0.38
+        ],
+        "source_model": "cone2",
+        "source_pose_z_m": 0.19,
+        "source_world": "custom_71e69ee938032295503bfed557fde18c",
+        "visual_uri": "model://meshes/custom_71e69ee938032295503bfed557fde18c/cone2.dae"
+      },
+      "cone_site": {
+        "chosen_side": "right",
+        "left_clearance_m": 0.3500003028533451,
+        "local_curvature_per_m": -1.791969350684056e-15,
+        "nonlocal_route_clearance_m": 2.0072800628053105,
+        "reason": "midpoint sample of the longest eligible low-curvature run after spawn/final-region exclusions; deterministic side uses greater ray clearance with a frozen tie-break",
+        "right_clearance_m": 0.3500046081131266,
+        "route_s_m": 6.9,
+        "straight_run_end_s_m": 10.600000000000001,
+        "straight_run_length_m": 7.450000000000001,
+        "straight_run_start_s_m": 3.15,
+        "x_m": 6.165700204349249,
+        "y_m": 1.2298027858176892,
+        "yaw_rad": -0.00439402928251829
+      },
+      "derived_world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1",
+      "model_metadata_identical": true,
+      "other_world_collision_clearance": {
+        "checked_explicit_box_collisions": 5,
+        "minimum_clearance_m": 1.1394081932906288,
+        "nearest_collision": "collision",
+        "nearest_model": "wall_0",
+        "result": "PASS"
+      },
+      "result": "PASS",
+      "route_byte_identical": true,
+      "route_sha256": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+      "vehicle_footprint": {
+        "collision_elements": [
+          "base_footprint_fixed_joint_lump__base_collision_collision",
+          "base_footprint_fixed_joint_lump__lidar_collision_collision_1",
+          "front_left_wheel_link_collision",
+          "front_right_wheel_link_collision",
+          "rear_left_wheel_link_collision",
+          "rear_right_wheel_link_collision"
+        ],
+        "conservative_simplification": "axis-aligned base-frame rectangle enclosing the body box, lidar cylinder, rear wheel cylinders, and both front wheel cylinders for every steering angle within the Expert command clamp",
+        "length_m": 0.27,
+        "source_sdf": "/home/a/physicar-ai-sim-docker/src/physicar-sim/share/models/physicar/model.sdf",
+        "steering_envelope_rad": 0.349066,
+        "vertices_base_frame_m": [
+          [
+            -0.135,
+            -0.10927038061476568
+          ],
+          [
+            0.135,
+            -0.10927038061476568
+          ],
+          [
+            0.135,
+            0.10927038061476568
+          ],
+          [
+            -0.135,
+            0.10927038061476568
+          ]
+        ],
+        "width_m": 0.21854076122953137,
+        "x_extent_m": [
+          -0.135,
+          0.135
+        ],
+        "y_extent_m": [
+          -0.10927038061476568,
+          0.10927038061476568
+        ]
+      }
+    },
+    "expert_clearances_m": [
+      0.05625004063486008,
+      0.05633822370619551,
+      0.0564010972779393
+    ],
+    "identities": {
+      "cone_environment_config": {
+        "path": "configs/cone_avoidance_environment_v1.json",
+        "sha256": "0778f735fd431f7befcf0ed17f59379e48883635914dea6c91b8087cc285830a"
+      },
+      "cone_expert_config": {
+        "path": "configs/cone_avoidance_expert_v1.json",
+        "sha256": "77deb963369b34aba917c3db6f559a63f85e80ae6e78dd2cf20a34dfe54e9831"
+      },
+      "cone_expert_result": {
+        "path": "results/cone_avoidance_expert_v1/summary.json",
+        "sha256": "b1b0603ba34e50644802b6b2c46fdc92c9290f31273eed2f2ac0387830ce7082"
+      },
+      "v9_checkpoint": {
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/checkpoints/pilotnet_v9_high_speed_temporal_best.pt",
+        "sha256": "1cded5fcc7f3d13242de096c4868fc576d03fa6bc86df6e5c8c7c235d9faa6cc"
+      },
+      "v9_dataset_config": {
+        "path": "configs/high_speed_temporal_dataset_v1.json",
+        "sha256": "619bfea3c4fcbc5b8dcd8a37edfb1383bd97c695a38b69149dd3856b646aec46"
+      },
+      "v9_live_result": {
+        "path": "results/pilotnet_e2e_v9_high_speed_temporal/summary.json",
+        "sha256": "56829cfc312f5cfe353458c60afcd146a54f406374d2e02546e20406cccaa6d2"
+      },
+      "v9_onnx": {
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/onnx/pilotnet_v9_high_speed_temporal.onnx",
+        "sha256": "7f6aa4c2d8c9b3615c580f065660c674efff94ff4cd0b9bdc9357df904000888"
+      },
+      "v9_train_manifest": {
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/train.csv",
+        "sha256": "07d2f6cb6dd668352ae988dcfb771fa42739faed745681c0ed9b682b669834b4"
+      },
+      "v9_training_config": {
+        "path": "configs/pilotnet_training_v9_high_speed_temporal.json",
+        "sha256": "c8c9821cde130a4855d81a11428e49ee1c5f3f42faad8bd4939c23b412d5a017"
+      },
+      "v9_training_result": {
+        "path": "results/pilotnet_training_v9_high_speed_temporal/summary.json",
+        "sha256": "4c22c0b7f2d408b44b4698ff98d394ff3bde3f8d40c5dc34e6edd0a30d906f87"
+      }
+    },
+    "result": "PASS",
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1"
+  },
+  "c1_frozen": false,
+  "camera_only_observation": true,
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "generated_utc": "2026-08-25T08:17:22.263246+00:00",
+  "multi_location_work_justified": false,
+  "onnx": {
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/c1/onnx/pilotnet_c1_cone_temporal.onnx",
+    "sha256": "22440ad61f6e5136b33016eb0781d79ab71637e659478ac0c92cc04cffc98e5f",
+    "size_bytes": 1026938
+  },
+  "result": "FAIL",
+  "temporal_live_preflight": {
+    "buffer": {
+      "adjacent_gaps_s": [
+        0.07091523599956417,
+        0.07144829399840091
+      ],
+      "camera_acquisition_latency": {
+        "count": 3,
+        "max_ms": 2.784162003081292,
+        "mean_ms": 2.4157593349324693,
+        "median_ms": 2.2986030016909353,
+        "p95_ms": 2.7356061029422563
+      },
+      "duplicate_padding_frames": 0,
+      "oldest_to_current_span_s": 0.1423635299979651,
+      "preprocessing_latency": {
+        "count": 3,
+        "max_ms": 3.9087080003810115,
+        "mean_ms": 2.60243599889994,
+        "median_ms": 2.0001249977212865,
+        "p95_ms": 3.717849700115039
+      },
+      "real_frame_acquisitions": 3,
+      "result": "PASS",
+      "vehicle_motion_during_warmup": false
+    },
+    "environment": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "camera": {
+        "acquisition_ms": 8.711801001481945,
+        "dimensions": [
+          480,
+          360
+        ],
+        "mode": "RGB",
+        "result": "PASS"
+      },
+      "clock_health": {
+        "maximum_allowed_stall_s": 0.5,
+        "maximum_observed_clock_stall_s": 0.10576059300001361,
+        "observed_real_time_factor": 1.003626508923074,
+        "paused_exposed": true,
+        "paused_observed": false,
+        "requested_duration_s": 2.0,
+        "result": "PASS",
+        "sample_count": 40,
+        "sim_delta_s": {
+          "max": 0.10500000000001819,
+          "mean": 0.05256410256409557,
+          "min": 0.0
+        },
+        "sim_elapsed_s": 2.049999999999727,
+        "wall_elapsed_s": 2.0425925199997437,
+        "wall_interval_s": {
+          "max": 0.053341625000030035,
+          "mean": 0.05237416717948061,
+          "min": 0.05111077900073724
+        }
+      },
+      "cone_count": 1,
+      "control_api": "PASS",
+      "environment": {
+        "canonical_cone_free_world_unchanged": true,
+        "canonical_hashes": {
+          "canonical_cone_free_world": "8a4e2b21f1cb2e4ee97684d152442610cb05f03e2ef58f6b805c5bc527d309e1",
+          "canonical_cone_world": "229c12ad677e862f0fa489e4f05891a19a43d21baacb1746f1118f4f66441107",
+          "canonical_route": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+          "cone_mesh": "86254b20a702627178dfa02318d761e18ae2cc859af07f55c0b9106be0890d50",
+          "vehicle_sdf": "443b9074cbe3359e957365305bf3ad9a244b7b84e7bc8583e16d82b79de1d23d"
+        },
+        "cone_count": 1,
+        "cone_geometry": {
+          "collision_2d_half_extents_m": [
+            0.09,
+            0.09
+          ],
+          "collision_name": "cone",
+          "collision_size_xyz_m": [
+            0.18,
+            0.18,
+            0.38
+          ],
+          "source_model": "cone2",
+          "source_pose_z_m": 0.19,
+          "source_world": "custom_71e69ee938032295503bfed557fde18c",
+          "visual_uri": "model://meshes/custom_71e69ee938032295503bfed557fde18c/cone2.dae"
+        },
+        "cone_site": {
+          "chosen_side": "right",
+          "left_clearance_m": 0.3500003028533451,
+          "local_curvature_per_m": -1.791969350684056e-15,
+          "nonlocal_route_clearance_m": 2.0072800628053105,
+          "reason": "midpoint sample of the longest eligible low-curvature run after spawn/final-region exclusions; deterministic side uses greater ray clearance with a frozen tie-break",
+          "right_clearance_m": 0.3500046081131266,
+          "route_s_m": 6.9,
+          "straight_run_end_s_m": 10.600000000000001,
+          "straight_run_length_m": 7.450000000000001,
+          "straight_run_start_s_m": 3.15,
+          "x_m": 6.165700204349249,
+          "y_m": 1.2298027858176892,
+          "yaw_rad": -0.00439402928251829
+        },
+        "derived_world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1",
+        "model_metadata_identical": true,
+        "other_world_collision_clearance": {
+          "checked_explicit_box_collisions": 5,
+          "minimum_clearance_m": 1.1394081932906288,
+          "nearest_collision": "collision",
+          "nearest_model": "wall_0",
+          "result": "PASS"
+        },
+        "result": "PASS",
+        "route_byte_identical": true,
+        "route_sha256": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+        "vehicle_footprint": {
+          "collision_elements": [
+            "base_footprint_fixed_joint_lump__base_collision_collision",
+            "base_footprint_fixed_joint_lump__lidar_collision_collision_1",
+            "front_left_wheel_link_collision",
+            "front_right_wheel_link_collision",
+            "rear_left_wheel_link_collision",
+            "rear_right_wheel_link_collision"
+          ],
+          "conservative_simplification": "axis-aligned base-frame rectangle enclosing the body box, lidar cylinder, rear wheel cylinders, and both front wheel cylinders for every steering angle within the Expert command clamp",
+          "length_m": 0.27,
+          "source_sdf": "/home/a/physicar-ai-sim-docker/src/physicar-sim/share/models/physicar/model.sdf",
+          "steering_envelope_rad": 0.349066,
+          "vertices_base_frame_m": [
+            [
+              -0.135,
+              -0.10927038061476568
+            ],
+            [
+              0.135,
+              -0.10927038061476568
+            ],
+            [
+              0.135,
+              0.10927038061476568
+            ],
+            [
+              -0.135,
+              0.10927038061476568
+            ]
+          ],
+          "width_m": 0.21854076122953137,
+          "x_extent_m": [
+            -0.135,
+            0.135
+          ],
+          "y_extent_m": [
+            -0.10927038061476568,
+            0.10927038061476568
+          ]
+        }
+      },
+      "fixed_contract": {
+        "control_frequency_hz": 15.0,
+        "lookahead_m": 0.9,
+        "speed_mps": 1.8,
+        "steering_limit_rad": 0.349066,
+        "wheelbase_m": 0.18
+      },
+      "offline_geometry_gate": "PASS",
+      "pose": {
+        "q": [
+          0.0,
+          0.0,
+          -0.707065,
+          0.707148
+        ],
+        "x": 1.400001,
+        "y": 3.394457,
+        "yaw": -1.570679,
+        "z": -0.00115
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1"
+    },
+    "model_observation_fields": [
+      "camera_yuv_t_minus_2",
+      "camera_yuv_t_minus_1",
+      "camera_yuv_t"
+    ],
+    "result": "PASS",
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1"
+  },
+  "total_attempts": 1,
+  "valid_policy_runs": 1,
+  "version": "pilotnet_e2e_c1_cone_temporal"
+}

@@ -1,0 +1,778 @@
+{
+  "architecture": {
+    "identical_to_v9": true,
+    "input_shape": [
+      9,
+      66,
+      200
+    ],
+    "parameter_count": 255819
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/c1/checkpoints/pilotnet_c1_cone_temporal_best.pt",
+      "sha256": "1e90002ca139b3cfb0f34074e013e52b6754df33ed0e3b438ca81809c9e2ee39",
+      "size_bytes": 1032149
+    },
+    "onnx": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/c1/onnx/pilotnet_c1_cone_temporal.onnx",
+      "sha256": "22440ad61f6e5136b33016eb0781d79ab71637e659478ac0c92cc04cffc98e5f",
+      "size_bytes": 1026938
+    }
+  },
+  "audit": {
+    "avoidance": {
+      "departure_s_m": 4.2,
+      "maximum_lateral_offset_m": 0.2542703806147657,
+      "return_s_m": 9.600000000000001,
+      "side": "right"
+    },
+    "baseline_audit": {
+      "high_speed_expert_v1": {
+        "control_frequency_hz": 15.0,
+        "lookahead_m": 0.9,
+        "max_steering_rad": 0.349066,
+        "speed_mps": 1.8,
+        "success": "3/3",
+        "wheelbase_m": 0.18
+      },
+      "identities": {
+        "high_speed_expert": {
+          "path": "results/expert_speed_1p8_repeatability_v1/summary.json",
+          "sha256": "aa0195ebeb2a15d1e6536896afaa5115bbf3c7c7cde7df319768dcff1bb42672"
+        },
+        "pilotnet_v4": {
+          "path": "results/pilotnet_v4_repeatability_v1/summary.json",
+          "sha256": "15fd6c61ce94f3962aeb6c7c64bd7462a1e60ab9161282ea926cd9fd60dc8503"
+        },
+        "temporal_pilotnet_v9_live": {
+          "path": "results/pilotnet_e2e_v9_high_speed_temporal/summary.json",
+          "sha256": "56829cfc312f5cfe353458c60afcd146a54f406374d2e02546e20406cccaa6d2"
+        },
+        "temporal_pilotnet_v9_training": {
+          "path": "results/pilotnet_training_v9_high_speed_temporal/summary.json",
+          "sha256": "4c22c0b7f2d408b44b4698ff98d394ff3bde3f8d40c5dc34e6edd0a30d906f87"
+        }
+      },
+      "pilotnet_v4": {
+        "observation": "single camera frame",
+        "speed_mps": 0.5,
+        "success": "3/3"
+      },
+      "preserved_files_unchanged": true,
+      "result": "PASS",
+      "temporal_pilotnet_v9": {
+        "observation": "causal three-frame camera",
+        "parameter_count": 255819,
+        "speed_mps": 1.8,
+        "success": "3/3 same-map/same-spawn"
+      }
+    },
+    "cone": {
+      "route_s_m": 6.9,
+      "x_m": 6.165700204349249,
+      "y_m": 1.2298027858176892
+    },
+    "environment": {
+      "canonical_cone_free_world_unchanged": true,
+      "canonical_hashes": {
+        "canonical_cone_free_world": "8a4e2b21f1cb2e4ee97684d152442610cb05f03e2ef58f6b805c5bc527d309e1",
+        "canonical_cone_world": "229c12ad677e862f0fa489e4f05891a19a43d21baacb1746f1118f4f66441107",
+        "canonical_route": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+        "cone_mesh": "86254b20a702627178dfa02318d761e18ae2cc859af07f55c0b9106be0890d50",
+        "vehicle_sdf": "443b9074cbe3359e957365305bf3ad9a244b7b84e7bc8583e16d82b79de1d23d"
+      },
+      "cone_count": 1,
+      "cone_geometry": {
+        "collision_2d_half_extents_m": [
+          0.09,
+          0.09
+        ],
+        "collision_name": "cone",
+        "collision_size_xyz_m": [
+          0.18,
+          0.18,
+          0.38
+        ],
+        "source_model": "cone2",
+        "source_pose_z_m": 0.19,
+        "source_world": "custom_71e69ee938032295503bfed557fde18c",
+        "visual_uri": "model://meshes/custom_71e69ee938032295503bfed557fde18c/cone2.dae"
+      },
+      "cone_site": {
+        "chosen_side": "right",
+        "left_clearance_m": 0.3500003028533451,
+        "local_curvature_per_m": -1.791969350684056e-15,
+        "nonlocal_route_clearance_m": 2.0072800628053105,
+        "reason": "midpoint sample of the longest eligible low-curvature run after spawn/final-region exclusions; deterministic side uses greater ray clearance with a frozen tie-break",
+        "right_clearance_m": 0.3500046081131266,
+        "route_s_m": 6.9,
+        "straight_run_end_s_m": 10.600000000000001,
+        "straight_run_length_m": 7.450000000000001,
+        "straight_run_start_s_m": 3.15,
+        "x_m": 6.165700204349249,
+        "y_m": 1.2298027858176892,
+        "yaw_rad": -0.00439402928251829
+      },
+      "derived_world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1",
+      "model_metadata_identical": true,
+      "other_world_collision_clearance": {
+        "checked_explicit_box_collisions": 5,
+        "minimum_clearance_m": 1.1394081932906288,
+        "nearest_collision": "collision",
+        "nearest_model": "wall_0",
+        "result": "PASS"
+      },
+      "result": "PASS",
+      "route_byte_identical": true,
+      "route_sha256": "07309dab65d64719ba833bcb43a3dc28276928ae16cc6dfaa9c6882f497a4213",
+      "vehicle_footprint": {
+        "collision_elements": [
+          "base_footprint_fixed_joint_lump__base_collision_collision",
+          "base_footprint_fixed_joint_lump__lidar_collision_collision_1",
+          "front_left_wheel_link_collision",
+          "front_right_wheel_link_collision",
+          "rear_left_wheel_link_collision",
+          "rear_right_wheel_link_collision"
+        ],
+        "conservative_simplification": "axis-aligned base-frame rectangle enclosing the body box, lidar cylinder, rear wheel cylinders, and both front wheel cylinders for every steering angle within the Expert command clamp",
+        "length_m": 0.27,
+        "source_sdf": "/home/a/physicar-ai-sim-docker/src/physicar-sim/share/models/physicar/model.sdf",
+        "steering_envelope_rad": 0.349066,
+        "vertices_base_frame_m": [
+          [
+            -0.135,
+            -0.10927038061476568
+          ],
+          [
+            0.135,
+            -0.10927038061476568
+          ],
+          [
+            0.135,
+            0.10927038061476568
+          ],
+          [
+            -0.135,
+            0.10927038061476568
+          ]
+        ],
+        "width_m": 0.21854076122953137,
+        "x_extent_m": [
+          -0.135,
+          0.135
+        ],
+        "y_extent_m": [
+          -0.10927038061476568,
+          0.10927038061476568
+        ]
+      }
+    },
+    "expert_clearances_m": [
+      0.05625004063486008,
+      0.05633822370619551,
+      0.0564010972779393
+    ],
+    "identities": {
+      "cone_environment_config": {
+        "path": "configs/cone_avoidance_environment_v1.json",
+        "sha256": "0778f735fd431f7befcf0ed17f59379e48883635914dea6c91b8087cc285830a"
+      },
+      "cone_expert_config": {
+        "path": "configs/cone_avoidance_expert_v1.json",
+        "sha256": "77deb963369b34aba917c3db6f559a63f85e80ae6e78dd2cf20a34dfe54e9831"
+      },
+      "cone_expert_result": {
+        "path": "results/cone_avoidance_expert_v1/summary.json",
+        "sha256": "b1b0603ba34e50644802b6b2c46fdc92c9290f31273eed2f2ac0387830ce7082"
+      },
+      "v9_checkpoint": {
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/checkpoints/pilotnet_v9_high_speed_temporal_best.pt",
+        "sha256": "1cded5fcc7f3d13242de096c4868fc576d03fa6bc86df6e5c8c7c235d9faa6cc"
+      },
+      "v9_dataset_config": {
+        "path": "configs/high_speed_temporal_dataset_v1.json",
+        "sha256": "619bfea3c4fcbc5b8dcd8a37edfb1383bd97c695a38b69149dd3856b646aec46"
+      },
+      "v9_live_result": {
+        "path": "results/pilotnet_e2e_v9_high_speed_temporal/summary.json",
+        "sha256": "56829cfc312f5cfe353458c60afcd146a54f406374d2e02546e20406cccaa6d2"
+      },
+      "v9_onnx": {
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/v9/onnx/pilotnet_v9_high_speed_temporal.onnx",
+        "sha256": "7f6aa4c2d8c9b3615c580f065660c674efff94ff4cd0b9bdc9357df904000888"
+      },
+      "v9_train_manifest": {
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_temporal_v1/manifests/train.csv",
+        "sha256": "07d2f6cb6dd668352ae988dcfb771fa42739faed745681c0ed9b682b669834b4"
+      },
+      "v9_training_config": {
+        "path": "configs/pilotnet_training_v9_high_speed_temporal.json",
+        "sha256": "c8c9821cde130a4855d81a11428e49ee1c5f3f42faad8bd4939c23b412d5a017"
+      },
+      "v9_training_result": {
+        "path": "results/pilotnet_training_v9_high_speed_temporal/summary.json",
+        "sha256": "4c22c0b7f2d408b44b4698ff98d394ff3bde3f8d40c5dc34e6edd0a30d906f87"
+      }
+    },
+    "result": "PASS",
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_cone_avoidance_v1"
+  },
+  "dataset": {
+    "cone_holdout": 484,
+    "cone_train": 1938,
+    "cone_validation": 485,
+    "nominal_holdout": 481,
+    "nominal_validation": 482,
+    "v9_train": 3510
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_normalized_mse": 0.09509306009475924,
+      "validation_normalized_mse": 0.010444727092557572
+    },
+    {
+      "epoch": 2,
+      "train_normalized_mse": 0.009989265653013462,
+      "validation_normalized_mse": 0.006592631095879728
+    },
+    {
+      "epoch": 3,
+      "train_normalized_mse": 0.008174077699319207,
+      "validation_normalized_mse": 0.007997622996719887
+    },
+    {
+      "epoch": 4,
+      "train_normalized_mse": 0.008346026876145392,
+      "validation_normalized_mse": 0.0031769358597204885
+    },
+    {
+      "epoch": 5,
+      "train_normalized_mse": 0.006152670317645378,
+      "validation_normalized_mse": 0.0032677583353335833
+    },
+    {
+      "epoch": 6,
+      "train_normalized_mse": 0.005879874625646683,
+      "validation_normalized_mse": 0.004805849505840746
+    },
+    {
+      "epoch": 7,
+      "train_normalized_mse": 0.005949006585141701,
+      "validation_normalized_mse": 0.006545431387715231
+    },
+    {
+      "epoch": 8,
+      "train_normalized_mse": 0.006044246912448395,
+      "validation_normalized_mse": 0.0035363660019898505
+    },
+    {
+      "epoch": 9,
+      "train_normalized_mse": 0.00534795274104644,
+      "validation_normalized_mse": 0.004285406165173847
+    },
+    {
+      "epoch": 10,
+      "train_normalized_mse": 0.0055192082006793345,
+      "validation_normalized_mse": 0.0027653405302822506
+    },
+    {
+      "epoch": 11,
+      "train_normalized_mse": 0.005105674720253719,
+      "validation_normalized_mse": 0.003524436304324539
+    },
+    {
+      "epoch": 12,
+      "train_normalized_mse": 0.0050241255014040745,
+      "validation_normalized_mse": 0.003202690220606006
+    },
+    {
+      "epoch": 13,
+      "train_normalized_mse": 0.004830509366771198,
+      "validation_normalized_mse": 0.002450484157462374
+    },
+    {
+      "epoch": 14,
+      "train_normalized_mse": 0.004562454749098411,
+      "validation_normalized_mse": 0.003126252760723977
+    },
+    {
+      "epoch": 15,
+      "train_normalized_mse": 0.004485924621543433,
+      "validation_normalized_mse": 0.002865923010005453
+    },
+    {
+      "epoch": 16,
+      "train_normalized_mse": 0.004378285859376411,
+      "validation_normalized_mse": 0.0021203867380214505
+    },
+    {
+      "epoch": 17,
+      "train_normalized_mse": 0.004546164902865274,
+      "validation_normalized_mse": 0.005244748308276373
+    },
+    {
+      "epoch": 18,
+      "train_normalized_mse": 0.00527118146214388,
+      "validation_normalized_mse": 0.003038455124266904
+    },
+    {
+      "epoch": 19,
+      "train_normalized_mse": 0.004069597877441699,
+      "validation_normalized_mse": 0.0020756139363992416
+    },
+    {
+      "epoch": 20,
+      "train_normalized_mse": 0.0043164711674126945,
+      "validation_normalized_mse": 0.0023943207959947633
+    },
+    {
+      "epoch": 21,
+      "train_normalized_mse": 0.003662389611467041,
+      "validation_normalized_mse": 0.0027219711443180103
+    },
+    {
+      "epoch": 22,
+      "train_normalized_mse": 0.004455467727084517,
+      "validation_normalized_mse": 0.002304609617146263
+    },
+    {
+      "epoch": 23,
+      "train_normalized_mse": 0.00426008907165898,
+      "validation_normalized_mse": 0.0020389377089306874
+    },
+    {
+      "epoch": 24,
+      "train_normalized_mse": 0.003902767697710232,
+      "validation_normalized_mse": 0.0026433741540918677
+    },
+    {
+      "epoch": 25,
+      "train_normalized_mse": 0.0037602651140327113,
+      "validation_normalized_mse": 0.0019960559735971773
+    },
+    {
+      "epoch": 26,
+      "train_normalized_mse": 0.0032765885566124657,
+      "validation_normalized_mse": 0.002414407760902638
+    },
+    {
+      "epoch": 27,
+      "train_normalized_mse": 0.003058380237233479,
+      "validation_normalized_mse": 0.0040786916471263176
+    },
+    {
+      "epoch": 28,
+      "train_normalized_mse": 0.003651484315079827,
+      "validation_normalized_mse": 0.002099410946886758
+    },
+    {
+      "epoch": 29,
+      "train_normalized_mse": 0.002858191868085168,
+      "validation_normalized_mse": 0.0019065177293932315
+    },
+    {
+      "epoch": 30,
+      "train_normalized_mse": 0.003003282542237889,
+      "validation_normalized_mse": 0.0035597696587689664
+    },
+    {
+      "epoch": 31,
+      "train_normalized_mse": 0.0036110235241388084,
+      "validation_normalized_mse": 0.0026763772259286007
+    },
+    {
+      "epoch": 32,
+      "train_normalized_mse": 0.0028406190145733425,
+      "validation_normalized_mse": 0.0019725065541657356
+    },
+    {
+      "epoch": 33,
+      "train_normalized_mse": 0.002955433807271518,
+      "validation_normalized_mse": 0.003668292984896125
+    },
+    {
+      "epoch": 34,
+      "train_normalized_mse": 0.0036310487424766045,
+      "validation_normalized_mse": 0.00675031229178975
+    },
+    {
+      "epoch": 35,
+      "train_normalized_mse": 0.0029746535649214064,
+      "validation_normalized_mse": 0.0030365743017139062
+    }
+  ],
+  "evaluation_route_s_reanalysis": {
+    "checkpoint_unchanged": true,
+    "dataset_region_counts": {
+      "holdout": {
+        "approach": 16,
+        "departure_avoidance": 52,
+        "pass_return": 40,
+        "recovered": 16
+      },
+      "validation": {
+        "approach": 16,
+        "departure_avoidance": 52,
+        "pass_return": 40,
+        "recovered": 17
+      }
+    },
+    "generated_utc": "2026-08-25T08:16:59.379691+00:00",
+    "onnx_unchanged": true,
+    "result": "PASS",
+    "training_reexecuted": false
+  },
+  "generated_utc": "2026-08-25T08:06:31.379985+00:00",
+  "matched_offline_comparison": {
+    "cone_holdout": {
+      "c1": {
+        "bias_mean_signed_error_rad": -0.0020310569645816874,
+        "corrective_magnitude_ratio": 1.0016817179707613,
+        "correlation": 0.9959182381889528,
+        "mae_rad": 0.009758912985448372,
+        "max_absolute_error_rad": 0.06153058279067469,
+        "rmse_rad": 0.014317864166821018,
+        "sample_count": 484
+      },
+      "matched_count": 484,
+      "v9": {
+        "bias_mean_signed_error_rad": 0.018690130338322685,
+        "corrective_magnitude_ratio": 1.1208244617320582,
+        "correlation": 0.9568271148974637,
+        "mae_rad": 0.029449222382199478,
+        "max_absolute_error_rad": 0.14907507546745516,
+        "rmse_rad": 0.04917692853516417,
+        "sample_count": 484
+      }
+    },
+    "cone_validation": {
+      "c1": {
+        "bias_mean_signed_error_rad": -0.0018226611177471024,
+        "corrective_magnitude_ratio": 1.0026509037481293,
+        "correlation": 0.9952612331502423,
+        "mae_rad": 0.010010386580375173,
+        "max_absolute_error_rad": 0.08815046462656445,
+        "rmse_rad": 0.015274970978863498,
+        "sample_count": 485
+      },
+      "matched_count": 485,
+      "v9": {
+        "bias_mean_signed_error_rad": 0.01847968040383009,
+        "corrective_magnitude_ratio": 1.1185283817833882,
+        "correlation": 0.9571225233688503,
+        "mae_rad": 0.028819149469631905,
+        "max_absolute_error_rad": 0.14926101126519423,
+        "rmse_rad": 0.048666015344096446,
+        "sample_count": 485
+      }
+    },
+    "nominal_holdout": {
+      "c1": {
+        "bias_mean_signed_error_rad": -0.0021998149362156944,
+        "corrective_magnitude_ratio": 1.004322459924168,
+        "correlation": 0.9955350029373871,
+        "mae_rad": 0.009575716930524955,
+        "max_absolute_error_rad": 0.0641136418077515,
+        "rmse_rad": 0.014862280798268138,
+        "sample_count": 481
+      },
+      "matched_count": 481,
+      "v9": {
+        "bias_mean_signed_error_rad": 0.0013983358330316251,
+        "corrective_magnitude_ratio": 0.9989545655854011,
+        "correlation": 0.9934911062845929,
+        "mae_rad": 0.010725361380216666,
+        "max_absolute_error_rad": 0.07621544105740055,
+        "rmse_rad": 0.017472230910774343,
+        "sample_count": 481
+      }
+    },
+    "nominal_validation": {
+      "c1": {
+        "bias_mean_signed_error_rad": -0.002484761057428535,
+        "corrective_magnitude_ratio": 0.9946162758561521,
+        "correlation": 0.9952521782709532,
+        "mae_rad": 0.009556916862854347,
+        "max_absolute_error_rad": 0.06857420072732973,
+        "rmse_rad": 0.015207764591847634,
+        "sample_count": 482
+      },
+      "matched_count": 482,
+      "v9": {
+        "bias_mean_signed_error_rad": 0.0010847015635431136,
+        "corrective_magnitude_ratio": 0.98981987663276,
+        "correlation": 0.9932867862786773,
+        "mae_rad": 0.01063420490384818,
+        "max_absolute_error_rad": 0.09578261617131446,
+        "rmse_rad": 0.01784399987332469,
+        "sample_count": 482
+      }
+    }
+  },
+  "no_augmentation": true,
+  "no_resampling": true,
+  "no_sample_weighting": true,
+  "obstacle_regions": {
+    "cone_holdout": {
+      "approach": {
+        "c1": {
+          "bias_mean_signed_error_rad": -0.0026185685555684315,
+          "corrective_magnitude_ratio": 0.9095282176621442,
+          "correlation": 0.975383640857457,
+          "mae_rad": 0.004800500529616928,
+          "max_absolute_error_rad": 0.016266270421086387,
+          "rmse_rad": 0.00650976568120001,
+          "sample_count": 16
+        },
+        "count": 16,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.01539287368611795,
+          "corrective_magnitude_ratio": 0.27327838168027035,
+          "correlation": 0.4146550150527602,
+          "mae_rad": 0.01760327857838189,
+          "max_absolute_error_rad": 0.04918435632083934,
+          "rmse_rad": 0.023816793769396615,
+          "sample_count": 16
+        }
+      },
+      "departure_avoidance": {
+        "c1": {
+          "bias_mean_signed_error_rad": 0.0008199351025393831,
+          "corrective_magnitude_ratio": 0.9935202856925246,
+          "correlation": 0.9906815635523687,
+          "mae_rad": 0.002596995142382884,
+          "max_absolute_error_rad": 0.007947585150308375,
+          "rmse_rad": 0.0031911776497842497,
+          "sample_count": 52
+        },
+        "count": 52,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.12491365698297362,
+          "corrective_magnitude_ratio": 6.733419971783927,
+          "correlation": 0.8436453459962622,
+          "mae_rad": 0.12491365698297362,
+          "max_absolute_error_rad": 0.14907507546745516,
+          "rmse_rad": 0.1261500406001992,
+          "sample_count": 52
+        }
+      },
+      "pass_return": {
+        "c1": {
+          "bias_mean_signed_error_rad": 0.0006853647884427453,
+          "corrective_magnitude_ratio": 1.0232015897468902,
+          "correlation": 0.9959193981240467,
+          "mae_rad": 0.0014559832936054365,
+          "max_absolute_error_rad": 0.00800877713715513,
+          "rmse_rad": 0.0022037312058483965,
+          "sample_count": 40
+        },
+        "count": 40,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.03870078311352794,
+          "corrective_magnitude_ratio": 2.654577545952897,
+          "correlation": 0.8138866988712494,
+          "mae_rad": 0.03870078311352794,
+          "max_absolute_error_rad": 0.12677983424066797,
+          "rmse_rad": 0.058239372770773117,
+          "sample_count": 40
+        }
+      },
+      "recovered": {
+        "c1": {
+          "bias_mean_signed_error_rad": -0.0011345112433885766,
+          "corrective_magnitude_ratio": 1.1122974987042307,
+          "correlation": 0.8595577031625684,
+          "mae_rad": 0.002219391303894005,
+          "max_absolute_error_rad": 0.0041770512544801065,
+          "rmse_rad": 0.0025739012595281975,
+          "sample_count": 16
+        },
+        "count": 16,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.003730552525713986,
+          "corrective_magnitude_ratio": 0.6307381527827267,
+          "correlation": 0.9950886909763951,
+          "mae_rad": 0.003730552525713986,
+          "max_absolute_error_rad": 0.005605217160894106,
+          "rmse_rad": 0.003900821515308188,
+          "sample_count": 16
+        }
+      }
+    },
+    "cone_validation": {
+      "approach": {
+        "c1": {
+          "bias_mean_signed_error_rad": -0.0043177664424915605,
+          "corrective_magnitude_ratio": 0.8630951304523254,
+          "correlation": 0.9860489941919574,
+          "mae_rad": 0.005622031294936667,
+          "max_absolute_error_rad": 0.016285446194159132,
+          "rmse_rad": 0.007271724490028993,
+          "sample_count": 16
+        },
+        "count": 16,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.012909492159869402,
+          "corrective_magnitude_ratio": 0.2966354491611672,
+          "correlation": 0.5722838060980201,
+          "mae_rad": 0.016756979462169815,
+          "max_absolute_error_rad": 0.047910749300882446,
+          "rmse_rad": 0.022633022441732015,
+          "sample_count": 16
+        }
+      },
+      "departure_avoidance": {
+        "c1": {
+          "bias_mean_signed_error_rad": 0.0001448345645277203,
+          "corrective_magnitude_ratio": 1.0157776779866146,
+          "correlation": 0.993648313837972,
+          "mae_rad": 0.002088567262338464,
+          "max_absolute_error_rad": 0.006264942221319479,
+          "rmse_rad": 0.002586395889729392,
+          "sample_count": 52
+        },
+        "count": 52,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.12403330588504996,
+          "corrective_magnitude_ratio": 6.843903607354371,
+          "correlation": 0.8558819782763782,
+          "mae_rad": 0.12403330588504996,
+          "max_absolute_error_rad": 0.14926101126519423,
+          "rmse_rad": 0.12530411506494704,
+          "sample_count": 52
+        }
+      },
+      "pass_return": {
+        "c1": {
+          "bias_mean_signed_error_rad": 0.0009797677927178296,
+          "corrective_magnitude_ratio": 1.0067270227629173,
+          "correlation": 0.9919011190939097,
+          "mae_rad": 0.00231800032999764,
+          "max_absolute_error_rad": 0.0072673135578013096,
+          "rmse_rad": 0.0030643855150810874,
+          "sample_count": 40
+        },
+        "count": 40,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.03993361230806266,
+          "corrective_magnitude_ratio": 2.6406236603945126,
+          "correlation": 0.8398158406470236,
+          "mae_rad": 0.03993361230806266,
+          "max_absolute_error_rad": 0.12602993476764393,
+          "rmse_rad": 0.058675288589803525,
+          "sample_count": 40
+        }
+      },
+      "recovered": {
+        "c1": {
+          "bias_mean_signed_error_rad": -0.0005152616953781218,
+          "corrective_magnitude_ratio": 1.0500487519329154,
+          "correlation": 0.8109724950796626,
+          "mae_rad": 0.002336236783404734,
+          "max_absolute_error_rad": 0.004329312535476831,
+          "rmse_rad": 0.0027525215691501536,
+          "sample_count": 17
+        },
+        "count": 17,
+        "v9": {
+          "bias_mean_signed_error_rad": 0.004289883473517986,
+          "corrective_magnitude_ratio": 0.6116447632565334,
+          "correlation": 0.9610301324378487,
+          "mae_rad": 0.004289883473517986,
+          "max_absolute_error_rad": 0.006730769420641786,
+          "rmse_rad": 0.004525914097057211,
+          "sample_count": 17
+        }
+      }
+    }
+  },
+  "offline_gate": {
+    "catastrophic_nominal_ratio_limit": 1.5,
+    "cone_holdout_nonempty": true,
+    "cone_holdout_relative_mae_improvement": 0.6686189924204204,
+    "cone_material_improvement_pass": true,
+    "minimum_required_relative_improvement": 0.1,
+    "no_catastrophic_nominal_regression": true,
+    "nominal_mae_ratios_c1_over_v9": {
+      "nominal_holdout": 0.8928106560761417,
+      "nominal_validation": 0.8986959485232416
+    },
+    "result": "PASS",
+    "training_pass": true
+  },
+  "onnx_contract": {
+    "checker": "PASS",
+    "input": [
+      "batch",
+      9,
+      66,
+      200
+    ],
+    "output": [
+      "batch",
+      1
+    ]
+  },
+  "onnx_equivalence": {
+    "max_absolute_difference_normalized": 2.384185791015625e-07,
+    "max_absolute_difference_rad": 8.322381717107419e-08,
+    "mean_absolute_difference_normalized": 2.0954757928848267e-08,
+    "mean_absolute_difference_rad": 7.314593375440381e-09,
+    "result": "PASS",
+    "samples": 128
+  },
+  "plots": [
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/c1/plots/training_loss.png",
+    "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/cone_avoidance_v1/c1/plots/offline_mae.png"
+  ],
+  "result": "PASS",
+  "training": {
+    "best_epoch": 29,
+    "early_stopped": false,
+    "epochs_completed": 35,
+    "initialized_from_scratch": true,
+    "result": "PASS",
+    "train_normalized_mse_at_best": 0.002858191868085168,
+    "validation_normalized_mse_at_best": 0.0019065177293932315
+  },
+  "training_composition": {
+    "cone_train_sequences": 1938,
+    "total": 5448,
+    "v9_train_sequences": 3510
+  },
+  "training_from_scratch": true,
+  "training_source_hash_overlap_with_eval": false,
+  "version": "pilotnet_training_c1_cone_temporal",
+  "visual_quality_gate": {
+    "checks": {
+      "color_and_decode_valid": true,
+      "cone_visible_in_approach_samples": true,
+      "expected_roi_and_aspect": true,
+      "normal_lane_and_recovery_coverage_visible": true,
+      "obvious_duplicate_or_corrupt_frames": false
+    },
+    "contact_sheets": [
+      {
+        "episode_id": "cone_episode_001",
+        "sha256": "8ace6ef3af81083d665d8cc7015bd555b305e37fbe040aeffe4d8edf8f0b270a",
+        "split": "train"
+      },
+      {
+        "episode_id": "cone_episode_009",
+        "sha256": "95964a2d9c7ee3c0c752f9f57f5ca6edb9a5ec9d2b9b43b3ff90fd2a4ef05b6e",
+        "split": "validation"
+      },
+      {
+        "episode_id": "cone_episode_011",
+        "sha256": "9ec40556cc39b2f454a8d9eeffe17c217c3a525573c96d40971d63fa4e67d828",
+        "split": "holdout"
+      }
+    ],
+    "inspection": "Manual inspection of actual generated contact sheets before training",
+    "limitations": "Nine uniformly sampled frames per episode are a compact quality check, not exhaustive frame-by-frame visual review.",
+    "result": "PASS",
+    "version": "cone_avoidance_dataset_visual_quality_v1"
+  }
+}

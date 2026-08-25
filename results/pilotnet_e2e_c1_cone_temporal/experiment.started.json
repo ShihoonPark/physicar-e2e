@@ -1,0 +1,6 @@
+{
+  "maximum_total_attempts": 5,
+  "maximum_valid_policy_runs": 3,
+  "started_utc": "2026-08-25T08:17:22.263028+00:00",
+  "status": "C1_CONE_POLICY_STARTED_DO_NOT_REPEAT"
+}
