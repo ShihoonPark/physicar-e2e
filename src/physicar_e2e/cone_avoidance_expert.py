@@ -684,7 +684,10 @@ def full_preflight(
 class ClearanceObserver:
     """Add privileged cone/footprint telemetry without changing commands."""
 
-    def __init__(self, client: SimClient, nominal: ClosedRoute, plan: BypassPlan, config: ExpertConfig) -> None:
+    def __init__(
+        self, client: SimClient, nominal: ClosedRoute, plan: BypassPlan, config: ExpertConfig,
+        *, enforce_clearance_margin: bool = True,
+    ) -> None:
         self.client = client
         self.nominal = nominal
         self.plan = plan
@@ -697,6 +700,7 @@ class ClearanceObserver:
         self.recovery_time_s: float | None = None
         self.recovery_cte_m: float | None = None
         self.first_after_return_at: float | None = None
+        self.enforce_clearance_margin = enforce_clearance_margin
 
     def __getattr__(self, name: str):
         return getattr(self.client, name)
@@ -748,7 +752,8 @@ class ClearanceObserver:
                 self.recovery_candidate_ctes = []
         if intersects:
             raise RuntimeError("vehicle-footprint/cone collision intersection detected")
-        if clearance + 1e-9 < self.config.environment.required_cone_clearance_m:
+        if (self.enforce_clearance_margin and
+                clearance + 1e-9 < self.config.environment.required_cone_clearance_m):
             raise RuntimeError(
                 f"cone clearance {clearance:.6f}m is below {self.config.environment.required_cone_clearance_m:.3f}m"
             )
