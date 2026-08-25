@@ -40,6 +40,7 @@ physicar-pilotnet-train-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_tra
 physicar-pilotnet-run-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_inference:main"
 physicar-pilotnet-v4-repeatability-v1 = "physicar_e2e.pilotnet_v4_repeatability:main"
 physicar-pilotnet-pi5-infer = "physicar_e2e.pilotnet_pi5:main"
+physicar-random-cone-expert-v1 = "physicar_e2e.random_cone_expert:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

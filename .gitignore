@@ -30,4 +30,5 @@ logs/
 # Runtime scratch (compact curated results remain trackable)
 *.tmp
 *.pid
+:memory:.ses
 results/runtime_*.json
