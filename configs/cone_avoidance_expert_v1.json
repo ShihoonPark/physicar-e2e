@@ -1,0 +1,47 @@
+{
+  "version": "cone_avoidance_expert_v1",
+  "baseline_expert_config": "configs/high_speed_expert_v1.json",
+  "baseline_expert_sha256": "3afdc5d3204143e8d1f64c1ec68b2bda2de08912b779f2ece69a7d86c99503c9",
+  "environment_config": "configs/cone_avoidance_environment_v1.json",
+  "avoidance": {
+    "profile": "symmetric_quintic_with_flat_pass",
+    "transition_minimum_time_s": 1.0,
+    "transition_minimum_lookaheads": 2.0,
+    "plateau_half_lookaheads": 1.0,
+    "maximum_reference_curvature_fraction": 0.5,
+    "sample_spacing_m": 0.01,
+    "kinematic_preview_substep_s": 0.005
+  },
+  "frozen_bypass": {
+    "chosen_side": "right",
+    "required_center_offset_m": 0.249270381,
+    "maximum_lateral_offset_m": 0.254270381,
+    "departure_start_s_m": 4.2,
+    "cone_s_m": 6.9,
+    "return_end_s_m": 9.6,
+    "transition_length_m": 1.8,
+    "plateau_half_length_m": 0.9
+  },
+  "return_to_route": {
+    "maximum_absolute_nominal_cte_m": 0.05,
+    "minimum_stable_duration_s": 0.50
+  },
+  "maximum_live_attempts": 5,
+  "target_valid_evaluations": 3,
+  "retry_obstacle_expert_failure": false,
+  "result_directory": "results/cone_avoidance_expert_v1",
+  "privileged_inputs": [
+    "gt_vehicle_pose",
+    "nominal_route",
+    "cone_gt_pose",
+    "generated_bypass_reference",
+    "track_geometry"
+  ],
+  "future_policy_forbidden_inputs": [
+    "cone_gt_coordinates",
+    "route",
+    "pose",
+    "cte",
+    "expert_command"
+  ]
+}

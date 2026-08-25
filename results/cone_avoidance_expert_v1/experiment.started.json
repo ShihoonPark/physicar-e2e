@@ -1,0 +1,16 @@
+{
+  "frozen_bypass": {
+    "chosen_side": "right",
+    "cone_s_m": 6.9,
+    "departure_start_s_m": 4.2,
+    "maximum_lateral_offset_m": 0.254270381,
+    "plateau_half_length_m": 0.9,
+    "required_center_offset_m": 0.249270381,
+    "return_end_s_m": 9.6,
+    "transition_length_m": 1.8
+  },
+  "maximum_live_attempts": 5,
+  "started_utc": "2026-08-25T07:29:37.808867+00:00",
+  "status": "CONE_AVOIDANCE_EXPERT_V1_STARTED_DO_NOT_REPEAT",
+  "target_valid_evaluations": 3
+}

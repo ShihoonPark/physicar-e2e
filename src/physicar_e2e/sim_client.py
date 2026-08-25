@@ -88,6 +88,19 @@ class SimClient:
     def reset(self) -> dict[str, Any]:
         return self._request("/sim/api/reset", method="POST")
 
+    def switch_world(self, world: str) -> dict[str, Any]:
+        """Request a simulator world switch by validated world basename."""
+        if not isinstance(world, str) or not world or not all(
+            character.isalnum() or character == "_" for character in world
+        ):
+            raise SimClientError("world must be a non-empty alphanumeric/underscore basename")
+        response = self._request(
+            "/sim/api/switch", method="POST", body={"world": f"{world}.world"}
+        )
+        if response.get("ok") is not True or response.get("world") != f"{world}.world":
+            raise SimClientError(f"world switch was not accepted: {response}")
+        return response
+
     def set_pose(self, x: float, y: float, yaw: float) -> dict[str, Any]:
         """Teleport to an exact world pose through the simulator's confirmed pose API."""
         values = (float(x), float(y), float(yaw))
