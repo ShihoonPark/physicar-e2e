@@ -1,0 +1,140 @@
+{
+  "attempt_number": 1,
+  "classification": "POLICY_FAIL",
+  "preflight": {
+    "camera": {
+      "camera_acquisition_ms": 1.0590760000468435,
+      "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+      "model_input_shape": [
+        3,
+        66,
+        200
+      ],
+      "preprocessing_ms": 1.528000999996948,
+      "result": "PASS",
+      "source_dimensions": [
+        480,
+        360
+      ],
+      "transport": "HTTP JPEG"
+    },
+    "clock_health": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.1048717400001351,
+      "observed_real_time_factor": 1.019930845859719,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 40,
+      "sim_delta_s": {
+        "max": 0.10500000000001819,
+        "mean": 0.05269230769230932,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 2.0550000000000637,
+      "wall_elapsed_s": 2.0148424849999174,
+      "wall_interval_s": {
+        "max": 0.05333166700006586,
+        "mean": 0.051662627820510704,
+        "min": 0.05115584600002876
+      }
+    },
+    "environment": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "bounds_height_m": 7.0,
+      "bounds_width_m": 12.0,
+      "cone_count": 0,
+      "pose": {
+        "q": [
+          -4e-06,
+          -4e-06,
+          -0.707065,
+          0.707148
+        ],
+        "x": 1.400001,
+        "y": 3.394596,
+        "yaw": -1.570679,
+        "z": -0.001195
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+    },
+    "result": "PASS"
+  },
+  "run": {
+    "api_failures": 0,
+    "camera_acquisition_latency": {
+      "count": 222,
+      "max_ms": 3.7623220000568836,
+      "mean_ms": 1.9022962252280309,
+      "median_ms": 1.7054635000022245,
+      "p95_ms": 2.971517500009213
+    },
+    "control_iterations": 221,
+    "control_loop_frequency_hz": 15.000308880794805,
+    "control_loop_period": {
+      "count": 221,
+      "max_ms": 67.73620200010555,
+      "mean_ms": 66.66529389140247,
+      "median_ms": 66.666375000068,
+      "p95_ms": 66.67873800006419
+    },
+    "elapsed_s": 14.74854887399988,
+    "failure": "sustained off-track: boundary distance 0.543m",
+    "failure_category": "accumulation/distribution shift or inability to recover after deviation",
+    "final_distance_to_start_m": 3.922583904739961,
+    "final_route_s_m": 25.440618538753945,
+    "liveness_failures": 0,
+    "max_absolute_predicted_steering_rad": 0.349066,
+    "max_cte_m": 0.8699319786195928,
+    "mean_absolute_command_delta_rad": 0.027389892738638674,
+    "mean_absolute_predicted_steering_rad": 0.11291164942362059,
+    "mean_cte_m": 0.0763200510611744,
+    "neural_observation_fields": [
+      "camera_yuv"
+    ],
+    "off_track_events": 1,
+    "off_track_total_duration_s": 0.5355523650000578,
+    "onnx_inference_latency": {
+      "count": 222,
+      "max_ms": 4.470975000003818,
+      "mean_ms": 0.8586865405385987,
+      "median_ms": 0.40166450003198406,
+      "p95_ms": 3.717994899943733
+    },
+    "preprocessing_latency": {
+      "count": 222,
+      "max_ms": 2.2731829999429465,
+      "mean_ms": 1.4211087882809348,
+      "median_ms": 1.3271269999677315,
+      "p95_ms": 1.7899385999953665
+    },
+    "privileged_safety_and_metrics_fields": [
+      "GT pose",
+      "route",
+      "track boundaries",
+      "simulator clock",
+      "world status"
+    ],
+    "result": "FAIL",
+    "route_completion_fraction": 0.8339545057064432,
+    "route_length_m": 30.50461070080936,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "speed_mps": 1.8,
+    "steering_saturation_fraction": 0.013574660633484163,
+    "timestamp_utc": "2026-08-25T02:57:07.222915+00:00",
+    "timing_slips": 0,
+    "total_unwrapped_progress_m": 25.439457538760948
+  },
+  "valid_policy_run_number": 1
+}

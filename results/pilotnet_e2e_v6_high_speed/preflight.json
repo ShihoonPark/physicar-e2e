@@ -1,0 +1,78 @@
+{
+  "camera": {
+    "camera_acquisition_ms": 2.1929750000708736,
+    "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+    "model_input_shape": [
+      3,
+      66,
+      200
+    ],
+    "preprocessing_ms": 1.5515540001160844,
+    "result": "PASS",
+    "source_dimensions": [
+      480,
+      360
+    ],
+    "transport": "HTTP JPEG"
+  },
+  "clock_health": {
+    "maximum_allowed_stall_s": 0.5,
+    "maximum_observed_clock_stall_s": 0.10578385000007984,
+    "observed_real_time_factor": 1.018790482925827,
+    "paused_exposed": true,
+    "paused_observed": false,
+    "requested_duration_s": 2.0,
+    "result": "PASS",
+    "sample_count": 40,
+    "sim_delta_s": {
+      "max": 0.10500000000001819,
+      "mean": 0.05269230769230932,
+      "min": 0.0
+    },
+    "sim_elapsed_s": 2.0550000000000637,
+    "wall_elapsed_s": 2.017097758999853,
+    "wall_interval_s": {
+      "max": 0.0543899940000756,
+      "mean": 0.05172045535897059,
+      "min": 0.051261769000120694
+    }
+  },
+  "environment": {
+    "bounds": {
+      "maxX": 12.0,
+      "maxY": 7.0,
+      "minX": 0.0,
+      "minY": 0.0
+    },
+    "bounds_height_m": 7.0,
+    "bounds_width_m": 12.0,
+    "cone_count": 0,
+    "pose": {
+      "q": [
+        -4e-06,
+        -4e-06,
+        -0.707065,
+        0.707148
+      ],
+      "x": 1.400001,
+      "y": 3.394561,
+      "yaw": -1.570679,
+      "z": -0.00116
+    },
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "switching": false,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "generated_utc": "2026-08-25T02:56:32.830011+00:00",
+  "onnx": {
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/v6/onnx/pilotnet_v6_high_speed_dagger.onnx",
+    "sha256": "3e168565b05b3925e3ab26d9643cdd936cefec34a11e074b918036ba96c3acf6",
+    "size_bytes": 1012518
+  },
+  "result": "PASS",
+  "safe_stop_errors": [],
+  "safe_stop_success": true,
+  "version": "pilotnet_e2e_v6_high_speed_preflight"
+}

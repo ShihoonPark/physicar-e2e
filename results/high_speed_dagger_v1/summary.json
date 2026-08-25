@@ -1,0 +1,409 @@
+{
+  "collections": [
+    {
+      "bag": {
+        "duration_s": 12.472030836,
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/high_speed_dagger_rollout_A/raw/high_speed_dagger_rollout_A/bag",
+        "size_bytes": 97656518,
+        "topic_counts": {
+          "/camera/image_raw": 188,
+          "/clock": 2479
+        }
+      },
+      "classification": "POLICY_FAIL",
+      "live": {
+        "api_failures": 0,
+        "camera_latency": {
+          "count": 183,
+          "max_ms": 4.2014279999875725,
+          "mean_ms": 2.017561573766812,
+          "median_ms": 1.7446379999910278,
+          "p95_ms": 3.4031495001045187
+        },
+        "control_frequency_hz": 14.999956568120414,
+        "control_iterations": 183,
+        "control_period": {
+          "count": 182,
+          "max_ms": 67.6684820000446,
+          "mean_ms": 66.66685969780151,
+          "median_ms": 66.66671150003367,
+          "p95_ms": 66.68012230003342
+        },
+        "elapsed_s": 12.14972040900011,
+        "failure": "sustained off-track: boundary distance 0.803m",
+        "final_distance_to_start_m": 5.063717913223149,
+        "inference_latency": {
+          "count": 183,
+          "max_ms": 4.694070999903488,
+          "mean_ms": 0.8816809344280742,
+          "median_ms": 0.39549099983560154,
+          "p95_ms": 3.831179800044993
+        },
+        "liveness_failures": 0,
+        "max_abs_steering_rad": 0.349066,
+        "max_cte_m": 1.1528170767658685,
+        "mean_abs_command_delta_rad": 0.020137849171323424,
+        "mean_abs_steering_rad": 0.08280114436917255,
+        "mean_cte_m": 0.07858833440790022,
+        "neural_observation_fields": [
+          "HTTP camera JPEG"
+        ],
+        "off_track_events": 1,
+        "off_track_total_duration_s": 0.5238358130000051,
+        "policy_controlling_vehicle": "PilotNet V5 only",
+        "preprocessing_latency": {
+          "count": 183,
+          "max_ms": 2.4978579999697104,
+          "mean_ms": 1.4431177540958882,
+          "median_ms": 1.3618610000776243,
+          "p95_ms": 1.7638893998764618
+        },
+        "privileged_fields_outside_model": [
+          "GT pose",
+          "route",
+          "CTE",
+          "sim clock",
+          "track boundaries"
+        ],
+        "result": "FAIL",
+        "route_completion_fraction": 0.685264972824913,
+        "route_length_m": 30.50461070080936,
+        "route_progress_m": 20.903741222924676,
+        "safe_stop_errors": [],
+        "safe_stop_success": true,
+        "shadow_expert_control_authority": false,
+        "steering_saturation_fraction": 0.03825136612021858
+      },
+      "objective_divergence": {
+        "critical_pre_onset_indices": [
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162
+        ],
+        "divergence_index": 163,
+        "divergence_time_s": 10.866733645000068,
+        "final_excursion_indices": [
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182
+        ],
+        "initial_persistence_slope_m_per_s": 0.03479234565312038,
+        "method": "start of final continuous above-threshold CTE excursion that persists to failure and begins with positive slope",
+        "stable_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "threshold_crossing_reproduced": true,
+        "threshold_m": 0.03
+      },
+      "rollout_id": "high_speed_dagger_rollout_A"
+    },
+    {
+      "bag": {
+        "duration_s": 12.162559285,
+        "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/high_speed_dagger_rollout_B/raw/high_speed_dagger_rollout_B/bag",
+        "size_bytes": 95578928,
+        "topic_counts": {
+          "/camera/image_raw": 184,
+          "/clock": 2425
+        }
+      },
+      "classification": "POLICY_FAIL",
+      "live": {
+        "api_failures": 0,
+        "camera_latency": {
+          "count": 179,
+          "max_ms": 4.608761000099548,
+          "mean_ms": 2.0221585363155783,
+          "median_ms": 1.7965650001769973,
+          "p95_ms": 3.176602299936348
+        },
+        "control_frequency_hz": 14.999960871169556,
+        "control_iterations": 179,
+        "control_period": {
+          "count": 178,
+          "max_ms": 66.72208999998475,
+          "mean_ms": 66.66684057303341,
+          "median_ms": 66.66705199995704,
+          "p95_ms": 66.68871614988348
+        },
+        "elapsed_s": 11.886680707000096,
+        "failure": "sustained off-track: boundary distance 0.778m",
+        "final_distance_to_start_m": 5.7651560874836685,
+        "inference_latency": {
+          "count": 179,
+          "max_ms": 4.623729000059029,
+          "mean_ms": 0.9646788770885641,
+          "median_ms": 0.42666900003496266,
+          "p95_ms": 3.9519808000250123
+        },
+        "liveness_failures": 0,
+        "max_abs_steering_rad": 0.349066,
+        "max_cte_m": 1.1375412447682105,
+        "mean_abs_command_delta_rad": 0.022848388518670756,
+        "mean_abs_steering_rad": 0.08012947891226815,
+        "mean_cte_m": 0.07278189600106036,
+        "neural_observation_fields": [
+          "HTTP camera JPEG"
+        ],
+        "off_track_events": 1,
+        "off_track_total_duration_s": 0.5383193379998374,
+        "policy_controlling_vehicle": "PilotNet V5 only",
+        "preprocessing_latency": {
+          "count": 179,
+          "max_ms": 2.059726999959821,
+          "mean_ms": 1.3977260558608806,
+          "median_ms": 1.33385799995267,
+          "p95_ms": 1.7469415000050503
+        },
+        "privileged_fields_outside_model": [
+          "GT pose",
+          "route",
+          "CTE",
+          "sim clock",
+          "track boundaries"
+        ],
+        "result": "FAIL",
+        "route_completion_fraction": 0.6793730399466371,
+        "route_length_m": 30.50461070080936,
+        "route_progress_m": 20.72401010419757,
+        "safe_stop_errors": [],
+        "safe_stop_success": true,
+        "shadow_expert_control_authority": false,
+        "steering_saturation_fraction": 0.0335195530726257
+      },
+      "objective_divergence": {
+        "critical_pre_onset_indices": [
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165
+        ],
+        "divergence_index": 166,
+        "divergence_time_s": 11.066731049000055,
+        "final_excursion_indices": [
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178
+        ],
+        "initial_persistence_slope_m_per_s": 1.1630877859830018,
+        "method": "start of final continuous above-threshold CTE excursion that persists to failure and begins with positive slope",
+        "stable_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "threshold_crossing_reproduced": true,
+        "threshold_m": 0.03
+      },
+      "rollout_id": "high_speed_dagger_rollout_B"
+    }
+  ],
+  "dataset_metadata_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/dataset_metadata.json",
+  "dataset_metadata_sha256": "430548defe831482ff7463c62a2189296ff7509b6c7910160265869e3f11b7e2",
+  "extractions": [
+    {
+      "accepted_samples": 50,
+      "below_30_percent_rejections": 0,
+      "config_sha256": "28a9446c072278a2121cfb50d1047a79f528cd6a78ae462828f4a73c6c567803",
+      "expert_label_age_ms": {
+        "count": 50,
+        "max": 100.0,
+        "mean": 49.9,
+        "median": 52.5,
+        "p95": 95.0
+      },
+      "future_label_violations": 0,
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/manifests/high_speed_dagger_rollout_A.csv",
+      "manifest_sha256": "dc4132146baf679f8370f685f2e0251c715b71d74b1086e45e8ea4f34ba91b22",
+      "objective_window_raw_frames_before_progress_gate": 50,
+      "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/previews/high_speed_dagger_rollout_A.png",
+      "raw_camera_frames": 188,
+      "result": "PASS",
+      "role": "training",
+      "rollout_id": "high_speed_dagger_rollout_A",
+      "selected_progress_range_fraction": [
+        0.5133323925894918,
+        0.6829739324799486
+      ],
+      "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/high_speed_dagger_rollout_A/raw/high_speed_dagger_rollout_A/bag",
+      "source_mcap_sha256": "54f23c6a6f1917167979e7e88e4fac423b9ec8c56fc82651852cebbe6f843a95",
+      "source_raw_size_bytes": 97656518,
+      "source_result_sha256": "80b22b9bfc10b2d7bf037d5da2acf97fc92f30f541c9285bf81e9469dbb37b5b",
+      "stale_label_rejections": 0,
+      "telemetry_sha256": "0e6f058866dac2b54500d5120efcf4b819f53eab6f339ec8a58ea2e25a9a1725",
+      "version": "high_speed_dagger_v1",
+      "window": {
+        "divergence_sim_time_ns": 1481260000000,
+        "end_sim_time_ns": 1482500000000,
+        "minimum_route_progress_fraction": 0.3,
+        "minimum_route_progress_m": 9.151383210242807,
+        "rule": "continuous from 2.0 s before objective V5 divergence through final valid pre-safe-stop frame, then require route progress >=30%",
+        "start_sim_time_ns": 1479260000000
+      },
+      "window_counts": {
+        "divergence": 15,
+        "late_failure": 4,
+        "pre_divergence": 31
+      }
+    },
+    {
+      "accepted_samples": 43,
+      "below_30_percent_rejections": 0,
+      "config_sha256": "28a9446c072278a2121cfb50d1047a79f528cd6a78ae462828f4a73c6c567803",
+      "expert_label_age_ms": {
+        "count": 43,
+        "max": 100.0,
+        "mean": 53.25581395348837,
+        "median": 55.0,
+        "p95": 95.0
+      },
+      "future_label_violations": 0,
+      "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/manifests/high_speed_dagger_rollout_B.csv",
+      "manifest_sha256": "83e25a7d006b227587012282f2870a5006ed8ee4c17f640af686c8ca4460070e",
+      "objective_window_raw_frames_before_progress_gate": 43,
+      "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/previews/high_speed_dagger_rollout_B.png",
+      "raw_camera_frames": 184,
+      "result": "PASS",
+      "role": "holdout",
+      "rollout_id": "high_speed_dagger_rollout_B",
+      "selected_progress_range_fraction": [
+        0.5313363822995304,
+        0.6783081234442322
+      ],
+      "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/high_speed_dagger_rollout_B/raw/high_speed_dagger_rollout_B/bag",
+      "source_mcap_sha256": "f885ba7e3d4b862c89b0a78f119691cc99cf7063d98ee0c835e018cf0d970bdd",
+      "source_raw_size_bytes": 95578928,
+      "source_result_sha256": "d72d65e9262dc65573296006cfe5bfa1890c407ac3b1240131acdc2f4b519aa5",
+      "stale_label_rejections": 0,
+      "telemetry_sha256": "55aabe36eca3db9b4a40a5c4954cf4ba2317364d38a6396a602ebaddbe93c1bd",
+      "version": "high_speed_dagger_v1",
+      "window": {
+        "divergence_sim_time_ns": 1516150000000,
+        "end_sim_time_ns": 1516975000000,
+        "minimum_route_progress_fraction": 0.3,
+        "minimum_route_progress_m": 9.151383210242807,
+        "rule": "continuous from 2.0 s before objective V5 divergence through final valid pre-safe-stop frame, then require route progress >=30%",
+        "start_sim_time_ns": 1514150000000
+      },
+      "window_counts": {
+        "divergence": 13,
+        "late_failure": 0,
+        "pre_divergence": 30
+      }
+    }
+  ],
+  "future_label_violations": 0,
+  "generated_utc": "2026-08-25T02:54:35.915471+00:00",
+  "result": "PASS",
+  "rollout_assignment": {
+    "high_speed_dagger_rollout_A": "training",
+    "high_speed_dagger_rollout_B": "holdout"
+  },
+  "version": "high_speed_dagger_v1"
+}

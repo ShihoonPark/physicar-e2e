@@ -1,0 +1,45 @@
+{
+  "accepted_samples": 50,
+  "below_30_percent_rejections": 0,
+  "config_sha256": "28a9446c072278a2121cfb50d1047a79f528cd6a78ae462828f4a73c6c567803",
+  "expert_label_age_ms": {
+    "count": 50,
+    "max": 100.0,
+    "mean": 49.9,
+    "median": 52.5,
+    "p95": 95.0
+  },
+  "future_label_violations": 0,
+  "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/manifests/high_speed_dagger_rollout_A.csv",
+  "manifest_sha256": "dc4132146baf679f8370f685f2e0251c715b71d74b1086e45e8ea4f34ba91b22",
+  "objective_window_raw_frames_before_progress_gate": 50,
+  "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/extracted/previews/high_speed_dagger_rollout_A.png",
+  "raw_camera_frames": 188,
+  "result": "PASS",
+  "role": "training",
+  "rollout_id": "high_speed_dagger_rollout_A",
+  "selected_progress_range_fraction": [
+    0.5133323925894918,
+    0.6829739324799486
+  ],
+  "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_v1/high_speed_dagger_rollout_A/raw/high_speed_dagger_rollout_A/bag",
+  "source_mcap_sha256": "54f23c6a6f1917167979e7e88e4fac423b9ec8c56fc82651852cebbe6f843a95",
+  "source_raw_size_bytes": 97656518,
+  "source_result_sha256": "80b22b9bfc10b2d7bf037d5da2acf97fc92f30f541c9285bf81e9469dbb37b5b",
+  "stale_label_rejections": 0,
+  "telemetry_sha256": "0e6f058866dac2b54500d5120efcf4b819f53eab6f339ec8a58ea2e25a9a1725",
+  "version": "high_speed_dagger_v1",
+  "window": {
+    "divergence_sim_time_ns": 1481260000000,
+    "end_sim_time_ns": 1482500000000,
+    "minimum_route_progress_fraction": 0.3,
+    "minimum_route_progress_m": 9.151383210242807,
+    "rule": "continuous from 2.0 s before objective V5 divergence through final valid pre-safe-stop frame, then require route progress >=30%",
+    "start_sim_time_ns": 1479260000000
+  },
+  "window_counts": {
+    "divergence": 15,
+    "late_failure": 4,
+    "pre_divergence": 31
+  }
+}
