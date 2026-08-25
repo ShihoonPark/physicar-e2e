@@ -320,8 +320,14 @@ class LifecycleBackend:
         return BagInfo(10.0, sum(counts.values()), counts)
 
 
-def test_episode_lifecycle_safe_stops_before_recorder_termination(tmp_path: Path, task: TaskConfig) -> None:
+def test_episode_lifecycle_safe_stops_before_recorder_termination(
+    tmp_path: Path, task: TaskConfig, monkeypatch: pytest.MonkeyPatch,
+) -> None:
     events: list[str] = []
+    monkeypatch.setattr(
+        "physicar_e2e.random_cone_train_data.disk_state",
+        lambda _path: {"available_bytes": 7 * 1024**3},
+    )
 
     def prepare(*args):
         events.append("preflight")
