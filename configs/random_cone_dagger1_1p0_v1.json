@@ -1,0 +1,129 @@
+{
+  "version": "random_cone_dagger1_1p0_v1",
+  "map_family": "71e69ee938032295503bfed557fde18c",
+  "preserved_r1": {
+    "task_config_path": "configs/random_cone_temporal_r1_v1.json",
+    "task_config_sha256": "634a0ebf3ff2d8729f0e9b0318db93a778e9dc5448cab0a7411ecd80070a3ba2",
+    "train_manifest_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/train_dataset/temporal_manifests/train.csv",
+    "train_manifest_sha256": "a9aaf25991cecbab3937deae545d392842007b228d8b8f571c519fba1772df73",
+    "train_sequence_count": 6706,
+    "validation_manifest_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/validation_dataset/temporal_manifests/validation.csv",
+    "validation_manifest_sha256": "a1182170a5d853b599209e6ce31f7deaa27077a99bdd62603b92ed817349693b",
+    "validation_sequence_count": 837,
+    "checkpoint_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/r1/checkpoints/random_cone_temporal_r1_best.pt",
+    "checkpoint_sha256": "b50d5d3c3cdb4f7aa730b2a44c1ffd46d7e0deb7aa0328cb7d40b090ae9022a0",
+    "onnx_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/r1/onnx/random_cone_temporal_r1.onnx",
+    "onnx_sha256": "2ebb6faf79ff015ae79c31d404c1fc7eb932b726c60c9f0b6dc7d7e02e51c993",
+    "freeze_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/r1/freeze.json",
+    "freeze_sha256": "ac622a793ce2bc4794170b53cc9421cc343e1691eeb4d2b85e01609714e7e0d7",
+    "freeze_seal_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/r1/freeze_seal.json",
+    "freeze_seal_sha256": "3d1c1f647b587ae6a8788c2d545a3ee8a2b0a3b90b9b465059f38ed5b687c798",
+    "training_summary_path": "results/pilotnet_training_r1_random_cone_1p0/summary.json",
+    "training_summary_sha256": "f852ccd9bf1370fbe38701624f6b7a9d4bb8db61ab9cf37b7f0b0f74fc3f698b",
+    "live_summary_path": "results/pilotnet_e2e_r1_random_cone_1p0/summary.json",
+    "live_summary_sha256": "35012bfaf43c2548a57b426d6b7c718146f2957aa953818aae1dbb6ab9669d94",
+    "s09_live_path": "results/pilotnet_e2e_r1_random_cone_1p0/validation_scenarios/scenario_09.json",
+    "s09_live_sha256": "d8233cd8794e88dc418142fb4bd751899a3c0528334248dd3510f5082085b7df"
+  },
+  "frozen_expert": {
+    "config_path": "configs/random_cone_expert_1p0_v1.json",
+    "config_sha256": "a6f2573bfaa041dafaca25d957c07b5ea1acbd33399e2aece6e1bda06d238cf5"
+  },
+  "scenario_roles": {
+    "TRAIN": ["01", "02", "03", "04", "05", "06", "07", "08"],
+    "VALIDATION": ["09", "10"],
+    "UNSEEN_HOLDOUT": ["11", "12"]
+  },
+  "diagnosis": {
+    "result_directory": "results/random_cone_r1_failure_diagnosis_1p0_v1",
+    "allow_s09_counterfactual_labels_for_training": false,
+    "required_windows": ["stable_pre_divergence", "first_divergence", "final_2_seconds"]
+  },
+  "collection": {
+    "episode_order": [
+      "dagger1_s01_r01", "dagger1_s02_r01", "dagger1_s03_r01", "dagger1_s04_r01",
+      "dagger1_s05_r01", "dagger1_s06_r01", "dagger1_s07_r01", "dagger1_s08_r01"
+    ],
+    "required_topics": ["/camera/image_raw", "/clock"],
+    "sidecar_label_name": "expert_steering_label",
+    "external_relative_root": "physicar_e2e/random_cone_1p0_v1/dagger1",
+    "container_name": "physicar-sim",
+    "compose_service": "sim",
+    "container_userdata_root": "/opt/physicar/userdata",
+    "storage_id": "mcap",
+    "recorder_startup_timeout_s": 10.0,
+    "recorder_shutdown_timeout_s": 15.0,
+    "settle_duration_s": 2.0,
+    "minimum_camera_messages": 2,
+    "minimum_projected_free_bytes_after_eight": 5368709120,
+    "maximum_infrastructure_replacements_per_episode": 1,
+    "retry_genuine_policy_failure": false
+  },
+  "dataset": {
+    "canonical_extractor_config_path": "configs/dataset_extractor_v1.json",
+    "canonical_extractor_config_sha256": "944f26336062e56b68cad0826e362dda8ef971a4544c3a727bf5b0067c706e2e",
+    "source_width": 480,
+    "source_height": 360,
+    "roi": {"x_start": 0, "x_end": 480, "y_start": 160, "y_end": 360},
+    "output_width": 200,
+    "output_height": 66,
+    "stored_color_space": "RGB",
+    "history_frames": 3,
+    "maximum_adjacent_gap_s": 0.120,
+    "maximum_teacher_label_age_s": 0.120,
+    "causal_teacher_zoh": true,
+    "future_teacher_labels_required": 0,
+    "allow_episode_boundary_crossing": false,
+    "allow_duplicate_padding": false
+  },
+  "training": {
+    "seed": 20260824,
+    "image_width": 200,
+    "image_height": 66,
+    "input_channels": 9,
+    "history_frames": 3,
+    "maximum_adjacent_gap_s": 0.120,
+    "max_steering_rad": 0.349066,
+    "target": "frozen_expert_steering_normalized_at_t",
+    "optimizer": "Adam",
+    "loss": "MSE",
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_epochs": 35,
+    "early_stopping_patience": 7,
+    "minimum_improvement": 0.000001,
+    "initialization": "from_scratch",
+    "augmentation": false,
+    "sample_weighting": false,
+    "scenario_weighting": false,
+    "oversampling": false,
+    "undersampling": false,
+    "hyperparameter_sweep": false,
+    "onnx_opset": 17,
+    "onnx_equivalence_samples": 128,
+    "onnx_mean_abs_difference_limit": 0.00001,
+    "onnx_max_abs_difference_limit": 0.0001
+  },
+  "live_inference_source": "configs/random_cone_temporal_r1_v1.json",
+  "external": {
+    "dagger1": "physicar_e2e/random_cone_1p0_v1/dagger1"
+  },
+  "result_directories": {
+    "collection": "results/random_cone_dagger1_collection_1p0_v1",
+    "dataset": "results/random_cone_dagger1_dataset_1p0_v1",
+    "training": "results/pilotnet_training_d1_random_cone_1p0",
+    "live": "results/pilotnet_e2e_d1_random_cone_1p0"
+  },
+  "permissions": {
+    "r1_evidence_changes_permitted": false,
+    "dagger_scenarios": ["01", "02", "03", "04", "05", "06", "07", "08"],
+    "validation_or_holdout_dagger_permitted": false,
+    "s09_s10_live_data_training_permitted": false,
+    "holdout_bag_collection_permitted": false,
+    "d1_training_runs_permitted": 1,
+    "second_dagger_iteration_permitted": false,
+    "tracked_simulator_source_changes_permitted": false,
+    "commit_permitted": false,
+    "push_permitted": false
+  }
+}
