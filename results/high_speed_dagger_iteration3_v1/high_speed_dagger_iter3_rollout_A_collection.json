@@ -1,0 +1,190 @@
+{
+  "bag": {
+    "duration_s": 114.768761472,
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/high_speed_dagger_iter3_rollout_A/raw/high_speed_dagger_iter3_rollout_A/bag",
+    "size_bytes": 893866080,
+    "topic_counts": {
+      "/camera/image_raw": 1721,
+      "/clock": 22721
+    }
+  },
+  "classification": "POLICY_FAIL",
+  "collection_run_count": 1,
+  "control_authority": {
+    "neural_observation": [
+      "camera"
+    ],
+    "shadow_expert_control_authority": false,
+    "vehicle_controller": "PilotNet V7"
+  },
+  "final_safe_stop_errors": [],
+  "final_safe_stop_success": true,
+  "late_region_gate": {
+    "maximum_observed_completion_fraction": 0.9621510645036951,
+    "minimum_completion_fraction": 0.85,
+    "result": "PASS"
+  },
+  "live": {
+    "api_failures": 0,
+    "camera_latency": {
+      "count": 1719,
+      "max_ms": 8.36279499981174,
+      "mean_ms": 2.5975264351345504,
+      "median_ms": 2.526827000110643,
+      "p95_ms": 4.0711267995902745
+    },
+    "control_frequency_hz": 15.000002480675647,
+    "control_iterations": 1719,
+    "control_period": {
+      "count": 1718,
+      "max_ms": 87.95336200000747,
+      "mean_ms": 66.66665564144338,
+      "median_ms": 66.66674400003103,
+      "p95_ms": 66.68835200039211
+    },
+    "elapsed_s": 114.56263464600033,
+    "failure": "sustained off-track: boundary distance 0.204m",
+    "final_distance_to_start_m": 1.2792722069567524,
+    "inference_latency": {
+      "count": 1719,
+      "max_ms": 8.753035999689018,
+      "mean_ms": 1.6310776614331948,
+      "median_ms": 0.8378709999306011,
+      "p95_ms": 4.1873393999594555
+    },
+    "liveness_failures": 0,
+    "max_abs_steering_rad": 0.349066,
+    "max_cte_m": 0.7059658948518253,
+    "mean_abs_command_delta_rad": 0.02956263342415568,
+    "mean_abs_steering_rad": 0.12380057147128921,
+    "mean_cte_m": 0.07340098576808868,
+    "neural_observation_fields": [
+      "HTTP camera JPEG"
+    ],
+    "off_track_events": 8,
+    "off_track_total_duration_s": 3.1262592980010595,
+    "policy_controlling_vehicle": "PilotNet V7 only",
+    "preprocessing_latency": {
+      "count": 1719,
+      "max_ms": 3.793269000198052,
+      "mean_ms": 1.915452657937123,
+      "median_ms": 1.905081000586506,
+      "p95_ms": 2.4571454999204434
+    },
+    "privileged_fields_outside_model": [
+      "GT pose",
+      "route",
+      "CTE",
+      "sim clock",
+      "track boundaries"
+    ],
+    "result": "FAIL",
+    "route_completion_fraction": 0.9621510645036951,
+    "route_length_m": 30.50461070080936,
+    "route_progress_m": 29.350043658054535,
+    "safe_stop_errors": [],
+    "safe_stop_success": true,
+    "shadow_expert_control_authority": false,
+    "steering_saturation_fraction": 0.07271669575334497
+  },
+  "preflight": {
+    "camera": {
+      "dimensions": [
+        480,
+        360
+      ],
+      "transport": "HTTP JPEG"
+    },
+    "clock_health": {
+      "maximum_allowed_stall_s": 0.5,
+      "maximum_observed_clock_stall_s": 0.10534500900030253,
+      "observed_real_time_factor": 1.013023219478618,
+      "paused_exposed": true,
+      "paused_observed": false,
+      "requested_duration_s": 2.0,
+      "result": "PASS",
+      "sample_count": 40,
+      "sim_delta_s": {
+        "max": 0.10500000000047294,
+        "mean": 0.05282051282049976,
+        "min": 0.0
+      },
+      "sim_elapsed_s": 2.0599999999994907,
+      "wall_elapsed_s": 2.033517061000566,
+      "wall_interval_s": {
+        "max": 0.053035265000289655,
+        "mean": 0.05214146310257862,
+        "min": 0.051455523999720754
+      }
+    },
+    "environment": {
+      "bounds": {
+        "maxX": 12.0,
+        "maxY": 7.0,
+        "minX": 0.0,
+        "minY": 0.0
+      },
+      "bounds_height_m": 7.0,
+      "bounds_width_m": 12.0,
+      "cone_count": 0,
+      "pose": {
+        "q": [
+          0.0,
+          0.0,
+          -0.707065,
+          0.707148
+        ],
+        "x": 1.400001,
+        "y": 3.394462,
+        "yaw": -1.570679,
+        "z": -0.001155
+      },
+      "result": "PASS",
+      "route_length_m": 30.50461070080936,
+      "route_points": 388,
+      "switching": false,
+      "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+    },
+    "result": "PASS",
+    "topics": {
+      "/camera/image_raw": "sensor_msgs/msg/Image",
+      "/clock": "rosgraph_msgs/msg/Clock"
+    }
+  },
+  "preserved_baseline": {
+    "checks": {
+      "expert_3_of_3_pass": true,
+      "nominal_collection_12_of_12": true,
+      "nominal_dataset_2911": true,
+      "v4_onnx_hash": true,
+      "v5_checkpoint_hash": true,
+      "v5_onnx_hash": true,
+      "v5_policy_fail_preserved": true,
+      "v5_training_pass": true
+    },
+    "result": "PASS",
+    "v5_checkpoint": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/v5/checkpoints/pilotnet_v5_high_speed_best.pt",
+    "v5_onnx": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_v1/v5/onnx/pilotnet_v5_high_speed.onnx"
+  },
+  "recorder_stop": {
+    "detail": null,
+    "graceful": true,
+    "orphaned": false
+  },
+  "reproduction_gate": {
+    "completion_fraction": 0.9621510645036951,
+    "policy_classification_accepted": "POLICY_PASS or late POLICY_FAIL",
+    "result": "PASS"
+  },
+  "result": "PASS",
+  "role": "training",
+  "rollout_id": "high_speed_dagger_iter3_rollout_A",
+  "target_region": {
+    "maximum_completion_fraction": 1.0,
+    "minimum_completion_fraction": 0.85,
+    "rule": "all valid raw ROS camera frames from route completion >=85% through final driving frame"
+  },
+  "telemetry": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/high_speed_dagger_iter3_rollout_A/telemetry.json",
+  "telemetry_sha256": "15ce9fd88b124373f6738999350e92125ad43f4497920cc1afe8fbd9ddc3b74a",
+  "version": "high_speed_dagger_iteration3_v1"
+}

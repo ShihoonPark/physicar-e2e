@@ -1,0 +1,47 @@
+{
+  "accepted_samples": 1015,
+  "candidate_frames": 1015,
+  "completion_fraction_range": [
+    0.8512372890631228,
+    0.9911450064565283
+  ],
+  "config_sha256": "f18c4bbbc6cee69a510508986032080e704d45b369b5d528ca7dfeb5f3e9695f",
+  "expert_label_age_ms": {
+    "count": 1015,
+    "max": 130.0,
+    "mean": 48.679802955665025,
+    "median": 50.0,
+    "p95": 95.0
+  },
+  "future_label_violations": 0,
+  "image_decode_failures": 0,
+  "late_region_counts": {
+    "85_90_percent": 994,
+    "90_95_percent": 7,
+    "95_100_percent": 14
+  },
+  "manifest": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/extracted/manifests/high_speed_dagger_iter3_rollout_B.csv",
+  "manifest_sha256": "5bf2401270ca7f2a76a4acaa3e8472b72d022fd2dcc804841e9675388367a107",
+  "preview": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/extracted/previews/high_speed_dagger_iter3_rollout_B.png",
+  "raw_camera_frames": 1238,
+  "result": "PASS",
+  "role": "holdout",
+  "rollout_id": "high_speed_dagger_iter3_rollout_B",
+  "route_s_range_m": [
+    25.966662116882883,
+    30.23449257000757
+  ],
+  "selection_rule": "all valid raw ROS frames with route completion >=85% through final driving frame",
+  "source_bag": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/high_speed_dagger_iter3_rollout_B/raw/high_speed_dagger_iter3_rollout_B/bag",
+  "source_mcap_sha256": "0fd9f5827cb773d0e5c7c213348081a48a972851751805832c92e3ac12c7f749",
+  "source_raw_size_bytes": 643005611,
+  "source_result_sha256": "1d684a91215f4e0af0255fcfe9f229bef33f7c5faad897d649fb455b32349fde",
+  "stale_label_rejections": 0,
+  "target_region": {
+    "maximum_completion_fraction": 1.0,
+    "minimum_completion_fraction": 0.85,
+    "rule": "all valid raw ROS camera frames from route completion >=85% through final driving frame"
+  },
+  "telemetry_sha256": "37a49f1c3ab2d0978726ab18e22699907b659a357ae8b61150931cc55aaa6d50",
+  "version": "high_speed_dagger_iteration3_v1"
+}

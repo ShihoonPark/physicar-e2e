@@ -1,0 +1,78 @@
+{
+  "camera": {
+    "camera_acquisition_ms": 1.9481310000628582,
+    "domain_difference": "Training uses raw ROS RGB-derived PNG; live input uses HTTP JPEG.",
+    "model_input_shape": [
+      3,
+      66,
+      200
+    ],
+    "preprocessing_ms": 2.9046239997114753,
+    "result": "PASS",
+    "source_dimensions": [
+      480,
+      360
+    ],
+    "transport": "HTTP JPEG"
+  },
+  "clock_health": {
+    "maximum_allowed_stall_s": 0.5,
+    "maximum_observed_clock_stall_s": 0.10619448099987494,
+    "observed_real_time_factor": 1.006078674114484,
+    "paused_exposed": true,
+    "paused_observed": false,
+    "requested_duration_s": 2.0,
+    "result": "PASS",
+    "sample_count": 40,
+    "sim_delta_s": {
+      "max": 0.10500000000047294,
+      "mean": 0.05282051282049976,
+      "min": 0.0
+    },
+    "sim_elapsed_s": 2.0599999999994907,
+    "wall_elapsed_s": 2.0475535890000174,
+    "wall_interval_s": {
+      "max": 0.053634887999578496,
+      "mean": 0.05250137407692352,
+      "min": 0.051728946000366705
+    }
+  },
+  "environment": {
+    "bounds": {
+      "maxX": 12.0,
+      "maxY": 7.0,
+      "minX": 0.0,
+      "minY": 0.0
+    },
+    "bounds_height_m": 7.0,
+    "bounds_width_m": 12.0,
+    "cone_count": 0,
+    "pose": {
+      "q": [
+        -0.0,
+        -0.0,
+        -0.707065,
+        0.707148
+      ],
+      "x": 1.400001,
+      "y": 3.394462,
+      "yaw": -1.570679,
+      "z": -0.001155
+    },
+    "result": "PASS",
+    "route_length_m": 30.50461070080936,
+    "route_points": 388,
+    "switching": false,
+    "world": "custom_71e69ee938032295503bfed557fde18c_e2e_lane_follow_v1"
+  },
+  "generated_utc": "2026-08-25T03:52:36.839963+00:00",
+  "onnx": {
+    "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/high_speed_dagger_iteration3_v1/v8/onnx/pilotnet_v8_high_speed_dagger.onnx",
+    "sha256": "e79afeb021a7d56fff20049026b3f05850906dc371ce01bf9811be77cf8385ca",
+    "size_bytes": 1012518
+  },
+  "result": "PASS",
+  "safe_stop_errors": [],
+  "safe_stop_success": true,
+  "version": "pilotnet_e2e_v8_high_speed_preflight"
+}
