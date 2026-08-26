@@ -1,0 +1,150 @@
+{
+  "version": "random_cone_post_recovery_conflict_fast_v1",
+  "expected_branch": "diagnosis/random-cone-post-recovery-conflict-fast-v1",
+  "expected_base_commit": "2c52f4dd3634fe59233acf95df42789a35da1828",
+  "purpose": "Diagnose optimization-gradient conflict versus visual/state aliasing between preserved D1 avoidance behavior and the existing 109 DAGGER2_POST_RECOVERY samples.",
+  "frozen_inputs": {
+    "dagger1_config": {
+      "path": "configs/random_cone_dagger1_1p0_v1.json",
+      "sha256": "5ed77c05df1e6f5090b642d3d5ed803e4b2c0c7ea2dc2cc362a1ad4ab8900979"
+    },
+    "d2_fe_config": {
+      "path": "configs/random_cone_d2_frontier_expansion_1p0_v1.json",
+      "sha256": "f6ea3796f3a93cbe1c9fa501f4da6799c6d7d62d2df06939edce45e2ea744536"
+    },
+    "d1_checkpoint": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/checkpoints/random_cone_temporal_d1_best.pt",
+      "sha256": "b63a8da4401df33d1e8e375c66bd46b35d9cecd70542aa7af8cdbecfdb69a434"
+    },
+    "d2_fe_checkpoint": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/d2_frontier_expansion/checkpoints/random_cone_temporal_d2_fe_best.pt",
+      "sha256": "7fcd021bd314640deff44a4fda6184eb944e55381d868a12764a20232966eba7"
+    },
+    "d1_training_summary": {
+      "path": "results/pilotnet_training_d1_random_cone_1p0/summary.json",
+      "sha256": "86d493bbc1daf4d1b3650533d5b186bf4e7759c6959442dbfb11d66bf68788c6"
+    },
+    "d2_fe_training_summary": {
+      "path": "results/pilotnet_training_d2_fe_random_cone_1p0/summary.json",
+      "sha256": "41c7e475b1202eab299bc84943f1d276f8a3e7523327cd50cdd40ff2ee1b573f"
+    },
+    "d2_fe_final_summary": {
+      "path": "results/pilotnet_e2e_d2_fe_random_cone_1p0/summary.json",
+      "sha256": "fdf3b5915d2ba73a549e42cf1a8abd16e10031f3ca8d060e51763acf95ef5ab8"
+    },
+    "d1_s09_live": {
+      "path": "results/pilotnet_e2e_d1_random_cone_1p0/validation_scenarios/scenario_09.json",
+      "sha256": "054dad57ac24b2d05f4366f693c6b4248c231773f2a2aa0ddafd4bec0d6b8e58"
+    },
+    "d2_fe_s09_live": {
+      "path": "results/pilotnet_e2e_d2_fe_random_cone_1p0/validation_scenarios/scenario_09.json",
+      "sha256": "8c396507dc39d49cc8662b388fec4d91bc7e8cc4fbb7f9218884dc11eda37c7a"
+    },
+    "d1_cone_free": {
+      "path": "results/random_cone_d1_cone_free_recheck_v1/d1_cone_free_valid.json",
+      "sha256": "9a06e3287542545e5b1be4075b2b6a19a5cebce39ebc80e3812440133806c8ba"
+    },
+    "d1_aggregate_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/aggregate/manifests/aggregate.csv",
+      "sha256": "8442af7dd41e5033722981249a906e8cb68287f2b83e3e2d35eb31f305b3dfc6",
+      "sequence_count": 8189,
+      "provenance_counts": {
+        "EXPERT_BASELINE": 6706,
+        "DAGGER1": 1483
+      }
+    },
+    "dagger1_detailed_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/dataset/temporal_manifests/dagger1_train.csv",
+      "sha256": "a86ef5a854eb72a057f4fb87001d593515297f323dddd500291186c80d847504",
+      "sequence_count": 1483
+    },
+    "dagger2_post_recovery_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger2_post_recovery/dataset/temporal_manifests/dagger2_post_recovery_train.csv",
+      "sha256": "744ea8ffb8df490c676ce93542b1f2eac3dafb4c23d85037218340f0b4d5aa13",
+      "sequence_count": 109
+    },
+    "s09_validation_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/validation_dataset/temporal_manifests/val_s09_r01.csv",
+      "sha256": "654592f672e0550d4255f45bd5d7f403d98919826b51e19802d4f3cfe46258fa",
+      "sequence_count": 419
+    },
+    "s09_episode_metadata": {
+      "path": "results/random_cone_validation_collection_1p0_v1/episodes/val_s09_r01.json",
+      "sha256": "267829f7f2fc991e9138b946ca643075bcb21a99e3cbde4b442f3f230368486b"
+    },
+    "s10_validation_manifest": {
+      "path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/validation_dataset/temporal_manifests/val_s10_r01.csv",
+      "sha256": "1b059012802f41963501504b1c4045d71142bd9e38860c8630896188aac84402",
+      "sequence_count": 418
+    },
+    "s10_episode_metadata": {
+      "path": "results/random_cone_validation_collection_1p0_v1/episodes/val_s10_r01.json",
+      "sha256": "f5e256a67d96caf01b15aea187e18d0046231c9271653a2c476cf4eb3622e905"
+    }
+  },
+  "prior_dagger2_negative": {
+    "collection_directory": "results/random_cone_dagger2_collection_1p0_v1",
+    "collection_directory_sha256": "ebe4d24dbab5cd3155676e5af8a4cca77ca45b1ddee7be52ed3977518e394fd1",
+    "dataset_directory": "results/random_cone_dagger2_dataset_1p0_v1",
+    "dataset_directory_sha256": "b9f8f993e0b30153af611720dddc00a4acb718319d1b1607ec7bce5d7dacca48",
+    "sequence_count": 109,
+    "sequences_after_20m": 18,
+    "sequences_after_26m": 0,
+    "historical_result": "FAIL",
+    "training_authorized": false
+  },
+  "architecture": {
+    "name": "Temporal PilotNet",
+    "input_shape": [9, 66, 200],
+    "parameter_count": 255819,
+    "penultimate_representation": "regressor final 10-D ReLU activation"
+  },
+  "subsets": {
+    "dagger1_avoidance_phases": ["approach", "avoidance", "pass_return"],
+    "dagger1_avoidance_phase": "avoidance",
+    "dagger1_recovery_or_failure_phases": ["post_recovery"],
+    "expert_nominal": {
+      "selection": "sha256_ranked_within_scenario_and_route_bin",
+      "per_scenario_route_bin": 16,
+      "route_bins_m": [[0.0, 10.0], [10.0, 20.0], [20.0, 26.0], [26.0, 30.50461070080936]],
+      "expected_count": 512
+    },
+    "s09_phase_boundaries_from_episode_metadata": true
+  },
+  "diagnostics": {
+    "device": "cpu",
+    "torch_threads": 2,
+    "forward_batch_size": 64,
+    "gradient_batch_size": 16,
+    "gradient_batch_count": 6,
+    "deterministic_seed": 20260826,
+    "steering_limit_rad": 0.349066,
+    "zero_sign_tolerance_rad": 0.000001,
+    "feature_high_similarity_rule": "nearest_avoidance_cosine_distance_at_or_below_observed_p25",
+    "feature_high_label_disagreement_rule": "absolute_label_difference_at_or_above_observed_p75",
+    "top_conflict_count": 20,
+    "consistent_gradient_opposition_rule": "median_cosine_below_zero_and_at_least_four_of_six_cosines_negative"
+  },
+  "classification_categories": [
+    "GRADIENT_CONFLICT_SUPPORTED",
+    "VISUAL_STATE_ALIASING_SUPPORTED",
+    "BOTH_SUPPORTED",
+    "NO_STRONG_CONFLICT_FOUND",
+    "MIXED_OR_INCONCLUSIVE"
+  ],
+  "result_directory": "results/random_cone_post_recovery_conflict_fast_v1",
+  "permissions": {
+    "training_permitted": false,
+    "fine_tuning_permitted": false,
+    "optimizer_steps_permitted": 0,
+    "checkpoint_writes_permitted": false,
+    "simulator_invocation_permitted": false,
+    "docker_manipulation_permitted": false,
+    "rosbag_access_permitted": false,
+    "new_data_collection_permitted": false,
+    "dagger3_permitted": false,
+    "s11_s12_access_permitted": false,
+    "commit_permitted": false,
+    "push_permitted": false
+  }
+}
