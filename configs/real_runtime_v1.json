@@ -1,0 +1,121 @@
+{
+  "version": "real_runtime_v1",
+  "expected_branch": "feature/real-runtime-v1",
+  "model": {
+    "selected_model": "REAL-SCRATCH-V1",
+    "onnx_path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/real_temporal_pilotnet_v1_selected.onnx",
+    "onnx_sha256": "b860afe396c8e48001339b4f99c8b3daa272500725d48d79b9c22b859c6fd339",
+    "onnx_size_bytes": 1026924,
+    "checkpoint_sha256": "02881b5b2d21768c4cf93b71e5d6c2a666043e34c08b71f4247b9545df3dc8e3",
+    "checkpoint_size_bytes": 1031661,
+    "freeze_path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/freeze.json",
+    "freeze_sha256": "635cea0c5b974a2dae6bcc680af4bff98ff745bab578b5fb30cdda838e907f7b",
+    "freeze_seal_path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/freeze_seal.json",
+    "freeze_seal_sha256": "03f56c997d77189dab11c9e4f9e1f6a22b140aebc1e35e1049be34f7523e43db"
+  },
+  "model_contract": {
+    "input_name": "camera_yuv_temporal",
+    "input_shape": [1, 9, 66, 200],
+    "input_frames": ["t_minus_2", "t_minus_1", "t"],
+    "output_name": "steering_rad",
+    "output_shape": [1, 1],
+    "output_unit": "radians",
+    "parameter_count": 255819,
+    "speed_is_neural_input": false
+  },
+  "camera": {
+    "topic": "/camera/image_raw",
+    "type": "sensor_msgs/msg/Image",
+    "width": 480,
+    "height": 360,
+    "encoding": "rgb8",
+    "nominal_rate_hz": 15.0
+  },
+  "preprocessing": {
+    "roi": [0, 80, 480, 360],
+    "crop_width": 480,
+    "crop_height": 280,
+    "output_width": 200,
+    "output_height": 66,
+    "resize": "Pillow_Image.Resampling.BILINEAR",
+    "stored_color_space": "RGB",
+    "model_color_space": "YUV_BT601_full_range",
+    "normalization": "(channel - 0.5) * 2.0",
+    "layout": "CHW",
+    "horizontal_crop": false,
+    "undistortion": false,
+    "simulator_roi_permitted": false
+  },
+  "temporal": {
+    "frame_count": 3,
+    "frame_order": ["t_minus_2", "t_minus_1", "t"],
+    "timestamp_source_live": "camera_callback_arrival_monotonic",
+    "strictly_increasing_timestamps": true,
+    "duplicate_frame_padding": false,
+    "maximum_adjacent_gap_s": 0.12,
+    "reset_if_gap_strictly_greater_than_s": 0.12
+  },
+  "steering": {
+    "topic": "/steering",
+    "type": "std_msgs/msg/Float64",
+    "model_output_unit": "radians",
+    "physical_bound_rad": [-0.35, 0.35],
+    "radians_per_normalized_command": 0.35,
+    "normalized_bound": [-1.0, 1.0],
+    "positive_direction": "LEFT",
+    "negative_direction": "RIGHT",
+    "safe_stop_normalized": 0.0
+  },
+  "speed": {
+    "topic": "/speed",
+    "type": "std_msgs/msg/Float64",
+    "unit": "m/s",
+    "neural_input": false,
+    "commanded_speed_mps": 0.1,
+    "physical_motion_authorized": false,
+    "safe_stop_mps": 0.0
+  },
+  "start_gate": {
+    "required": true,
+    "adapter": null,
+    "topic": null,
+    "development_bypass": false,
+    "allow_development_bypass": true,
+    "unverified_interface_blocker": "Exact real GREEN-signal ROS topic/API is not established; supply a verified adapter before physical deployment."
+  },
+  "safety": {
+    "publish_control": false,
+    "camera_timeout_s": 0.12,
+    "inference_timeout_s": 0.12,
+    "publisher_liveness_timeout_s": 0.12,
+    "maximum_consecutive_inference_failures": 3,
+    "fault_speed_mps": 0.0,
+    "fault_steering_normalized": 0.0,
+    "hold_stale_prediction": false
+  },
+  "offline_validation": {
+    "real_dataset_root": "/home/a/physicar-e2e-artifacts/real_dataset_v1",
+    "real_dataset_manifest_path": "/home/a/physicar-e2e-artifacts/real_dataset_v1/manifests/real_dataset_v1.csv",
+    "real_dataset_manifest_sha256": "ba82ae5f1f7c606f5f516ea006148f033ab95ec9097d2f6aaa300c2ab91f5597",
+    "bags": {
+      "bag_01": {
+        "mcap_path": "/home/a/output_bag/bag_01/bag_01_0.mcap",
+        "mcap_sha256": "c98fd035af40fb5e698e94f0a87fe3f8c979f4b473c16807621c70aa0b038f04",
+        "camera_frame_count": 651,
+        "accepted_sequence_count": 649
+      },
+      "bag_02": {
+        "mcap_path": "/home/a/output_bag/bag_02/bag_02_0.mcap",
+        "mcap_sha256": "856bcdebb65db968a549625abb528a80ee863e03540fa458b43c711333826636",
+        "camera_frame_count": 1068,
+        "accepted_sequence_count": 1064
+      },
+      "bag_03": {
+        "mcap_path": "/home/a/output_bag/bag_03/bag_03_0.mcap",
+        "mcap_sha256": "f7b3622c0d35e04fcc31e01aa6041bc5ae46c1ed6fdcb700c30900aa7e34438f",
+        "camera_frame_count": 454,
+        "accepted_sequence_count": 450
+      }
+    }
+  }
+}

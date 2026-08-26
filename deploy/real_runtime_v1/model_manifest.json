@@ -1,0 +1,19 @@
+{
+  "version": "real_runtime_v1_deploy_model_manifest",
+  "selected_model": "REAL-SCRATCH-V1",
+  "status": "offline_integration_candidate_only",
+  "onnx_filename": "real_temporal_pilotnet_v1_selected.onnx",
+  "onnx_sha256": "b860afe396c8e48001339b4f99c8b3daa272500725d48d79b9c22b859c6fd339",
+  "onnx_size_bytes": 1026924,
+  "checkpoint_sha256_evidence": "02881b5b2d21768c4cf93b71e5d6c2a666043e34c08b71f4247b9545df3dc8e3",
+  "freeze_filename": "freeze.json",
+  "freeze_sha256": "635cea0c5b974a2dae6bcc680af4bff98ff745bab578b5fb30cdda838e907f7b",
+  "freeze_seal_filename": "freeze_seal.json",
+  "freeze_seal_sha256": "03f56c997d77189dab11c9e4f9e1f6a22b140aebc1e35e1049be34f7523e43db",
+  "input": [1, 9, 66, 200],
+  "output": [1, 1],
+  "output_unit": "radians",
+  "parameter_count": 255819,
+  "model_binary_in_git": false,
+  "real_vehicle_success_claimed": false
+}

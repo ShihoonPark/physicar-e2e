@@ -1,0 +1,97 @@
+{
+  "version": "real_runtime_v1_summary",
+  "generated_local": "2026-08-26T09:38:55+09:00",
+  "result": "PASS",
+  "status": "OFFLINE_INTEGRATION_CANDIDATE_ONLY",
+  "branch": "feature/real-runtime-v1",
+  "selected_model": {
+    "name": "REAL-SCRATCH-V1",
+    "onnx_sha256": "b860afe396c8e48001339b4f99c8b3daa272500725d48d79b9c22b859c6fd339",
+    "checkpoint_sha256": "02881b5b2d21768c4cf93b71e5d6c2a666043e34c08b71f4247b9545df3dc8e3",
+    "freeze_sha256": "635cea0c5b974a2dae6bcc680af4bff98ff745bab578b5fb30cdda838e907f7b",
+    "freeze_seal_sha256": "03f56c997d77189dab11c9e4f9e1f6a22b140aebc1e35e1049be34f7523e43db",
+    "input_shape": [1, 9, 66, 200],
+    "output_shape": [1, 1],
+    "parameter_count": 255819,
+    "output_unit": "radians",
+    "result": "PASS"
+  },
+  "offline_gates": {
+    "selected_onnx_hash": "PASS",
+    "camera_contract": "PASS",
+    "preprocessing_equivalence": "PASS",
+    "bag_03_prediction_equivalence": "PASS",
+    "bag_03_freeze_metric_equivalence": "PASS",
+    "three_frame_temporal_behavior": "PASS",
+    "steering_scaled_exactly_once": "PASS",
+    "left_positive_convention": "PASS",
+    "nan_inf_output_count_zero": "PASS",
+    "normalized_bounds": "PASS",
+    "watchdog_and_safe_stop_tests": "PASS",
+    "dry_run_control_publications_zero": "PASS",
+    "physical_motion_zero": "PASS"
+  },
+  "complete_bag_replay": {
+    "result": "PASS",
+    "bag_count": 3,
+    "camera_frames": 2173,
+    "warmup_frames": 10,
+    "predictions": 2163,
+    "invalid_temporal_buffers": 2,
+    "preprocessing_tensor_mismatches": 0,
+    "runtime_vs_canonical_onnx_max_absolute_difference_rad": 0.0,
+    "nan_inf_model_output_count": 0,
+    "saturation_count": 0
+  },
+  "bag_03_equivalence": {
+    "result": "PASS",
+    "camera_frames": 454,
+    "warmup_frames": 4,
+    "predictions": 450,
+    "invalid_temporal_buffers": 1,
+    "runtime_onnx_vs_frozen_checkpoint_max_absolute_difference_rad": 7.450580596923828e-08,
+    "freeze_overall_metric_max_absolute_difference": 6.413553857997911e-06,
+    "runtime_validation_mae_rad": 0.047841743228362044,
+    "runtime_validation_rmse_rad": 0.08189241311020384,
+    "runtime_validation_sign_agreement": 0.8088888888888889
+  },
+  "recorded_timing_dry_run": {
+    "result": "PASS",
+    "bag": "bag_03",
+    "recorded_duration_s": 30.359962689,
+    "camera_replay_wall_elapsed_s": 30.380519974998606,
+    "realtime_pacing_ratio": 1.0006771182892809,
+    "preprocessing_p95_ms": 1.6843404506289514,
+    "onnx_p95_ms": 3.929532248912437,
+    "total_p95_ms": 5.185863848782899,
+    "watchdog_safe_stop_count": 1,
+    "model_steering_rad_range": [-0.2478904128074646, 0.24984332919120789],
+    "normalized_command_range": [-0.7082583223070418, 0.7138380834034511],
+    "steering_publish_count": 0,
+    "speed_publish_count": 0
+  },
+  "configuration_defaults": {
+    "publish_control": false,
+    "physical_motion_authorized": false,
+    "commanded_speed_mps_for_later_milestone": 0.1,
+    "start_gate_required": true,
+    "development_start_bypass": false,
+    "traffic_light_adapter": null
+  },
+  "test_evidence": {
+    "focused": "25 passed, 8 subtests passed",
+    "full_regression": "568 passed, 47 subtests passed",
+    "git_diff_check": "PASS"
+  },
+  "scope": {
+    "training_performed": false,
+    "real_dataset_v1_modified": false,
+    "simulator_model_used_as_runtime_model": false,
+    "simulator_motion_performed": false,
+    "real_vehicle_motion_performed": false,
+    "commit_performed": false,
+    "push_performed": false,
+    "real_vehicle_success_claimed": false
+  },
+  "blocking_item": "The exact real GREEN-signal ROS topic/API is not verified. Runtime V1 deliberately provides an adapter boundary and remains WAITING_FOR_START instead of guessing a topic."
+}

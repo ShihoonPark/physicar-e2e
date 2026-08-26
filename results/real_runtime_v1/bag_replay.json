@@ -1,0 +1,540 @@
+{
+  "bags": {
+    "bag_01": {
+      "bag_id": "bag_01",
+      "camera_replay_wall_elapsed_s": 2.7853076350002084,
+      "checkpoint_pipeline_equivalence": null,
+      "mode": "offline_no_publish_replay",
+      "normalized_commands_within_bounds": true,
+      "playback_rate": null,
+      "prediction_equivalence": {
+        "count": 649,
+        "result": "PASS",
+        "runtime_raw_camera_vs_stored_rgb_onnx_max_absolute_difference_rad": 0.0,
+        "runtime_raw_camera_vs_stored_rgb_onnx_mean_absolute_difference_rad": 0.0,
+        "tolerance_rad": 1e-07
+      },
+      "preprocessing_equivalence": {
+        "exact_tensor_matches": 651,
+        "frames_compared": 651,
+        "max_absolute_tensor_difference": 0.0,
+        "mismatch_count": 0,
+        "result": "PASS"
+      },
+      "realtime_pacing_ratio": null,
+      "result": "PASS",
+      "safety": {
+        "development_start_gate_bypass": true,
+        "physical_motion_authorized": false,
+        "publish_control": false,
+        "real_vehicle_motion_performed": false,
+        "simulator_motion_performed": false,
+        "speed_publish_count": 0,
+        "steering_publish_count": 0
+      },
+      "source": {
+        "camera_frame_count": 651,
+        "mcap_path": "/home/a/output_bag/bag_01/bag_01_0.mcap",
+        "mcap_sha256": "c98fd035af40fb5e698e94f0a87fe3f8c979f4b473c16807621c70aa0b038f04",
+        "recorded_camera_duration_s": 43.306935846
+      },
+      "statistics": {
+        "dropouts": 0,
+        "duplicate_frames": 0,
+        "frame_interval": {
+          "count": 650,
+          "max_ms": 85.03148,
+          "mean_ms": 66.62605514769231,
+          "median_ms": 66.62733700000001,
+          "min_ms": 54.459610999999995,
+          "p95_ms": 69.50594674999999
+        },
+        "frames": 651,
+        "inference_failures": 0,
+        "invalid_orderings": 0,
+        "invalid_temporal_buffers": 0,
+        "nan_inf_model_output_count": 0,
+        "normalized_command_max": 0.761532017162868,
+        "normalized_command_min": -0.6764703989028931,
+        "onnx_latency": {
+          "count": 649,
+          "max_ms": 8.127660999889486,
+          "mean_ms": 0.9916629585071908,
+          "median_ms": 0.6038300016371068,
+          "min_ms": 0.3236249976907857,
+          "p95_ms": 3.055753202352212
+        },
+        "predictions": 649,
+        "preprocessing_failures": 0,
+        "preprocessing_latency": {
+          "count": 651,
+          "max_ms": 6.8728820006072056,
+          "mean_ms": 1.4982350630271797,
+          "median_ms": 1.1875420022988692,
+          "min_ms": 0.9114360000239685,
+          "p95_ms": 4.331782000008388
+        },
+        "publisher_failures": 0,
+        "safe_stop_decisions": 2,
+        "saturation_count": 0,
+        "steering_rad_max": 0.2665362060070038,
+        "steering_rad_min": -0.23676463961601257,
+        "total_latency": {
+          "count": 651,
+          "max_ms": 9.245042001566617,
+          "mean_ms": 2.5234375683565378,
+          "median_ms": 2.0269230008125305,
+          "min_ms": 1.3055939998594113,
+          "p95_ms": 5.553212500672089
+        },
+        "warmup_frames": 2,
+        "watchdog_faults": 0
+      },
+      "temporal": {
+        "expected_predictions": 649,
+        "observed_predictions": 649,
+        "realtime_watchdog_safe_stop_count": 0,
+        "result": "PASS",
+        "source_adjacent_gap_gt_0p120_s_count": 0,
+        "target_camera_indices_match_manifest": true
+      },
+      "validation_metrics": null,
+      "version": "real_runtime_v1",
+      "wall_elapsed_s": 4.164680282003246
+    },
+    "bag_02": {
+      "bag_id": "bag_02",
+      "camera_replay_wall_elapsed_s": 4.175236118997418,
+      "checkpoint_pipeline_equivalence": null,
+      "mode": "offline_no_publish_replay",
+      "normalized_commands_within_bounds": true,
+      "playback_rate": null,
+      "prediction_equivalence": {
+        "count": 1064,
+        "result": "PASS",
+        "runtime_raw_camera_vs_stored_rgb_onnx_max_absolute_difference_rad": 0.0,
+        "runtime_raw_camera_vs_stored_rgb_onnx_mean_absolute_difference_rad": 0.0,
+        "tolerance_rad": 1e-07
+      },
+      "preprocessing_equivalence": {
+        "exact_tensor_matches": 1068,
+        "frames_compared": 1068,
+        "max_absolute_tensor_difference": 0.0,
+        "mismatch_count": 0,
+        "result": "PASS"
+      },
+      "realtime_pacing_ratio": null,
+      "result": "PASS",
+      "safety": {
+        "development_start_gate_bypass": true,
+        "physical_motion_authorized": false,
+        "publish_control": false,
+        "real_vehicle_motion_performed": false,
+        "simulator_motion_performed": false,
+        "speed_publish_count": 0,
+        "steering_publish_count": 0
+      },
+      "source": {
+        "camera_frame_count": 1068,
+        "mcap_path": "/home/a/output_bag/bag_02/bag_02_0.mcap",
+        "mcap_sha256": "856bcdebb65db968a549625abb528a80ee863e03540fa458b43c711333826636",
+        "recorded_camera_duration_s": 71.359248207
+      },
+      "statistics": {
+        "dropouts": 1,
+        "duplicate_frames": 0,
+        "frame_interval": {
+          "count": 1067,
+          "max_ms": 357.921377,
+          "mean_ms": 66.87839569540769,
+          "median_ms": 66.674831,
+          "min_ms": 39.547205000000005,
+          "p95_ms": 69.6083568
+        },
+        "frames": 1068,
+        "inference_failures": 0,
+        "invalid_orderings": 0,
+        "invalid_temporal_buffers": 1,
+        "nan_inf_model_output_count": 0,
+        "normalized_command_max": 0.7875430583953857,
+        "normalized_command_min": -0.7126961435590472,
+        "onnx_latency": {
+          "count": 1064,
+          "max_ms": 9.853900999587495,
+          "mean_ms": 1.0238165507775863,
+          "median_ms": 0.5449854998005321,
+          "min_ms": 0.31523000143351965,
+          "p95_ms": 3.585585348992026
+        },
+        "predictions": 1064,
+        "preprocessing_failures": 0,
+        "preprocessing_latency": {
+          "count": 1068,
+          "max_ms": 7.497832997614751,
+          "mean_ms": 1.2863122940527068,
+          "median_ms": 1.1285170003247913,
+          "min_ms": 0.7803699991200119,
+          "p95_ms": 2.137784099795677
+        },
+        "publisher_failures": 0,
+        "safe_stop_decisions": 4,
+        "saturation_count": 0,
+        "steering_rad_max": 0.275640070438385,
+        "steering_rad_min": -0.2494436502456665,
+        "total_latency": {
+          "count": 1068,
+          "max_ms": 12.728821999189677,
+          "mean_ms": 2.346935495388811,
+          "median_ms": 1.8173965017922455,
+          "min_ms": 0.8009999983187299,
+          "p95_ms": 5.27360980031517
+        },
+        "warmup_frames": 4,
+        "watchdog_faults": 0
+      },
+      "temporal": {
+        "expected_predictions": 1064,
+        "observed_predictions": 1064,
+        "realtime_watchdog_safe_stop_count": 0,
+        "result": "PASS",
+        "source_adjacent_gap_gt_0p120_s_count": 1,
+        "target_camera_indices_match_manifest": true
+      },
+      "validation_metrics": null,
+      "version": "real_runtime_v1",
+      "wall_elapsed_s": 6.345220701998187
+    },
+    "bag_03": {
+      "bag_id": "bag_03",
+      "camera_replay_wall_elapsed_s": 1.8576907160022529,
+      "checkpoint_pipeline_equivalence": {
+        "all_metric_tolerance": 0.0002,
+        "freeze_metric_max_absolute_difference": 0.00010184765544513953,
+        "freeze_overall_metric_max_absolute_difference": 6.413553857997911e-06,
+        "overall_metric_tolerance": 1e-05,
+        "prediction_tolerance_rad": 0.0001,
+        "result": "PASS",
+        "runtime_onnx_vs_frozen_checkpoint_max_absolute_difference_rad": 7.450580596923828e-08,
+        "runtime_onnx_vs_frozen_checkpoint_mean_absolute_difference_rad": 1.1738803651597765e-08
+      },
+      "mode": "offline_no_publish_replay",
+      "normalized_commands_within_bounds": true,
+      "playback_rate": null,
+      "prediction_equivalence": {
+        "count": 450,
+        "result": "PASS",
+        "runtime_raw_camera_vs_stored_rgb_onnx_max_absolute_difference_rad": 0.0,
+        "runtime_raw_camera_vs_stored_rgb_onnx_mean_absolute_difference_rad": 0.0,
+        "tolerance_rad": 1e-07
+      },
+      "preprocessing_equivalence": {
+        "exact_tensor_matches": 454,
+        "frames_compared": 454,
+        "max_absolute_tensor_difference": 0.0,
+        "mismatch_count": 0,
+        "result": "PASS"
+      },
+      "realtime_pacing_ratio": null,
+      "result": "PASS",
+      "safety": {
+        "development_start_gate_bypass": true,
+        "physical_motion_authorized": false,
+        "publish_control": false,
+        "real_vehicle_motion_performed": false,
+        "simulator_motion_performed": false,
+        "speed_publish_count": 0,
+        "steering_publish_count": 0
+      },
+      "source": {
+        "camera_frame_count": 454,
+        "mcap_path": "/home/a/output_bag/bag_03/bag_03_0.mcap",
+        "mcap_sha256": "f7b3622c0d35e04fcc31e01aa6041bc5ae46c1ed6fdcb700c30900aa7e34438f",
+        "recorded_camera_duration_s": 30.359962689
+      },
+      "statistics": {
+        "dropouts": 1,
+        "duplicate_frames": 0,
+        "frame_interval": {
+          "count": 453,
+          "max_ms": 252.107132,
+          "mean_ms": 67.01978518543046,
+          "median_ms": 66.65344900000001,
+          "min_ms": 51.553319,
+          "p95_ms": 70.3703238
+        },
+        "frames": 454,
+        "inference_failures": 0,
+        "invalid_orderings": 0,
+        "invalid_temporal_buffers": 1,
+        "nan_inf_model_output_count": 0,
+        "normalized_command_max": 0.7138380834034511,
+        "normalized_command_min": -0.7082583223070418,
+        "onnx_latency": {
+          "count": 450,
+          "max_ms": 7.939539002109086,
+          "mean_ms": 0.9339484465777382,
+          "median_ms": 0.5185850022826344,
+          "min_ms": 0.34586699985084124,
+          "p95_ms": 3.4011794501566306
+        },
+        "predictions": 450,
+        "preprocessing_failures": 0,
+        "preprocessing_latency": {
+          "count": 454,
+          "max_ms": 10.282143000949873,
+          "mean_ms": 1.4322432708840727,
+          "median_ms": 1.108494499931112,
+          "min_ms": 0.7720249996054918,
+          "p95_ms": 3.294558599736773
+        },
+        "publisher_failures": 0,
+        "safe_stop_decisions": 4,
+        "saturation_count": 0,
+        "steering_rad_max": 0.24984332919120789,
+        "steering_rad_min": -0.2478904128074646,
+        "total_latency": {
+          "count": 454,
+          "max_ms": 12.018912999337772,
+          "mean_ms": 2.4029544449373765,
+          "median_ms": 1.8565595000836765,
+          "min_ms": 0.8783939993008971,
+          "p95_ms": 5.116522999378502
+        },
+        "warmup_frames": 4,
+        "watchdog_faults": 0
+      },
+      "temporal": {
+        "expected_predictions": 450,
+        "observed_predictions": 450,
+        "realtime_watchdog_safe_stop_count": 0,
+        "result": "PASS",
+        "source_adjacent_gap_gt_0p120_s_count": 1,
+        "target_camera_indices_match_manifest": true
+      },
+      "validation_metrics": {
+        "by_target_magnitude_and_direction": {
+          "abs_0p05_to_lt_0p15": {
+            "combined": {
+              "bias_rad": 0.00683389197696339,
+              "corrective_magnitude_ratio": 0.743581010751988,
+              "count": 209,
+              "mae_rad": 0.050641523130487594,
+              "max_absolute_error_rad": 0.2034367024898529,
+              "median_absolute_error_rad": 0.026552405208349228,
+              "p95_absolute_error_rad": 0.1573326528072357,
+              "pearson_correlation": 0.6617893163619271,
+              "rmse_rad": 0.07238906084624928,
+              "steering_sign_agreement": 0.8373205741626795
+            },
+            "left": {
+              "bias_rad": -0.02704373926155327,
+              "corrective_magnitude_ratio": 0.77265317298816,
+              "count": 129,
+              "mae_rad": 0.03939956478601278,
+              "max_absolute_error_rad": 0.2034367024898529,
+              "median_absolute_error_rad": 0.016747482120990753,
+              "p95_absolute_error_rad": 0.14599368274211882,
+              "pearson_correlation": -0.033558432925438836,
+              "rmse_rad": 0.062053972301455915,
+              "steering_sign_agreement": 0.9069767441860465
+            },
+            "right": {
+              "bias_rad": 0.0614615723490715,
+              "corrective_magnitude_ratio": 0.6984570607517281,
+              "count": 80,
+              "mae_rad": 0.06876918096095323,
+              "max_absolute_error_rad": 0.19979716464877129,
+              "median_absolute_error_rad": 0.058149250224232674,
+              "p95_absolute_error_rad": 0.17535050362348556,
+              "pearson_correlation": 0.49851248137873067,
+              "rmse_rad": 0.08649111908889275,
+              "steering_sign_agreement": 0.725
+            },
+            "zero_target_count": 0
+          },
+          "abs_0p15_to_lt_0p25": {
+            "combined": {
+              "bias_rad": 0.05777939311836077,
+              "corrective_magnitude_ratio": 0.5408695926568579,
+              "count": 46,
+              "mae_rad": 0.11484759657279305,
+              "max_absolute_error_rad": 0.33959098160266876,
+              "median_absolute_error_rad": 0.09556471556425095,
+              "p95_absolute_error_rad": 0.3110747206956148,
+              "pearson_correlation": 0.6187012678639777,
+              "rmse_rad": 0.15038858197262697,
+              "steering_sign_agreement": 0.7391304347826086
+            },
+            "left": {
+              "bias_rad": -0.08045796652634939,
+              "corrective_magnitude_ratio": 0.6526942068646813,
+              "count": 15,
+              "mae_rad": 0.09182170927524566,
+              "max_absolute_error_rad": 0.2216954380273819,
+              "median_absolute_error_rad": 0.03962114453315735,
+              "p95_absolute_error_rad": 0.2096774414181709,
+              "pearson_correlation": 0.5737938408754586,
+              "rmse_rad": 0.12416304095268771,
+              "steering_sign_agreement": 0.6
+            },
+            "right": {
+              "bias_rad": 0.12466843810773665,
+              "corrective_magnitude_ratio": 0.490544405083626,
+              "count": 31,
+              "mae_rad": 0.12598915494257404,
+              "max_absolute_error_rad": 0.33959098160266876,
+              "median_absolute_error_rad": 0.11226591467857361,
+              "p95_absolute_error_rad": 0.31771595403552055,
+              "pearson_correlation": -0.34065062076251035,
+              "rmse_rad": 0.16155718711428116,
+              "steering_sign_agreement": 0.8064516129032258
+            },
+            "zero_target_count": 0
+          },
+          "abs_gte_0p25": {
+            "combined": {
+              "bias_rad": 0.3127107930680116,
+              "corrective_magnitude_ratio": 0.5012064543138933,
+              "count": 6,
+              "mae_rad": 0.32810194914539653,
+              "max_absolute_error_rad": 0.3934902101755142,
+              "median_absolute_error_rad": 0.3840797729790211,
+              "p95_absolute_error_rad": 0.3934757001698017,
+              "pearson_correlation": 0.9847092761739361,
+              "rmse_rad": 0.35162275035199325,
+              "steering_sign_agreement": 0.16666666666666666
+            },
+            "left": {
+              "bias_rad": -0.046173468232154846,
+              "corrective_magnitude_ratio": 0.815577376643059,
+              "count": 1,
+              "mae_rad": 0.046173468232154846,
+              "max_absolute_error_rad": 0.046173468232154846,
+              "median_absolute_error_rad": 0.046173468232154846,
+              "p95_absolute_error_rad": 0.046173468232154846,
+              "pearson_correlation": null,
+              "rmse_rad": 0.046173468232154846,
+              "steering_sign_agreement": 1.0
+            },
+            "right": {
+              "bias_rad": 0.3844876453280449,
+              "corrective_magnitude_ratio": 0.44216158048993587,
+              "count": 5,
+              "mae_rad": 0.3844876453280449,
+              "max_absolute_error_rad": 0.3934902101755142,
+              "median_absolute_error_rad": 0.3908158242702484,
+              "p95_absolute_error_rad": 0.3934786021709442,
+              "pearson_correlation": 0.009111016590494323,
+              "rmse_rad": 0.3846295262254356,
+              "steering_sign_agreement": 0.0
+            },
+            "zero_target_count": 0
+          },
+          "abs_lt_0p05": {
+            "combined": {
+              "bias_rad": 0.004049879199734066,
+              "corrective_magnitude_ratio": 1.1991847957054018,
+              "count": 189,
+              "mae_rad": 0.019540237996138375,
+              "max_absolute_error_rad": 0.11130908434279263,
+              "median_absolute_error_rad": 0.012767855077981949,
+              "p95_absolute_error_rad": 0.05191755592823028,
+              "pearson_correlation": 0.5377336159234946,
+              "rmse_rad": 0.027261981649818978,
+              "steering_sign_agreement": 0.8148148148148148
+            },
+            "left": {
+              "bias_rad": -0.0007135090794540325,
+              "corrective_magnitude_ratio": 1.1739055474911704,
+              "count": 133,
+              "mae_rad": 0.015732272395941157,
+              "max_absolute_error_rad": 0.07574240304529667,
+              "median_absolute_error_rad": 0.011301113292574883,
+              "p95_absolute_error_rad": 0.04089005514979361,
+              "pearson_correlation": 0.36515904995525683,
+              "rmse_rad": 0.021220392634749133,
+              "steering_sign_agreement": 0.8947368421052632
+            },
+            "right": {
+              "bias_rad": 0.0153629263628058,
+              "corrective_magnitude_ratio": 1.2746641669844427,
+              "count": 56,
+              "mae_rad": 0.028584156296606773,
+              "max_absolute_error_rad": 0.11130908434279263,
+              "median_absolute_error_rad": 0.02133770612999797,
+              "p95_absolute_error_rad": 0.07712014816934243,
+              "pearson_correlation": 0.22536059940906794,
+              "rmse_rad": 0.037932548961843775,
+              "steering_sign_agreement": 0.625
+            },
+            "zero_target_count": 0
+          }
+        },
+        "overall": {
+          "bias_rad": 0.014950727630639449,
+          "corrective_magnitude_ratio": 0.7431123008647037,
+          "count": 450,
+          "mae_rad": 0.047841743228362044,
+          "max_absolute_error_rad": 0.3934902101755142,
+          "median_absolute_error_rad": 0.021555528044700623,
+          "p95_absolute_error_rad": 0.17410930395126342,
+          "pearson_correlation": 0.569247772503159,
+          "rmse_rad": 0.08189241311020384,
+          "steering_sign_agreement": 0.8088888888888889
+        }
+      },
+      "version": "real_runtime_v1",
+      "wall_elapsed_s": 4.5224158500022895
+    }
+  },
+  "publication": {
+    "publish_control": false,
+    "speed_publish_count": 0,
+    "steering_publish_count": 0
+  },
+  "real_vehicle_motion_performed": false,
+  "result": "PASS",
+  "selected_model_audit": {
+    "checkpoint": {
+      "file_verified": true,
+      "path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/real_temporal_pilotnet_v1_selected.pt",
+      "sha256_expected": "02881b5b2d21768c4cf93b71e5d6c2a666043e34c08b71f4247b9545df3dc8e3",
+      "sha256_observed": "02881b5b2d21768c4cf93b71e5d6c2a666043e34c08b71f4247b9545df3dc8e3"
+    },
+    "freeze": {
+      "path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/freeze.json",
+      "sha256": "635cea0c5b974a2dae6bcc680af4bff98ff745bab578b5fb30cdda838e907f7b"
+    },
+    "freeze_seal": {
+      "path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/freeze_seal.json",
+      "sha256": "03f56c997d77189dab11c9e4f9e1f6a22b140aebc1e35e1049be34f7523e43db"
+    },
+    "offline_integration_candidate_only": true,
+    "onnx": {
+      "checker": "PASS",
+      "input_name": "camera_yuv_temporal",
+      "input_shape": [
+        "N",
+        9,
+        66,
+        200
+      ],
+      "output_name": "steering_rad",
+      "output_shape": [
+        "N",
+        1
+      ],
+      "parameter_count": 255819,
+      "path": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1/selected/real_temporal_pilotnet_v1_selected.onnx",
+      "sha256_expected": "b860afe396c8e48001339b4f99c8b3daa272500725d48d79b9c22b859c6fd339",
+      "sha256_observed": "b860afe396c8e48001339b4f99c8b3daa272500725d48d79b9c22b859c6fd339",
+      "size_bytes": 1026924
+    },
+    "real_vehicle_success_claimed": false,
+    "result": "PASS",
+    "selected_model": "REAL-SCRATCH-V1"
+  },
+  "simulator_motion_performed": false,
+  "training_performed": false,
+  "version": "real_runtime_v1"
+}

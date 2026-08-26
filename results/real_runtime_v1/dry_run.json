@@ -1,0 +1,102 @@
+{
+  "bag_id": "bag_03",
+  "camera_replay_wall_elapsed_s": 30.380519974998606,
+  "checkpoint_pipeline_equivalence": null,
+  "mode": "recorded_timing_no_publish_dry_run",
+  "normalized_commands_within_bounds": true,
+  "playback_rate": 1.0,
+  "prediction_equivalence": {
+    "count": 450,
+    "result": "PASS",
+    "runtime_raw_camera_vs_stored_rgb_onnx_max_absolute_difference_rad": 0.0,
+    "runtime_raw_camera_vs_stored_rgb_onnx_mean_absolute_difference_rad": 0.0,
+    "tolerance_rad": 1e-07
+  },
+  "preprocessing_equivalence": {
+    "exact_tensor_matches": 454,
+    "frames_compared": 454,
+    "max_absolute_tensor_difference": 0.0,
+    "mismatch_count": 0,
+    "result": "PASS"
+  },
+  "realtime_pacing_ratio": 1.0006771182892809,
+  "result": "PASS",
+  "safety": {
+    "development_start_gate_bypass": true,
+    "physical_motion_authorized": false,
+    "publish_control": false,
+    "real_vehicle_motion_performed": false,
+    "simulator_motion_performed": false,
+    "speed_publish_count": 0,
+    "steering_publish_count": 0
+  },
+  "source": {
+    "camera_frame_count": 454,
+    "mcap_path": "/home/a/output_bag/bag_03/bag_03_0.mcap",
+    "mcap_sha256": "f7b3622c0d35e04fcc31e01aa6041bc5ae46c1ed6fdcb700c30900aa7e34438f",
+    "recorded_camera_duration_s": 30.359962689
+  },
+  "statistics": {
+    "dropouts": 0,
+    "duplicate_frames": 0,
+    "frame_interval": {
+      "count": 453,
+      "max_ms": 252.107132,
+      "mean_ms": 67.01978518543046,
+      "median_ms": 66.65344900000001,
+      "min_ms": 51.553319,
+      "p95_ms": 70.3703238
+    },
+    "frames": 454,
+    "inference_failures": 0,
+    "invalid_orderings": 0,
+    "invalid_temporal_buffers": 1,
+    "nan_inf_model_output_count": 0,
+    "normalized_command_max": 0.7138380834034511,
+    "normalized_command_min": -0.7082583223070418,
+    "onnx_latency": {
+      "count": 450,
+      "max_ms": 7.487031998607563,
+      "mean_ms": 1.1320237689748562,
+      "median_ms": 0.6611725002585445,
+      "min_ms": 0.40158200135920197,
+      "p95_ms": 3.929532248912437
+    },
+    "predictions": 450,
+    "preprocessing_failures": 0,
+    "preprocessing_latency": {
+      "count": 454,
+      "max_ms": 3.251975998864509,
+      "mean_ms": 1.2562319075487172,
+      "median_ms": 1.2432714993337868,
+      "min_ms": 0.8446200008620508,
+      "p95_ms": 1.6843404506289514
+    },
+    "publisher_failures": 0,
+    "safe_stop_decisions": 5,
+    "saturation_count": 0,
+    "steering_rad_max": 0.24984332919120789,
+    "steering_rad_min": -0.2478904128074646,
+    "total_latency": {
+      "count": 454,
+      "max_ms": 9.056029000930721,
+      "mean_ms": 2.4462857490615963,
+      "median_ms": 2.0682805006799754,
+      "min_ms": 1.316775000304915,
+      "p95_ms": 5.185863848782899
+    },
+    "warmup_frames": 4,
+    "watchdog_faults": 1
+  },
+  "temporal": {
+    "expected_predictions": 450,
+    "observed_predictions": 450,
+    "realtime_watchdog_safe_stop_count": 1,
+    "result": "PASS",
+    "source_adjacent_gap_gt_0p120_s_count": 1,
+    "target_camera_indices_match_manifest": true
+  },
+  "validation_metrics": null,
+  "version": "real_runtime_v1",
+  "wall_elapsed_s": 31.32031634699888
+}

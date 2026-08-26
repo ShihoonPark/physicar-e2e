@@ -1,0 +1,81 @@
+{
+  "version": "real_runtime_v1_safety_audit",
+  "generated_local": "2026-08-26T09:38:55+09:00",
+  "result": "PASS",
+  "state_machine": {
+    "states": [
+      "INIT",
+      "WAITING_FOR_START",
+      "WARMING_TEMPORAL_BUFFER",
+      "RUNNING",
+      "FAULT",
+      "SAFE_STOPPED"
+    ],
+    "safe_stop_speed_mps": 0.0,
+    "safe_stop_steering_normalized": 0.0,
+    "hold_stale_prediction": false,
+    "result": "PASS"
+  },
+  "fault_handling": {
+    "camera_timeout": "SAFE_STOP",
+    "invalid_image_contract": "SAFE_STOP_AND_CLEAR_HISTORY",
+    "invalid_temporal_ordering": "SAFE_STOP_AND_CLEAR_HISTORY",
+    "frame_gap_strictly_greater_than_0p120_s": "SAFE_STOP_AND_REBUILD_FROM_CURRENT_FRESH_FRAME",
+    "preprocessing_exception": "SAFE_STOP_AND_CLEAR_HISTORY",
+    "onnx_exception": "SAFE_STOP_AND_CLEAR_HISTORY",
+    "nan_or_infinite_model_output": "SAFE_STOP_AND_CLEAR_HISTORY",
+    "publisher_or_liveness_failure": "NONRECOVERABLE_FAULT_AND_SAFE_STOP_ATTEMPT",
+    "result": "PASS"
+  },
+  "watchdog": {
+    "camera_timeout_s": 0.12,
+    "inference_timeout_s": 0.12,
+    "publisher_liveness_timeout_s": 0.12,
+    "tracks_last_camera_receipt": true,
+    "tracks_frame_interval": true,
+    "tracks_preprocessing_latency": true,
+    "tracks_onnx_latency": true,
+    "tracks_total_control_latency": true,
+    "tracks_consecutive_inference_failures": true,
+    "recorded_timing_dry_run_watchdog_safe_stops": 1,
+    "focused_tests": "PASS"
+  },
+  "publication": {
+    "core_has_ros_dependency": false,
+    "core_can_publish": false,
+    "publisher_contract_is_separate": true,
+    "default_publish_control": false,
+    "ros_publishers_created_only_with_explicit_flag": true,
+    "development_bypass_with_publication_rejected": true,
+    "bag_replay_steering_publish_count": 0,
+    "bag_replay_speed_publish_count": 0,
+    "dry_run_steering_publish_count": 0,
+    "dry_run_speed_publish_count": 0,
+    "result": "PASS"
+  },
+  "start_gate": {
+    "default_required": true,
+    "default_state_without_green": "WAITING_FOR_START",
+    "traffic_light_topic": null,
+    "traffic_light_adapter": null,
+    "development_bypass_supported_for_no_publish_testing": true,
+    "interface_status": "BLOCKED_PENDING_VERIFIED_REAL_GREEN_SIGNAL_API",
+    "unverified_topic_invented": false,
+    "result": "PASS"
+  },
+  "motion": {
+    "default_physical_motion_authorized": false,
+    "runtime_default_speed_output_mps": 0.0,
+    "real_vehicle_motion_performed": false,
+    "simulator_motion_performed": false,
+    "result": "PASS"
+  },
+  "offline_observation": {
+    "complete_camera_frames": 2173,
+    "predictions": 2163,
+    "nan_inf_model_output_count": 0,
+    "normalized_commands_out_of_bounds": 0,
+    "saturation_count": 0,
+    "result": "PASS"
+  }
+}
