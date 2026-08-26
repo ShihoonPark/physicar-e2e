@@ -44,6 +44,12 @@ therefore remains `WAITING_FOR_START`; it does not subscribe to a guessed topic.
 A future verified adapter must call
 `authorize_green_from_verified_adapter(green)`.
 
+The confirmed real-vehicle control path is direct: publish normalized
+`std_msgs/msg/Float64` steering to `/steering` after
+`steering_rad / 0.35`, and publish the m/s `std_msgs/msg/Float64` speed command
+to `/speed`. Do not route through `/teleop/steering`, `/teleop/speed`, or
+`/cmd_vel`.
+
 `--publish-control` is the explicit publisher opt-in. Never combine it with
 `--development-start-bypass`; the adapter rejects that combination. Runtime V1
 must stay in its default no-publish configuration. Physical-motion

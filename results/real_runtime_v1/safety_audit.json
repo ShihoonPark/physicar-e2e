@@ -53,6 +53,18 @@
     "dry_run_speed_publish_count": 0,
     "result": "PASS"
   },
+  "confirmed_real_control_interface": {
+    "routing": "DIRECT_ONLY",
+    "steering_topic": "/steering",
+    "steering_type": "std_msgs/msg/Float64",
+    "steering_value": "normalized_steering_command",
+    "steering_conversion": "steering_normalized = steering_rad / 0.35",
+    "speed_topic": "/speed",
+    "speed_type": "std_msgs/msg/Float64",
+    "speed_value_unit": "m/s",
+    "forbidden_topics": ["/teleop/steering", "/teleop/speed", "/cmd_vel"],
+    "result": "PASS"
+  },
   "start_gate": {
     "default_required": true,
     "default_state_without_green": "WAITING_FOR_START",

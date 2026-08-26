@@ -40,6 +40,8 @@ physicar-pilotnet-train-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_tra
 physicar-pilotnet-run-v4-dagger = "physicar_e2e.pilotnet_dagger_iteration2_inference:main"
 physicar-pilotnet-v4-repeatability-v1 = "physicar_e2e.pilotnet_v4_repeatability:main"
 physicar-pilotnet-pi5-infer = "physicar_e2e.pilotnet_pi5:main"
+physicar-real-runtime-v1 = "physicar_e2e.real_runtime:main"
+physicar-real-runtime-ros2-v1 = "physicar_e2e.real_runtime_ros2:main"
 physicar-random-cone-expert-v1 = "physicar_e2e.random_cone_expert:main"
 physicar-random-cone-expert-1p0-v1 = "physicar_e2e.random_cone_expert:main"
 

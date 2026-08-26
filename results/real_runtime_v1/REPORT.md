@@ -23,6 +23,12 @@ uses the canonical float32 full-range BT.601 YUV conversion, normalization
 `(channel - 0.5) * 2`, CHW layout, and causal channel order `[t-2,t-1,t]`.
 Speed is never a neural input.
 
+The confirmed real-vehicle control interface is direct. The isolated ROS 2
+adapter publishes normalized `std_msgs/msg/Float64` steering to `/steering`
+using `steering_rad / 0.35`, and publishes the m/s `std_msgs/msg/Float64` speed
+command to `/speed`. It does not route through `/teleop/steering`,
+`/teleop/speed`, or `/cmd_vel`.
+
 Three genuine frames are required; there is no startup padding. Arrival times
 must increase strictly. A gap over 0.120 s commands a safe stop, invalidates
 history, retains the current frame as the first fresh frame, and requires two
@@ -89,5 +95,5 @@ provided before a physical milestone. The deploy recipe is in
 `deploy/real_runtime_v1/`; the deliberately unexecuted first physical procedure
 is in `docs/real_runtime_v1_first_physical_test.md`.
 
-Focused tests passed (25 tests, 8 subtests). The full regression passed (568
+Focused tests passed (26 tests, 8 subtests). The full regression passed (569
 tests, 47 subtests). Final diff/status evidence is recorded at handoff.

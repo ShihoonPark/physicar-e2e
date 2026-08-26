@@ -78,9 +78,25 @@
     "development_start_bypass": false,
     "traffic_light_adapter": null
   },
+  "confirmed_real_control_interface": {
+    "routing": "direct",
+    "steering": {
+      "topic": "/steering",
+      "type": "std_msgs/msg/Float64",
+      "value": "normalized_steering_command",
+      "conversion": "steering_normalized = steering_rad / 0.35"
+    },
+    "speed": {
+      "topic": "/speed",
+      "type": "std_msgs/msg/Float64",
+      "value": "speed_command_mps",
+      "unit": "m/s"
+    },
+    "forbidden_topics": ["/teleop/steering", "/teleop/speed", "/cmd_vel"]
+  },
   "test_evidence": {
-    "focused": "25 passed, 8 subtests passed",
-    "full_regression": "568 passed, 47 subtests passed",
+    "focused": "26 passed, 8 subtests passed",
+    "full_regression": "569 passed, 47 subtests passed",
     "git_diff_check": "PASS"
   },
   "scope": {

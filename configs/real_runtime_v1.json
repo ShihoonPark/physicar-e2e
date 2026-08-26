@@ -55,6 +55,18 @@
     "maximum_adjacent_gap_s": 0.12,
     "reset_if_gap_strictly_greater_than_s": 0.12
   },
+  "control_interface": {
+    "status": "CONFIRMED_REAL_VEHICLE_DIRECT_TOPICS",
+    "routing": "direct",
+    "steering_topic": "/steering",
+    "steering_type": "std_msgs/msg/Float64",
+    "steering_value": "normalized_steering_command",
+    "steering_conversion": "steering_normalized = steering_rad / 0.35",
+    "speed_topic": "/speed",
+    "speed_type": "std_msgs/msg/Float64",
+    "speed_value": "speed_command_mps",
+    "forbidden_topics": ["/teleop/steering", "/teleop/speed", "/cmd_vel"]
+  },
   "steering": {
     "topic": "/steering",
     "type": "std_msgs/msg/Float64",

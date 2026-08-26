@@ -89,6 +89,27 @@ class RuntimeConfigAndModelAuditTests(unittest.TestCase):
         self.assertFalse(self.config["speed"]["neural_input"])
         self.assertEqual(self.config["model_contract"]["input_shape"], [1, 9, 66, 200])
 
+    def test_confirmed_real_control_interface_is_direct_only(self):
+        interface = self.config["control_interface"]
+        self.assertEqual(interface["status"], "CONFIRMED_REAL_VEHICLE_DIRECT_TOPICS")
+        self.assertEqual(interface["routing"], "direct")
+        self.assertEqual(
+            (interface["steering_topic"], interface["steering_type"]),
+            ("/steering", "std_msgs/msg/Float64"),
+        )
+        self.assertEqual(
+            interface["steering_conversion"],
+            "steering_normalized = steering_rad / 0.35",
+        )
+        self.assertEqual(
+            (interface["speed_topic"], interface["speed_type"]),
+            ("/speed", "std_msgs/msg/Float64"),
+        )
+        self.assertEqual(
+            interface["forbidden_topics"],
+            ["/teleop/steering", "/teleop/speed", "/cmd_vel"],
+        )
+
 
 class RealCameraPreprocessingTests(unittest.TestCase):
     @classmethod
@@ -366,6 +387,8 @@ class PublisherSeparationTests(unittest.TestCase):
         self.assertNotIn("sim_client", core_source + ros_source)
         self.assertNotIn("train_model", core_source + ros_source)
         self.assertNotIn("/home/a/physicar-ai-sim-docker", core_source + ros_source)
+        for forbidden_topic in ("/teleop/steering", "/teleop/speed", "/cmd_vel"):
+            self.assertNotIn(forbidden_topic, ros_source)
 
 
 @unittest.skipUnless(SELECTED_ONNX.is_file() and BAG_03.is_file(), "canonical Runtime V1 artifacts absent")

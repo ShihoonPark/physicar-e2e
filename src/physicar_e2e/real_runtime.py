@@ -191,6 +191,22 @@ def validate_config(config: Mapping[str, Any]) -> dict[str, Any]:
         },
         "temporal contract",
     )
+    _require_equal(
+        value.get("control_interface"),
+        {
+            "status": "CONFIRMED_REAL_VEHICLE_DIRECT_TOPICS",
+            "routing": "direct",
+            "steering_topic": "/steering",
+            "steering_type": "std_msgs/msg/Float64",
+            "steering_value": "normalized_steering_command",
+            "steering_conversion": "steering_normalized = steering_rad / 0.35",
+            "speed_topic": "/speed",
+            "speed_type": "std_msgs/msg/Float64",
+            "speed_value": "speed_command_mps",
+            "forbidden_topics": ["/teleop/steering", "/teleop/speed", "/cmd_vel"],
+        },
+        "confirmed real-vehicle control interface",
+    )
 
     steering = value.get("steering", {})
     _require_equal(steering.get("topic"), "/steering", "steering topic")
