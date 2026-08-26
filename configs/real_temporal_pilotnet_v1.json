@@ -1,0 +1,151 @@
+{
+  "version": "real_temporal_pilotnet_v1",
+  "expected_branch": "feature/real-temporal-pilotnet-v1",
+  "dataset": {
+    "name": "REAL_DATASET_V1",
+    "root": "/home/a/physicar-e2e-artifacts/real_dataset_v1",
+    "manifest_path": "/home/a/physicar-e2e-artifacts/real_dataset_v1/manifests/real_dataset_v1.csv",
+    "manifest_sha256": "ba82ae5f1f7c606f5f516ea006148f033ab95ec9097d2f6aaa300c2ab91f5597",
+    "accepted_sequence_count": 2163,
+    "bag_sequence_counts": {
+      "bag_01": 649,
+      "bag_02": 1064,
+      "bag_03": 450
+    },
+    "train_bags": ["bag_01", "bag_02"],
+    "validation_bags": ["bag_03"],
+    "train_count_before_filter": 1713,
+    "validation_count": 450,
+    "train_filter": "target_time_speed_mps != 0.0",
+    "validation_speed_filter": null
+  },
+  "camera_contract": {
+    "source_width": 480,
+    "source_height": 360,
+    "source_encoding": "rgb8",
+    "roi": [0, 80, 480, 360],
+    "crop_width": 480,
+    "crop_height": 280,
+    "output_width": 200,
+    "output_height": 66,
+    "resize": "Pillow_Image.Resampling.BILINEAR",
+    "horizontal_crop": false,
+    "undistortion": false,
+    "simulator_roi_permitted": false
+  },
+  "preprocessing": {
+    "stored_color_space": "RGB",
+    "model_color_space": "YUV_BT601_full_range",
+    "normalization": "(channel - 0.5) * 2.0",
+    "frame_order": ["t_minus_2", "t_minus_1", "t"]
+  },
+  "steering_contract": {
+    "manifest_target_field": "steering_rad",
+    "recorded_field": "steering_recorded_raw",
+    "recorded_to_radians_scale": 0.35,
+    "training_target": "physical_steering_rad",
+    "positive_direction": "LEFT",
+    "negative_direction": "RIGHT",
+    "additional_scaling_permitted": false,
+    "target_clipping_permitted": false,
+    "near_zero_abs_lte_rad": 0.01
+  },
+  "speed_contract": {
+    "field": "speed_mps",
+    "unit": "m/s",
+    "semantics": "UNKNOWN_COMMAND_OR_FEEDBACK",
+    "neural_input": false,
+    "target": false,
+    "metadata_only": true,
+    "only_exact_zero_train_filter_permitted": true
+  },
+  "architecture": {
+    "name": "Temporal PilotNet",
+    "input_shape": ["N", 9, 66, 200],
+    "output_shape": ["N", 1],
+    "parameter_count": 255819,
+    "output_unit": "radians"
+  },
+  "early_stopping": {
+    "semantics": "validation_loss_improvement_strictly_greater_than_minimum_resets_patience",
+    "patience": 7,
+    "minimum_improvement_mse_rad2": 0.000001
+  },
+  "models": {
+    "REAL-SCRATCH-V1": {
+      "initialization": "from_scratch",
+      "optimizer": "Adam",
+      "loss": "MSE_steering_rad",
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "max_epochs": 35,
+      "seed": 20260824
+    },
+    "REAL-D1-TRANSFER-V1": {
+      "initialization": "exact_frozen_simulator_D1",
+      "optimizer": "Adam",
+      "loss": "MSE_steering_rad",
+      "learning_rate": 0.0001,
+      "batch_size": 64,
+      "max_epochs": 20,
+      "seed": 20260824,
+      "full_network_finetuning": true,
+      "frozen_parameter_count": 0
+    }
+  },
+  "d1_initialization": {
+    "checkpoint_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/checkpoints/random_cone_temporal_d1_best.pt",
+    "checkpoint_sha256": "b63a8da4401df33d1e8e375c66bd46b35d9cecd70542aa7af8cdbecfdb69a434",
+    "onnx_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/onnx/random_cone_temporal_d1.onnx",
+    "onnx_sha256": "3dee7ab9bb0ce6892dbba0784389af3c87b453e3150e1f7375e6b5301dba128c",
+    "freeze_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/freeze.json",
+    "freeze_sha256": "66dbf7762ab089f111e2c02d22240d861e575730dcb416692bf6fac4e1e3fdc8",
+    "freeze_seal_path": "/home/a/physicar-ai-sim-docker/userdata/physicar_e2e/random_cone_1p0_v1/dagger1/d1/freeze_seal.json",
+    "freeze_seal_sha256": "7781423c7ba69f381e91120687d07d93d006393ff3c0c74af751085ce6ea1840",
+    "forbidden_initializations": ["D1-R", "D2-FE", "R1", "V9", "C1"]
+  },
+  "validation": {
+    "magnitude_bins_rad": [0.05, 0.15, 0.25],
+    "baseline_predictions": ["ZERO", "MEAN"]
+  },
+  "selection": {
+    "primary_metric": "bag_03_validation_mae_rad",
+    "near_tie_relative_mae": 0.01,
+    "near_tie_required_sanity_wins": 4,
+    "clear_mae_relative_margin": 0.05,
+    "substantial_tail_regression": 0.25,
+    "substantial_sign_agreement_drop": 0.10
+  },
+  "export": {
+    "opset": 17,
+    "equivalence_samples": 128,
+    "mean_absolute_difference_limit_rad": 0.00001,
+    "max_absolute_difference_limit_rad": 0.0001
+  },
+  "benchmark": {
+    "warmup_iterations": 25,
+    "iterations": 200,
+    "batch_size": 1,
+    "machine_classification": "CURRENT_X86_NOT_RASPBERRY_PI"
+  },
+  "output": {
+    "external_root": "/home/a/physicar-e2e-artifacts/real_temporal_pilotnet_v1",
+    "compact_result_root": "results/real_temporal_pilotnet_v1"
+  },
+  "prohibitions": {
+    "augmentation": false,
+    "balancing": false,
+    "oversampling": false,
+    "steering_weighting": false,
+    "source_weighting": false,
+    "hyperparameter_sweep": false,
+    "simulator_training_samples": false,
+    "new_data_collection": false,
+    "real_vehicle_driving": false,
+    "simulator_driving": false,
+    "raw_bag_modification": false,
+    "traffic_light_runtime_modification": false,
+    "commit": false,
+    "push": false
+  }
+}
