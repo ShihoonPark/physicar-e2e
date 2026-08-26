@@ -1,0 +1,876 @@
+{
+  "actual_readable_messages": {
+    "end_time_ns": 1787685025909053329,
+    "end_time_utc": "2026-08-25T19:10:25.909053329Z",
+    "span_s": 12.297079445,
+    "start_time_ns": 1787685013611973884,
+    "start_time_utc": "2026-08-25T19:10:13.611973884Z",
+    "topic_counts_and_rates": [
+      {
+        "count_matches_metadata": false,
+        "measured_rate_hz": 15.006541674074818,
+        "metadata_message_count": 1068,
+        "metadata_type": "sensor_msgs/msg/Image",
+        "readable_fraction": 0.17322097378277154,
+        "readable_message_count": 185,
+        "readable_schema_types": [
+          "sensor_msgs/msg/Image"
+        ],
+        "readable_span_s": 12.261319363,
+        "topic": "/camera/image_raw"
+      },
+      {
+        "count_matches_metadata": false,
+        "measured_rate_hz": 15.010958748802937,
+        "metadata_message_count": 1068,
+        "metadata_type": "sensor_msgs/msg/Image",
+        "readable_fraction": 0.17322097378277154,
+        "readable_message_count": 185,
+        "readable_schema_types": [
+          "sensor_msgs/msg/Image"
+        ],
+        "readable_span_s": 12.257711388,
+        "topic": "/lane/debug/path"
+      },
+      {
+        "count_matches_metadata": false,
+        "measured_rate_hz": 10.006345909869147,
+        "metadata_message_count": 713,
+        "metadata_type": "sensor_msgs/msg/LaserScan",
+        "readable_fraction": 0.17391304347826086,
+        "readable_message_count": 124,
+        "readable_schema_types": [
+          "sensor_msgs/msg/LaserScan"
+        ],
+        "readable_span_s": 12.292199481,
+        "topic": "/scan"
+      },
+      {
+        "count_matches_metadata": false,
+        "measured_rate_hz": 15.005467835084795,
+        "metadata_message_count": 1070,
+        "metadata_type": "std_msgs/msg/Float64",
+        "readable_fraction": 0.17289719626168223,
+        "readable_message_count": 185,
+        "readable_schema_types": [
+          "std_msgs/msg/Float64"
+        ],
+        "readable_span_s": 12.262196822,
+        "topic": "/speed"
+      },
+      {
+        "count_matches_metadata": false,
+        "measured_rate_hz": 15.005474279185204,
+        "metadata_message_count": 1070,
+        "metadata_type": "std_msgs/msg/Float64",
+        "readable_fraction": 0.17289719626168223,
+        "readable_message_count": 185,
+        "readable_schema_types": [
+          "std_msgs/msg/Float64"
+        ],
+        "readable_span_s": 12.262191556,
+        "topic": "/steering"
+      }
+    ]
+  },
+  "audit_scope": "strictly_readable_prefix_only",
+  "bag_id": "bag_02",
+  "camera": {
+    "all_readable_messages_share_contract": true,
+    "bag_publish_timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013636278158,
+      "first_time_utc": "2026-08-25T19:10:13.636278158Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.075076966,
+        "mean": 0.0666432845923913,
+        "median": 0.066788562,
+        "min": 0.060292059,
+        "nonfinite_count": 0,
+        "p01": 0.06188034062,
+        "p05": 0.06386046484999999,
+        "p25": 0.06562098925000001,
+        "p75": 0.06758983199999999,
+        "p95": 0.0693727146,
+        "p99": 0.07039846702,
+        "std": 0.0017621401461583991
+      },
+      "last_time_ns": 1787685025898642523,
+      "last_time_utc": "2026-08-25T19:10:25.898642523Z",
+      "maximum_time_ns": 1787685025898642523,
+      "measured_rate_hz": 15.005262812544064,
+      "minimum_time_ns": 1787685013636278158,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 12.262364365,
+      "strictly_increasing": true
+    },
+    "bag_record_timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013638317409,
+      "first_time_utc": "2026-08-25T19:10:13.638317409Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.074211939,
+        "mean": 0.06663760523369565,
+        "median": 0.06677295999999999,
+        "min": 0.059603327,
+        "nonfinite_count": 0,
+        "p01": 0.06223851935,
+        "p05": 0.06368451309999999,
+        "p25": 0.06538076525,
+        "p75": 0.06780936125,
+        "p95": 0.069463193,
+        "p99": 0.07089322652,
+        "std": 0.0018655230240897812
+      },
+      "last_time_ns": 1787685025899636772,
+      "last_time_utc": "2026-08-25T19:10:25.899636772Z",
+      "maximum_time_ns": 1787685025899636772,
+      "measured_rate_hz": 15.006541674074818,
+      "minimum_time_ns": 1787685013638317409,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 12.261319363,
+      "strictly_increasing": true
+    },
+    "bounded_preview_decode": {
+      "attempted_count": 7,
+      "failure_count": 0
+    },
+    "contracts": [
+      {
+        "count": 185,
+        "encoding": "rgb8",
+        "frame_id": "camera",
+        "height": 360,
+        "is_bigendian": 0,
+        "step": 1440,
+        "width": 480
+      }
+    ],
+    "decode": {
+      "all_readable_payload_layouts_valid": true,
+      "failure_count": 0,
+      "payload_validation_attempted_count": 185,
+      "payload_validation_failure_count": 0
+    },
+    "duplicate_timestamps": {
+      "bag_record": 0,
+      "camera_header": 0
+    },
+    "fps": 15.006541674074818,
+    "frame_ids": {
+      "camera": 185
+    },
+    "header_timestamp": {
+      "available_count": 185,
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787626035549140538,
+      "first_time_utc": "2026-08-25T02:47:15.549140538Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.066657963,
+        "mean": 0.06664225311956522,
+        "median": 0.066642259,
+        "min": 0.06663024,
+        "nonfinite_count": 0,
+        "p01": 0.06663410897000001,
+        "p05": 0.0666387213,
+        "p25": 0.06664048175000001,
+        "p75": 0.06664353275,
+        "p95": 0.06664700725,
+        "p99": 0.06664994506,
+        "std": 3.0110220832314422e-06
+      },
+      "last_time_ns": 1787626047811315112,
+      "last_time_utc": "2026-08-25T02:47:27.811315112Z",
+      "maximum_time_ns": 1787626047811315112,
+      "measured_rate_hz": 15.005495060406568,
+      "minimum_time_ns": 1787626035549140538,
+      "missing_count": 0,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "nonzero_count": 185,
+      "span_s": 12.262174574,
+      "strictly_increasing": true
+    },
+    "header_vs_bag_record": {
+      "first_record_minus_header_s": 58978.089176871,
+      "inter_frame_increment_difference_ms": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 7.563272,
+        "mean": -0.004647885869565216,
+        "median": 0.1316455,
+        "min": -7.038266,
+        "nonfinite_count": 0,
+        "p01": -4.401450479999999,
+        "p05": -2.9553722999999996,
+        "p25": -1.259487,
+        "p75": 1.1659865,
+        "p95": 2.8202353,
+        "p99": 4.247101389999999,
+        "std": 1.8648464184328504
+      },
+      "last_record_minus_header_s": 58978.08832166,
+      "mixed_domain_use_safe_without_proven_transform": false,
+      "offset_change_s": -0.000855211001180578,
+      "pair_count": 185,
+      "record_minus_header_s": {
+        "count": 185,
+        "finite_count": 185,
+        "max": 58978.095694627,
+        "mean": 58978.088654292726,
+        "median": 58978.088430115,
+        "min": 58978.086601748,
+        "nonfinite_count": 0,
+        "p01": 58978.08674872436,
+        "p05": 58978.0869092376,
+        "p25": 58978.087685856,
+        "p75": 58978.08920937,
+        "p95": 58978.0912106724,
+        "p99": 58978.09314414696,
+        "std": 0.0014563204393561711
+      },
+      "timestamps_numerically_identical": false
+    },
+    "inter_frame_gap_s": {
+      "count": 184,
+      "finite_count": 184,
+      "max": 0.074211939,
+      "mean": 0.06663760523369565,
+      "median": 0.06677295999999999,
+      "min": 0.059603327,
+      "nonfinite_count": 0,
+      "p01": 0.06223851935,
+      "p05": 0.06368451309999999,
+      "p25": 0.06538076525,
+      "p75": 0.06780936125,
+      "p95": 0.069463193,
+      "p99": 0.07089322652,
+      "std": 0.0018655230240897812
+    },
+    "message_count": 185,
+    "roi_applied": false,
+    "timestamp_monotonicity": {
+      "bag_record": true,
+      "camera_header": true
+    },
+    "uniform_contract": {
+      "count": 185,
+      "encoding": "rgb8",
+      "frame_id": "camera",
+      "height": 360,
+      "is_bigendian": 0,
+      "step": 1440,
+      "width": 480
+    }
+  },
+  "causal_synchronization": {
+    "camera_count": 185,
+    "complete_causal_pair_count": 184,
+    "future_label_violations": 0,
+    "missing_both_count": 1,
+    "missing_causal_speed_count": 1,
+    "missing_causal_steering_count": 1,
+    "rule": "latest scalar record satisfying t_scalar <= t_camera",
+    "speed_age_ms": {
+      "count": 184,
+      "finite_count": 184,
+      "max": 69.909247,
+      "mean": 62.17476313586957,
+      "median": 62.52873099999999,
+      "min": 41.821008,
+      "nonfinite_count": 0,
+      "p01": 51.152413519999996,
+      "p05": 56.5726514,
+      "p25": 59.4574465,
+      "p75": 65.47131300000001,
+      "p95": 67.44346734999999,
+      "p99": 68.79408280999998,
+      "std": 4.029186826749745
+    },
+    "stale_age_threshold_applied": false,
+    "steering_age_ms": {
+      "count": 184,
+      "finite_count": 184,
+      "max": 69.918453,
+      "mean": 62.21701873913043,
+      "median": 62.5862315,
+      "min": 41.834503,
+      "nonfinite_count": 0,
+      "p01": 51.19714433,
+      "p05": 56.6360262,
+      "p25": 59.52625725,
+      "p75": 65.48121075,
+      "p95": 67.49099095,
+      "p99": 68.80432124,
+      "std": 4.011394421657787
+    },
+    "timestamp_domain": "MCAP log_time (bag-record time) for all three streams"
+  },
+  "decode_failure_examples": [],
+  "integrity": {
+    "classification": "truncated/incomplete local MCAP: missing closing magic and strict reader reached EOF before metadata counts",
+    "closing_magic_valid": false,
+    "completed_records_crc_checked": true,
+    "metadata_counts_match_readable_messages": false,
+    "metadata_total_message_count": 4989,
+    "opening_magic_valid": true,
+    "readable_total_fraction": 0.17318099819603128,
+    "readable_total_message_count": 864,
+    "result": "FAIL",
+    "scan_error_message": "",
+    "scan_error_type": "EndOfFile",
+    "strict_crc_stream_scan_completed": false
+  },
+  "mcap_path": "/home/a/bag_02/bag_02_0.mcap",
+  "mcap_sha256": "75700793d13d8c66acdc18207b2c72d6a9d992089e175026d053d10342699fd0",
+  "mcap_size_bytes": 192937984,
+  "metadata": {
+    "duration_ns": 72767350237,
+    "duration_s": 72.767350237,
+    "end_time_ns": 1787685086379324121,
+    "end_time_utc": "2026-08-25T19:11:26.379324121Z",
+    "message_count": 4989,
+    "relative_file_paths": [
+      "bag_02_0.mcap"
+    ],
+    "ros_distro": "jazzy",
+    "start_time_ns": 1787685013611973884,
+    "start_time_utc": "2026-08-25T19:10:13.611973884Z",
+    "storage_identifier": "mcap",
+    "topics": {
+      "/camera/image_raw": {
+        "message_count": 1068,
+        "name": "/camera/image_raw",
+        "type": "sensor_msgs/msg/Image"
+      },
+      "/lane/debug/path": {
+        "message_count": 1068,
+        "name": "/lane/debug/path",
+        "type": "sensor_msgs/msg/Image"
+      },
+      "/scan": {
+        "message_count": 713,
+        "name": "/scan",
+        "type": "sensor_msgs/msg/LaserScan"
+      },
+      "/speed": {
+        "message_count": 1070,
+        "name": "/speed",
+        "type": "std_msgs/msg/Float64"
+      },
+      "/steering": {
+        "message_count": 1070,
+        "name": "/steering",
+        "type": "std_msgs/msg/Float64"
+      }
+    },
+    "version": 9
+  },
+  "metadata_path": "/home/a/bag_02/metadata.yaml",
+  "path": "/home/a/bag_02",
+  "previews": {
+    "contact_sheet": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/bag_02_contact_sheet.png",
+    "decode_failure_count": 0,
+    "decode_failures": [],
+    "roi_applied": false,
+    "scope": "readable_prefix_only",
+    "selected_frame_count": 7,
+    "selected_frames": [
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000000__readable_prefix_first.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000018__readable_prefix_early.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000077__maximum_steering_rad.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000092__readable_prefix_middle.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000160__minimum_steering_rad.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000166__readable_prefix_late.png",
+      "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000184__readable_prefix_last.png"
+    ],
+    "selection": [
+      {
+        "camera_index": 0,
+        "labels": [
+          "readable_prefix_first"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000000__readable_prefix_first.png"
+      },
+      {
+        "camera_index": 18,
+        "labels": [
+          "readable_prefix_early"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000018__readable_prefix_early.png"
+      },
+      {
+        "camera_index": 77,
+        "labels": [
+          "maximum_steering_rad"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000077__maximum_steering_rad.png"
+      },
+      {
+        "camera_index": 92,
+        "labels": [
+          "readable_prefix_middle"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000092__readable_prefix_middle.png"
+      },
+      {
+        "camera_index": 160,
+        "labels": [
+          "minimum_steering_rad"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000160__minimum_steering_rad.png"
+      },
+      {
+        "camera_index": 166,
+        "labels": [
+          "readable_prefix_late"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000166__readable_prefix_late.png"
+      },
+      {
+        "camera_index": 184,
+        "labels": [
+          "readable_prefix_last"
+        ],
+        "path": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/bag_02/frame_000184__readable_prefix_last.png"
+      }
+    ]
+  },
+  "result": "FAIL_INCOMPLETE_MCAP",
+  "speed": {
+    "active_driving_candidate_window": {
+      "diagnostic_only": true,
+      "duration_s": 6.397352772,
+      "end_offset_from_metadata_s": 12.294333395,
+      "end_record_time_ns": 1787685025906307279,
+      "end_time_utc": "2026-08-25T19:10:25.906307279Z",
+      "full_bag_inference_permitted": false,
+      "left_censored_by_readable_prefix": false,
+      "method": "longest contiguous run of finite, exactly nonzero raw speed values",
+      "record_count": 97,
+      "right_censored_by_readable_prefix": true,
+      "start_offset_from_metadata_s": 5.896980623,
+      "start_record_time_ns": 1787685019508954507,
+      "start_time_utc": "2026-08-25T19:10:19.508954507Z",
+      "supporting_raw_speed_distribution": {
+        "count": 97,
+        "finite_count": 97,
+        "max": 0.9984995648354781,
+        "mean": 0.9245175934637891,
+        "median": 0.9583135079040714,
+        "min": 0.5496621533611644,
+        "nonfinite_count": 0,
+        "p01": 0.5567264855900537,
+        "p05": 0.6914313520571463,
+        "p25": 0.9358589312343131,
+        "p75": 0.9770582189647209,
+        "p95": 0.9969185062277718,
+        "p99": 0.9984995648354781,
+        "std": 0.09930993239296144
+      }
+    },
+    "count_and_rate": {
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644110457,
+      "first_time_utc": "2026-08-25T19:10:13.644110457Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.081518433,
+        "mean": 0.0666423740326087,
+        "median": 0.066789879,
+        "min": 0.049937177,
+        "nonfinite_count": 0,
+        "p01": 0.05316986904,
+        "p05": 0.058782671700000004,
+        "p25": 0.063457816,
+        "p75": 0.0703957985,
+        "p95": 0.07351514265,
+        "p99": 0.07840816468999999,
+        "std": 0.005120655213345654
+      },
+      "last_time_ns": 1787685025906307279,
+      "last_time_utc": "2026-08-25T19:10:25.906307279Z",
+      "maximum_time_ns": 1787685025906307279,
+      "measured_rate_hz": 15.005467835084795,
+      "minimum_time_ns": 1787685013644110457,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 12.262196822,
+      "strictly_increasing": true
+    },
+    "distribution_raw": {
+      "count": 185,
+      "finite_count": 185,
+      "max": 0.9984995648354781,
+      "mean": 0.8785132327023116,
+      "median": 0.944713120851566,
+      "min": 0.0,
+      "nonfinite_count": 0,
+      "p01": 0.2,
+      "p05": 0.2,
+      "p25": 0.9271714001289594,
+      "p75": 0.9629334737816232,
+      "p95": 0.9910012748837945,
+      "p99": 0.9984995648354781,
+      "std": 0.19741744444395856
+    },
+    "float64_decode_validation": {
+      "attempted_count": 185,
+      "method": "mcap_ros2 decode independently compared with direct CDR Float64 unpack",
+      "mismatch_count": 0
+    },
+    "meaning": "unresolved",
+    "sign_and_stationary_counts": {
+      "exact_zero": 1,
+      "exact_zero_fraction": 0.005405405405405406,
+      "negative": 0,
+      "positive": 184,
+      "stationary_definition": "exact zero only; diagnostic, not a permanent filter"
+    },
+    "stationary_prefix_candidate": {
+      "observed": false,
+      "record_count": 0
+    },
+    "stationary_suffix_candidate": {
+      "full_bag_suffix_observable": false,
+      "observed": false,
+      "record_count": 0
+    },
+    "timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644110457,
+      "first_time_utc": "2026-08-25T19:10:13.644110457Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.081518433,
+        "mean": 0.0666423740326087,
+        "median": 0.066789879,
+        "min": 0.049937177,
+        "nonfinite_count": 0,
+        "p01": 0.05316986904,
+        "p05": 0.058782671700000004,
+        "p25": 0.063457816,
+        "p75": 0.0703957985,
+        "p95": 0.07351514265,
+        "p99": 0.07840816468999999,
+        "std": 0.005120655213345654
+      },
+      "last_time_ns": 1787685025906307279,
+      "last_time_utc": "2026-08-25T19:10:25.906307279Z",
+      "maximum_time_ns": 1787685025906307279,
+      "measured_rate_hz": 15.005467835084795,
+      "minimum_time_ns": 1787685013644110457,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 12.262196822,
+      "strictly_increasing": true
+    },
+    "unit": "unresolved"
+  },
+  "steering": {
+    "confirmed_numeric_range_rad": [
+      -0.35,
+      0.35
+    ],
+    "count_and_rate": {
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644054462,
+      "first_time_utc": "2026-08-25T19:10:13.644054462Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.081540629,
+        "mean": 0.06664234541304348,
+        "median": 0.066750252,
+        "min": 0.049940689,
+        "nonfinite_count": 0,
+        "p01": 0.05319923914,
+        "p05": 0.05882620985,
+        "p25": 0.06351045825,
+        "p75": 0.07034144975,
+        "p95": 0.07345349035,
+        "p99": 0.07836909589999999,
+        "std": 0.0050895023366130535
+      },
+      "last_time_ns": 1787685025906246018,
+      "last_time_utc": "2026-08-25T19:10:25.906246018Z",
+      "maximum_time_ns": 1787685025906246018,
+      "measured_rate_hz": 15.005474279185204,
+      "minimum_time_ns": 1787685013644054462,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 12.262191556,
+      "strictly_increasing": true
+    },
+    "distribution_rad": {
+      "count": 185,
+      "finite_count": 185,
+      "max": 0.8050795064359867,
+      "mean": 0.1149399912247114,
+      "median": 0.05202491085316113,
+      "min": -0.06803942946733559,
+      "nonfinite_count": 0,
+      "p01": -0.06433879372427773,
+      "p05": -0.04595173300883949,
+      "p25": 0.02532312421340945,
+      "p75": 0.06982209748223092,
+      "p95": 0.7353483794903352,
+      "p99": 0.8050795064359867,
+      "std": 0.21560464676849134
+    },
+    "float64_decode_validation": {
+      "attempted_count": 185,
+      "method": "mcap_ros2 decode independently compared with direct CDR Float64 unpack",
+      "mismatch_count": 0
+    },
+    "probable_saturation": {
+      "assessment": "out-of-range repeated plateaus require investigation; actuator saturation is not proven",
+      "diagnostic_only": true,
+      "maximum_exact_repeat_count": 8,
+      "minimum_exact_repeat_count": 2,
+      "near_confirmed_limit_count": 0,
+      "near_confirmed_limit_fraction": 0.0,
+      "repeated_near_limit_candidates": [],
+      "repeated_out_of_range_plateau_candidates": [
+        {
+          "count": 8,
+          "value_rad_rounded_6dp": 0.80508
+        },
+        {
+          "count": 3,
+          "value_rad_rounded_6dp": 0.735348
+        }
+      ]
+    },
+    "range_check": {
+      "above_confirmed_range_count": 20,
+      "all_finite_values_within_confirmed_approximate_range": false,
+      "assessment": "CONFLICT: readable values exceed the user-confirmed approximate range",
+      "below_confirmed_range_count": 0
+    },
+    "repeated_values": {
+      "consecutive_repeat_count": 61,
+      "consecutive_repeat_fraction": 0.33152173913043476,
+      "most_frequent_values": [
+        {
+          "count": 22,
+          "fraction": 0.11891891891891893,
+          "value": 0.06982209748223092
+        },
+        {
+          "count": 11,
+          "fraction": 0.05945945945945946,
+          "value": 0.047574003717857256
+        },
+        {
+          "count": 11,
+          "fraction": 0.05945945945945946,
+          "value": 0.05202491085316113
+        },
+        {
+          "count": 10,
+          "fraction": 0.05405405405405406,
+          "value": 0.02977193753189224
+        },
+        {
+          "count": 10,
+          "fraction": 0.05405405405405406,
+          "value": 0.05647541156190029
+        },
+        {
+          "count": 8,
+          "fraction": 0.043243243243243246,
+          "value": 0.03867215040857527
+        },
+        {
+          "count": 8,
+          "fraction": 0.043243243243243246,
+          "value": 0.8050795064359867
+        },
+        {
+          "count": 7,
+          "fraction": 0.03783783783783784,
+          "value": 0.03422172575817399
+        },
+        {
+          "count": 7,
+          "fraction": 0.03783783783783784,
+          "value": 0.06092524489104599
+        },
+        {
+          "count": 6,
+          "fraction": 0.032432432432432434,
+          "value": 0.02532312421340945
+        }
+      ],
+      "records_in_repeated_values_fraction": 0.8540540540540541,
+      "repeated_excess_fraction": 0.7027027027027027,
+      "repeated_excess_record_count": 130,
+      "unique_value_count": 55
+    },
+    "semantics": {
+      "command_or_actual_actuator_feedback": "unresolved",
+      "left_right_sign_convention": "unresolved",
+      "unit": "confirmed_radians"
+    },
+    "sign_counts": {
+      "near_zero": 11,
+      "near_zero_threshold_abs_rad": 0.01,
+      "negative": 26,
+      "positive": 148
+    },
+    "timestamp": {
+      "backward_timestamp_count": 0,
+      "count": 185,
+      "duplicate_timestamp_count": 0,
+      "first_time_ns": 1787685013644054462,
+      "first_time_utc": "2026-08-25T19:10:13.644054462Z",
+      "gap_s": {
+        "count": 184,
+        "finite_count": 184,
+        "max": 0.081540629,
+        "mean": 0.06664234541304348,
+        "median": 0.066750252,
+        "min": 0.049940689,
+        "nonfinite_count": 0,
+        "p01": 0.05319923914,
+        "p05": 0.05882620985,
+        "p25": 0.06351045825,
+        "p75": 0.07034144975,
+        "p95": 0.07345349035,
+        "p99": 0.07836909589999999,
+        "std": 0.0050895023366130535
+      },
+      "last_time_ns": 1787685025906246018,
+      "last_time_utc": "2026-08-25T19:10:25.906246018Z",
+      "maximum_time_ns": 1787685025906246018,
+      "measured_rate_hz": 15.005474279185204,
+      "minimum_time_ns": 1787685013644054462,
+      "monotonic_non_decreasing": true,
+      "non_increasing_timestamp_count": 0,
+      "span_s": 12.262191556,
+      "strictly_increasing": true
+    },
+    "unit": "radians"
+  },
+  "three_frame_temporal_readiness": {
+    "adjacent_frame_gap_s": {
+      "count": 184,
+      "finite_count": 184,
+      "max": 0.074211939,
+      "mean": 0.06663760523369565,
+      "median": 0.06677295999999999,
+      "min": 0.059603327,
+      "nonfinite_count": 0,
+      "p01": 0.06223851935,
+      "p05": 0.06368451309999999,
+      "p25": 0.06538076525,
+      "p75": 0.06780936125,
+      "p95": 0.069463193,
+      "p99": 0.07089322652,
+      "std": 0.0018655230240897812
+    },
+    "architecture_assessment": "readable prefix is temporally compatible; full-bag compatibility is unresolved because the MCAP is incomplete",
+    "candidate_three_frame_sequences": 183,
+    "frame_order": [
+      "t_minus_2",
+      "t_minus_1",
+      "t"
+    ],
+    "oldest_to_current_span_s": {
+      "count": 183,
+      "finite_count": 183,
+      "max": 0.141146215,
+      "mean": 0.1332751546557377,
+      "median": 0.133302257,
+      "min": 0.124989069,
+      "nonfinite_count": 0,
+      "p01": 0.12755415636,
+      "p05": 0.1300486494,
+      "p25": 0.13215228699999998,
+      "p75": 0.134442178,
+      "p95": 0.1362186786,
+      "p99": 0.13789743302000002,
+      "std": 0.0020218990607759647
+    },
+    "simulator_comparison": {
+      "diagnostic_triplets_exceeding_0p120_s": 0,
+      "existing_0p120_s_adjacent_gate_applied": false,
+      "readable_prefix_spacing_supports_architecture": true,
+      "simulator_train_adjacent_gap_s": {
+        "max": 0.07,
+        "mean": 0.066,
+        "median": 0.065,
+        "p95": 0.07
+      },
+      "simulator_train_oldest_to_current_span_s": {
+        "max": 0.135,
+        "mean": 0.132,
+        "median": 0.13,
+        "p95": 0.135
+      },
+      "source": "results/high_speed_temporal_dataset_v1/summary.json"
+    },
+    "timestamp_order_failure_count": 0,
+    "valid_strict_causal_sequences": 183,
+    "valid_strict_causal_sequences_with_current_causal_labels": 183,
+    "valid_triplet_adjacent_gap_s": {
+      "count": 366,
+      "finite_count": 366,
+      "max": 0.074211939,
+      "mean": 0.06663757732786885,
+      "median": 0.06677295999999999,
+      "min": 0.059603327,
+      "nonfinite_count": 0,
+      "p01": 0.06218922725,
+      "p05": 0.063650293,
+      "p25": 0.06537081175,
+      "p75": 0.06782589775,
+      "p95": 0.06946454,
+      "p99": 0.0709044686,
+      "std": 0.0018698822695282936
+    }
+  },
+  "timestamp_domain": {
+    "camera_available": [
+      "header.stamp",
+      "MCAP log_time",
+      "MCAP publish_time"
+    ],
+    "camera_header_use": "diagnostic_only",
+    "mixed_timestamp_domains_used": false,
+    "reason": "Float64 has no header; use one causal MCAP bag-record timestamp domain for camera, steering, and speed.",
+    "selected": "mcap_log_time",
+    "speed_available": [
+      "MCAP log_time",
+      "MCAP publish_time"
+    ],
+    "steering_available": [
+      "MCAP log_time",
+      "MCAP publish_time"
+    ]
+  },
+  "version": "real_bag_audit_v1"
+}

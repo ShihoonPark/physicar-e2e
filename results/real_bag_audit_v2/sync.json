@@ -1,0 +1,527 @@
+{
+  "bags": {
+    "bag_01": {
+      "audit_scope": "complete_bag",
+      "camera_header_vs_record": {
+        "first_record_minus_header_s": 58635.026703196,
+        "inter_frame_increment_difference_ms": {
+          "count": 650,
+          "finite_count": 650,
+          "max": 18.406294,
+          "mean": -0.0024619476923076924,
+          "median": 0.0003094999999999999,
+          "min": -12.167721,
+          "nonfinite_count": 0,
+          "p01": -6.39804655,
+          "p05": -2.82631225,
+          "p25": -0.80352725,
+          "p75": 0.84985225,
+          "p95": 2.8789871499999995,
+          "p99": 5.290052769999999,
+          "std": 2.0612350021344636
+        },
+        "last_record_minus_header_s": 58635.02510293,
+        "mixed_domain_use_safe_without_proven_transform": false,
+        "offset_change_s": -0.0016002660049707629,
+        "pair_count": 651,
+        "record_minus_header_s": {
+          "count": 651,
+          "finite_count": 651,
+          "max": 58635.043216228,
+          "mean": 58635.02517442843,
+          "median": 58635.024791009,
+          "min": 58635.023007099,
+          "nonfinite_count": 0,
+          "p01": 58635.02319082701,
+          "p05": 58635.023520771,
+          "p25": 58635.0242661085,
+          "p75": 58635.0255585455,
+          "p95": 58635.027701494,
+          "p99": 58635.032459194495,
+          "std": 0.00173671748435769
+        },
+        "timestamps_numerically_identical": false
+      },
+      "causal_synchronization": {
+        "camera_count": 651,
+        "complete_causal_pair_count": 651,
+        "future_label_violations": 0,
+        "missing_both_count": 0,
+        "missing_causal_speed_count": 0,
+        "missing_causal_steering_count": 0,
+        "rule": "latest scalar record satisfying t_scalar <= t_camera",
+        "speed_age_ms": {
+          "count": 651,
+          "finite_count": 651,
+          "max": 78.830721,
+          "mean": 60.570933937019966,
+          "median": 60.354619,
+          "min": 40.558671,
+          "nonfinite_count": 0,
+          "p01": 45.844742,
+          "p05": 55.013645999999994,
+          "p25": 58.990943,
+          "p75": 62.275252,
+          "p95": 66.717367,
+          "p99": 68.7693605,
+          "std": 4.077094638207066
+        },
+        "stale_age_threshold_applied": false,
+        "steering_age_ms": {
+          "count": 651,
+          "finite_count": 651,
+          "max": 78.874056,
+          "mean": 60.61474751766513,
+          "median": 60.401176,
+          "min": 40.549974,
+          "nonfinite_count": 0,
+          "p01": 45.844704,
+          "p05": 55.0581575,
+          "p25": 59.040754500000006,
+          "p75": 62.3282455,
+          "p95": 66.7258705,
+          "p99": 68.778018,
+          "std": 4.075031359569525
+        },
+        "timestamp_domain": "MCAP log_time (bag-record time) for all three streams"
+      },
+      "three_frame_temporal_readiness": {
+        "adjacent_frame_gap_s": {
+          "count": 650,
+          "finite_count": 650,
+          "max": 0.08503148,
+          "mean": 0.0666260551476923,
+          "median": 0.06662733700000001,
+          "min": 0.054459611,
+          "nonfinite_count": 0,
+          "p01": 0.06023140895,
+          "p05": 0.06380020015,
+          "p25": 0.065826567,
+          "p75": 0.06748231075,
+          "p95": 0.06950594674999999,
+          "p99": 0.07192467901999999,
+          "std": 0.0020618823855684644
+        },
+        "architecture_assessment": "temporally compatible on complete audited messages",
+        "candidate_three_frame_sequences": 649,
+        "frame_order": [
+          "t_minus_2",
+          "t_minus_1",
+          "t"
+        ],
+        "oldest_to_current_span_s": {
+          "count": 649,
+          "finite_count": 649,
+          "max": 0.151984902,
+          "mean": 0.13325419594915253,
+          "median": 0.133283856,
+          "min": 0.117328678,
+          "nonfinite_count": 0,
+          "p01": 0.12605801688,
+          "p05": 0.1300996414,
+          "p25": 0.132335078,
+          "p75": 0.134218703,
+          "p95": 0.136390767,
+          "p99": 0.1401243632,
+          "std": 0.0023770008048258004
+        },
+        "simulator_comparison": {
+          "adjacent_gap_over_0p120_s_count": 0,
+          "adjacent_gaps_over_0p120_s": [],
+          "diagnostic_triplets_exceeding_0p120_s": 0,
+          "existing_0p120_s_adjacent_gate_applied": false,
+          "readable_prefix_spacing_supports_architecture": true,
+          "simulator_train_adjacent_gap_s": {
+            "max": 0.07,
+            "mean": 0.066,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "simulator_train_oldest_to_current_span_s": {
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "source": "results/high_speed_temporal_dataset_v1/summary.json"
+        },
+        "timestamp_order_failure_count": 0,
+        "valid_strict_causal_sequences": 649,
+        "valid_strict_causal_sequences_with_current_causal_labels": 649,
+        "valid_triplet_adjacent_gap_s": {
+          "count": 1298,
+          "finite_count": 1298,
+          "max": 0.08503148,
+          "mean": 0.06662709797457628,
+          "median": 0.06662733700000001,
+          "min": 0.054459611,
+          "nonfinite_count": 0,
+          "p01": 0.060225257,
+          "p05": 0.063794581,
+          "p25": 0.065826567,
+          "p75": 0.06748231075,
+          "p95": 0.069507776,
+          "p99": 0.071976571,
+          "std": 0.0020619822692338483
+        }
+      }
+    },
+    "bag_02": {
+      "audit_scope": "complete_bag",
+      "camera_header_vs_record": {
+        "first_record_minus_header_s": 58978.089176871,
+        "inter_frame_increment_difference_ms": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 61805.887489,
+          "mean": 57.884544797563265,
+          "median": 0.032257,
+          "min": -27.091017,
+          "nonfinite_count": 0,
+          "p01": -6.22817194,
+          "p05": -3.0503458,
+          "p25": -1.154808,
+          "p75": 1.1503255000000001,
+          "p95": 2.959896899999999,
+          "p99": 5.640126519999997,
+          "std": 1891.2311366980707
+        },
+        "last_record_minus_header_s": 59039.85198617,
+        "mixed_domain_use_safe_without_proven_transform": false,
+        "offset_change_s": 61.762809298998036,
+        "pair_count": 1068,
+        "record_minus_header_s": {
+          "count": 1068,
+          "finite_count": 1068,
+          "max": 59039.894691333,
+          "mean": 58987.80477999826,
+          "median": 58978.088773767,
+          "min": 58978.086583354,
+          "nonfinite_count": 0,
+          "p01": 58978.08675919687,
+          "p05": 58978.0870117262,
+          "p25": 58978.0879024045,
+          "p75": 58978.09049494975,
+          "p95": 59039.85436147875,
+          "p99": 59039.8569250242,
+          "std": 22.48800695042309
+        },
+        "timestamps_numerically_identical": false
+      },
+      "causal_synchronization": {
+        "camera_count": 1068,
+        "complete_causal_pair_count": 1067,
+        "future_label_violations": 0,
+        "missing_both_count": 1,
+        "missing_causal_speed_count": 1,
+        "missing_causal_steering_count": 1,
+        "rule": "latest scalar record satisfying t_scalar <= t_camera",
+        "speed_age_ms": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 356.690094,
+          "mean": 62.19089571602625,
+          "median": 61.233712,
+          "min": 31.698587,
+          "nonfinite_count": 0,
+          "p01": 53.44925036,
+          "p05": 56.742238,
+          "p25": 59.168566,
+          "p75": 65.2199885,
+          "p95": 67.736592,
+          "p99": 70.41070744,
+          "std": 9.838936793197899
+        },
+        "stale_age_threshold_applied": false,
+        "steering_age_ms": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 356.70113,
+          "mean": 62.236774149953135,
+          "median": 61.283348,
+          "min": 31.776791,
+          "nonfinite_count": 0,
+          "p01": 53.56385522,
+          "p05": 56.8127513,
+          "p25": 59.2237565,
+          "p75": 65.229883,
+          "p95": 67.7448004,
+          "p99": 70.42038044,
+          "std": 9.830048348760107
+        },
+        "timestamp_domain": "MCAP log_time (bag-record time) for all three streams"
+      },
+      "three_frame_temporal_readiness": {
+        "adjacent_frame_gap_s": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 0.357921377,
+          "mean": 0.06687839569540768,
+          "median": 0.066674831,
+          "min": 0.039547205,
+          "nonfinite_count": 0,
+          "p01": 0.060420888660000005,
+          "p05": 0.06359187969999999,
+          "p25": 0.065487615,
+          "p75": 0.067798742,
+          "p95": 0.06960835679999999,
+          "p99": 0.072285292,
+          "std": 0.00918327326348453
+        },
+        "architecture_assessment": "typical complete-bag spacing is compatible, but diagnostic >0.120 s gaps require a real-data policy",
+        "candidate_three_frame_sequences": 1066,
+        "frame_order": [
+          "t_minus_2",
+          "t_minus_1",
+          "t"
+        ],
+        "oldest_to_current_span_s": {
+          "count": 1066,
+          "finite_count": 1066,
+          "max": 0.422717297,
+          "mean": 0.13375809233771105,
+          "median": 0.133336081,
+          "min": 0.099006449,
+          "nonfinite_count": 0,
+          "p01": 0.1249864538,
+          "p05": 0.13000768975,
+          "p25": 0.13221213625,
+          "p75": 0.13441839825,
+          "p95": 0.1366048675,
+          "p99": 0.1398593352,
+          "std": 0.012236050161308952
+        },
+        "simulator_comparison": {
+          "adjacent_gap_over_0p120_s_count": 1,
+          "adjacent_gaps_over_0p120_s": [
+            {
+              "current_camera_index": 900,
+              "current_offset_from_first_camera_s": 60.272784999,
+              "current_record_time_ns": 1787685073911102408,
+              "gap_s": 0.357921377,
+              "previous_camera_index": 899,
+              "previous_record_time_ns": 1787685073553181031
+            }
+          ],
+          "diagnostic_triplets_exceeding_0p120_s": 2,
+          "existing_0p120_s_adjacent_gate_applied": false,
+          "readable_prefix_spacing_supports_architecture": true,
+          "simulator_train_adjacent_gap_s": {
+            "max": 0.07,
+            "mean": 0.066,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "simulator_train_oldest_to_current_span_s": {
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "source": "results/high_speed_temporal_dataset_v1/summary.json"
+        },
+        "timestamp_order_failure_count": 0,
+        "valid_strict_causal_sequences": 1066,
+        "valid_strict_causal_sequences_with_current_causal_labels": 1066,
+        "valid_triplet_adjacent_gap_s": {
+          "count": 2132,
+          "finite_count": 2132,
+          "max": 0.357921377,
+          "mean": 0.06687904616885552,
+          "median": 0.0666754405,
+          "min": 0.039547205,
+          "nonfinite_count": 0,
+          "p01": 0.06039003581,
+          "p05": 0.063588043,
+          "p25": 0.065483406,
+          "p75": 0.067800312,
+          "p95": 0.069613239,
+          "p99": 0.072300167,
+          "std": 0.009187551856129367
+        }
+      }
+    },
+    "bag_03": {
+      "audit_scope": "complete_bag",
+      "camera_header_vs_record": {
+        "first_record_minus_header_s": 58642.674489088,
+        "inter_frame_increment_difference_ms": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 30709.514669,
+          "mean": 67.75539450110375,
+          "median": 0.008395,
+          "min": -15.088995,
+          "nonfinite_count": 0,
+          "p01": -7.633791519999999,
+          "p05": -3.8211429999999997,
+          "p25": -1.191207,
+          "p75": 1.1649,
+          "p95": 3.721985799999999,
+          "p99": 7.51362940000004,
+          "std": 1441.269286492615
+        },
+        "last_record_minus_header_s": 58673.367682797,
+        "mixed_domain_use_safe_without_proven_transform": false,
+        "offset_change_s": 30.69319370899757,
+        "pair_count": 454,
+        "record_minus_header_s": {
+          "count": 454,
+          "finite_count": 454,
+          "max": 58673.381818553,
+          "mean": 58643.14700148565,
+          "median": 58642.6730902195,
+          "min": 58642.671140472,
+          "nonfinite_count": 0,
+          "p01": 58642.67134864122,
+          "p05": 58642.6716152948,
+          "p25": 58642.67236012075,
+          "p75": 58642.674348877,
+          "p95": 58642.678453485,
+          "p99": 58673.3705554812,
+          "std": 3.7824568477047187
+        },
+        "timestamps_numerically_identical": false
+      },
+      "causal_synchronization": {
+        "camera_count": 454,
+        "complete_causal_pair_count": 453,
+        "future_label_violations": 0,
+        "missing_both_count": 1,
+        "missing_causal_speed_count": 1,
+        "missing_causal_steering_count": 1,
+        "rule": "latest scalar record satisfying t_scalar <= t_camera",
+        "speed_age_ms": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 250.863247,
+          "mean": 62.5794552406181,
+          "median": 61.45908,
+          "min": 49.309123,
+          "nonfinite_count": 0,
+          "p01": 52.581537440000005,
+          "p05": 56.6906388,
+          "p25": 59.280507,
+          "p75": 65.426613,
+          "p95": 68.1526906,
+          "p99": 70.67299752000001,
+          "std": 9.69032822588252
+        },
+        "stale_age_threshold_applied": false,
+        "steering_age_ms": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 250.871544,
+          "mean": 62.62170076379691,
+          "median": 61.517789,
+          "min": 49.378361,
+          "nonfinite_count": 0,
+          "p01": 52.65100004,
+          "p05": 56.768021399999995,
+          "p25": 59.333268,
+          "p75": 65.434538,
+          "p95": 68.1876576,
+          "p99": 70.6813872,
+          "std": 9.680846472018583
+        },
+        "timestamp_domain": "MCAP log_time (bag-record time) for all three streams"
+      },
+      "three_frame_temporal_readiness": {
+        "adjacent_frame_gap_s": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 0.252107132,
+          "mean": 0.06701978518543046,
+          "median": 0.066653449,
+          "min": 0.051553319,
+          "nonfinite_count": 0,
+          "p01": 0.05901056324,
+          "p05": 0.0628260902,
+          "p25": 0.065457811,
+          "p75": 0.067808993,
+          "p95": 0.0703703238,
+          "p99": 0.07415997140000004,
+          "std": 0.009057715460655712
+        },
+        "architecture_assessment": "typical complete-bag spacing is compatible, but diagnostic >0.120 s gaps require a real-data policy",
+        "candidate_three_frame_sequences": 452,
+        "frame_order": [
+          "t_minus_2",
+          "t_minus_1",
+          "t"
+        ],
+        "oldest_to_current_span_s": {
+          "count": 452,
+          "finite_count": 452,
+          "max": 0.319498714,
+          "mean": 0.13404576760840708,
+          "median": 0.1331844105,
+          "min": 0.119927127,
+          "nonfinite_count": 0,
+          "p01": 0.12550790725,
+          "p05": 0.1291916389,
+          "p25": 0.13200039624999998,
+          "p75": 0.13453204549999997,
+          "p95": 0.13742856285,
+          "p99": 0.14166295552,
+          "std": 0.012294996598331527
+        },
+        "simulator_comparison": {
+          "adjacent_gap_over_0p120_s_count": 1,
+          "adjacent_gaps_over_0p120_s": [
+            {
+              "current_camera_index": 447,
+              "current_offset_from_first_camera_s": 29.974227057,
+              "current_record_time_ns": 1787685137490436684,
+              "gap_s": 0.252107132,
+              "previous_camera_index": 446,
+              "previous_record_time_ns": 1787685137238329552
+            }
+          ],
+          "diagnostic_triplets_exceeding_0p120_s": 2,
+          "existing_0p120_s_adjacent_gate_applied": false,
+          "readable_prefix_spacing_supports_architecture": true,
+          "simulator_train_adjacent_gap_s": {
+            "max": 0.07,
+            "mean": 0.066,
+            "median": 0.065,
+            "p95": 0.07
+          },
+          "simulator_train_oldest_to_current_span_s": {
+            "max": 0.135,
+            "mean": 0.132,
+            "median": 0.13,
+            "p95": 0.135
+          },
+          "source": "results/high_speed_temporal_dataset_v1/summary.json"
+        },
+        "timestamp_order_failure_count": 0,
+        "valid_strict_causal_sequences": 452,
+        "valid_strict_causal_sequences_with_current_causal_labels": 452,
+        "valid_triplet_adjacent_gap_s": {
+          "count": 904,
+          "finite_count": 904,
+          "max": 0.252107132,
+          "mean": 0.06702288380420354,
+          "median": 0.0666538015,
+          "min": 0.051553319,
+          "nonfinite_count": 0,
+          "p01": 0.05863371061,
+          "p05": 0.0627383663,
+          "p25": 0.065457811,
+          "p75": 0.0678175955,
+          "p95": 0.07039907969999999,
+          "p99": 0.07524762685000007,
+          "std": 0.009067393657397338
+        }
+      }
+    }
+  },
+  "chosen_timestamp_domain": {
+    "camera_header_use": "diagnostic_only",
+    "reason": "Float64 has no header; use one causal MCAP bag-record timestamp domain for camera, steering, and speed.",
+    "selected": "mcap_log_time"
+  },
+  "future_label_violations": 0,
+  "version": "real_bag_audit_v2"
+}

@@ -1,0 +1,466 @@
+{
+  "audit_scope": "complete_bags",
+  "bag_ids": [
+    "bag_01",
+    "bag_02",
+    "bag_03"
+  ],
+  "bag_result_files": {
+    "bag_01": "bag_01.json",
+    "bag_02": "bag_02.json",
+    "bag_03": "bag_03.json"
+  },
+  "camera_contract_same_on_all_messages": true,
+  "camera_contract_same_on_readable_messages": true,
+  "cross_bag_consistency": {
+    "assessment": "complete-bag comparison is valid and the camera contract is consistent across all three bags",
+    "camera": {
+      "contracts": {
+        "bag_01": {
+          "count": 651,
+          "encoding": "rgb8",
+          "frame_id": "camera",
+          "height": 360,
+          "is_bigendian": 0,
+          "step": 1440,
+          "width": 480
+        },
+        "bag_02": {
+          "count": 1068,
+          "encoding": "rgb8",
+          "frame_id": "camera",
+          "height": 360,
+          "is_bigendian": 0,
+          "step": 1440,
+          "width": 480
+        },
+        "bag_03": {
+          "count": 454,
+          "encoding": "rgb8",
+          "frame_id": "camera",
+          "height": 360,
+          "is_bigendian": 0,
+          "step": 1440,
+          "width": 480
+        }
+      },
+      "fps_hz": {
+        "bag_01": 15.009143161534402,
+        "bag_02": 14.952511788028234,
+        "bag_03": 14.920966953761463
+      },
+      "same_contract_on_readable_messages": true
+    },
+    "complete_bag_comparison_valid": true,
+    "material_differences_or_blockers": [],
+    "observed_differences": [
+      "bag_01: 195 normalized recorded steering samples numerically exceed +/-0.35 before the required x0.350000 whole-stream conversion; 0 converted-radian samples remain outside +/-0.35",
+      "bag_02: 274 normalized recorded steering samples numerically exceed +/-0.35 before the required x0.350000 whole-stream conversion; 0 converted-radian samples remain outside +/-0.35",
+      "bag_03: 92 normalized recorded steering samples numerically exceed +/-0.35 before the required x0.350000 whole-stream conversion; 0 converted-radian samples remain outside +/-0.35",
+      "speed medians differ across complete bags (m/s): bag_01=0.768690, bag_02=0.890066, bag_03=0.833865",
+      "steering medians differ across complete bags: bag_01=+0.058848 rad, bag_02=+0.019766 rad, bag_03=+0.019766 rad",
+      "exact-zero speed record counts in complete bags: bag_01=17, bag_02=2, bag_03=0; complete-bag suffix stationarity is observable",
+      "camera timing gap p95 across complete bags: bag_01=0.069506 s, bag_02=0.069608 s, bag_03=0.070370 s"
+    ],
+    "readable_prefix_observed_differences": [
+      "bag_01: 195 normalized recorded steering samples numerically exceed +/-0.35 before the required x0.350000 whole-stream conversion; 0 converted-radian samples remain outside +/-0.35",
+      "bag_02: 274 normalized recorded steering samples numerically exceed +/-0.35 before the required x0.350000 whole-stream conversion; 0 converted-radian samples remain outside +/-0.35",
+      "bag_03: 92 normalized recorded steering samples numerically exceed +/-0.35 before the required x0.350000 whole-stream conversion; 0 converted-radian samples remain outside +/-0.35",
+      "speed medians differ across complete bags (m/s): bag_01=0.768690, bag_02=0.890066, bag_03=0.833865",
+      "steering medians differ across complete bags: bag_01=+0.058848 rad, bag_02=+0.019766 rad, bag_03=+0.019766 rad",
+      "exact-zero speed record counts in complete bags: bag_01=17, bag_02=2, bag_03=0; complete-bag suffix stationarity is observable",
+      "camera timing gap p95 across complete bags: bag_01=0.069506 s, bag_02=0.069608 s, bag_03=0.070370 s"
+    ],
+    "speed": {
+      "median_raw": {
+        "bag_01": 0.7686902482355292,
+        "bag_02": 0.8900660245861577,
+        "bag_03": 0.8338647560149297
+      },
+      "range_raw": {
+        "bag_01": {
+          "max": 0.9984995648354781,
+          "min": 0.0
+        },
+        "bag_02": {
+          "max": 1.1,
+          "min": 0.0
+        },
+        "bag_03": {
+          "max": 0.9981675487281614,
+          "min": 0.2
+        }
+      },
+      "rate_hz": {
+        "bag_01": 15.006573304677296,
+        "bag_02": 14.697145249868115,
+        "bag_03": 14.9225493323188
+      },
+      "unit": "meters_per_second",
+      "unit_symbol": "m/s"
+    },
+    "steering": {
+      "median_rad": {
+        "bag_01": 0.05884846184007374,
+        "bag_02": 0.019766394046665102,
+        "bag_03": 0.019766394046665102
+      },
+      "range_rad": {
+        "bag_01": {
+          "max": 0.3186946927056361,
+          "min": -0.28466980252593205
+        },
+        "bag_02": {
+          "max": 0.3153779657400577,
+          "min": -0.327208485671835
+        },
+        "bag_03": {
+          "max": 0.2503676920681372,
+          "min": -0.2781433752805876
+        }
+      },
+      "rate_hz": {
+        "bag_01": 15.006573382736462,
+        "bag_02": 14.697155071988309,
+        "bag_03": 14.922533542034014
+      },
+      "unit": "confirmed radians"
+    },
+    "timing": {
+      "bag_01": {
+        "camera_gap_s": {
+          "count": 650,
+          "finite_count": 650,
+          "max": 0.08503148,
+          "mean": 0.0666260551476923,
+          "median": 0.06662733700000001,
+          "min": 0.054459611,
+          "nonfinite_count": 0,
+          "p01": 0.06023140895,
+          "p05": 0.06380020015,
+          "p25": 0.065826567,
+          "p75": 0.06748231075,
+          "p95": 0.06950594674999999,
+          "p99": 0.07192467901999999,
+          "std": 0.0020618823855684644
+        },
+        "speed_age_ms": {
+          "count": 651,
+          "finite_count": 651,
+          "max": 78.830721,
+          "mean": 60.570933937019966,
+          "median": 60.354619,
+          "min": 40.558671,
+          "nonfinite_count": 0,
+          "p01": 45.844742,
+          "p05": 55.013645999999994,
+          "p25": 58.990943,
+          "p75": 62.275252,
+          "p95": 66.717367,
+          "p99": 68.7693605,
+          "std": 4.077094638207066
+        },
+        "steering_age_ms": {
+          "count": 651,
+          "finite_count": 651,
+          "max": 78.874056,
+          "mean": 60.61474751766513,
+          "median": 60.401176,
+          "min": 40.549974,
+          "nonfinite_count": 0,
+          "p01": 45.844704,
+          "p05": 55.0581575,
+          "p25": 59.040754500000006,
+          "p75": 62.3282455,
+          "p95": 66.7258705,
+          "p99": 68.778018,
+          "std": 4.075031359569525
+        }
+      },
+      "bag_02": {
+        "camera_gap_s": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 0.357921377,
+          "mean": 0.06687839569540768,
+          "median": 0.066674831,
+          "min": 0.039547205,
+          "nonfinite_count": 0,
+          "p01": 0.060420888660000005,
+          "p05": 0.06359187969999999,
+          "p25": 0.065487615,
+          "p75": 0.067798742,
+          "p95": 0.06960835679999999,
+          "p99": 0.072285292,
+          "std": 0.00918327326348453
+        },
+        "speed_age_ms": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 356.690094,
+          "mean": 62.19089571602625,
+          "median": 61.233712,
+          "min": 31.698587,
+          "nonfinite_count": 0,
+          "p01": 53.44925036,
+          "p05": 56.742238,
+          "p25": 59.168566,
+          "p75": 65.2199885,
+          "p95": 67.736592,
+          "p99": 70.41070744,
+          "std": 9.838936793197899
+        },
+        "steering_age_ms": {
+          "count": 1067,
+          "finite_count": 1067,
+          "max": 356.70113,
+          "mean": 62.236774149953135,
+          "median": 61.283348,
+          "min": 31.776791,
+          "nonfinite_count": 0,
+          "p01": 53.56385522,
+          "p05": 56.8127513,
+          "p25": 59.2237565,
+          "p75": 65.229883,
+          "p95": 67.7448004,
+          "p99": 70.42038044,
+          "std": 9.830048348760107
+        }
+      },
+      "bag_03": {
+        "camera_gap_s": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 0.252107132,
+          "mean": 0.06701978518543046,
+          "median": 0.066653449,
+          "min": 0.051553319,
+          "nonfinite_count": 0,
+          "p01": 0.05901056324,
+          "p05": 0.0628260902,
+          "p25": 0.065457811,
+          "p75": 0.067808993,
+          "p95": 0.0703703238,
+          "p99": 0.07415997140000004,
+          "std": 0.009057715460655712
+        },
+        "speed_age_ms": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 250.863247,
+          "mean": 62.5794552406181,
+          "median": 61.45908,
+          "min": 49.309123,
+          "nonfinite_count": 0,
+          "p01": 52.581537440000005,
+          "p05": 56.6906388,
+          "p25": 59.280507,
+          "p75": 65.426613,
+          "p95": 68.1526906,
+          "p99": 70.67299752000001,
+          "std": 9.69032822588252
+        },
+        "steering_age_ms": {
+          "count": 453,
+          "finite_count": 453,
+          "max": 250.871544,
+          "mean": 62.62170076379691,
+          "median": 61.517789,
+          "min": 49.378361,
+          "nonfinite_count": 0,
+          "p01": 52.65100004,
+          "p05": 56.768021399999995,
+          "p25": 59.333268,
+          "p75": 65.434538,
+          "p95": 68.1876576,
+          "p99": 70.6813872,
+          "std": 9.680846472018583
+        }
+      }
+    }
+  },
+  "dataset_stage": {
+    "blocked_on": [
+      "freeze and test the user-confirmed whole-stream steering conversion steering_rad = steering_recorded * 0.35 in the future real-data extractor (never clip only the raw exceedances)",
+      "approve a real-data temporal-gap and label-staleness policy for 2 adjacent camera gaps above 120 ms and observed causal label ages up to 356.701 ms",
+      "confirm only whether /speed is a command or an actual feedback/measurement value; its m/s unit is already confirmed"
+    ],
+    "decision_reason": "the complete-bag audit and ROI approval are complete, but preprocessing, temporal-policy, and /speed command-versus-feedback blockers remain",
+    "generated": false,
+    "real_dataset_extraction_decision": "NOT YET JUSTIFIED",
+    "real_dataset_extraction_justified": false,
+    "status": "BLOCKED"
+  },
+  "future_label_violations": 0,
+  "generated_utc": "2026-08-25T21:29:16.470056+00:00",
+  "integrity_all_three": true,
+  "preview_root": "/home/a/physicar-e2e-artifacts/real_bag_audit_v2/previews",
+  "real_camera_roi": {
+    "apply_to_audit_previews": false,
+    "approval_evidence": "Human review completed and contract supplied by the user on 2026-08-26 after reviewing the complete-bag V2 contact sheets.",
+    "auto_apply_simulator_roi": false,
+    "camera_undistortion_applied": false,
+    "crop": {
+      "end_coordinates_exclusive": true,
+      "x_end": 480,
+      "x_start": 0,
+      "y_end": 360,
+      "y_start": 80
+    },
+    "cropped_height": 280,
+    "cropped_width": 480,
+    "horizontal_crop_applied": false,
+    "post_resize_color_conversion": "existing RGB_to_YUV preprocessing",
+    "reason": "The y=80:160 band retains useful far-track curvature, orange center-line vanishing-point information, and early cone visibility that simulator y=160:360 would discard.",
+    "resize": {
+      "implementation": "canonical Pillow Image.Resampling.BILINEAR",
+      "interpolation": "bilinear",
+      "output_height": 66,
+      "output_width": 200
+    },
+    "simulator_y_160_360_crop_used": false,
+    "source": {
+      "color_space": "RGB",
+      "height": 360,
+      "ros_encoding": "rgb8",
+      "width": 480
+    },
+    "status": "approved",
+    "temporal_input": {
+      "causal": true,
+      "frame_count": 3,
+      "frame_order": [
+        "t_minus_2",
+        "t_minus_1",
+        "t"
+      ]
+    },
+    "version": "real_camera_roi_v1"
+  },
+  "result": "PASS",
+  "scope_guards": {
+    "auto_apply_simulator_roi": false,
+    "drive_simulator": false,
+    "generate_training_dataset": false,
+    "invoke_training": false,
+    "modify_bags": false,
+    "modify_docker": false,
+    "real_data_audit_only": true,
+    "require_odometry": false
+  },
+  "simulator_camera_comparison": {
+    "aspect_ratio_match": true,
+    "encoding_match": true,
+    "field_of_view_and_content": {
+      "field_of_view_and_content": "The complete-bag contact sheets show a low-mounted, wide, visibly barrel-distorted indoor track view with close barriers, spectators, cones, ceiling lights, motion blur, curved lane geometry, far-track curvature, and orange center-line vanishing-point information.",
+      "roi_implication": "Real Camera ROI V1 is approved at x=0:480, y=80:360. Simulator y=160:360 is forbidden for real data because it discards useful far-track and early-cone information. No horizontal crop or camera undistortion is approved for V1.",
+      "simulator_full_frame_reviewed": "/home/a/physicar-e2e-artifacts/real_bag_audit_v1/previews/simulator_reference_full_frame.png",
+      "status": "completed_real_camera_roi_v1_approved"
+    },
+    "real_camera_roi": {
+      "apply_to_audit_previews": false,
+      "approval_evidence": "Human review completed and contract supplied by the user on 2026-08-26 after reviewing the complete-bag V2 contact sheets.",
+      "auto_apply_simulator_roi": false,
+      "camera_undistortion_applied": false,
+      "crop": {
+        "end_coordinates_exclusive": true,
+        "x_end": 480,
+        "x_start": 0,
+        "y_end": 360,
+        "y_start": 80
+      },
+      "cropped_height": 280,
+      "cropped_width": 480,
+      "horizontal_crop_applied": false,
+      "post_resize_color_conversion": "existing RGB_to_YUV preprocessing",
+      "reason": "The y=80:160 band retains useful far-track curvature, orange center-line vanishing-point information, and early cone visibility that simulator y=160:360 would discard.",
+      "resize": {
+        "implementation": "canonical Pillow Image.Resampling.BILINEAR",
+        "interpolation": "bilinear",
+        "output_height": 66,
+        "output_width": 200
+      },
+      "simulator_y_160_360_crop_used": false,
+      "source": {
+        "color_space": "RGB",
+        "height": 360,
+        "ros_encoding": "rgb8",
+        "width": 480
+      },
+      "status": "approved",
+      "temporal_input": {
+        "causal": true,
+        "frame_count": 3,
+        "frame_order": [
+          "t_minus_2",
+          "t_minus_1",
+          "t"
+        ]
+      },
+      "version": "real_camera_roi_v1"
+    },
+    "real_readable_message_contract": {
+      "count": 651,
+      "encoding": "rgb8",
+      "frame_id": "camera",
+      "height": 360,
+      "is_bigendian": 0,
+      "step": 1440,
+      "width": 480
+    },
+    "real_roi_status": "approved",
+    "resolution_match": true,
+    "simulator_reference": {
+      "aspect_ratio": "4:3",
+      "encoding": "rgb8",
+      "height": 360,
+      "output_height": 66,
+      "output_width": 200,
+      "roi": {
+        "x_end": 480,
+        "x_start": 0,
+        "y_end": 360,
+        "y_start": 160
+      },
+      "source": "configs/dataset_extractor_v1.json",
+      "width": 480
+    },
+    "simulator_roi_applied_to_real_images": false
+  },
+  "speed_contract": {
+    "active_window_diagnostic": "all_contiguous_nonzero_runs_plus_longest",
+    "meaning": "unresolved_command_or_actual_feedback_measurement",
+    "stationary_diagnostic": "exact_zero_only",
+    "unit": "meters_per_second",
+    "unit_evidence": "User-confirmed real-vehicle /speed unit supplied on 2026-08-26.",
+    "unit_symbol": "m/s"
+  },
+  "steering_contract": {
+    "clip_out_of_range": false,
+    "command_or_feedback": "command",
+    "confirmed_numeric_range_rad": [
+      -0.35,
+      0.35
+    ],
+    "control_semantics_evidence": "User-confirmed real-vehicle control semantics supplied on 2026-08-26: normalized steering command, positive is LEFT, negative is RIGHT.",
+    "left_right_sign_convention": "positive_left_negative_right",
+    "near_zero_abs_rad": 0.01,
+    "physical_unit": "radians",
+    "range_and_unit_evidence": "Physical steering range and normalized-recording correction supplied by the user on 2026-08-26.",
+    "recorded_numeric_range": [
+      -1.0,
+      1.0
+    ],
+    "recorded_representation": "normalized_raw",
+    "recorded_scale_evidence": "User-confirmed on 2026-08-26: these bags mistakenly stored steering on a -1 to +1 scale and the entire stream must be rescaled to the physical +/-0.35 rad range.",
+    "recorded_to_radians_scale": 0.35
+  },
+  "steering_physical_outside_count_after_rescaling": 0,
+  "steering_recorded_threshold_exceedance_count": 561,
+  "timestamp_domain": {
+    "camera_header_use": "diagnostic_only",
+    "reason": "Float64 has no header; use one causal MCAP bag-record timestamp domain for camera, steering, and speed.",
+    "selected": "mcap_log_time"
+  },
+  "version": "real_bag_audit_v2"
+}
